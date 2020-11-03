@@ -1,0 +1,17 @@
+package com.lucky.mall.admin.dao;
+
+import com.lucky.mall.mbg.model.UmsAdminPermissionRelation;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+/**
+ * 用户权限自定义Dao
+ * Created by macro on 2018/10/8.
+ */
+public interface UmsAdminPermissionRelationDao {
+    /**
+     * 批量创建
+     */
+    int insertList(@Param("list") List<UmsAdminPermissionRelation> list);
+}

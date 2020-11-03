@@ -12,16 +12,16 @@ public class SmsFlashPromotionSession implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "每日开始时间")
-    private Date startTime;
+    private Date start_time;
 
     @ApiModelProperty(value = "每日结束时间")
-    private Date endTime;
+    private Date end_time;
 
     @ApiModelProperty(value = "启用状态：0->不启用；1->启用")
     private Integer status;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createTime;
+    private Date create_time;
 
     private static final long serialVersionUID = 1L;
 
@@ -41,20 +41,20 @@ public class SmsFlashPromotionSession implements Serializable {
         this.name = name;
     }
 
-    public Date getStartTime() {
-        return startTime;
+    public Date getStart_time() {
+        return start_time;
     }
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setStart_time(Date start_time) {
+        this.start_time = start_time;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getEnd_time() {
+        return end_time;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
     }
 
     public Integer getStatus() {
@@ -65,12 +65,12 @@ public class SmsFlashPromotionSession implements Serializable {
         this.status = status;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
     @Override
@@ -81,10 +81,10 @@ public class SmsFlashPromotionSession implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", startTime=").append(startTime);
-        sb.append(", endTime=").append(endTime);
+        sb.append(", start_time=").append(start_time);
+        sb.append(", end_time=").append(end_time);
         sb.append(", status=").append(status);
-        sb.append(", createTime=").append(createTime);
+        sb.append(", create_time=").append(create_time);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

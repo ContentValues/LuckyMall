@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class CmsPrefrenceAreaProductRelation implements Serializable {
     private Long id;
 
-    private Long prefrenceAreaId;
+    private Long prefrence_area_id;
 
-    private Long productId;
+    private Long product_id;
 
     private static final long serialVersionUID = 1L;
 
@@ -20,20 +20,20 @@ public class CmsPrefrenceAreaProductRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getPrefrenceAreaId() {
-        return prefrenceAreaId;
+    public Long getPrefrence_area_id() {
+        return prefrence_area_id;
     }
 
-    public void setPrefrenceAreaId(Long prefrenceAreaId) {
-        this.prefrenceAreaId = prefrenceAreaId;
+    public void setPrefrence_area_id(Long prefrence_area_id) {
+        this.prefrence_area_id = prefrence_area_id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class CmsPrefrenceAreaProductRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", prefrenceAreaId=").append(prefrenceAreaId);
-        sb.append(", productId=").append(productId);
+        sb.append(", prefrence_area_id=").append(prefrence_area_id);
+        sb.append(", product_id=").append(product_id);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

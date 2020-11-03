@@ -27,8 +27,8 @@ public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMe
 
     @PostConstruct
     public void loadDataSource() {
-        Logger logger=  LoggerFactory.getLogger(this.getClass());
-        logger.info("loadDataSource()............");
+//        Logger logger=  LoggerFactory.getLogger(this.getClass());
+//        logger.info("loadDataSource()............");
         configAttributeMap = dynamicSecurityService.loadDataSource();
     }
 
@@ -41,8 +41,8 @@ public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMe
     @Override
     public Collection<ConfigAttribute> getAttributes(Object o) throws IllegalArgumentException {
 
-        Logger logger=  LoggerFactory.getLogger(this.getClass());
-        logger.info("getAttributes()............");
+//        Logger logger=  LoggerFactory.getLogger(this.getClass());
+//        logger.info("getAttributes()............");
 
         if (configAttributeMap == null) this.loadDataSource();
         List<ConfigAttribute>  configAttributes = new ArrayList<>();

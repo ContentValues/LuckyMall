@@ -304,123 +304,123 @@ public class CmsHelpCategoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountIsNull() {
+        public Criteria andHelp_countIsNull() {
             addCriterion("help_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountIsNotNull() {
+        public Criteria andHelp_countIsNotNull() {
             addCriterion("help_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountEqualTo(Integer value) {
-            addCriterion("help_count =", value, "helpCount");
+        public Criteria andHelp_countEqualTo(Integer value) {
+            addCriterion("help_count =", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountNotEqualTo(Integer value) {
-            addCriterion("help_count <>", value, "helpCount");
+        public Criteria andHelp_countNotEqualTo(Integer value) {
+            addCriterion("help_count <>", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountGreaterThan(Integer value) {
-            addCriterion("help_count >", value, "helpCount");
+        public Criteria andHelp_countGreaterThan(Integer value) {
+            addCriterion("help_count >", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("help_count >=", value, "helpCount");
+        public Criteria andHelp_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("help_count >=", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountLessThan(Integer value) {
-            addCriterion("help_count <", value, "helpCount");
+        public Criteria andHelp_countLessThan(Integer value) {
+            addCriterion("help_count <", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountLessThanOrEqualTo(Integer value) {
-            addCriterion("help_count <=", value, "helpCount");
+        public Criteria andHelp_countLessThanOrEqualTo(Integer value) {
+            addCriterion("help_count <=", value, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountIn(List<Integer> values) {
-            addCriterion("help_count in", values, "helpCount");
+        public Criteria andHelp_countIn(List<Integer> values) {
+            addCriterion("help_count in", values, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountNotIn(List<Integer> values) {
-            addCriterion("help_count not in", values, "helpCount");
+        public Criteria andHelp_countNotIn(List<Integer> values) {
+            addCriterion("help_count not in", values, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountBetween(Integer value1, Integer value2) {
-            addCriterion("help_count between", value1, value2, "helpCount");
+        public Criteria andHelp_countBetween(Integer value1, Integer value2) {
+            addCriterion("help_count between", value1, value2, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andHelpCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("help_count not between", value1, value2, "helpCount");
+        public Criteria andHelp_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("help_count not between", value1, value2, "help_count");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNull() {
+        public Criteria andShow_statusIsNull() {
             addCriterion("show_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNotNull() {
+        public Criteria andShow_statusIsNotNull() {
             addCriterion("show_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusEqualTo(Integer value) {
-            addCriterion("show_status =", value, "showStatus");
+        public Criteria andShow_statusEqualTo(Integer value) {
+            addCriterion("show_status =", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotEqualTo(Integer value) {
-            addCriterion("show_status <>", value, "showStatus");
+        public Criteria andShow_statusNotEqualTo(Integer value) {
+            addCriterion("show_status <>", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThan(Integer value) {
-            addCriterion("show_status >", value, "showStatus");
+        public Criteria andShow_statusGreaterThan(Integer value) {
+            addCriterion("show_status >", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("show_status >=", value, "showStatus");
+        public Criteria andShow_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("show_status >=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThan(Integer value) {
-            addCriterion("show_status <", value, "showStatus");
+        public Criteria andShow_statusLessThan(Integer value) {
+            addCriterion("show_status <", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("show_status <=", value, "showStatus");
+        public Criteria andShow_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("show_status <=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIn(List<Integer> values) {
-            addCriterion("show_status in", values, "showStatus");
+        public Criteria andShow_statusIn(List<Integer> values) {
+            addCriterion("show_status in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotIn(List<Integer> values) {
-            addCriterion("show_status not in", values, "showStatus");
+        public Criteria andShow_statusNotIn(List<Integer> values) {
+            addCriterion("show_status not in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusBetween(Integer value1, Integer value2) {
-            addCriterion("show_status between", value1, value2, "showStatus");
+        public Criteria andShow_statusBetween(Integer value1, Integer value2) {
+            addCriterion("show_status between", value1, value2, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("show_status not between", value1, value2, "showStatus");
+        public Criteria andShow_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("show_status not between", value1, value2, "show_status");
             return (Criteria) this;
         }
 

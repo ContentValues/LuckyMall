@@ -5,8 +5,8 @@
     <insert id="insertList">
         INSERT INTO ums_admin_permission_relation (admin_id, permission_id, type) VALUES
         <foreach collection="list" separator="," item="item" index="index">
-            (#{item.adminId,jdbcType=BIGINT},
-            #{item.permissionId,jdbcType=BIGINT},
+            (#{item.admin_id,jdbcType=BIGINT},
+            #{item.permission_id,jdbcType=BIGINT},
             #{item.type,jdbcType=INTEGER})
         </foreach>
     </insert>

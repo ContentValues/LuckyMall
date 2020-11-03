@@ -7,10 +7,10 @@ public class UmsRoleResourceRelation implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "角色ID")
-    private Long roleId;
+    private Long role_id;
 
     @ApiModelProperty(value = "资源ID")
-    private Long resourceId;
+    private Long resource_id;
 
     private static final long serialVersionUID = 1L;
 
@@ -22,20 +22,20 @@ public class UmsRoleResourceRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getRoleId() {
-        return roleId;
+    public Long getRole_id() {
+        return role_id;
     }
 
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
+    public void setRole_id(Long role_id) {
+        this.role_id = role_id;
     }
 
-    public Long getResourceId() {
-        return resourceId;
+    public Long getResource_id() {
+        return resource_id;
     }
 
-    public void setResourceId(Long resourceId) {
-        this.resourceId = resourceId;
+    public void setResource_id(Long resource_id) {
+        this.resource_id = resource_id;
     }
 
     @Override
@@ -45,8 +45,8 @@ public class UmsRoleResourceRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", roleId=").append(roleId);
-        sb.append(", resourceId=").append(resourceId);
+        sb.append(", role_id=").append(role_id);
+        sb.append(", resource_id=").append(resource_id);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -235,603 +235,603 @@ public class UmsMemberLevelExample {
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointIsNull() {
+        public Criteria andGrowth_pointIsNull() {
             addCriterion("growth_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointIsNotNull() {
+        public Criteria andGrowth_pointIsNotNull() {
             addCriterion("growth_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointEqualTo(Integer value) {
-            addCriterion("growth_point =", value, "growthPoint");
+        public Criteria andGrowth_pointEqualTo(Integer value) {
+            addCriterion("growth_point =", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointNotEqualTo(Integer value) {
-            addCriterion("growth_point <>", value, "growthPoint");
+        public Criteria andGrowth_pointNotEqualTo(Integer value) {
+            addCriterion("growth_point <>", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointGreaterThan(Integer value) {
-            addCriterion("growth_point >", value, "growthPoint");
+        public Criteria andGrowth_pointGreaterThan(Integer value) {
+            addCriterion("growth_point >", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointGreaterThanOrEqualTo(Integer value) {
-            addCriterion("growth_point >=", value, "growthPoint");
+        public Criteria andGrowth_pointGreaterThanOrEqualTo(Integer value) {
+            addCriterion("growth_point >=", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointLessThan(Integer value) {
-            addCriterion("growth_point <", value, "growthPoint");
+        public Criteria andGrowth_pointLessThan(Integer value) {
+            addCriterion("growth_point <", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointLessThanOrEqualTo(Integer value) {
-            addCriterion("growth_point <=", value, "growthPoint");
+        public Criteria andGrowth_pointLessThanOrEqualTo(Integer value) {
+            addCriterion("growth_point <=", value, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointIn(List<Integer> values) {
-            addCriterion("growth_point in", values, "growthPoint");
+        public Criteria andGrowth_pointIn(List<Integer> values) {
+            addCriterion("growth_point in", values, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointNotIn(List<Integer> values) {
-            addCriterion("growth_point not in", values, "growthPoint");
+        public Criteria andGrowth_pointNotIn(List<Integer> values) {
+            addCriterion("growth_point not in", values, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointBetween(Integer value1, Integer value2) {
-            addCriterion("growth_point between", value1, value2, "growthPoint");
+        public Criteria andGrowth_pointBetween(Integer value1, Integer value2) {
+            addCriterion("growth_point between", value1, value2, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andGrowthPointNotBetween(Integer value1, Integer value2) {
-            addCriterion("growth_point not between", value1, value2, "growthPoint");
+        public Criteria andGrowth_pointNotBetween(Integer value1, Integer value2) {
+            addCriterion("growth_point not between", value1, value2, "growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusIsNull() {
+        public Criteria andDefault_statusIsNull() {
             addCriterion("default_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusIsNotNull() {
+        public Criteria andDefault_statusIsNotNull() {
             addCriterion("default_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusEqualTo(Integer value) {
-            addCriterion("default_status =", value, "defaultStatus");
+        public Criteria andDefault_statusEqualTo(Integer value) {
+            addCriterion("default_status =", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusNotEqualTo(Integer value) {
-            addCriterion("default_status <>", value, "defaultStatus");
+        public Criteria andDefault_statusNotEqualTo(Integer value) {
+            addCriterion("default_status <>", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusGreaterThan(Integer value) {
-            addCriterion("default_status >", value, "defaultStatus");
+        public Criteria andDefault_statusGreaterThan(Integer value) {
+            addCriterion("default_status >", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("default_status >=", value, "defaultStatus");
+        public Criteria andDefault_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("default_status >=", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusLessThan(Integer value) {
-            addCriterion("default_status <", value, "defaultStatus");
+        public Criteria andDefault_statusLessThan(Integer value) {
+            addCriterion("default_status <", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("default_status <=", value, "defaultStatus");
+        public Criteria andDefault_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("default_status <=", value, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusIn(List<Integer> values) {
-            addCriterion("default_status in", values, "defaultStatus");
+        public Criteria andDefault_statusIn(List<Integer> values) {
+            addCriterion("default_status in", values, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusNotIn(List<Integer> values) {
-            addCriterion("default_status not in", values, "defaultStatus");
+        public Criteria andDefault_statusNotIn(List<Integer> values) {
+            addCriterion("default_status not in", values, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusBetween(Integer value1, Integer value2) {
-            addCriterion("default_status between", value1, value2, "defaultStatus");
+        public Criteria andDefault_statusBetween(Integer value1, Integer value2) {
+            addCriterion("default_status between", value1, value2, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andDefaultStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("default_status not between", value1, value2, "defaultStatus");
+        public Criteria andDefault_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("default_status not between", value1, value2, "default_status");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointIsNull() {
+        public Criteria andFree_freight_pointIsNull() {
             addCriterion("free_freight_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointIsNotNull() {
+        public Criteria andFree_freight_pointIsNotNull() {
             addCriterion("free_freight_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointEqualTo(BigDecimal value) {
-            addCriterion("free_freight_point =", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointEqualTo(BigDecimal value) {
+            addCriterion("free_freight_point =", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointNotEqualTo(BigDecimal value) {
-            addCriterion("free_freight_point <>", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointNotEqualTo(BigDecimal value) {
+            addCriterion("free_freight_point <>", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointGreaterThan(BigDecimal value) {
-            addCriterion("free_freight_point >", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointGreaterThan(BigDecimal value) {
+            addCriterion("free_freight_point >", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("free_freight_point >=", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("free_freight_point >=", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointLessThan(BigDecimal value) {
-            addCriterion("free_freight_point <", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointLessThan(BigDecimal value) {
+            addCriterion("free_freight_point <", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("free_freight_point <=", value, "freeFreightPoint");
+        public Criteria andFree_freight_pointLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("free_freight_point <=", value, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointIn(List<BigDecimal> values) {
-            addCriterion("free_freight_point in", values, "freeFreightPoint");
+        public Criteria andFree_freight_pointIn(List<BigDecimal> values) {
+            addCriterion("free_freight_point in", values, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointNotIn(List<BigDecimal> values) {
-            addCriterion("free_freight_point not in", values, "freeFreightPoint");
+        public Criteria andFree_freight_pointNotIn(List<BigDecimal> values) {
+            addCriterion("free_freight_point not in", values, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("free_freight_point between", value1, value2, "freeFreightPoint");
+        public Criteria andFree_freight_pointBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("free_freight_point between", value1, value2, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andFreeFreightPointNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("free_freight_point not between", value1, value2, "freeFreightPoint");
+        public Criteria andFree_freight_pointNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("free_freight_point not between", value1, value2, "free_freight_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointIsNull() {
+        public Criteria andComment_growth_pointIsNull() {
             addCriterion("comment_growth_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointIsNotNull() {
+        public Criteria andComment_growth_pointIsNotNull() {
             addCriterion("comment_growth_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointEqualTo(Integer value) {
-            addCriterion("comment_growth_point =", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointEqualTo(Integer value) {
+            addCriterion("comment_growth_point =", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointNotEqualTo(Integer value) {
-            addCriterion("comment_growth_point <>", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointNotEqualTo(Integer value) {
+            addCriterion("comment_growth_point <>", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointGreaterThan(Integer value) {
-            addCriterion("comment_growth_point >", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointGreaterThan(Integer value) {
+            addCriterion("comment_growth_point >", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointGreaterThanOrEqualTo(Integer value) {
-            addCriterion("comment_growth_point >=", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointGreaterThanOrEqualTo(Integer value) {
+            addCriterion("comment_growth_point >=", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointLessThan(Integer value) {
-            addCriterion("comment_growth_point <", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointLessThan(Integer value) {
+            addCriterion("comment_growth_point <", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointLessThanOrEqualTo(Integer value) {
-            addCriterion("comment_growth_point <=", value, "commentGrowthPoint");
+        public Criteria andComment_growth_pointLessThanOrEqualTo(Integer value) {
+            addCriterion("comment_growth_point <=", value, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointIn(List<Integer> values) {
-            addCriterion("comment_growth_point in", values, "commentGrowthPoint");
+        public Criteria andComment_growth_pointIn(List<Integer> values) {
+            addCriterion("comment_growth_point in", values, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointNotIn(List<Integer> values) {
-            addCriterion("comment_growth_point not in", values, "commentGrowthPoint");
+        public Criteria andComment_growth_pointNotIn(List<Integer> values) {
+            addCriterion("comment_growth_point not in", values, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointBetween(Integer value1, Integer value2) {
-            addCriterion("comment_growth_point between", value1, value2, "commentGrowthPoint");
+        public Criteria andComment_growth_pointBetween(Integer value1, Integer value2) {
+            addCriterion("comment_growth_point between", value1, value2, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andCommentGrowthPointNotBetween(Integer value1, Integer value2) {
-            addCriterion("comment_growth_point not between", value1, value2, "commentGrowthPoint");
+        public Criteria andComment_growth_pointNotBetween(Integer value1, Integer value2) {
+            addCriterion("comment_growth_point not between", value1, value2, "comment_growth_point");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIsNull() {
+        public Criteria andPriviledge_free_freightIsNull() {
             addCriterion("priviledge_free_freight is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIsNotNull() {
+        public Criteria andPriviledge_free_freightIsNotNull() {
             addCriterion("priviledge_free_freight is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight =", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightEqualTo(Integer value) {
+            addCriterion("priviledge_free_freight =", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight <>", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightNotEqualTo(Integer value) {
+            addCriterion("priviledge_free_freight <>", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightGreaterThan(Integer value) {
-            addCriterion("priviledge_free_freight >", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightGreaterThan(Integer value) {
+            addCriterion("priviledge_free_freight >", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight >=", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_free_freight >=", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightLessThan(Integer value) {
-            addCriterion("priviledge_free_freight <", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightLessThan(Integer value) {
+            addCriterion("priviledge_free_freight <", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_free_freight <=", value, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_free_freight <=", value, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightIn(List<Integer> values) {
-            addCriterion("priviledge_free_freight in", values, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightIn(List<Integer> values) {
+            addCriterion("priviledge_free_freight in", values, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotIn(List<Integer> values) {
-            addCriterion("priviledge_free_freight not in", values, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightNotIn(List<Integer> values) {
+            addCriterion("priviledge_free_freight not in", values, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_free_freight between", value1, value2, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_free_freight between", value1, value2, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeFreeFreightNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_free_freight not between", value1, value2, "priviledgeFreeFreight");
+        public Criteria andPriviledge_free_freightNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_free_freight not between", value1, value2, "priviledge_free_freight");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIsNull() {
+        public Criteria andPriviledge_sign_inIsNull() {
             addCriterion("priviledge_sign_in is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIsNotNull() {
+        public Criteria andPriviledge_sign_inIsNotNull() {
             addCriterion("priviledge_sign_in is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in =", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inEqualTo(Integer value) {
+            addCriterion("priviledge_sign_in =", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in <>", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inNotEqualTo(Integer value) {
+            addCriterion("priviledge_sign_in <>", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInGreaterThan(Integer value) {
-            addCriterion("priviledge_sign_in >", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inGreaterThan(Integer value) {
+            addCriterion("priviledge_sign_in >", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in >=", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_sign_in >=", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInLessThan(Integer value) {
-            addCriterion("priviledge_sign_in <", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inLessThan(Integer value) {
+            addCriterion("priviledge_sign_in <", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_sign_in <=", value, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_sign_in <=", value, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInIn(List<Integer> values) {
-            addCriterion("priviledge_sign_in in", values, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inIn(List<Integer> values) {
+            addCriterion("priviledge_sign_in in", values, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotIn(List<Integer> values) {
-            addCriterion("priviledge_sign_in not in", values, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inNotIn(List<Integer> values) {
+            addCriterion("priviledge_sign_in not in", values, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_sign_in between", value1, value2, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_sign_in between", value1, value2, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeSignInNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_sign_in not between", value1, value2, "priviledgeSignIn");
+        public Criteria andPriviledge_sign_inNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_sign_in not between", value1, value2, "priviledge_sign_in");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIsNull() {
+        public Criteria andPriviledge_commentIsNull() {
             addCriterion("priviledge_comment is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIsNotNull() {
+        public Criteria andPriviledge_commentIsNotNull() {
             addCriterion("priviledge_comment is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentEqualTo(Integer value) {
-            addCriterion("priviledge_comment =", value, "priviledgeComment");
+        public Criteria andPriviledge_commentEqualTo(Integer value) {
+            addCriterion("priviledge_comment =", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotEqualTo(Integer value) {
-            addCriterion("priviledge_comment <>", value, "priviledgeComment");
+        public Criteria andPriviledge_commentNotEqualTo(Integer value) {
+            addCriterion("priviledge_comment <>", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentGreaterThan(Integer value) {
-            addCriterion("priviledge_comment >", value, "priviledgeComment");
+        public Criteria andPriviledge_commentGreaterThan(Integer value) {
+            addCriterion("priviledge_comment >", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_comment >=", value, "priviledgeComment");
+        public Criteria andPriviledge_commentGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_comment >=", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentLessThan(Integer value) {
-            addCriterion("priviledge_comment <", value, "priviledgeComment");
+        public Criteria andPriviledge_commentLessThan(Integer value) {
+            addCriterion("priviledge_comment <", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_comment <=", value, "priviledgeComment");
+        public Criteria andPriviledge_commentLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_comment <=", value, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentIn(List<Integer> values) {
-            addCriterion("priviledge_comment in", values, "priviledgeComment");
+        public Criteria andPriviledge_commentIn(List<Integer> values) {
+            addCriterion("priviledge_comment in", values, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotIn(List<Integer> values) {
-            addCriterion("priviledge_comment not in", values, "priviledgeComment");
+        public Criteria andPriviledge_commentNotIn(List<Integer> values) {
+            addCriterion("priviledge_comment not in", values, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_comment between", value1, value2, "priviledgeComment");
+        public Criteria andPriviledge_commentBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_comment between", value1, value2, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeCommentNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_comment not between", value1, value2, "priviledgeComment");
+        public Criteria andPriviledge_commentNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_comment not between", value1, value2, "priviledge_comment");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIsNull() {
+        public Criteria andPriviledge_promotionIsNull() {
             addCriterion("priviledge_promotion is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIsNotNull() {
+        public Criteria andPriviledge_promotionIsNotNull() {
             addCriterion("priviledge_promotion is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionEqualTo(Integer value) {
-            addCriterion("priviledge_promotion =", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionEqualTo(Integer value) {
+            addCriterion("priviledge_promotion =", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotEqualTo(Integer value) {
-            addCriterion("priviledge_promotion <>", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionNotEqualTo(Integer value) {
+            addCriterion("priviledge_promotion <>", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionGreaterThan(Integer value) {
-            addCriterion("priviledge_promotion >", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionGreaterThan(Integer value) {
+            addCriterion("priviledge_promotion >", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_promotion >=", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_promotion >=", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionLessThan(Integer value) {
-            addCriterion("priviledge_promotion <", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionLessThan(Integer value) {
+            addCriterion("priviledge_promotion <", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_promotion <=", value, "priviledgePromotion");
+        public Criteria andPriviledge_promotionLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_promotion <=", value, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionIn(List<Integer> values) {
-            addCriterion("priviledge_promotion in", values, "priviledgePromotion");
+        public Criteria andPriviledge_promotionIn(List<Integer> values) {
+            addCriterion("priviledge_promotion in", values, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotIn(List<Integer> values) {
-            addCriterion("priviledge_promotion not in", values, "priviledgePromotion");
+        public Criteria andPriviledge_promotionNotIn(List<Integer> values) {
+            addCriterion("priviledge_promotion not in", values, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_promotion between", value1, value2, "priviledgePromotion");
+        public Criteria andPriviledge_promotionBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_promotion between", value1, value2, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgePromotionNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_promotion not between", value1, value2, "priviledgePromotion");
+        public Criteria andPriviledge_promotionNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_promotion not between", value1, value2, "priviledge_promotion");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIsNull() {
+        public Criteria andPriviledge_member_priceIsNull() {
             addCriterion("priviledge_member_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIsNotNull() {
+        public Criteria andPriviledge_member_priceIsNotNull() {
             addCriterion("priviledge_member_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceEqualTo(Integer value) {
-            addCriterion("priviledge_member_price =", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceEqualTo(Integer value) {
+            addCriterion("priviledge_member_price =", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotEqualTo(Integer value) {
-            addCriterion("priviledge_member_price <>", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceNotEqualTo(Integer value) {
+            addCriterion("priviledge_member_price <>", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceGreaterThan(Integer value) {
-            addCriterion("priviledge_member_price >", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceGreaterThan(Integer value) {
+            addCriterion("priviledge_member_price >", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_member_price >=", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_member_price >=", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceLessThan(Integer value) {
-            addCriterion("priviledge_member_price <", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceLessThan(Integer value) {
+            addCriterion("priviledge_member_price <", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_member_price <=", value, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_member_price <=", value, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceIn(List<Integer> values) {
-            addCriterion("priviledge_member_price in", values, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceIn(List<Integer> values) {
+            addCriterion("priviledge_member_price in", values, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotIn(List<Integer> values) {
-            addCriterion("priviledge_member_price not in", values, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceNotIn(List<Integer> values) {
+            addCriterion("priviledge_member_price not in", values, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_member_price between", value1, value2, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_member_price between", value1, value2, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeMemberPriceNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_member_price not between", value1, value2, "priviledgeMemberPrice");
+        public Criteria andPriviledge_member_priceNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_member_price not between", value1, value2, "priviledge_member_price");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIsNull() {
+        public Criteria andPriviledge_birthdayIsNull() {
             addCriterion("priviledge_birthday is null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIsNotNull() {
+        public Criteria andPriviledge_birthdayIsNotNull() {
             addCriterion("priviledge_birthday is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayEqualTo(Integer value) {
-            addCriterion("priviledge_birthday =", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayEqualTo(Integer value) {
+            addCriterion("priviledge_birthday =", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotEqualTo(Integer value) {
-            addCriterion("priviledge_birthday <>", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayNotEqualTo(Integer value) {
+            addCriterion("priviledge_birthday <>", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayGreaterThan(Integer value) {
-            addCriterion("priviledge_birthday >", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayGreaterThan(Integer value) {
+            addCriterion("priviledge_birthday >", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayGreaterThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_birthday >=", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayGreaterThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_birthday >=", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayLessThan(Integer value) {
-            addCriterion("priviledge_birthday <", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayLessThan(Integer value) {
+            addCriterion("priviledge_birthday <", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayLessThanOrEqualTo(Integer value) {
-            addCriterion("priviledge_birthday <=", value, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayLessThanOrEqualTo(Integer value) {
+            addCriterion("priviledge_birthday <=", value, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayIn(List<Integer> values) {
-            addCriterion("priviledge_birthday in", values, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayIn(List<Integer> values) {
+            addCriterion("priviledge_birthday in", values, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotIn(List<Integer> values) {
-            addCriterion("priviledge_birthday not in", values, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayNotIn(List<Integer> values) {
+            addCriterion("priviledge_birthday not in", values, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_birthday between", value1, value2, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_birthday between", value1, value2, "priviledge_birthday");
             return (Criteria) this;
         }
 
-        public Criteria andPriviledgeBirthdayNotBetween(Integer value1, Integer value2) {
-            addCriterion("priviledge_birthday not between", value1, value2, "priviledgeBirthday");
+        public Criteria andPriviledge_birthdayNotBetween(Integer value1, Integer value2) {
+            addCriterion("priviledge_birthday not between", value1, value2, "priviledge_birthday");
             return (Criteria) this;
         }
 

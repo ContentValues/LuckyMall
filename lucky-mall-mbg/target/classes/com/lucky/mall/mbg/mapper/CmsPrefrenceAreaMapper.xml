@@ -4,9 +4,9 @@
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsPrefrenceArea">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="sub_title" jdbcType="VARCHAR" property="subTitle" />
+    <result column="sub_title" jdbcType="VARCHAR" property="sub_title" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
-    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="show_status" jdbcType="INTEGER" property="show_status" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.CmsPrefrenceArea">
     <result column="pic" jdbcType="VARBINARY" property="pic" />
@@ -124,30 +124,29 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsPrefrenceArea">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_prefrence_area (name, sub_title, sort, 
-      show_status, pic)
-    values (#{name,jdbcType=VARCHAR}, #{subTitle,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
-      #{showStatus,jdbcType=INTEGER}, #{pic,jdbcType=VARBINARY})
+    insert into cms_prefrence_area (id, name, sub_title, 
+      sort, show_status, pic
+      )
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{sub_title,jdbcType=VARCHAR}, 
+      #{sort,jdbcType=INTEGER}, #{show_status,jdbcType=INTEGER}, #{pic,jdbcType=VARBINARY}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsPrefrenceArea">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_prefrence_area
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="name != null">
         name,
       </if>
-      <if test="subTitle != null">
+      <if test="sub_title != null">
         sub_title,
       </if>
       <if test="sort != null">
         sort,
       </if>
-      <if test="showStatus != null">
+      <if test="show_status != null">
         show_status,
       </if>
       <if test="pic != null">
@@ -155,17 +154,20 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="subTitle != null">
-        #{subTitle,jdbcType=VARCHAR},
+      <if test="sub_title != null">
+        #{sub_title,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
       </if>
-      <if test="showStatus != null">
-        #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        #{show_status,jdbcType=INTEGER},
       </if>
       <if test="pic != null">
         #{pic,jdbcType=VARBINARY},
@@ -187,14 +189,14 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.subTitle != null">
-        sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      <if test="record.sub_title != null">
+        sub_title = #{record.sub_title,jdbcType=VARCHAR},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
       </if>
-      <if test="record.showStatus != null">
-        show_status = #{record.showStatus,jdbcType=INTEGER},
+      <if test="record.show_status != null">
+        show_status = #{record.show_status,jdbcType=INTEGER},
       </if>
       <if test="record.pic != null">
         pic = #{record.pic,jdbcType=VARBINARY},
@@ -208,9 +210,9 @@
     update cms_prefrence_area
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      sub_title = #{record.sub_title,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER},
-      show_status = #{record.showStatus,jdbcType=INTEGER},
+      show_status = #{record.show_status,jdbcType=INTEGER},
       pic = #{record.pic,jdbcType=VARBINARY}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -220,9 +222,9 @@
     update cms_prefrence_area
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      sub_title = #{record.sub_title,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER},
-      show_status = #{record.showStatus,jdbcType=INTEGER}
+      show_status = #{record.show_status,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -233,14 +235,14 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="subTitle != null">
-        sub_title = #{subTitle,jdbcType=VARCHAR},
+      <if test="sub_title != null">
+        sub_title = #{sub_title,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
       </if>
-      <if test="showStatus != null">
-        show_status = #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        show_status = #{show_status,jdbcType=INTEGER},
       </if>
       <if test="pic != null">
         pic = #{pic,jdbcType=VARBINARY},
@@ -251,18 +253,18 @@
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.CmsPrefrenceArea">
     update cms_prefrence_area
     set name = #{name,jdbcType=VARCHAR},
-      sub_title = #{subTitle,jdbcType=VARCHAR},
+      sub_title = #{sub_title,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER},
-      show_status = #{showStatus,jdbcType=INTEGER},
+      show_status = #{show_status,jdbcType=INTEGER},
       pic = #{pic,jdbcType=VARBINARY}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.CmsPrefrenceArea">
     update cms_prefrence_area
     set name = #{name,jdbcType=VARCHAR},
-      sub_title = #{subTitle,jdbcType=VARCHAR},
+      sub_title = #{sub_title,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER},
-      show_status = #{showStatus,jdbcType=INTEGER}
+      show_status = #{show_status,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

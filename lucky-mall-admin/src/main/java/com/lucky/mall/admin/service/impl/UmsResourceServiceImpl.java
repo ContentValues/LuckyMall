@@ -25,7 +25,7 @@ public class UmsResourceServiceImpl implements UmsResourceService {
     private UmsAdminCacheService adminCacheService;
     @Override
     public int create(UmsResource umsResource) {
-        umsResource.setCreateTime(new Date());
+        umsResource.setCreate_time(new Date());
         return resourceMapper.insert(umsResource);
     }
 
@@ -55,7 +55,7 @@ public class UmsResourceServiceImpl implements UmsResourceService {
         UmsResourceExample example = new UmsResourceExample();
         UmsResourceExample.Criteria criteria = example.createCriteria();
         if(categoryId!=null){
-            criteria.andCategoryIdEqualTo(categoryId);
+            criteria.andCategory_idEqualTo(categoryId);
         }
         if(StrUtil.isNotEmpty(nameKeyword)){
             criteria.andNameLike('%'+nameKeyword+'%');

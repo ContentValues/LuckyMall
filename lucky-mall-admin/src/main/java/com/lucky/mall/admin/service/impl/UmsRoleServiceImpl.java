@@ -40,8 +40,8 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     private UmsAdminCacheService adminCacheService;
     @Override
     public int create(UmsRole role) {
-        role.setCreateTime(new Date());
-        role.setAdminCount(0);
+        role.setCreate_time(new Date());
+        role.setAdmin_count(0);
         role.setSort(0);
         return roleMapper.insert(role);
     }
@@ -70,14 +70,14 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     public int updatePermission(Long roleId, List<Long> permissionIds) {
         //先删除原有关系
         UmsRolePermissionRelationExample example=new UmsRolePermissionRelationExample();
-        example.createCriteria().andRoleIdEqualTo(roleId);
+        example.createCriteria().andRole_idEqualTo(roleId);
         rolePermissionRelationMapper.deleteByExample(example);
         //批量插入新关系
         List<UmsRolePermissionRelation> relationList = new ArrayList<>();
         for (Long permissionId : permissionIds) {
             UmsRolePermissionRelation relation = new UmsRolePermissionRelation();
-            relation.setRoleId(roleId);
-            relation.setPermissionId(permissionId);
+            relation.setRole_id(roleId);
+            relation.setPermission_id(permissionId);
             relationList.add(relation);
         }
         return rolePermissionRelationDao.insertList(relationList);
@@ -117,13 +117,13 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     public int allocMenu(Long roleId, List<Long> menuIds) {
         //先删除原有关系
         UmsRoleMenuRelationExample example=new UmsRoleMenuRelationExample();
-        example.createCriteria().andRoleIdEqualTo(roleId);
+        example.createCriteria().andRole_idEqualTo(roleId);
         roleMenuRelationMapper.deleteByExample(example);
         //批量插入新关系
         for (Long menuId : menuIds) {
             UmsRoleMenuRelation relation = new UmsRoleMenuRelation();
-            relation.setRoleId(roleId);
-            relation.setMenuId(menuId);
+            relation.setRole_id(roleId);
+            relation.setMenu_id(menuId);
             roleMenuRelationMapper.insert(relation);
         }
         return menuIds.size();
@@ -133,13 +133,13 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     public int allocResource(Long roleId, List<Long> resourceIds) {
         //先删除原有关系
         UmsRoleResourceRelationExample example=new UmsRoleResourceRelationExample();
-        example.createCriteria().andRoleIdEqualTo(roleId);
+        example.createCriteria().andRole_idEqualTo(roleId);
         roleResourceRelationMapper.deleteByExample(example);
         //批量插入新关系
         for (Long resourceId : resourceIds) {
             UmsRoleResourceRelation relation = new UmsRoleResourceRelation();
-            relation.setRoleId(roleId);
-            relation.setResourceId(resourceId);
+            relation.setRole_id(roleId);
+            relation.setResource_id(resourceId);
             roleResourceRelationMapper.insert(relation);
         }
         adminCacheService.delResourceListByRole(roleId);

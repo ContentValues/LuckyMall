@@ -3,20 +3,20 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.CmsSubjectMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsSubject">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="category_id" jdbcType="BIGINT" property="category_id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
-    <result column="product_count" jdbcType="INTEGER" property="productCount" />
-    <result column="recommend_status" jdbcType="INTEGER" property="recommendStatus" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="collect_count" jdbcType="INTEGER" property="collectCount" />
-    <result column="read_count" jdbcType="INTEGER" property="readCount" />
-    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
-    <result column="album_pics" jdbcType="VARCHAR" property="albumPics" />
+    <result column="product_count" jdbcType="INTEGER" property="product_count" />
+    <result column="recommend_status" jdbcType="INTEGER" property="recommend_status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="collect_count" jdbcType="INTEGER" property="collect_count" />
+    <result column="read_count" jdbcType="INTEGER" property="read_count" />
+    <result column="comment_count" jdbcType="INTEGER" property="comment_count" />
+    <result column="album_pics" jdbcType="VARCHAR" property="album_pics" />
     <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
-    <result column="forward_count" jdbcType="INTEGER" property="forwardCount" />
-    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="show_status" jdbcType="INTEGER" property="show_status" />
+    <result column="forward_count" jdbcType="INTEGER" property="forward_count" />
+    <result column="category_name" jdbcType="VARCHAR" property="category_name" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.CmsSubject">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
@@ -135,29 +135,26 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsSubject">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_subject (category_id, title, pic, 
-      product_count, recommend_status, create_time, 
-      collect_count, read_count, comment_count, 
-      album_pics, description, show_status, 
-      forward_count, category_name, content
-      )
-    values (#{categoryId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, 
-      #{productCount,jdbcType=INTEGER}, #{recommendStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{collectCount,jdbcType=INTEGER}, #{readCount,jdbcType=INTEGER}, #{commentCount,jdbcType=INTEGER}, 
-      #{albumPics,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{showStatus,jdbcType=INTEGER}, 
-      #{forwardCount,jdbcType=INTEGER}, #{categoryName,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
-      )
+    insert into cms_subject (id, category_id, title, 
+      pic, product_count, recommend_status, 
+      create_time, collect_count, read_count, 
+      comment_count, album_pics, description, 
+      show_status, forward_count, category_name, 
+      content)
+    values (#{id,jdbcType=BIGINT}, #{category_id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
+      #{pic,jdbcType=VARCHAR}, #{product_count,jdbcType=INTEGER}, #{recommend_status,jdbcType=INTEGER}, 
+      #{create_time,jdbcType=TIMESTAMP}, #{collect_count,jdbcType=INTEGER}, #{read_count,jdbcType=INTEGER}, 
+      #{comment_count,jdbcType=INTEGER}, #{album_pics,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{show_status,jdbcType=INTEGER}, #{forward_count,jdbcType=INTEGER}, #{category_name,jdbcType=VARCHAR}, 
+      #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsSubject">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_subject
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="categoryId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="category_id != null">
         category_id,
       </if>
       <if test="title != null">
@@ -166,37 +163,37 @@
       <if test="pic != null">
         pic,
       </if>
-      <if test="productCount != null">
+      <if test="product_count != null">
         product_count,
       </if>
-      <if test="recommendStatus != null">
+      <if test="recommend_status != null">
         recommend_status,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
-      <if test="collectCount != null">
+      <if test="collect_count != null">
         collect_count,
       </if>
-      <if test="readCount != null">
+      <if test="read_count != null">
         read_count,
       </if>
-      <if test="commentCount != null">
+      <if test="comment_count != null">
         comment_count,
       </if>
-      <if test="albumPics != null">
+      <if test="album_pics != null">
         album_pics,
       </if>
       <if test="description != null">
         description,
       </if>
-      <if test="showStatus != null">
+      <if test="show_status != null">
         show_status,
       </if>
-      <if test="forwardCount != null">
+      <if test="forward_count != null">
         forward_count,
       </if>
-      <if test="categoryName != null">
+      <if test="category_name != null">
         category_name,
       </if>
       <if test="content != null">
@@ -204,8 +201,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="categoryId != null">
-        #{categoryId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="category_id != null">
+        #{category_id,jdbcType=BIGINT},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -213,38 +213,38 @@
       <if test="pic != null">
         #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="productCount != null">
-        #{productCount,jdbcType=INTEGER},
+      <if test="product_count != null">
+        #{product_count,jdbcType=INTEGER},
       </if>
-      <if test="recommendStatus != null">
-        #{recommendStatus,jdbcType=INTEGER},
+      <if test="recommend_status != null">
+        #{recommend_status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="collectCount != null">
-        #{collectCount,jdbcType=INTEGER},
+      <if test="collect_count != null">
+        #{collect_count,jdbcType=INTEGER},
       </if>
-      <if test="readCount != null">
-        #{readCount,jdbcType=INTEGER},
+      <if test="read_count != null">
+        #{read_count,jdbcType=INTEGER},
       </if>
-      <if test="commentCount != null">
-        #{commentCount,jdbcType=INTEGER},
+      <if test="comment_count != null">
+        #{comment_count,jdbcType=INTEGER},
       </if>
-      <if test="albumPics != null">
-        #{albumPics,jdbcType=VARCHAR},
+      <if test="album_pics != null">
+        #{album_pics,jdbcType=VARCHAR},
       </if>
       <if test="description != null">
         #{description,jdbcType=VARCHAR},
       </if>
-      <if test="showStatus != null">
-        #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        #{show_status,jdbcType=INTEGER},
       </if>
-      <if test="forwardCount != null">
-        #{forwardCount,jdbcType=INTEGER},
+      <if test="forward_count != null">
+        #{forward_count,jdbcType=INTEGER},
       </if>
-      <if test="categoryName != null">
-        #{categoryName,jdbcType=VARCHAR},
+      <if test="category_name != null">
+        #{category_name,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
@@ -263,8 +263,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.categoryId != null">
-        category_id = #{record.categoryId,jdbcType=BIGINT},
+      <if test="record.category_id != null">
+        category_id = #{record.category_id,jdbcType=BIGINT},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
@@ -272,38 +272,38 @@
       <if test="record.pic != null">
         pic = #{record.pic,jdbcType=VARCHAR},
       </if>
-      <if test="record.productCount != null">
-        product_count = #{record.productCount,jdbcType=INTEGER},
+      <if test="record.product_count != null">
+        product_count = #{record.product_count,jdbcType=INTEGER},
       </if>
-      <if test="record.recommendStatus != null">
-        recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
+      <if test="record.recommend_status != null">
+        recommend_status = #{record.recommend_status,jdbcType=INTEGER},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.collectCount != null">
-        collect_count = #{record.collectCount,jdbcType=INTEGER},
+      <if test="record.collect_count != null">
+        collect_count = #{record.collect_count,jdbcType=INTEGER},
       </if>
-      <if test="record.readCount != null">
-        read_count = #{record.readCount,jdbcType=INTEGER},
+      <if test="record.read_count != null">
+        read_count = #{record.read_count,jdbcType=INTEGER},
       </if>
-      <if test="record.commentCount != null">
-        comment_count = #{record.commentCount,jdbcType=INTEGER},
+      <if test="record.comment_count != null">
+        comment_count = #{record.comment_count,jdbcType=INTEGER},
       </if>
-      <if test="record.albumPics != null">
-        album_pics = #{record.albumPics,jdbcType=VARCHAR},
+      <if test="record.album_pics != null">
+        album_pics = #{record.album_pics,jdbcType=VARCHAR},
       </if>
       <if test="record.description != null">
         description = #{record.description,jdbcType=VARCHAR},
       </if>
-      <if test="record.showStatus != null">
-        show_status = #{record.showStatus,jdbcType=INTEGER},
+      <if test="record.show_status != null">
+        show_status = #{record.show_status,jdbcType=INTEGER},
       </if>
-      <if test="record.forwardCount != null">
-        forward_count = #{record.forwardCount,jdbcType=INTEGER},
+      <if test="record.forward_count != null">
+        forward_count = #{record.forward_count,jdbcType=INTEGER},
       </if>
-      <if test="record.categoryName != null">
-        category_name = #{record.categoryName,jdbcType=VARCHAR},
+      <if test="record.category_name != null">
+        category_name = #{record.category_name,jdbcType=VARCHAR},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=LONGVARCHAR},
@@ -316,20 +316,20 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update cms_subject
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.categoryId,jdbcType=BIGINT},
+      category_id = #{record.category_id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
       pic = #{record.pic,jdbcType=VARCHAR},
-      product_count = #{record.productCount,jdbcType=INTEGER},
-      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      collect_count = #{record.collectCount,jdbcType=INTEGER},
-      read_count = #{record.readCount,jdbcType=INTEGER},
-      comment_count = #{record.commentCount,jdbcType=INTEGER},
-      album_pics = #{record.albumPics,jdbcType=VARCHAR},
+      product_count = #{record.product_count,jdbcType=INTEGER},
+      recommend_status = #{record.recommend_status,jdbcType=INTEGER},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      collect_count = #{record.collect_count,jdbcType=INTEGER},
+      read_count = #{record.read_count,jdbcType=INTEGER},
+      comment_count = #{record.comment_count,jdbcType=INTEGER},
+      album_pics = #{record.album_pics,jdbcType=VARCHAR},
       description = #{record.description,jdbcType=VARCHAR},
-      show_status = #{record.showStatus,jdbcType=INTEGER},
-      forward_count = #{record.forwardCount,jdbcType=INTEGER},
-      category_name = #{record.categoryName,jdbcType=VARCHAR},
+      show_status = #{record.show_status,jdbcType=INTEGER},
+      forward_count = #{record.forward_count,jdbcType=INTEGER},
+      category_name = #{record.category_name,jdbcType=VARCHAR},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -338,20 +338,20 @@
   <update id="updateByExample" parameterType="map">
     update cms_subject
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.categoryId,jdbcType=BIGINT},
+      category_id = #{record.category_id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
       pic = #{record.pic,jdbcType=VARCHAR},
-      product_count = #{record.productCount,jdbcType=INTEGER},
-      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      collect_count = #{record.collectCount,jdbcType=INTEGER},
-      read_count = #{record.readCount,jdbcType=INTEGER},
-      comment_count = #{record.commentCount,jdbcType=INTEGER},
-      album_pics = #{record.albumPics,jdbcType=VARCHAR},
+      product_count = #{record.product_count,jdbcType=INTEGER},
+      recommend_status = #{record.recommend_status,jdbcType=INTEGER},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      collect_count = #{record.collect_count,jdbcType=INTEGER},
+      read_count = #{record.read_count,jdbcType=INTEGER},
+      comment_count = #{record.comment_count,jdbcType=INTEGER},
+      album_pics = #{record.album_pics,jdbcType=VARCHAR},
       description = #{record.description,jdbcType=VARCHAR},
-      show_status = #{record.showStatus,jdbcType=INTEGER},
-      forward_count = #{record.forwardCount,jdbcType=INTEGER},
-      category_name = #{record.categoryName,jdbcType=VARCHAR}
+      show_status = #{record.show_status,jdbcType=INTEGER},
+      forward_count = #{record.forward_count,jdbcType=INTEGER},
+      category_name = #{record.category_name,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -359,8 +359,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.CmsSubject">
     update cms_subject
     <set>
-      <if test="categoryId != null">
-        category_id = #{categoryId,jdbcType=BIGINT},
+      <if test="category_id != null">
+        category_id = #{category_id,jdbcType=BIGINT},
       </if>
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
@@ -368,38 +368,38 @@
       <if test="pic != null">
         pic = #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="productCount != null">
-        product_count = #{productCount,jdbcType=INTEGER},
+      <if test="product_count != null">
+        product_count = #{product_count,jdbcType=INTEGER},
       </if>
-      <if test="recommendStatus != null">
-        recommend_status = #{recommendStatus,jdbcType=INTEGER},
+      <if test="recommend_status != null">
+        recommend_status = #{recommend_status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="collectCount != null">
-        collect_count = #{collectCount,jdbcType=INTEGER},
+      <if test="collect_count != null">
+        collect_count = #{collect_count,jdbcType=INTEGER},
       </if>
-      <if test="readCount != null">
-        read_count = #{readCount,jdbcType=INTEGER},
+      <if test="read_count != null">
+        read_count = #{read_count,jdbcType=INTEGER},
       </if>
-      <if test="commentCount != null">
-        comment_count = #{commentCount,jdbcType=INTEGER},
+      <if test="comment_count != null">
+        comment_count = #{comment_count,jdbcType=INTEGER},
       </if>
-      <if test="albumPics != null">
-        album_pics = #{albumPics,jdbcType=VARCHAR},
+      <if test="album_pics != null">
+        album_pics = #{album_pics,jdbcType=VARCHAR},
       </if>
       <if test="description != null">
         description = #{description,jdbcType=VARCHAR},
       </if>
-      <if test="showStatus != null">
-        show_status = #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        show_status = #{show_status,jdbcType=INTEGER},
       </if>
-      <if test="forwardCount != null">
-        forward_count = #{forwardCount,jdbcType=INTEGER},
+      <if test="forward_count != null">
+        forward_count = #{forward_count,jdbcType=INTEGER},
       </if>
-      <if test="categoryName != null">
-        category_name = #{categoryName,jdbcType=VARCHAR},
+      <if test="category_name != null">
+        category_name = #{category_name,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=LONGVARCHAR},
@@ -409,39 +409,39 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.CmsSubject">
     update cms_subject
-    set category_id = #{categoryId,jdbcType=BIGINT},
+    set category_id = #{category_id,jdbcType=BIGINT},
       title = #{title,jdbcType=VARCHAR},
       pic = #{pic,jdbcType=VARCHAR},
-      product_count = #{productCount,jdbcType=INTEGER},
-      recommend_status = #{recommendStatus,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      collect_count = #{collectCount,jdbcType=INTEGER},
-      read_count = #{readCount,jdbcType=INTEGER},
-      comment_count = #{commentCount,jdbcType=INTEGER},
-      album_pics = #{albumPics,jdbcType=VARCHAR},
+      product_count = #{product_count,jdbcType=INTEGER},
+      recommend_status = #{recommend_status,jdbcType=INTEGER},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      collect_count = #{collect_count,jdbcType=INTEGER},
+      read_count = #{read_count,jdbcType=INTEGER},
+      comment_count = #{comment_count,jdbcType=INTEGER},
+      album_pics = #{album_pics,jdbcType=VARCHAR},
       description = #{description,jdbcType=VARCHAR},
-      show_status = #{showStatus,jdbcType=INTEGER},
-      forward_count = #{forwardCount,jdbcType=INTEGER},
-      category_name = #{categoryName,jdbcType=VARCHAR},
+      show_status = #{show_status,jdbcType=INTEGER},
+      forward_count = #{forward_count,jdbcType=INTEGER},
+      category_name = #{category_name,jdbcType=VARCHAR},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.CmsSubject">
     update cms_subject
-    set category_id = #{categoryId,jdbcType=BIGINT},
+    set category_id = #{category_id,jdbcType=BIGINT},
       title = #{title,jdbcType=VARCHAR},
       pic = #{pic,jdbcType=VARCHAR},
-      product_count = #{productCount,jdbcType=INTEGER},
-      recommend_status = #{recommendStatus,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      collect_count = #{collectCount,jdbcType=INTEGER},
-      read_count = #{readCount,jdbcType=INTEGER},
-      comment_count = #{commentCount,jdbcType=INTEGER},
-      album_pics = #{albumPics,jdbcType=VARCHAR},
+      product_count = #{product_count,jdbcType=INTEGER},
+      recommend_status = #{recommend_status,jdbcType=INTEGER},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      collect_count = #{collect_count,jdbcType=INTEGER},
+      read_count = #{read_count,jdbcType=INTEGER},
+      comment_count = #{comment_count,jdbcType=INTEGER},
+      album_pics = #{album_pics,jdbcType=VARCHAR},
       description = #{description,jdbcType=VARCHAR},
-      show_status = #{showStatus,jdbcType=INTEGER},
-      forward_count = #{forwardCount,jdbcType=INTEGER},
-      category_name = #{categoryName,jdbcType=VARCHAR}
+      show_status = #{show_status,jdbcType=INTEGER},
+      forward_count = #{forward_count,jdbcType=INTEGER},
+      category_name = #{category_name,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

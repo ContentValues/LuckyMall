@@ -165,303 +165,303 @@ public class UmsMemberRuleSettingExample {
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayIsNull() {
+        public Criteria andContinue_sign_dayIsNull() {
             addCriterion("continue_sign_day is null");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayIsNotNull() {
+        public Criteria andContinue_sign_dayIsNotNull() {
             addCriterion("continue_sign_day is not null");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayEqualTo(Integer value) {
-            addCriterion("continue_sign_day =", value, "continueSignDay");
+        public Criteria andContinue_sign_dayEqualTo(Integer value) {
+            addCriterion("continue_sign_day =", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayNotEqualTo(Integer value) {
-            addCriterion("continue_sign_day <>", value, "continueSignDay");
+        public Criteria andContinue_sign_dayNotEqualTo(Integer value) {
+            addCriterion("continue_sign_day <>", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayGreaterThan(Integer value) {
-            addCriterion("continue_sign_day >", value, "continueSignDay");
+        public Criteria andContinue_sign_dayGreaterThan(Integer value) {
+            addCriterion("continue_sign_day >", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayGreaterThanOrEqualTo(Integer value) {
-            addCriterion("continue_sign_day >=", value, "continueSignDay");
+        public Criteria andContinue_sign_dayGreaterThanOrEqualTo(Integer value) {
+            addCriterion("continue_sign_day >=", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayLessThan(Integer value) {
-            addCriterion("continue_sign_day <", value, "continueSignDay");
+        public Criteria andContinue_sign_dayLessThan(Integer value) {
+            addCriterion("continue_sign_day <", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayLessThanOrEqualTo(Integer value) {
-            addCriterion("continue_sign_day <=", value, "continueSignDay");
+        public Criteria andContinue_sign_dayLessThanOrEqualTo(Integer value) {
+            addCriterion("continue_sign_day <=", value, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayIn(List<Integer> values) {
-            addCriterion("continue_sign_day in", values, "continueSignDay");
+        public Criteria andContinue_sign_dayIn(List<Integer> values) {
+            addCriterion("continue_sign_day in", values, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayNotIn(List<Integer> values) {
-            addCriterion("continue_sign_day not in", values, "continueSignDay");
+        public Criteria andContinue_sign_dayNotIn(List<Integer> values) {
+            addCriterion("continue_sign_day not in", values, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayBetween(Integer value1, Integer value2) {
-            addCriterion("continue_sign_day between", value1, value2, "continueSignDay");
+        public Criteria andContinue_sign_dayBetween(Integer value1, Integer value2) {
+            addCriterion("continue_sign_day between", value1, value2, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignDayNotBetween(Integer value1, Integer value2) {
-            addCriterion("continue_sign_day not between", value1, value2, "continueSignDay");
+        public Criteria andContinue_sign_dayNotBetween(Integer value1, Integer value2) {
+            addCriterion("continue_sign_day not between", value1, value2, "continue_sign_day");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointIsNull() {
+        public Criteria andContinue_sign_pointIsNull() {
             addCriterion("continue_sign_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointIsNotNull() {
+        public Criteria andContinue_sign_pointIsNotNull() {
             addCriterion("continue_sign_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointEqualTo(Integer value) {
-            addCriterion("continue_sign_point =", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointEqualTo(Integer value) {
+            addCriterion("continue_sign_point =", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointNotEqualTo(Integer value) {
-            addCriterion("continue_sign_point <>", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointNotEqualTo(Integer value) {
+            addCriterion("continue_sign_point <>", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointGreaterThan(Integer value) {
-            addCriterion("continue_sign_point >", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointGreaterThan(Integer value) {
+            addCriterion("continue_sign_point >", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointGreaterThanOrEqualTo(Integer value) {
-            addCriterion("continue_sign_point >=", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointGreaterThanOrEqualTo(Integer value) {
+            addCriterion("continue_sign_point >=", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointLessThan(Integer value) {
-            addCriterion("continue_sign_point <", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointLessThan(Integer value) {
+            addCriterion("continue_sign_point <", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointLessThanOrEqualTo(Integer value) {
-            addCriterion("continue_sign_point <=", value, "continueSignPoint");
+        public Criteria andContinue_sign_pointLessThanOrEqualTo(Integer value) {
+            addCriterion("continue_sign_point <=", value, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointIn(List<Integer> values) {
-            addCriterion("continue_sign_point in", values, "continueSignPoint");
+        public Criteria andContinue_sign_pointIn(List<Integer> values) {
+            addCriterion("continue_sign_point in", values, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointNotIn(List<Integer> values) {
-            addCriterion("continue_sign_point not in", values, "continueSignPoint");
+        public Criteria andContinue_sign_pointNotIn(List<Integer> values) {
+            addCriterion("continue_sign_point not in", values, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointBetween(Integer value1, Integer value2) {
-            addCriterion("continue_sign_point between", value1, value2, "continueSignPoint");
+        public Criteria andContinue_sign_pointBetween(Integer value1, Integer value2) {
+            addCriterion("continue_sign_point between", value1, value2, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andContinueSignPointNotBetween(Integer value1, Integer value2) {
-            addCriterion("continue_sign_point not between", value1, value2, "continueSignPoint");
+        public Criteria andContinue_sign_pointNotBetween(Integer value1, Integer value2) {
+            addCriterion("continue_sign_point not between", value1, value2, "continue_sign_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointIsNull() {
+        public Criteria andConsume_per_pointIsNull() {
             addCriterion("consume_per_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointIsNotNull() {
+        public Criteria andConsume_per_pointIsNotNull() {
             addCriterion("consume_per_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointEqualTo(BigDecimal value) {
-            addCriterion("consume_per_point =", value, "consumePerPoint");
+        public Criteria andConsume_per_pointEqualTo(BigDecimal value) {
+            addCriterion("consume_per_point =", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointNotEqualTo(BigDecimal value) {
-            addCriterion("consume_per_point <>", value, "consumePerPoint");
+        public Criteria andConsume_per_pointNotEqualTo(BigDecimal value) {
+            addCriterion("consume_per_point <>", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointGreaterThan(BigDecimal value) {
-            addCriterion("consume_per_point >", value, "consumePerPoint");
+        public Criteria andConsume_per_pointGreaterThan(BigDecimal value) {
+            addCriterion("consume_per_point >", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("consume_per_point >=", value, "consumePerPoint");
+        public Criteria andConsume_per_pointGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("consume_per_point >=", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointLessThan(BigDecimal value) {
-            addCriterion("consume_per_point <", value, "consumePerPoint");
+        public Criteria andConsume_per_pointLessThan(BigDecimal value) {
+            addCriterion("consume_per_point <", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("consume_per_point <=", value, "consumePerPoint");
+        public Criteria andConsume_per_pointLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("consume_per_point <=", value, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointIn(List<BigDecimal> values) {
-            addCriterion("consume_per_point in", values, "consumePerPoint");
+        public Criteria andConsume_per_pointIn(List<BigDecimal> values) {
+            addCriterion("consume_per_point in", values, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointNotIn(List<BigDecimal> values) {
-            addCriterion("consume_per_point not in", values, "consumePerPoint");
+        public Criteria andConsume_per_pointNotIn(List<BigDecimal> values) {
+            addCriterion("consume_per_point not in", values, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("consume_per_point between", value1, value2, "consumePerPoint");
+        public Criteria andConsume_per_pointBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("consume_per_point between", value1, value2, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andConsumePerPointNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("consume_per_point not between", value1, value2, "consumePerPoint");
+        public Criteria andConsume_per_pointNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("consume_per_point not between", value1, value2, "consume_per_point");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountIsNull() {
+        public Criteria andLow_order_amountIsNull() {
             addCriterion("low_order_amount is null");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountIsNotNull() {
+        public Criteria andLow_order_amountIsNotNull() {
             addCriterion("low_order_amount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountEqualTo(BigDecimal value) {
-            addCriterion("low_order_amount =", value, "lowOrderAmount");
+        public Criteria andLow_order_amountEqualTo(BigDecimal value) {
+            addCriterion("low_order_amount =", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountNotEqualTo(BigDecimal value) {
-            addCriterion("low_order_amount <>", value, "lowOrderAmount");
+        public Criteria andLow_order_amountNotEqualTo(BigDecimal value) {
+            addCriterion("low_order_amount <>", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountGreaterThan(BigDecimal value) {
-            addCriterion("low_order_amount >", value, "lowOrderAmount");
+        public Criteria andLow_order_amountGreaterThan(BigDecimal value) {
+            addCriterion("low_order_amount >", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("low_order_amount >=", value, "lowOrderAmount");
+        public Criteria andLow_order_amountGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("low_order_amount >=", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountLessThan(BigDecimal value) {
-            addCriterion("low_order_amount <", value, "lowOrderAmount");
+        public Criteria andLow_order_amountLessThan(BigDecimal value) {
+            addCriterion("low_order_amount <", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("low_order_amount <=", value, "lowOrderAmount");
+        public Criteria andLow_order_amountLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("low_order_amount <=", value, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountIn(List<BigDecimal> values) {
-            addCriterion("low_order_amount in", values, "lowOrderAmount");
+        public Criteria andLow_order_amountIn(List<BigDecimal> values) {
+            addCriterion("low_order_amount in", values, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountNotIn(List<BigDecimal> values) {
-            addCriterion("low_order_amount not in", values, "lowOrderAmount");
+        public Criteria andLow_order_amountNotIn(List<BigDecimal> values) {
+            addCriterion("low_order_amount not in", values, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("low_order_amount between", value1, value2, "lowOrderAmount");
+        public Criteria andLow_order_amountBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("low_order_amount between", value1, value2, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andLowOrderAmountNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("low_order_amount not between", value1, value2, "lowOrderAmount");
+        public Criteria andLow_order_amountNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("low_order_amount not between", value1, value2, "low_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderIsNull() {
+        public Criteria andMax_point_per_orderIsNull() {
             addCriterion("max_point_per_order is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderIsNotNull() {
+        public Criteria andMax_point_per_orderIsNotNull() {
             addCriterion("max_point_per_order is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderEqualTo(Integer value) {
-            addCriterion("max_point_per_order =", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderEqualTo(Integer value) {
+            addCriterion("max_point_per_order =", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderNotEqualTo(Integer value) {
-            addCriterion("max_point_per_order <>", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderNotEqualTo(Integer value) {
+            addCriterion("max_point_per_order <>", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderGreaterThan(Integer value) {
-            addCriterion("max_point_per_order >", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderGreaterThan(Integer value) {
+            addCriterion("max_point_per_order >", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderGreaterThanOrEqualTo(Integer value) {
-            addCriterion("max_point_per_order >=", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderGreaterThanOrEqualTo(Integer value) {
+            addCriterion("max_point_per_order >=", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderLessThan(Integer value) {
-            addCriterion("max_point_per_order <", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderLessThan(Integer value) {
+            addCriterion("max_point_per_order <", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderLessThanOrEqualTo(Integer value) {
-            addCriterion("max_point_per_order <=", value, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderLessThanOrEqualTo(Integer value) {
+            addCriterion("max_point_per_order <=", value, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderIn(List<Integer> values) {
-            addCriterion("max_point_per_order in", values, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderIn(List<Integer> values) {
+            addCriterion("max_point_per_order in", values, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderNotIn(List<Integer> values) {
-            addCriterion("max_point_per_order not in", values, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderNotIn(List<Integer> values) {
+            addCriterion("max_point_per_order not in", values, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderBetween(Integer value1, Integer value2) {
-            addCriterion("max_point_per_order between", value1, value2, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderBetween(Integer value1, Integer value2) {
+            addCriterion("max_point_per_order between", value1, value2, "max_point_per_order");
             return (Criteria) this;
         }
 
-        public Criteria andMaxPointPerOrderNotBetween(Integer value1, Integer value2) {
-            addCriterion("max_point_per_order not between", value1, value2, "maxPointPerOrder");
+        public Criteria andMax_point_per_orderNotBetween(Integer value1, Integer value2) {
+            addCriterion("max_point_per_order not between", value1, value2, "max_point_per_order");
             return (Criteria) this;
         }
 

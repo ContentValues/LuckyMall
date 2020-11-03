@@ -164,123 +164,123 @@ public class UmsRoleResourceRelationExample {
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdIsNull() {
+        public Criteria andRole_idIsNull() {
             addCriterion("role_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdIsNotNull() {
+        public Criteria andRole_idIsNotNull() {
             addCriterion("role_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdEqualTo(Long value) {
-            addCriterion("role_id =", value, "roleId");
+        public Criteria andRole_idEqualTo(Long value) {
+            addCriterion("role_id =", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdNotEqualTo(Long value) {
-            addCriterion("role_id <>", value, "roleId");
+        public Criteria andRole_idNotEqualTo(Long value) {
+            addCriterion("role_id <>", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdGreaterThan(Long value) {
-            addCriterion("role_id >", value, "roleId");
+        public Criteria andRole_idGreaterThan(Long value) {
+            addCriterion("role_id >", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("role_id >=", value, "roleId");
+        public Criteria andRole_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("role_id >=", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdLessThan(Long value) {
-            addCriterion("role_id <", value, "roleId");
+        public Criteria andRole_idLessThan(Long value) {
+            addCriterion("role_id <", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdLessThanOrEqualTo(Long value) {
-            addCriterion("role_id <=", value, "roleId");
+        public Criteria andRole_idLessThanOrEqualTo(Long value) {
+            addCriterion("role_id <=", value, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdIn(List<Long> values) {
-            addCriterion("role_id in", values, "roleId");
+        public Criteria andRole_idIn(List<Long> values) {
+            addCriterion("role_id in", values, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdNotIn(List<Long> values) {
-            addCriterion("role_id not in", values, "roleId");
+        public Criteria andRole_idNotIn(List<Long> values) {
+            addCriterion("role_id not in", values, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdBetween(Long value1, Long value2) {
-            addCriterion("role_id between", value1, value2, "roleId");
+        public Criteria andRole_idBetween(Long value1, Long value2) {
+            addCriterion("role_id between", value1, value2, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andRoleIdNotBetween(Long value1, Long value2) {
-            addCriterion("role_id not between", value1, value2, "roleId");
+        public Criteria andRole_idNotBetween(Long value1, Long value2) {
+            addCriterion("role_id not between", value1, value2, "role_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdIsNull() {
+        public Criteria andResource_idIsNull() {
             addCriterion("resource_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdIsNotNull() {
+        public Criteria andResource_idIsNotNull() {
             addCriterion("resource_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdEqualTo(Long value) {
-            addCriterion("resource_id =", value, "resourceId");
+        public Criteria andResource_idEqualTo(Long value) {
+            addCriterion("resource_id =", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdNotEqualTo(Long value) {
-            addCriterion("resource_id <>", value, "resourceId");
+        public Criteria andResource_idNotEqualTo(Long value) {
+            addCriterion("resource_id <>", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdGreaterThan(Long value) {
-            addCriterion("resource_id >", value, "resourceId");
+        public Criteria andResource_idGreaterThan(Long value) {
+            addCriterion("resource_id >", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("resource_id >=", value, "resourceId");
+        public Criteria andResource_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("resource_id >=", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdLessThan(Long value) {
-            addCriterion("resource_id <", value, "resourceId");
+        public Criteria andResource_idLessThan(Long value) {
+            addCriterion("resource_id <", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdLessThanOrEqualTo(Long value) {
-            addCriterion("resource_id <=", value, "resourceId");
+        public Criteria andResource_idLessThanOrEqualTo(Long value) {
+            addCriterion("resource_id <=", value, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdIn(List<Long> values) {
-            addCriterion("resource_id in", values, "resourceId");
+        public Criteria andResource_idIn(List<Long> values) {
+            addCriterion("resource_id in", values, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdNotIn(List<Long> values) {
-            addCriterion("resource_id not in", values, "resourceId");
+        public Criteria andResource_idNotIn(List<Long> values) {
+            addCriterion("resource_id not in", values, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdBetween(Long value1, Long value2) {
-            addCriterion("resource_id between", value1, value2, "resourceId");
+        public Criteria andResource_idBetween(Long value1, Long value2) {
+            addCriterion("resource_id between", value1, value2, "resource_id");
             return (Criteria) this;
         }
 
-        public Criteria andResourceIdNotBetween(Long value1, Long value2) {
-            addCriterion("resource_id not between", value1, value2, "resourceId");
+        public Criteria andResource_idNotBetween(Long value1, Long value2) {
+            addCriterion("resource_id not between", value1, value2, "resource_id");
             return (Criteria) this;
         }
     }

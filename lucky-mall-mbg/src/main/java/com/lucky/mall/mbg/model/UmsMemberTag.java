@@ -10,10 +10,10 @@ public class UmsMemberTag implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "自动打标签完成订单数量")
-    private Integer finishOrderCount;
+    private Integer finish_order_count;
 
     @ApiModelProperty(value = "自动打标签完成订单金额")
-    private BigDecimal finishOrderAmount;
+    private BigDecimal finish_order_amount;
 
     private static final long serialVersionUID = 1L;
 
@@ -33,20 +33,20 @@ public class UmsMemberTag implements Serializable {
         this.name = name;
     }
 
-    public Integer getFinishOrderCount() {
-        return finishOrderCount;
+    public Integer getFinish_order_count() {
+        return finish_order_count;
     }
 
-    public void setFinishOrderCount(Integer finishOrderCount) {
-        this.finishOrderCount = finishOrderCount;
+    public void setFinish_order_count(Integer finish_order_count) {
+        this.finish_order_count = finish_order_count;
     }
 
-    public BigDecimal getFinishOrderAmount() {
-        return finishOrderAmount;
+    public BigDecimal getFinish_order_amount() {
+        return finish_order_amount;
     }
 
-    public void setFinishOrderAmount(BigDecimal finishOrderAmount) {
-        this.finishOrderAmount = finishOrderAmount;
+    public void setFinish_order_amount(BigDecimal finish_order_amount) {
+        this.finish_order_amount = finish_order_amount;
     }
 
     @Override
@@ -57,8 +57,8 @@ public class UmsMemberTag implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", finishOrderCount=").append(finishOrderCount);
-        sb.append(", finishOrderAmount=").append(finishOrderAmount);
+        sb.append(", finish_order_count=").append(finish_order_count);
+        sb.append(", finish_order_amount=").append(finish_order_amount);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

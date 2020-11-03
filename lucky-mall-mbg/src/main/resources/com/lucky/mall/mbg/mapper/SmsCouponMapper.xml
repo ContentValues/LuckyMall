@@ -8,18 +8,18 @@
     <result column="platform" jdbcType="INTEGER" property="platform" />
     <result column="count" jdbcType="INTEGER" property="count" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
-    <result column="per_limit" jdbcType="INTEGER" property="perLimit" />
-    <result column="min_point" jdbcType="DECIMAL" property="minPoint" />
-    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
-    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
-    <result column="use_type" jdbcType="INTEGER" property="useType" />
+    <result column="per_limit" jdbcType="INTEGER" property="per_limit" />
+    <result column="min_point" jdbcType="DECIMAL" property="min_point" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="start_time" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="end_time" />
+    <result column="use_type" jdbcType="INTEGER" property="use_type" />
     <result column="note" jdbcType="VARCHAR" property="note" />
-    <result column="publish_count" jdbcType="INTEGER" property="publishCount" />
-    <result column="use_count" jdbcType="INTEGER" property="useCount" />
-    <result column="receive_count" jdbcType="INTEGER" property="receiveCount" />
-    <result column="enable_time" jdbcType="TIMESTAMP" property="enableTime" />
+    <result column="publish_count" jdbcType="INTEGER" property="publish_count" />
+    <result column="use_count" jdbcType="INTEGER" property="use_count" />
+    <result column="receive_count" jdbcType="INTEGER" property="receive_count" />
+    <result column="enable_time" jdbcType="TIMESTAMP" property="enable_time" />
     <result column="code" jdbcType="VARCHAR" property="code" />
-    <result column="member_level" jdbcType="INTEGER" property="memberLevel" />
+    <result column="member_level" jdbcType="INTEGER" property="member_level" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -114,28 +114,27 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsCoupon">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into sms_coupon (type, name, platform, 
-      count, amount, per_limit, 
-      min_point, start_time, end_time, 
-      use_type, note, publish_count, 
-      use_count, receive_count, enable_time, 
-      code, member_level)
-    values (#{type,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{platform,jdbcType=INTEGER}, 
-      #{count,jdbcType=INTEGER}, #{amount,jdbcType=DECIMAL}, #{perLimit,jdbcType=INTEGER}, 
-      #{minPoint,jdbcType=DECIMAL}, #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
-      #{useType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, #{publishCount,jdbcType=INTEGER}, 
-      #{useCount,jdbcType=INTEGER}, #{receiveCount,jdbcType=INTEGER}, #{enableTime,jdbcType=TIMESTAMP}, 
-      #{code,jdbcType=VARCHAR}, #{memberLevel,jdbcType=INTEGER})
+    insert into sms_coupon (id, type, name, 
+      platform, count, amount, 
+      per_limit, min_point, start_time, 
+      end_time, use_type, note, 
+      publish_count, use_count, receive_count, 
+      enable_time, code, member_level
+      )
+    values (#{id,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{platform,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, #{amount,jdbcType=DECIMAL}, 
+      #{per_limit,jdbcType=INTEGER}, #{min_point,jdbcType=DECIMAL}, #{start_time,jdbcType=TIMESTAMP}, 
+      #{end_time,jdbcType=TIMESTAMP}, #{use_type,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
+      #{publish_count,jdbcType=INTEGER}, #{use_count,jdbcType=INTEGER}, #{receive_count,jdbcType=INTEGER}, 
+      #{enable_time,jdbcType=TIMESTAMP}, #{code,jdbcType=VARCHAR}, #{member_level,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsCoupon">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into sms_coupon
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="type != null">
         type,
       </if>
@@ -151,44 +150,47 @@
       <if test="amount != null">
         amount,
       </if>
-      <if test="perLimit != null">
+      <if test="per_limit != null">
         per_limit,
       </if>
-      <if test="minPoint != null">
+      <if test="min_point != null">
         min_point,
       </if>
-      <if test="startTime != null">
+      <if test="start_time != null">
         start_time,
       </if>
-      <if test="endTime != null">
+      <if test="end_time != null">
         end_time,
       </if>
-      <if test="useType != null">
+      <if test="use_type != null">
         use_type,
       </if>
       <if test="note != null">
         note,
       </if>
-      <if test="publishCount != null">
+      <if test="publish_count != null">
         publish_count,
       </if>
-      <if test="useCount != null">
+      <if test="use_count != null">
         use_count,
       </if>
-      <if test="receiveCount != null">
+      <if test="receive_count != null">
         receive_count,
       </if>
-      <if test="enableTime != null">
+      <if test="enable_time != null">
         enable_time,
       </if>
       <if test="code != null">
         code,
       </if>
-      <if test="memberLevel != null">
+      <if test="member_level != null">
         member_level,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
       <if test="type != null">
         #{type,jdbcType=INTEGER},
       </if>
@@ -204,41 +206,41 @@
       <if test="amount != null">
         #{amount,jdbcType=DECIMAL},
       </if>
-      <if test="perLimit != null">
-        #{perLimit,jdbcType=INTEGER},
+      <if test="per_limit != null">
+        #{per_limit,jdbcType=INTEGER},
       </if>
-      <if test="minPoint != null">
-        #{minPoint,jdbcType=DECIMAL},
+      <if test="min_point != null">
+        #{min_point,jdbcType=DECIMAL},
       </if>
-      <if test="startTime != null">
-        #{startTime,jdbcType=TIMESTAMP},
+      <if test="start_time != null">
+        #{start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="endTime != null">
-        #{endTime,jdbcType=TIMESTAMP},
+      <if test="end_time != null">
+        #{end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="useType != null">
-        #{useType,jdbcType=INTEGER},
+      <if test="use_type != null">
+        #{use_type,jdbcType=INTEGER},
       </if>
       <if test="note != null">
         #{note,jdbcType=VARCHAR},
       </if>
-      <if test="publishCount != null">
-        #{publishCount,jdbcType=INTEGER},
+      <if test="publish_count != null">
+        #{publish_count,jdbcType=INTEGER},
       </if>
-      <if test="useCount != null">
-        #{useCount,jdbcType=INTEGER},
+      <if test="use_count != null">
+        #{use_count,jdbcType=INTEGER},
       </if>
-      <if test="receiveCount != null">
-        #{receiveCount,jdbcType=INTEGER},
+      <if test="receive_count != null">
+        #{receive_count,jdbcType=INTEGER},
       </if>
-      <if test="enableTime != null">
-        #{enableTime,jdbcType=TIMESTAMP},
+      <if test="enable_time != null">
+        #{enable_time,jdbcType=TIMESTAMP},
       </if>
       <if test="code != null">
         #{code,jdbcType=VARCHAR},
       </if>
-      <if test="memberLevel != null">
-        #{memberLevel,jdbcType=INTEGER},
+      <if test="member_level != null">
+        #{member_level,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -269,41 +271,41 @@
       <if test="record.amount != null">
         amount = #{record.amount,jdbcType=DECIMAL},
       </if>
-      <if test="record.perLimit != null">
-        per_limit = #{record.perLimit,jdbcType=INTEGER},
+      <if test="record.per_limit != null">
+        per_limit = #{record.per_limit,jdbcType=INTEGER},
       </if>
-      <if test="record.minPoint != null">
-        min_point = #{record.minPoint,jdbcType=DECIMAL},
+      <if test="record.min_point != null">
+        min_point = #{record.min_point,jdbcType=DECIMAL},
       </if>
-      <if test="record.startTime != null">
-        start_time = #{record.startTime,jdbcType=TIMESTAMP},
+      <if test="record.start_time != null">
+        start_time = #{record.start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.endTime != null">
-        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      <if test="record.end_time != null">
+        end_time = #{record.end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.useType != null">
-        use_type = #{record.useType,jdbcType=INTEGER},
+      <if test="record.use_type != null">
+        use_type = #{record.use_type,jdbcType=INTEGER},
       </if>
       <if test="record.note != null">
         note = #{record.note,jdbcType=VARCHAR},
       </if>
-      <if test="record.publishCount != null">
-        publish_count = #{record.publishCount,jdbcType=INTEGER},
+      <if test="record.publish_count != null">
+        publish_count = #{record.publish_count,jdbcType=INTEGER},
       </if>
-      <if test="record.useCount != null">
-        use_count = #{record.useCount,jdbcType=INTEGER},
+      <if test="record.use_count != null">
+        use_count = #{record.use_count,jdbcType=INTEGER},
       </if>
-      <if test="record.receiveCount != null">
-        receive_count = #{record.receiveCount,jdbcType=INTEGER},
+      <if test="record.receive_count != null">
+        receive_count = #{record.receive_count,jdbcType=INTEGER},
       </if>
-      <if test="record.enableTime != null">
-        enable_time = #{record.enableTime,jdbcType=TIMESTAMP},
+      <if test="record.enable_time != null">
+        enable_time = #{record.enable_time,jdbcType=TIMESTAMP},
       </if>
       <if test="record.code != null">
         code = #{record.code,jdbcType=VARCHAR},
       </if>
-      <if test="record.memberLevel != null">
-        member_level = #{record.memberLevel,jdbcType=INTEGER},
+      <if test="record.member_level != null">
+        member_level = #{record.member_level,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -318,18 +320,18 @@
       platform = #{record.platform,jdbcType=INTEGER},
       count = #{record.count,jdbcType=INTEGER},
       amount = #{record.amount,jdbcType=DECIMAL},
-      per_limit = #{record.perLimit,jdbcType=INTEGER},
-      min_point = #{record.minPoint,jdbcType=DECIMAL},
-      start_time = #{record.startTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
-      use_type = #{record.useType,jdbcType=INTEGER},
+      per_limit = #{record.per_limit,jdbcType=INTEGER},
+      min_point = #{record.min_point,jdbcType=DECIMAL},
+      start_time = #{record.start_time,jdbcType=TIMESTAMP},
+      end_time = #{record.end_time,jdbcType=TIMESTAMP},
+      use_type = #{record.use_type,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR},
-      publish_count = #{record.publishCount,jdbcType=INTEGER},
-      use_count = #{record.useCount,jdbcType=INTEGER},
-      receive_count = #{record.receiveCount,jdbcType=INTEGER},
-      enable_time = #{record.enableTime,jdbcType=TIMESTAMP},
+      publish_count = #{record.publish_count,jdbcType=INTEGER},
+      use_count = #{record.use_count,jdbcType=INTEGER},
+      receive_count = #{record.receive_count,jdbcType=INTEGER},
+      enable_time = #{record.enable_time,jdbcType=TIMESTAMP},
       code = #{record.code,jdbcType=VARCHAR},
-      member_level = #{record.memberLevel,jdbcType=INTEGER}
+      member_level = #{record.member_level,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -352,41 +354,41 @@
       <if test="amount != null">
         amount = #{amount,jdbcType=DECIMAL},
       </if>
-      <if test="perLimit != null">
-        per_limit = #{perLimit,jdbcType=INTEGER},
+      <if test="per_limit != null">
+        per_limit = #{per_limit,jdbcType=INTEGER},
       </if>
-      <if test="minPoint != null">
-        min_point = #{minPoint,jdbcType=DECIMAL},
+      <if test="min_point != null">
+        min_point = #{min_point,jdbcType=DECIMAL},
       </if>
-      <if test="startTime != null">
-        start_time = #{startTime,jdbcType=TIMESTAMP},
+      <if test="start_time != null">
+        start_time = #{start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="endTime != null">
-        end_time = #{endTime,jdbcType=TIMESTAMP},
+      <if test="end_time != null">
+        end_time = #{end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="useType != null">
-        use_type = #{useType,jdbcType=INTEGER},
+      <if test="use_type != null">
+        use_type = #{use_type,jdbcType=INTEGER},
       </if>
       <if test="note != null">
         note = #{note,jdbcType=VARCHAR},
       </if>
-      <if test="publishCount != null">
-        publish_count = #{publishCount,jdbcType=INTEGER},
+      <if test="publish_count != null">
+        publish_count = #{publish_count,jdbcType=INTEGER},
       </if>
-      <if test="useCount != null">
-        use_count = #{useCount,jdbcType=INTEGER},
+      <if test="use_count != null">
+        use_count = #{use_count,jdbcType=INTEGER},
       </if>
-      <if test="receiveCount != null">
-        receive_count = #{receiveCount,jdbcType=INTEGER},
+      <if test="receive_count != null">
+        receive_count = #{receive_count,jdbcType=INTEGER},
       </if>
-      <if test="enableTime != null">
-        enable_time = #{enableTime,jdbcType=TIMESTAMP},
+      <if test="enable_time != null">
+        enable_time = #{enable_time,jdbcType=TIMESTAMP},
       </if>
       <if test="code != null">
         code = #{code,jdbcType=VARCHAR},
       </if>
-      <if test="memberLevel != null">
-        member_level = #{memberLevel,jdbcType=INTEGER},
+      <if test="member_level != null">
+        member_level = #{member_level,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -398,18 +400,18 @@
       platform = #{platform,jdbcType=INTEGER},
       count = #{count,jdbcType=INTEGER},
       amount = #{amount,jdbcType=DECIMAL},
-      per_limit = #{perLimit,jdbcType=INTEGER},
-      min_point = #{minPoint,jdbcType=DECIMAL},
-      start_time = #{startTime,jdbcType=TIMESTAMP},
-      end_time = #{endTime,jdbcType=TIMESTAMP},
-      use_type = #{useType,jdbcType=INTEGER},
+      per_limit = #{per_limit,jdbcType=INTEGER},
+      min_point = #{min_point,jdbcType=DECIMAL},
+      start_time = #{start_time,jdbcType=TIMESTAMP},
+      end_time = #{end_time,jdbcType=TIMESTAMP},
+      use_type = #{use_type,jdbcType=INTEGER},
       note = #{note,jdbcType=VARCHAR},
-      publish_count = #{publishCount,jdbcType=INTEGER},
-      use_count = #{useCount,jdbcType=INTEGER},
-      receive_count = #{receiveCount,jdbcType=INTEGER},
-      enable_time = #{enableTime,jdbcType=TIMESTAMP},
+      publish_count = #{publish_count,jdbcType=INTEGER},
+      use_count = #{use_count,jdbcType=INTEGER},
+      receive_count = #{receive_count,jdbcType=INTEGER},
+      enable_time = #{enable_time,jdbcType=TIMESTAMP},
       code = #{code,jdbcType=VARCHAR},
-      member_level = #{memberLevel,jdbcType=INTEGER}
+      member_level = #{member_level,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

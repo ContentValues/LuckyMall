@@ -7,36 +7,36 @@ import java.util.Date;
 public class PmsComment implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private String memberNickName;
+    private String member_nick_name;
 
-    private String productName;
+    private String product_name;
 
     @ApiModelProperty(value = "评价星数：0->5")
     private Integer star;
 
     @ApiModelProperty(value = "评价的ip")
-    private String memberIp;
+    private String member_ip;
 
-    private Date createTime;
+    private Date create_time;
 
-    private Integer showStatus;
+    private Integer show_status;
 
     @ApiModelProperty(value = "购买时的商品属性")
-    private String productAttribute;
+    private String product_attribute;
 
-    private Integer collectCouont;
+    private Integer collect_couont;
 
-    private Integer readCount;
+    private Integer read_count;
 
     @ApiModelProperty(value = "上传图片地址，以逗号隔开")
     private String pics;
 
     @ApiModelProperty(value = "评论用户头像")
-    private String memberIcon;
+    private String member_icon;
 
-    private Integer replayCount;
+    private Integer replay_count;
 
     private String content;
 
@@ -50,28 +50,28 @@ public class PmsComment implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public String getMemberNickName() {
-        return memberNickName;
+    public String getMember_nick_name() {
+        return member_nick_name;
     }
 
-    public void setMemberNickName(String memberNickName) {
-        this.memberNickName = memberNickName;
+    public void setMember_nick_name(String member_nick_name) {
+        this.member_nick_name = member_nick_name;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
     public Integer getStar() {
@@ -82,52 +82,52 @@ public class PmsComment implements Serializable {
         this.star = star;
     }
 
-    public String getMemberIp() {
-        return memberIp;
+    public String getMember_ip() {
+        return member_ip;
     }
 
-    public void setMemberIp(String memberIp) {
-        this.memberIp = memberIp;
+    public void setMember_ip(String member_ip) {
+        this.member_ip = member_ip;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public Integer getShowStatus() {
-        return showStatus;
+    public Integer getShow_status() {
+        return show_status;
     }
 
-    public void setShowStatus(Integer showStatus) {
-        this.showStatus = showStatus;
+    public void setShow_status(Integer show_status) {
+        this.show_status = show_status;
     }
 
-    public String getProductAttribute() {
-        return productAttribute;
+    public String getProduct_attribute() {
+        return product_attribute;
     }
 
-    public void setProductAttribute(String productAttribute) {
-        this.productAttribute = productAttribute;
+    public void setProduct_attribute(String product_attribute) {
+        this.product_attribute = product_attribute;
     }
 
-    public Integer getCollectCouont() {
-        return collectCouont;
+    public Integer getCollect_couont() {
+        return collect_couont;
     }
 
-    public void setCollectCouont(Integer collectCouont) {
-        this.collectCouont = collectCouont;
+    public void setCollect_couont(Integer collect_couont) {
+        this.collect_couont = collect_couont;
     }
 
-    public Integer getReadCount() {
-        return readCount;
+    public Integer getRead_count() {
+        return read_count;
     }
 
-    public void setReadCount(Integer readCount) {
-        this.readCount = readCount;
+    public void setRead_count(Integer read_count) {
+        this.read_count = read_count;
     }
 
     public String getPics() {
@@ -138,20 +138,20 @@ public class PmsComment implements Serializable {
         this.pics = pics;
     }
 
-    public String getMemberIcon() {
-        return memberIcon;
+    public String getMember_icon() {
+        return member_icon;
     }
 
-    public void setMemberIcon(String memberIcon) {
-        this.memberIcon = memberIcon;
+    public void setMember_icon(String member_icon) {
+        this.member_icon = member_icon;
     }
 
-    public Integer getReplayCount() {
-        return replayCount;
+    public Integer getReplay_count() {
+        return replay_count;
     }
 
-    public void setReplayCount(Integer replayCount) {
-        this.replayCount = replayCount;
+    public void setReplay_count(Integer replay_count) {
+        this.replay_count = replay_count;
     }
 
     public String getContent() {
@@ -169,19 +169,19 @@ public class PmsComment implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", memberNickName=").append(memberNickName);
-        sb.append(", productName=").append(productName);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", member_nick_name=").append(member_nick_name);
+        sb.append(", product_name=").append(product_name);
         sb.append(", star=").append(star);
-        sb.append(", memberIp=").append(memberIp);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", showStatus=").append(showStatus);
-        sb.append(", productAttribute=").append(productAttribute);
-        sb.append(", collectCouont=").append(collectCouont);
-        sb.append(", readCount=").append(readCount);
+        sb.append(", member_ip=").append(member_ip);
+        sb.append(", create_time=").append(create_time);
+        sb.append(", show_status=").append(show_status);
+        sb.append(", product_attribute=").append(product_attribute);
+        sb.append(", collect_couont=").append(collect_couont);
+        sb.append(", read_count=").append(read_count);
         sb.append(", pics=").append(pics);
-        sb.append(", memberIcon=").append(memberIcon);
-        sb.append(", replayCount=").append(replayCount);
+        sb.append(", member_icon=").append(member_icon);
+        sb.append(", replay_count=").append(replay_count);
         sb.append(", content=").append(content);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

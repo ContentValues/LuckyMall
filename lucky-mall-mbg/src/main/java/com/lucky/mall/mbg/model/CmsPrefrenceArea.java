@@ -8,11 +8,11 @@ public class CmsPrefrenceArea implements Serializable {
 
     private String name;
 
-    private String subTitle;
+    private String sub_title;
 
     private Integer sort;
 
-    private Integer showStatus;
+    private Integer show_status;
 
     @ApiModelProperty(value = "展示图片")
     private byte[] pic;
@@ -35,12 +35,12 @@ public class CmsPrefrenceArea implements Serializable {
         this.name = name;
     }
 
-    public String getSubTitle() {
-        return subTitle;
+    public String getSub_title() {
+        return sub_title;
     }
 
-    public void setSubTitle(String subTitle) {
-        this.subTitle = subTitle;
+    public void setSub_title(String sub_title) {
+        this.sub_title = sub_title;
     }
 
     public Integer getSort() {
@@ -51,12 +51,12 @@ public class CmsPrefrenceArea implements Serializable {
         this.sort = sort;
     }
 
-    public Integer getShowStatus() {
-        return showStatus;
+    public Integer getShow_status() {
+        return show_status;
     }
 
-    public void setShowStatus(Integer showStatus) {
-        this.showStatus = showStatus;
+    public void setShow_status(Integer show_status) {
+        this.show_status = show_status;
     }
 
     public byte[] getPic() {
@@ -75,9 +75,9 @@ public class CmsPrefrenceArea implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", subTitle=").append(subTitle);
+        sb.append(", sub_title=").append(sub_title);
         sb.append(", sort=").append(sort);
-        sb.append(", showStatus=").append(showStatus);
+        sb.append(", show_status=").append(show_status);
         sb.append(", pic=").append(pic);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

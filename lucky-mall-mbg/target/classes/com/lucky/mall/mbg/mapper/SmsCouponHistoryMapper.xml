@@ -3,16 +3,16 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.SmsCouponHistoryMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.SmsCouponHistory">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="coupon_id" jdbcType="BIGINT" property="couponId" />
-    <result column="member_id" jdbcType="BIGINT" property="memberId" />
-    <result column="coupon_code" jdbcType="VARCHAR" property="couponCode" />
-    <result column="member_nickname" jdbcType="VARCHAR" property="memberNickname" />
-    <result column="get_type" jdbcType="INTEGER" property="getType" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="use_status" jdbcType="INTEGER" property="useStatus" />
-    <result column="use_time" jdbcType="TIMESTAMP" property="useTime" />
-    <result column="order_id" jdbcType="BIGINT" property="orderId" />
-    <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+    <result column="coupon_id" jdbcType="BIGINT" property="coupon_id" />
+    <result column="member_id" jdbcType="BIGINT" property="member_id" />
+    <result column="coupon_code" jdbcType="VARCHAR" property="coupon_code" />
+    <result column="member_nickname" jdbcType="VARCHAR" property="member_nickname" />
+    <result column="get_type" jdbcType="INTEGER" property="get_type" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="use_status" jdbcType="INTEGER" property="use_status" />
+    <result column="use_time" jdbcType="TIMESTAMP" property="use_time" />
+    <result column="order_id" jdbcType="BIGINT" property="order_id" />
+    <result column="order_sn" jdbcType="VARCHAR" property="order_sn" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -107,85 +107,85 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsCouponHistory">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into sms_coupon_history (coupon_id, member_id, coupon_code, 
-      member_nickname, get_type, create_time, 
-      use_status, use_time, order_id, 
-      order_sn)
-    values (#{couponId,jdbcType=BIGINT}, #{memberId,jdbcType=BIGINT}, #{couponCode,jdbcType=VARCHAR}, 
-      #{memberNickname,jdbcType=VARCHAR}, #{getType,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{useStatus,jdbcType=INTEGER}, #{useTime,jdbcType=TIMESTAMP}, #{orderId,jdbcType=BIGINT}, 
-      #{orderSn,jdbcType=VARCHAR})
+    insert into sms_coupon_history (id, coupon_id, member_id, 
+      coupon_code, member_nickname, get_type, 
+      create_time, use_status, use_time, 
+      order_id, order_sn)
+    values (#{id,jdbcType=BIGINT}, #{coupon_id,jdbcType=BIGINT}, #{member_id,jdbcType=BIGINT}, 
+      #{coupon_code,jdbcType=VARCHAR}, #{member_nickname,jdbcType=VARCHAR}, #{get_type,jdbcType=INTEGER}, 
+      #{create_time,jdbcType=TIMESTAMP}, #{use_status,jdbcType=INTEGER}, #{use_time,jdbcType=TIMESTAMP}, 
+      #{order_id,jdbcType=BIGINT}, #{order_sn,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsCouponHistory">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into sms_coupon_history
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="couponId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="coupon_id != null">
         coupon_id,
       </if>
-      <if test="memberId != null">
+      <if test="member_id != null">
         member_id,
       </if>
-      <if test="couponCode != null">
+      <if test="coupon_code != null">
         coupon_code,
       </if>
-      <if test="memberNickname != null">
+      <if test="member_nickname != null">
         member_nickname,
       </if>
-      <if test="getType != null">
+      <if test="get_type != null">
         get_type,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
-      <if test="useStatus != null">
+      <if test="use_status != null">
         use_status,
       </if>
-      <if test="useTime != null">
+      <if test="use_time != null">
         use_time,
       </if>
-      <if test="orderId != null">
+      <if test="order_id != null">
         order_id,
       </if>
-      <if test="orderSn != null">
+      <if test="order_sn != null">
         order_sn,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="couponId != null">
-        #{couponId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="memberId != null">
-        #{memberId,jdbcType=BIGINT},
+      <if test="coupon_id != null">
+        #{coupon_id,jdbcType=BIGINT},
       </if>
-      <if test="couponCode != null">
-        #{couponCode,jdbcType=VARCHAR},
+      <if test="member_id != null">
+        #{member_id,jdbcType=BIGINT},
       </if>
-      <if test="memberNickname != null">
-        #{memberNickname,jdbcType=VARCHAR},
+      <if test="coupon_code != null">
+        #{coupon_code,jdbcType=VARCHAR},
       </if>
-      <if test="getType != null">
-        #{getType,jdbcType=INTEGER},
+      <if test="member_nickname != null">
+        #{member_nickname,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="get_type != null">
+        #{get_type,jdbcType=INTEGER},
       </if>
-      <if test="useStatus != null">
-        #{useStatus,jdbcType=INTEGER},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="useTime != null">
-        #{useTime,jdbcType=TIMESTAMP},
+      <if test="use_status != null">
+        #{use_status,jdbcType=INTEGER},
       </if>
-      <if test="orderId != null">
-        #{orderId,jdbcType=BIGINT},
+      <if test="use_time != null">
+        #{use_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="orderSn != null">
-        #{orderSn,jdbcType=VARCHAR},
+      <if test="order_id != null">
+        #{order_id,jdbcType=BIGINT},
+      </if>
+      <if test="order_sn != null">
+        #{order_sn,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -201,35 +201,35 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.couponId != null">
-        coupon_id = #{record.couponId,jdbcType=BIGINT},
+      <if test="record.coupon_id != null">
+        coupon_id = #{record.coupon_id,jdbcType=BIGINT},
       </if>
-      <if test="record.memberId != null">
-        member_id = #{record.memberId,jdbcType=BIGINT},
+      <if test="record.member_id != null">
+        member_id = #{record.member_id,jdbcType=BIGINT},
       </if>
-      <if test="record.couponCode != null">
-        coupon_code = #{record.couponCode,jdbcType=VARCHAR},
+      <if test="record.coupon_code != null">
+        coupon_code = #{record.coupon_code,jdbcType=VARCHAR},
       </if>
-      <if test="record.memberNickname != null">
-        member_nickname = #{record.memberNickname,jdbcType=VARCHAR},
+      <if test="record.member_nickname != null">
+        member_nickname = #{record.member_nickname,jdbcType=VARCHAR},
       </if>
-      <if test="record.getType != null">
-        get_type = #{record.getType,jdbcType=INTEGER},
+      <if test="record.get_type != null">
+        get_type = #{record.get_type,jdbcType=INTEGER},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.useStatus != null">
-        use_status = #{record.useStatus,jdbcType=INTEGER},
+      <if test="record.use_status != null">
+        use_status = #{record.use_status,jdbcType=INTEGER},
       </if>
-      <if test="record.useTime != null">
-        use_time = #{record.useTime,jdbcType=TIMESTAMP},
+      <if test="record.use_time != null">
+        use_time = #{record.use_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.orderId != null">
-        order_id = #{record.orderId,jdbcType=BIGINT},
+      <if test="record.order_id != null">
+        order_id = #{record.order_id,jdbcType=BIGINT},
       </if>
-      <if test="record.orderSn != null">
-        order_sn = #{record.orderSn,jdbcType=VARCHAR},
+      <if test="record.order_sn != null">
+        order_sn = #{record.order_sn,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -239,16 +239,16 @@
   <update id="updateByExample" parameterType="map">
     update sms_coupon_history
     set id = #{record.id,jdbcType=BIGINT},
-      coupon_id = #{record.couponId,jdbcType=BIGINT},
-      member_id = #{record.memberId,jdbcType=BIGINT},
-      coupon_code = #{record.couponCode,jdbcType=VARCHAR},
-      member_nickname = #{record.memberNickname,jdbcType=VARCHAR},
-      get_type = #{record.getType,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      use_status = #{record.useStatus,jdbcType=INTEGER},
-      use_time = #{record.useTime,jdbcType=TIMESTAMP},
-      order_id = #{record.orderId,jdbcType=BIGINT},
-      order_sn = #{record.orderSn,jdbcType=VARCHAR}
+      coupon_id = #{record.coupon_id,jdbcType=BIGINT},
+      member_id = #{record.member_id,jdbcType=BIGINT},
+      coupon_code = #{record.coupon_code,jdbcType=VARCHAR},
+      member_nickname = #{record.member_nickname,jdbcType=VARCHAR},
+      get_type = #{record.get_type,jdbcType=INTEGER},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      use_status = #{record.use_status,jdbcType=INTEGER},
+      use_time = #{record.use_time,jdbcType=TIMESTAMP},
+      order_id = #{record.order_id,jdbcType=BIGINT},
+      order_sn = #{record.order_sn,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -256,51 +256,51 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.SmsCouponHistory">
     update sms_coupon_history
     <set>
-      <if test="couponId != null">
-        coupon_id = #{couponId,jdbcType=BIGINT},
+      <if test="coupon_id != null">
+        coupon_id = #{coupon_id,jdbcType=BIGINT},
       </if>
-      <if test="memberId != null">
-        member_id = #{memberId,jdbcType=BIGINT},
+      <if test="member_id != null">
+        member_id = #{member_id,jdbcType=BIGINT},
       </if>
-      <if test="couponCode != null">
-        coupon_code = #{couponCode,jdbcType=VARCHAR},
+      <if test="coupon_code != null">
+        coupon_code = #{coupon_code,jdbcType=VARCHAR},
       </if>
-      <if test="memberNickname != null">
-        member_nickname = #{memberNickname,jdbcType=VARCHAR},
+      <if test="member_nickname != null">
+        member_nickname = #{member_nickname,jdbcType=VARCHAR},
       </if>
-      <if test="getType != null">
-        get_type = #{getType,jdbcType=INTEGER},
+      <if test="get_type != null">
+        get_type = #{get_type,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="useStatus != null">
-        use_status = #{useStatus,jdbcType=INTEGER},
+      <if test="use_status != null">
+        use_status = #{use_status,jdbcType=INTEGER},
       </if>
-      <if test="useTime != null">
-        use_time = #{useTime,jdbcType=TIMESTAMP},
+      <if test="use_time != null">
+        use_time = #{use_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="orderId != null">
-        order_id = #{orderId,jdbcType=BIGINT},
+      <if test="order_id != null">
+        order_id = #{order_id,jdbcType=BIGINT},
       </if>
-      <if test="orderSn != null">
-        order_sn = #{orderSn,jdbcType=VARCHAR},
+      <if test="order_sn != null">
+        order_sn = #{order_sn,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.SmsCouponHistory">
     update sms_coupon_history
-    set coupon_id = #{couponId,jdbcType=BIGINT},
-      member_id = #{memberId,jdbcType=BIGINT},
-      coupon_code = #{couponCode,jdbcType=VARCHAR},
-      member_nickname = #{memberNickname,jdbcType=VARCHAR},
-      get_type = #{getType,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      use_status = #{useStatus,jdbcType=INTEGER},
-      use_time = #{useTime,jdbcType=TIMESTAMP},
-      order_id = #{orderId,jdbcType=BIGINT},
-      order_sn = #{orderSn,jdbcType=VARCHAR}
+    set coupon_id = #{coupon_id,jdbcType=BIGINT},
+      member_id = #{member_id,jdbcType=BIGINT},
+      coupon_code = #{coupon_code,jdbcType=VARCHAR},
+      member_nickname = #{member_nickname,jdbcType=VARCHAR},
+      get_type = #{get_type,jdbcType=INTEGER},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      use_status = #{use_status,jdbcType=INTEGER},
+      use_time = #{use_time,jdbcType=TIMESTAMP},
+      order_id = #{order_id,jdbcType=BIGINT},
+      order_sn = #{order_sn,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class PmsProductAttributeValue implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private Long productAttributeId;
+    private Long product_attribute_id;
 
     @ApiModelProperty(value = "手动添加规格或参数的值，参数单值，规格有多个时以逗号隔开")
     private String value;
@@ -23,20 +23,20 @@ public class PmsProductAttributeValue implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public Long getProductAttributeId() {
-        return productAttributeId;
+    public Long getProduct_attribute_id() {
+        return product_attribute_id;
     }
 
-    public void setProductAttributeId(Long productAttributeId) {
-        this.productAttributeId = productAttributeId;
+    public void setProduct_attribute_id(Long product_attribute_id) {
+        this.product_attribute_id = product_attribute_id;
     }
 
     public String getValue() {
@@ -54,8 +54,8 @@ public class PmsProductAttributeValue implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", productAttributeId=").append(productAttributeId);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", product_attribute_id=").append(product_attribute_id);
         sb.append(", value=").append(value);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

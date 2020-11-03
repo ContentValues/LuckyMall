@@ -3,8 +3,8 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsMemberMemberTagRelationMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsMemberMemberTagRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="member_id" jdbcType="BIGINT" property="memberId" />
-    <result column="tag_id" jdbcType="BIGINT" property="tagId" />
+    <result column="member_id" jdbcType="BIGINT" property="member_id" />
+    <result column="tag_id" jdbcType="BIGINT" property="tag_id" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -98,31 +98,33 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsMemberMemberTagRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into ums_member_member_tag_relation (member_id, tag_id)
-    values (#{memberId,jdbcType=BIGINT}, #{tagId,jdbcType=BIGINT})
+    insert into ums_member_member_tag_relation (id, member_id, tag_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{member_id,jdbcType=BIGINT}, #{tag_id,jdbcType=BIGINT}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsMemberMemberTagRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into ums_member_member_tag_relation
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="memberId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="member_id != null">
         member_id,
       </if>
-      <if test="tagId != null">
+      <if test="tag_id != null">
         tag_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="memberId != null">
-        #{memberId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="tagId != null">
-        #{tagId,jdbcType=BIGINT},
+      <if test="member_id != null">
+        #{member_id,jdbcType=BIGINT},
+      </if>
+      <if test="tag_id != null">
+        #{tag_id,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -138,11 +140,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.memberId != null">
-        member_id = #{record.memberId,jdbcType=BIGINT},
+      <if test="record.member_id != null">
+        member_id = #{record.member_id,jdbcType=BIGINT},
       </if>
-      <if test="record.tagId != null">
-        tag_id = #{record.tagId,jdbcType=BIGINT},
+      <if test="record.tag_id != null">
+        tag_id = #{record.tag_id,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -152,8 +154,8 @@
   <update id="updateByExample" parameterType="map">
     update ums_member_member_tag_relation
     set id = #{record.id,jdbcType=BIGINT},
-      member_id = #{record.memberId,jdbcType=BIGINT},
-      tag_id = #{record.tagId,jdbcType=BIGINT}
+      member_id = #{record.member_id,jdbcType=BIGINT},
+      tag_id = #{record.tag_id,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -161,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsMemberMemberTagRelation">
     update ums_member_member_tag_relation
     <set>
-      <if test="memberId != null">
-        member_id = #{memberId,jdbcType=BIGINT},
+      <if test="member_id != null">
+        member_id = #{member_id,jdbcType=BIGINT},
       </if>
-      <if test="tagId != null">
-        tag_id = #{tagId,jdbcType=BIGINT},
+      <if test="tag_id != null">
+        tag_id = #{tag_id,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsMemberMemberTagRelation">
     update ums_member_member_tag_relation
-    set member_id = #{memberId,jdbcType=BIGINT},
-      tag_id = #{tagId,jdbcType=BIGINT}
+    set member_id = #{member_id,jdbcType=BIGINT},
+      tag_id = #{tag_id,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

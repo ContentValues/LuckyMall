@@ -6,15 +6,15 @@ import java.io.Serializable;
 public class SmsCouponProductRelation implements Serializable {
     private Long id;
 
-    private Long couponId;
+    private Long coupon_id;
 
-    private Long productId;
+    private Long product_id;
 
     @ApiModelProperty(value = "商品名称")
-    private String productName;
+    private String product_name;
 
     @ApiModelProperty(value = "商品编码")
-    private String productSn;
+    private String product_sn;
 
     private static final long serialVersionUID = 1L;
 
@@ -26,36 +26,36 @@ public class SmsCouponProductRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getCouponId() {
-        return couponId;
+    public Long getCoupon_id() {
+        return coupon_id;
     }
 
-    public void setCouponId(Long couponId) {
-        this.couponId = couponId;
+    public void setCoupon_id(Long coupon_id) {
+        this.coupon_id = coupon_id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
-    public String getProductSn() {
-        return productSn;
+    public String getProduct_sn() {
+        return product_sn;
     }
 
-    public void setProductSn(String productSn) {
-        this.productSn = productSn;
+    public void setProduct_sn(String product_sn) {
+        this.product_sn = product_sn;
     }
 
     @Override
@@ -65,10 +65,10 @@ public class SmsCouponProductRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", couponId=").append(couponId);
-        sb.append(", productId=").append(productId);
-        sb.append(", productName=").append(productName);
-        sb.append(", productSn=").append(productSn);
+        sb.append(", coupon_id=").append(coupon_id);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", product_name=").append(product_name);
+        sb.append(", product_sn=").append(product_sn);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -164,123 +164,123 @@ public class CmsPrefrenceAreaProductRelationExample {
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdIsNull() {
+        public Criteria andPrefrence_area_idIsNull() {
             addCriterion("prefrence_area_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdIsNotNull() {
+        public Criteria andPrefrence_area_idIsNotNull() {
             addCriterion("prefrence_area_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdEqualTo(Long value) {
-            addCriterion("prefrence_area_id =", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idEqualTo(Long value) {
+            addCriterion("prefrence_area_id =", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdNotEqualTo(Long value) {
-            addCriterion("prefrence_area_id <>", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idNotEqualTo(Long value) {
+            addCriterion("prefrence_area_id <>", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdGreaterThan(Long value) {
-            addCriterion("prefrence_area_id >", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idGreaterThan(Long value) {
+            addCriterion("prefrence_area_id >", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("prefrence_area_id >=", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("prefrence_area_id >=", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdLessThan(Long value) {
-            addCriterion("prefrence_area_id <", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idLessThan(Long value) {
+            addCriterion("prefrence_area_id <", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdLessThanOrEqualTo(Long value) {
-            addCriterion("prefrence_area_id <=", value, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idLessThanOrEqualTo(Long value) {
+            addCriterion("prefrence_area_id <=", value, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdIn(List<Long> values) {
-            addCriterion("prefrence_area_id in", values, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idIn(List<Long> values) {
+            addCriterion("prefrence_area_id in", values, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdNotIn(List<Long> values) {
-            addCriterion("prefrence_area_id not in", values, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idNotIn(List<Long> values) {
+            addCriterion("prefrence_area_id not in", values, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdBetween(Long value1, Long value2) {
-            addCriterion("prefrence_area_id between", value1, value2, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idBetween(Long value1, Long value2) {
+            addCriterion("prefrence_area_id between", value1, value2, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andPrefrenceAreaIdNotBetween(Long value1, Long value2) {
-            addCriterion("prefrence_area_id not between", value1, value2, "prefrenceAreaId");
+        public Criteria andPrefrence_area_idNotBetween(Long value1, Long value2) {
+            addCriterion("prefrence_area_id not between", value1, value2, "prefrence_area_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNull() {
+        public Criteria andProduct_idIsNull() {
             addCriterion("product_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNotNull() {
+        public Criteria andProduct_idIsNotNull() {
             addCriterion("product_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdEqualTo(Long value) {
-            addCriterion("product_id =", value, "productId");
+        public Criteria andProduct_idEqualTo(Long value) {
+            addCriterion("product_id =", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotEqualTo(Long value) {
-            addCriterion("product_id <>", value, "productId");
+        public Criteria andProduct_idNotEqualTo(Long value) {
+            addCriterion("product_id <>", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThan(Long value) {
-            addCriterion("product_id >", value, "productId");
+        public Criteria andProduct_idGreaterThan(Long value) {
+            addCriterion("product_id >", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("product_id >=", value, "productId");
+        public Criteria andProduct_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("product_id >=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThan(Long value) {
-            addCriterion("product_id <", value, "productId");
+        public Criteria andProduct_idLessThan(Long value) {
+            addCriterion("product_id <", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThanOrEqualTo(Long value) {
-            addCriterion("product_id <=", value, "productId");
+        public Criteria andProduct_idLessThanOrEqualTo(Long value) {
+            addCriterion("product_id <=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIn(List<Long> values) {
-            addCriterion("product_id in", values, "productId");
+        public Criteria andProduct_idIn(List<Long> values) {
+            addCriterion("product_id in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotIn(List<Long> values) {
-            addCriterion("product_id not in", values, "productId");
+        public Criteria andProduct_idNotIn(List<Long> values) {
+            addCriterion("product_id not in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdBetween(Long value1, Long value2) {
-            addCriterion("product_id between", value1, value2, "productId");
+        public Criteria andProduct_idBetween(Long value1, Long value2) {
+            addCriterion("product_id between", value1, value2, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotBetween(Long value1, Long value2) {
-            addCriterion("product_id not between", value1, value2, "productId");
+        public Criteria andProduct_idNotBetween(Long value1, Long value2) {
+            addCriterion("product_id not between", value1, value2, "product_id");
             return (Criteria) this;
         }
     }

@@ -8,29 +8,29 @@ import java.util.Date;
 public class PmsProductOperateLog implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private BigDecimal priceOld;
+    private BigDecimal price_old;
 
-    private BigDecimal priceNew;
+    private BigDecimal price_new;
 
-    private BigDecimal salePriceOld;
+    private BigDecimal sale_price_old;
 
-    private BigDecimal salePriceNew;
+    private BigDecimal sale_price_new;
 
     @ApiModelProperty(value = "赠送的积分")
-    private Integer giftPointOld;
+    private Integer gift_point_old;
 
-    private Integer giftPointNew;
+    private Integer gift_point_new;
 
-    private Integer usePointLimitOld;
+    private Integer use_point_limit_old;
 
-    private Integer usePointLimitNew;
+    private Integer use_point_limit_new;
 
     @ApiModelProperty(value = "操作人")
-    private String operateMan;
+    private String operate_man;
 
-    private Date createTime;
+    private Date create_time;
 
     private static final long serialVersionUID = 1L;
 
@@ -42,92 +42,92 @@ public class PmsProductOperateLog implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public BigDecimal getPriceOld() {
-        return priceOld;
+    public BigDecimal getPrice_old() {
+        return price_old;
     }
 
-    public void setPriceOld(BigDecimal priceOld) {
-        this.priceOld = priceOld;
+    public void setPrice_old(BigDecimal price_old) {
+        this.price_old = price_old;
     }
 
-    public BigDecimal getPriceNew() {
-        return priceNew;
+    public BigDecimal getPrice_new() {
+        return price_new;
     }
 
-    public void setPriceNew(BigDecimal priceNew) {
-        this.priceNew = priceNew;
+    public void setPrice_new(BigDecimal price_new) {
+        this.price_new = price_new;
     }
 
-    public BigDecimal getSalePriceOld() {
-        return salePriceOld;
+    public BigDecimal getSale_price_old() {
+        return sale_price_old;
     }
 
-    public void setSalePriceOld(BigDecimal salePriceOld) {
-        this.salePriceOld = salePriceOld;
+    public void setSale_price_old(BigDecimal sale_price_old) {
+        this.sale_price_old = sale_price_old;
     }
 
-    public BigDecimal getSalePriceNew() {
-        return salePriceNew;
+    public BigDecimal getSale_price_new() {
+        return sale_price_new;
     }
 
-    public void setSalePriceNew(BigDecimal salePriceNew) {
-        this.salePriceNew = salePriceNew;
+    public void setSale_price_new(BigDecimal sale_price_new) {
+        this.sale_price_new = sale_price_new;
     }
 
-    public Integer getGiftPointOld() {
-        return giftPointOld;
+    public Integer getGift_point_old() {
+        return gift_point_old;
     }
 
-    public void setGiftPointOld(Integer giftPointOld) {
-        this.giftPointOld = giftPointOld;
+    public void setGift_point_old(Integer gift_point_old) {
+        this.gift_point_old = gift_point_old;
     }
 
-    public Integer getGiftPointNew() {
-        return giftPointNew;
+    public Integer getGift_point_new() {
+        return gift_point_new;
     }
 
-    public void setGiftPointNew(Integer giftPointNew) {
-        this.giftPointNew = giftPointNew;
+    public void setGift_point_new(Integer gift_point_new) {
+        this.gift_point_new = gift_point_new;
     }
 
-    public Integer getUsePointLimitOld() {
-        return usePointLimitOld;
+    public Integer getUse_point_limit_old() {
+        return use_point_limit_old;
     }
 
-    public void setUsePointLimitOld(Integer usePointLimitOld) {
-        this.usePointLimitOld = usePointLimitOld;
+    public void setUse_point_limit_old(Integer use_point_limit_old) {
+        this.use_point_limit_old = use_point_limit_old;
     }
 
-    public Integer getUsePointLimitNew() {
-        return usePointLimitNew;
+    public Integer getUse_point_limit_new() {
+        return use_point_limit_new;
     }
 
-    public void setUsePointLimitNew(Integer usePointLimitNew) {
-        this.usePointLimitNew = usePointLimitNew;
+    public void setUse_point_limit_new(Integer use_point_limit_new) {
+        this.use_point_limit_new = use_point_limit_new;
     }
 
-    public String getOperateMan() {
-        return operateMan;
+    public String getOperate_man() {
+        return operate_man;
     }
 
-    public void setOperateMan(String operateMan) {
-        this.operateMan = operateMan;
+    public void setOperate_man(String operate_man) {
+        this.operate_man = operate_man;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
     @Override
@@ -137,17 +137,17 @@ public class PmsProductOperateLog implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", priceOld=").append(priceOld);
-        sb.append(", priceNew=").append(priceNew);
-        sb.append(", salePriceOld=").append(salePriceOld);
-        sb.append(", salePriceNew=").append(salePriceNew);
-        sb.append(", giftPointOld=").append(giftPointOld);
-        sb.append(", giftPointNew=").append(giftPointNew);
-        sb.append(", usePointLimitOld=").append(usePointLimitOld);
-        sb.append(", usePointLimitNew=").append(usePointLimitNew);
-        sb.append(", operateMan=").append(operateMan);
-        sb.append(", createTime=").append(createTime);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", price_old=").append(price_old);
+        sb.append(", price_new=").append(price_new);
+        sb.append(", sale_price_old=").append(sale_price_old);
+        sb.append(", sale_price_new=").append(sale_price_new);
+        sb.append(", gift_point_old=").append(gift_point_old);
+        sb.append(", gift_point_new=").append(gift_point_new);
+        sb.append(", use_point_limit_old=").append(use_point_limit_old);
+        sb.append(", use_point_limit_new=").append(use_point_limit_new);
+        sb.append(", operate_man=").append(operate_man);
+        sb.append(", create_time=").append(create_time);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -7,12 +7,12 @@ import java.util.Date;
 public class PmsProductVertifyRecord implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private Date createTime;
+    private Date create_time;
 
     @ApiModelProperty(value = "审核人")
-    private String vertifyMan;
+    private String vertify_man;
 
     private Integer status;
 
@@ -29,28 +29,28 @@ public class PmsProductVertifyRecord implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public String getVertifyMan() {
-        return vertifyMan;
+    public String getVertify_man() {
+        return vertify_man;
     }
 
-    public void setVertifyMan(String vertifyMan) {
-        this.vertifyMan = vertifyMan;
+    public void setVertify_man(String vertify_man) {
+        this.vertify_man = vertify_man;
     }
 
     public Integer getStatus() {
@@ -76,9 +76,9 @@ public class PmsProductVertifyRecord implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", vertifyMan=").append(vertifyMan);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", create_time=").append(create_time);
+        sb.append(", vertify_man=").append(vertify_man);
         sb.append(", status=").append(status);
         sb.append(", detail=").append(detail);
         sb.append(", serialVersionUID=").append(serialVersionUID);

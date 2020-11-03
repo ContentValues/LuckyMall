@@ -7,14 +7,14 @@ import java.math.BigDecimal;
 public class PmsMemberPrice implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private Long memberLevelId;
+    private Long member_level_id;
 
     @ApiModelProperty(value = "会员价格")
-    private BigDecimal memberPrice;
+    private BigDecimal member_price;
 
-    private String memberLevelName;
+    private String member_level_name;
 
     private static final long serialVersionUID = 1L;
 
@@ -26,36 +26,36 @@ public class PmsMemberPrice implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public Long getMemberLevelId() {
-        return memberLevelId;
+    public Long getMember_level_id() {
+        return member_level_id;
     }
 
-    public void setMemberLevelId(Long memberLevelId) {
-        this.memberLevelId = memberLevelId;
+    public void setMember_level_id(Long member_level_id) {
+        this.member_level_id = member_level_id;
     }
 
-    public BigDecimal getMemberPrice() {
-        return memberPrice;
+    public BigDecimal getMember_price() {
+        return member_price;
     }
 
-    public void setMemberPrice(BigDecimal memberPrice) {
-        this.memberPrice = memberPrice;
+    public void setMember_price(BigDecimal member_price) {
+        this.member_price = member_price;
     }
 
-    public String getMemberLevelName() {
-        return memberLevelName;
+    public String getMember_level_name() {
+        return member_level_name;
     }
 
-    public void setMemberLevelName(String memberLevelName) {
-        this.memberLevelName = memberLevelName;
+    public void setMember_level_name(String member_level_name) {
+        this.member_level_name = member_level_name;
     }
 
     @Override
@@ -65,10 +65,10 @@ public class PmsMemberPrice implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", memberLevelId=").append(memberLevelId);
-        sb.append(", memberPrice=").append(memberPrice);
-        sb.append(", memberLevelName=").append(memberLevelName);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", member_level_id=").append(member_level_id);
+        sb.append(", member_price=").append(member_price);
+        sb.append(", member_level_name=").append(member_level_name);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

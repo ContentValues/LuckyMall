@@ -5,8 +5,8 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="icon" jdbcType="VARCHAR" property="icon" />
-    <result column="subject_count" jdbcType="INTEGER" property="subjectCount" />
-    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="subject_count" jdbcType="INTEGER" property="subject_count" />
+    <result column="show_status" jdbcType="INTEGER" property="show_status" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -101,30 +101,29 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsTopicCategory">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_topic_category (name, icon, subject_count, 
-      show_status, sort)
-    values (#{name,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{subjectCount,jdbcType=INTEGER}, 
-      #{showStatus,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER})
+    insert into cms_topic_category (id, name, icon, 
+      subject_count, show_status, sort
+      )
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, 
+      #{subject_count,jdbcType=INTEGER}, #{show_status,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsTopicCategory">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_topic_category
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="name != null">
         name,
       </if>
       <if test="icon != null">
         icon,
       </if>
-      <if test="subjectCount != null">
+      <if test="subject_count != null">
         subject_count,
       </if>
-      <if test="showStatus != null">
+      <if test="show_status != null">
         show_status,
       </if>
       <if test="sort != null">
@@ -132,17 +131,20 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="icon != null">
         #{icon,jdbcType=VARCHAR},
       </if>
-      <if test="subjectCount != null">
-        #{subjectCount,jdbcType=INTEGER},
+      <if test="subject_count != null">
+        #{subject_count,jdbcType=INTEGER},
       </if>
-      <if test="showStatus != null">
-        #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        #{show_status,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
@@ -167,11 +169,11 @@
       <if test="record.icon != null">
         icon = #{record.icon,jdbcType=VARCHAR},
       </if>
-      <if test="record.subjectCount != null">
-        subject_count = #{record.subjectCount,jdbcType=INTEGER},
+      <if test="record.subject_count != null">
+        subject_count = #{record.subject_count,jdbcType=INTEGER},
       </if>
-      <if test="record.showStatus != null">
-        show_status = #{record.showStatus,jdbcType=INTEGER},
+      <if test="record.show_status != null">
+        show_status = #{record.show_status,jdbcType=INTEGER},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
@@ -186,8 +188,8 @@
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
       icon = #{record.icon,jdbcType=VARCHAR},
-      subject_count = #{record.subjectCount,jdbcType=INTEGER},
-      show_status = #{record.showStatus,jdbcType=INTEGER},
+      subject_count = #{record.subject_count,jdbcType=INTEGER},
+      show_status = #{record.show_status,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -202,11 +204,11 @@
       <if test="icon != null">
         icon = #{icon,jdbcType=VARCHAR},
       </if>
-      <if test="subjectCount != null">
-        subject_count = #{subjectCount,jdbcType=INTEGER},
+      <if test="subject_count != null">
+        subject_count = #{subject_count,jdbcType=INTEGER},
       </if>
-      <if test="showStatus != null">
-        show_status = #{showStatus,jdbcType=INTEGER},
+      <if test="show_status != null">
+        show_status = #{show_status,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
@@ -218,8 +220,8 @@
     update cms_topic_category
     set name = #{name,jdbcType=VARCHAR},
       icon = #{icon,jdbcType=VARCHAR},
-      subject_count = #{subjectCount,jdbcType=INTEGER},
-      show_status = #{showStatus,jdbcType=INTEGER},
+      subject_count = #{subject_count,jdbcType=INTEGER},
+      show_status = #{show_status,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

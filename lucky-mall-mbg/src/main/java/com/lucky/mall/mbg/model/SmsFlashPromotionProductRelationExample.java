@@ -165,363 +165,363 @@ public class SmsFlashPromotionProductRelationExample {
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdIsNull() {
+        public Criteria andFlash_promotion_idIsNull() {
             addCriterion("flash_promotion_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdIsNotNull() {
+        public Criteria andFlash_promotion_idIsNotNull() {
             addCriterion("flash_promotion_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdEqualTo(Long value) {
-            addCriterion("flash_promotion_id =", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idEqualTo(Long value) {
+            addCriterion("flash_promotion_id =", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdNotEqualTo(Long value) {
-            addCriterion("flash_promotion_id <>", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idNotEqualTo(Long value) {
+            addCriterion("flash_promotion_id <>", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdGreaterThan(Long value) {
-            addCriterion("flash_promotion_id >", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idGreaterThan(Long value) {
+            addCriterion("flash_promotion_id >", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("flash_promotion_id >=", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("flash_promotion_id >=", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdLessThan(Long value) {
-            addCriterion("flash_promotion_id <", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idLessThan(Long value) {
+            addCriterion("flash_promotion_id <", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdLessThanOrEqualTo(Long value) {
-            addCriterion("flash_promotion_id <=", value, "flashPromotionId");
+        public Criteria andFlash_promotion_idLessThanOrEqualTo(Long value) {
+            addCriterion("flash_promotion_id <=", value, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdIn(List<Long> values) {
-            addCriterion("flash_promotion_id in", values, "flashPromotionId");
+        public Criteria andFlash_promotion_idIn(List<Long> values) {
+            addCriterion("flash_promotion_id in", values, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdNotIn(List<Long> values) {
-            addCriterion("flash_promotion_id not in", values, "flashPromotionId");
+        public Criteria andFlash_promotion_idNotIn(List<Long> values) {
+            addCriterion("flash_promotion_id not in", values, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdBetween(Long value1, Long value2) {
-            addCriterion("flash_promotion_id between", value1, value2, "flashPromotionId");
+        public Criteria andFlash_promotion_idBetween(Long value1, Long value2) {
+            addCriterion("flash_promotion_id between", value1, value2, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionIdNotBetween(Long value1, Long value2) {
-            addCriterion("flash_promotion_id not between", value1, value2, "flashPromotionId");
+        public Criteria andFlash_promotion_idNotBetween(Long value1, Long value2) {
+            addCriterion("flash_promotion_id not between", value1, value2, "flash_promotion_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdIsNull() {
+        public Criteria andFlash_promotion_session_idIsNull() {
             addCriterion("flash_promotion_session_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdIsNotNull() {
+        public Criteria andFlash_promotion_session_idIsNotNull() {
             addCriterion("flash_promotion_session_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdEqualTo(Long value) {
-            addCriterion("flash_promotion_session_id =", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idEqualTo(Long value) {
+            addCriterion("flash_promotion_session_id =", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdNotEqualTo(Long value) {
-            addCriterion("flash_promotion_session_id <>", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idNotEqualTo(Long value) {
+            addCriterion("flash_promotion_session_id <>", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdGreaterThan(Long value) {
-            addCriterion("flash_promotion_session_id >", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idGreaterThan(Long value) {
+            addCriterion("flash_promotion_session_id >", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("flash_promotion_session_id >=", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("flash_promotion_session_id >=", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdLessThan(Long value) {
-            addCriterion("flash_promotion_session_id <", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idLessThan(Long value) {
+            addCriterion("flash_promotion_session_id <", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdLessThanOrEqualTo(Long value) {
-            addCriterion("flash_promotion_session_id <=", value, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idLessThanOrEqualTo(Long value) {
+            addCriterion("flash_promotion_session_id <=", value, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdIn(List<Long> values) {
-            addCriterion("flash_promotion_session_id in", values, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idIn(List<Long> values) {
+            addCriterion("flash_promotion_session_id in", values, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdNotIn(List<Long> values) {
-            addCriterion("flash_promotion_session_id not in", values, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idNotIn(List<Long> values) {
+            addCriterion("flash_promotion_session_id not in", values, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdBetween(Long value1, Long value2) {
-            addCriterion("flash_promotion_session_id between", value1, value2, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idBetween(Long value1, Long value2) {
+            addCriterion("flash_promotion_session_id between", value1, value2, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionSessionIdNotBetween(Long value1, Long value2) {
-            addCriterion("flash_promotion_session_id not between", value1, value2, "flashPromotionSessionId");
+        public Criteria andFlash_promotion_session_idNotBetween(Long value1, Long value2) {
+            addCriterion("flash_promotion_session_id not between", value1, value2, "flash_promotion_session_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNull() {
+        public Criteria andProduct_idIsNull() {
             addCriterion("product_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNotNull() {
+        public Criteria andProduct_idIsNotNull() {
             addCriterion("product_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdEqualTo(Long value) {
-            addCriterion("product_id =", value, "productId");
+        public Criteria andProduct_idEqualTo(Long value) {
+            addCriterion("product_id =", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotEqualTo(Long value) {
-            addCriterion("product_id <>", value, "productId");
+        public Criteria andProduct_idNotEqualTo(Long value) {
+            addCriterion("product_id <>", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThan(Long value) {
-            addCriterion("product_id >", value, "productId");
+        public Criteria andProduct_idGreaterThan(Long value) {
+            addCriterion("product_id >", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("product_id >=", value, "productId");
+        public Criteria andProduct_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("product_id >=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThan(Long value) {
-            addCriterion("product_id <", value, "productId");
+        public Criteria andProduct_idLessThan(Long value) {
+            addCriterion("product_id <", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThanOrEqualTo(Long value) {
-            addCriterion("product_id <=", value, "productId");
+        public Criteria andProduct_idLessThanOrEqualTo(Long value) {
+            addCriterion("product_id <=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIn(List<Long> values) {
-            addCriterion("product_id in", values, "productId");
+        public Criteria andProduct_idIn(List<Long> values) {
+            addCriterion("product_id in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotIn(List<Long> values) {
-            addCriterion("product_id not in", values, "productId");
+        public Criteria andProduct_idNotIn(List<Long> values) {
+            addCriterion("product_id not in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdBetween(Long value1, Long value2) {
-            addCriterion("product_id between", value1, value2, "productId");
+        public Criteria andProduct_idBetween(Long value1, Long value2) {
+            addCriterion("product_id between", value1, value2, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotBetween(Long value1, Long value2) {
-            addCriterion("product_id not between", value1, value2, "productId");
+        public Criteria andProduct_idNotBetween(Long value1, Long value2) {
+            addCriterion("product_id not between", value1, value2, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceIsNull() {
+        public Criteria andFlash_promotion_priceIsNull() {
             addCriterion("flash_promotion_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceIsNotNull() {
+        public Criteria andFlash_promotion_priceIsNotNull() {
             addCriterion("flash_promotion_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceEqualTo(BigDecimal value) {
-            addCriterion("flash_promotion_price =", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceEqualTo(BigDecimal value) {
+            addCriterion("flash_promotion_price =", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceNotEqualTo(BigDecimal value) {
-            addCriterion("flash_promotion_price <>", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceNotEqualTo(BigDecimal value) {
+            addCriterion("flash_promotion_price <>", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceGreaterThan(BigDecimal value) {
-            addCriterion("flash_promotion_price >", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceGreaterThan(BigDecimal value) {
+            addCriterion("flash_promotion_price >", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("flash_promotion_price >=", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("flash_promotion_price >=", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceLessThan(BigDecimal value) {
-            addCriterion("flash_promotion_price <", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceLessThan(BigDecimal value) {
+            addCriterion("flash_promotion_price <", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("flash_promotion_price <=", value, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("flash_promotion_price <=", value, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceIn(List<BigDecimal> values) {
-            addCriterion("flash_promotion_price in", values, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceIn(List<BigDecimal> values) {
+            addCriterion("flash_promotion_price in", values, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceNotIn(List<BigDecimal> values) {
-            addCriterion("flash_promotion_price not in", values, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceNotIn(List<BigDecimal> values) {
+            addCriterion("flash_promotion_price not in", values, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("flash_promotion_price between", value1, value2, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("flash_promotion_price between", value1, value2, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionPriceNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("flash_promotion_price not between", value1, value2, "flashPromotionPrice");
+        public Criteria andFlash_promotion_priceNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("flash_promotion_price not between", value1, value2, "flash_promotion_price");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountIsNull() {
+        public Criteria andFlash_promotion_countIsNull() {
             addCriterion("flash_promotion_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountIsNotNull() {
+        public Criteria andFlash_promotion_countIsNotNull() {
             addCriterion("flash_promotion_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountEqualTo(Integer value) {
-            addCriterion("flash_promotion_count =", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countEqualTo(Integer value) {
+            addCriterion("flash_promotion_count =", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountNotEqualTo(Integer value) {
-            addCriterion("flash_promotion_count <>", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countNotEqualTo(Integer value) {
+            addCriterion("flash_promotion_count <>", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountGreaterThan(Integer value) {
-            addCriterion("flash_promotion_count >", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countGreaterThan(Integer value) {
+            addCriterion("flash_promotion_count >", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("flash_promotion_count >=", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("flash_promotion_count >=", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountLessThan(Integer value) {
-            addCriterion("flash_promotion_count <", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countLessThan(Integer value) {
+            addCriterion("flash_promotion_count <", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountLessThanOrEqualTo(Integer value) {
-            addCriterion("flash_promotion_count <=", value, "flashPromotionCount");
+        public Criteria andFlash_promotion_countLessThanOrEqualTo(Integer value) {
+            addCriterion("flash_promotion_count <=", value, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountIn(List<Integer> values) {
-            addCriterion("flash_promotion_count in", values, "flashPromotionCount");
+        public Criteria andFlash_promotion_countIn(List<Integer> values) {
+            addCriterion("flash_promotion_count in", values, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountNotIn(List<Integer> values) {
-            addCriterion("flash_promotion_count not in", values, "flashPromotionCount");
+        public Criteria andFlash_promotion_countNotIn(List<Integer> values) {
+            addCriterion("flash_promotion_count not in", values, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountBetween(Integer value1, Integer value2) {
-            addCriterion("flash_promotion_count between", value1, value2, "flashPromotionCount");
+        public Criteria andFlash_promotion_countBetween(Integer value1, Integer value2) {
+            addCriterion("flash_promotion_count between", value1, value2, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("flash_promotion_count not between", value1, value2, "flashPromotionCount");
+        public Criteria andFlash_promotion_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("flash_promotion_count not between", value1, value2, "flash_promotion_count");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitIsNull() {
+        public Criteria andFlash_promotion_limitIsNull() {
             addCriterion("flash_promotion_limit is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitIsNotNull() {
+        public Criteria andFlash_promotion_limitIsNotNull() {
             addCriterion("flash_promotion_limit is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitEqualTo(Integer value) {
-            addCriterion("flash_promotion_limit =", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitEqualTo(Integer value) {
+            addCriterion("flash_promotion_limit =", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitNotEqualTo(Integer value) {
-            addCriterion("flash_promotion_limit <>", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitNotEqualTo(Integer value) {
+            addCriterion("flash_promotion_limit <>", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitGreaterThan(Integer value) {
-            addCriterion("flash_promotion_limit >", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitGreaterThan(Integer value) {
+            addCriterion("flash_promotion_limit >", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitGreaterThanOrEqualTo(Integer value) {
-            addCriterion("flash_promotion_limit >=", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitGreaterThanOrEqualTo(Integer value) {
+            addCriterion("flash_promotion_limit >=", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitLessThan(Integer value) {
-            addCriterion("flash_promotion_limit <", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitLessThan(Integer value) {
+            addCriterion("flash_promotion_limit <", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitLessThanOrEqualTo(Integer value) {
-            addCriterion("flash_promotion_limit <=", value, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitLessThanOrEqualTo(Integer value) {
+            addCriterion("flash_promotion_limit <=", value, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitIn(List<Integer> values) {
-            addCriterion("flash_promotion_limit in", values, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitIn(List<Integer> values) {
+            addCriterion("flash_promotion_limit in", values, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitNotIn(List<Integer> values) {
-            addCriterion("flash_promotion_limit not in", values, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitNotIn(List<Integer> values) {
+            addCriterion("flash_promotion_limit not in", values, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitBetween(Integer value1, Integer value2) {
-            addCriterion("flash_promotion_limit between", value1, value2, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitBetween(Integer value1, Integer value2) {
+            addCriterion("flash_promotion_limit between", value1, value2, "flash_promotion_limit");
             return (Criteria) this;
         }
 
-        public Criteria andFlashPromotionLimitNotBetween(Integer value1, Integer value2) {
-            addCriterion("flash_promotion_limit not between", value1, value2, "flashPromotionLimit");
+        public Criteria andFlash_promotion_limitNotBetween(Integer value1, Integer value2) {
+            addCriterion("flash_promotion_limit not between", value1, value2, "flash_promotion_limit");
             return (Criteria) this;
         }
 

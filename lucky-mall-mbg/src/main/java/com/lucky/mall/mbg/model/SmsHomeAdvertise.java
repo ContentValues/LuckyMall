@@ -14,18 +14,18 @@ public class SmsHomeAdvertise implements Serializable {
 
     private String pic;
 
-    private Date startTime;
+    private Date start_time;
 
-    private Date endTime;
+    private Date end_time;
 
     @ApiModelProperty(value = "上下线状态：0->下线；1->上线")
     private Integer status;
 
     @ApiModelProperty(value = "点击数")
-    private Integer clickCount;
+    private Integer click_count;
 
     @ApiModelProperty(value = "下单数")
-    private Integer orderCount;
+    private Integer order_count;
 
     @ApiModelProperty(value = "链接地址")
     private String url;
@@ -70,20 +70,20 @@ public class SmsHomeAdvertise implements Serializable {
         this.pic = pic;
     }
 
-    public Date getStartTime() {
-        return startTime;
+    public Date getStart_time() {
+        return start_time;
     }
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setStart_time(Date start_time) {
+        this.start_time = start_time;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getEnd_time() {
+        return end_time;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
     }
 
     public Integer getStatus() {
@@ -94,20 +94,20 @@ public class SmsHomeAdvertise implements Serializable {
         this.status = status;
     }
 
-    public Integer getClickCount() {
-        return clickCount;
+    public Integer getClick_count() {
+        return click_count;
     }
 
-    public void setClickCount(Integer clickCount) {
-        this.clickCount = clickCount;
+    public void setClick_count(Integer click_count) {
+        this.click_count = click_count;
     }
 
-    public Integer getOrderCount() {
-        return orderCount;
+    public Integer getOrder_count() {
+        return order_count;
     }
 
-    public void setOrderCount(Integer orderCount) {
-        this.orderCount = orderCount;
+    public void setOrder_count(Integer order_count) {
+        this.order_count = order_count;
     }
 
     public String getUrl() {
@@ -144,11 +144,11 @@ public class SmsHomeAdvertise implements Serializable {
         sb.append(", name=").append(name);
         sb.append(", type=").append(type);
         sb.append(", pic=").append(pic);
-        sb.append(", startTime=").append(startTime);
-        sb.append(", endTime=").append(endTime);
+        sb.append(", start_time=").append(start_time);
+        sb.append(", end_time=").append(end_time);
         sb.append(", status=").append(status);
-        sb.append(", clickCount=").append(clickCount);
-        sb.append(", orderCount=").append(orderCount);
+        sb.append(", click_count=").append(click_count);
+        sb.append(", order_count=").append(order_count);
         sb.append(", url=").append(url);
         sb.append(", note=").append(note);
         sb.append(", sort=").append(sort);

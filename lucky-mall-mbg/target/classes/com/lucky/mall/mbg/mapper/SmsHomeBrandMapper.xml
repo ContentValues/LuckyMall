@@ -3,9 +3,9 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.SmsHomeBrandMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.SmsHomeBrand">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="brand_id" jdbcType="BIGINT" property="brandId" />
-    <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
-    <result column="recommend_status" jdbcType="INTEGER" property="recommendStatus" />
+    <result column="brand_id" jdbcType="BIGINT" property="brand_id" />
+    <result column="brand_name" jdbcType="VARCHAR" property="brand_name" />
+    <result column="recommend_status" jdbcType="INTEGER" property="recommend_status" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -100,27 +100,24 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsHomeBrand">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into sms_home_brand (brand_id, brand_name, recommend_status, 
-      sort)
-    values (#{brandId,jdbcType=BIGINT}, #{brandName,jdbcType=VARCHAR}, #{recommendStatus,jdbcType=INTEGER}, 
-      #{sort,jdbcType=INTEGER})
+    insert into sms_home_brand (id, brand_id, brand_name, 
+      recommend_status, sort)
+    values (#{id,jdbcType=BIGINT}, #{brand_id,jdbcType=BIGINT}, #{brand_name,jdbcType=VARCHAR}, 
+      #{recommend_status,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsHomeBrand">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into sms_home_brand
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="brandId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="brand_id != null">
         brand_id,
       </if>
-      <if test="brandName != null">
+      <if test="brand_name != null">
         brand_name,
       </if>
-      <if test="recommendStatus != null">
+      <if test="recommend_status != null">
         recommend_status,
       </if>
       <if test="sort != null">
@@ -128,14 +125,17 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="brandId != null">
-        #{brandId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="brandName != null">
-        #{brandName,jdbcType=VARCHAR},
+      <if test="brand_id != null">
+        #{brand_id,jdbcType=BIGINT},
       </if>
-      <if test="recommendStatus != null">
-        #{recommendStatus,jdbcType=INTEGER},
+      <if test="brand_name != null">
+        #{brand_name,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend_status != null">
+        #{recommend_status,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
@@ -154,14 +154,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.brandId != null">
-        brand_id = #{record.brandId,jdbcType=BIGINT},
+      <if test="record.brand_id != null">
+        brand_id = #{record.brand_id,jdbcType=BIGINT},
       </if>
-      <if test="record.brandName != null">
-        brand_name = #{record.brandName,jdbcType=VARCHAR},
+      <if test="record.brand_name != null">
+        brand_name = #{record.brand_name,jdbcType=VARCHAR},
       </if>
-      <if test="record.recommendStatus != null">
-        recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
+      <if test="record.recommend_status != null">
+        recommend_status = #{record.recommend_status,jdbcType=INTEGER},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
@@ -174,9 +174,9 @@
   <update id="updateByExample" parameterType="map">
     update sms_home_brand
     set id = #{record.id,jdbcType=BIGINT},
-      brand_id = #{record.brandId,jdbcType=BIGINT},
-      brand_name = #{record.brandName,jdbcType=VARCHAR},
-      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
+      brand_id = #{record.brand_id,jdbcType=BIGINT},
+      brand_name = #{record.brand_name,jdbcType=VARCHAR},
+      recommend_status = #{record.recommend_status,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -185,14 +185,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.SmsHomeBrand">
     update sms_home_brand
     <set>
-      <if test="brandId != null">
-        brand_id = #{brandId,jdbcType=BIGINT},
+      <if test="brand_id != null">
+        brand_id = #{brand_id,jdbcType=BIGINT},
       </if>
-      <if test="brandName != null">
-        brand_name = #{brandName,jdbcType=VARCHAR},
+      <if test="brand_name != null">
+        brand_name = #{brand_name,jdbcType=VARCHAR},
       </if>
-      <if test="recommendStatus != null">
-        recommend_status = #{recommendStatus,jdbcType=INTEGER},
+      <if test="recommend_status != null">
+        recommend_status = #{recommend_status,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
@@ -202,9 +202,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.SmsHomeBrand">
     update sms_home_brand
-    set brand_id = #{brandId,jdbcType=BIGINT},
-      brand_name = #{brandName,jdbcType=VARCHAR},
-      recommend_status = #{recommendStatus,jdbcType=INTEGER},
+    set brand_id = #{brand_id,jdbcType=BIGINT},
+      brand_name = #{brand_name,jdbcType=VARCHAR},
+      recommend_status = #{recommend_status,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

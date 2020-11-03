@@ -3,16 +3,16 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.CmsTopicMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsTopic">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="category_id" jdbcType="BIGINT" property="category_id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
-    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
-    <result column="attend_count" jdbcType="INTEGER" property="attendCount" />
-    <result column="attention_count" jdbcType="INTEGER" property="attentionCount" />
-    <result column="read_count" jdbcType="INTEGER" property="readCount" />
-    <result column="award_name" jdbcType="VARCHAR" property="awardName" />
-    <result column="attend_type" jdbcType="VARCHAR" property="attendType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="start_time" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="end_time" />
+    <result column="attend_count" jdbcType="INTEGER" property="attend_count" />
+    <result column="attention_count" jdbcType="INTEGER" property="attention_count" />
+    <result column="read_count" jdbcType="INTEGER" property="read_count" />
+    <result column="award_name" jdbcType="VARCHAR" property="award_name" />
+    <result column="attend_type" jdbcType="VARCHAR" property="attend_type" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.CmsTopic">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
@@ -131,52 +131,51 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsTopic">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_topic (category_id, name, create_time, 
-      start_time, end_time, attend_count, 
-      attention_count, read_count, award_name, 
-      attend_type, content)
-    values (#{categoryId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{attendCount,jdbcType=INTEGER}, 
-      #{attentionCount,jdbcType=INTEGER}, #{readCount,jdbcType=INTEGER}, #{awardName,jdbcType=VARCHAR}, 
-      #{attendType,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR})
+    insert into cms_topic (id, category_id, name, 
+      create_time, start_time, end_time, 
+      attend_count, attention_count, read_count, 
+      award_name, attend_type, content
+      )
+    values (#{id,jdbcType=BIGINT}, #{category_id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{create_time,jdbcType=TIMESTAMP}, #{start_time,jdbcType=TIMESTAMP}, #{end_time,jdbcType=TIMESTAMP}, 
+      #{attend_count,jdbcType=INTEGER}, #{attention_count,jdbcType=INTEGER}, #{read_count,jdbcType=INTEGER}, 
+      #{award_name,jdbcType=VARCHAR}, #{attend_type,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsTopic">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_topic
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="categoryId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="category_id != null">
         category_id,
       </if>
       <if test="name != null">
         name,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
-      <if test="startTime != null">
+      <if test="start_time != null">
         start_time,
       </if>
-      <if test="endTime != null">
+      <if test="end_time != null">
         end_time,
       </if>
-      <if test="attendCount != null">
+      <if test="attend_count != null">
         attend_count,
       </if>
-      <if test="attentionCount != null">
+      <if test="attention_count != null">
         attention_count,
       </if>
-      <if test="readCount != null">
+      <if test="read_count != null">
         read_count,
       </if>
-      <if test="awardName != null">
+      <if test="award_name != null">
         award_name,
       </if>
-      <if test="attendType != null">
+      <if test="attend_type != null">
         attend_type,
       </if>
       <if test="content != null">
@@ -184,35 +183,38 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="categoryId != null">
-        #{categoryId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="category_id != null">
+        #{category_id,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="startTime != null">
-        #{startTime,jdbcType=TIMESTAMP},
+      <if test="start_time != null">
+        #{start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="endTime != null">
-        #{endTime,jdbcType=TIMESTAMP},
+      <if test="end_time != null">
+        #{end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="attendCount != null">
-        #{attendCount,jdbcType=INTEGER},
+      <if test="attend_count != null">
+        #{attend_count,jdbcType=INTEGER},
       </if>
-      <if test="attentionCount != null">
-        #{attentionCount,jdbcType=INTEGER},
+      <if test="attention_count != null">
+        #{attention_count,jdbcType=INTEGER},
       </if>
-      <if test="readCount != null">
-        #{readCount,jdbcType=INTEGER},
+      <if test="read_count != null">
+        #{read_count,jdbcType=INTEGER},
       </if>
-      <if test="awardName != null">
-        #{awardName,jdbcType=VARCHAR},
+      <if test="award_name != null">
+        #{award_name,jdbcType=VARCHAR},
       </if>
-      <if test="attendType != null">
-        #{attendType,jdbcType=VARCHAR},
+      <if test="attend_type != null">
+        #{attend_type,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
@@ -231,35 +233,35 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.categoryId != null">
-        category_id = #{record.categoryId,jdbcType=BIGINT},
+      <if test="record.category_id != null">
+        category_id = #{record.category_id,jdbcType=BIGINT},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.startTime != null">
-        start_time = #{record.startTime,jdbcType=TIMESTAMP},
+      <if test="record.start_time != null">
+        start_time = #{record.start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.endTime != null">
-        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      <if test="record.end_time != null">
+        end_time = #{record.end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.attendCount != null">
-        attend_count = #{record.attendCount,jdbcType=INTEGER},
+      <if test="record.attend_count != null">
+        attend_count = #{record.attend_count,jdbcType=INTEGER},
       </if>
-      <if test="record.attentionCount != null">
-        attention_count = #{record.attentionCount,jdbcType=INTEGER},
+      <if test="record.attention_count != null">
+        attention_count = #{record.attention_count,jdbcType=INTEGER},
       </if>
-      <if test="record.readCount != null">
-        read_count = #{record.readCount,jdbcType=INTEGER},
+      <if test="record.read_count != null">
+        read_count = #{record.read_count,jdbcType=INTEGER},
       </if>
-      <if test="record.awardName != null">
-        award_name = #{record.awardName,jdbcType=VARCHAR},
+      <if test="record.award_name != null">
+        award_name = #{record.award_name,jdbcType=VARCHAR},
       </if>
-      <if test="record.attendType != null">
-        attend_type = #{record.attendType,jdbcType=VARCHAR},
+      <if test="record.attend_type != null">
+        attend_type = #{record.attend_type,jdbcType=VARCHAR},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=LONGVARCHAR},
@@ -272,16 +274,16 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update cms_topic
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.categoryId,jdbcType=BIGINT},
+      category_id = #{record.category_id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      start_time = #{record.startTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
-      attend_count = #{record.attendCount,jdbcType=INTEGER},
-      attention_count = #{record.attentionCount,jdbcType=INTEGER},
-      read_count = #{record.readCount,jdbcType=INTEGER},
-      award_name = #{record.awardName,jdbcType=VARCHAR},
-      attend_type = #{record.attendType,jdbcType=VARCHAR},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      start_time = #{record.start_time,jdbcType=TIMESTAMP},
+      end_time = #{record.end_time,jdbcType=TIMESTAMP},
+      attend_count = #{record.attend_count,jdbcType=INTEGER},
+      attention_count = #{record.attention_count,jdbcType=INTEGER},
+      read_count = #{record.read_count,jdbcType=INTEGER},
+      award_name = #{record.award_name,jdbcType=VARCHAR},
+      attend_type = #{record.attend_type,jdbcType=VARCHAR},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -290,16 +292,16 @@
   <update id="updateByExample" parameterType="map">
     update cms_topic
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.categoryId,jdbcType=BIGINT},
+      category_id = #{record.category_id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      start_time = #{record.startTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
-      attend_count = #{record.attendCount,jdbcType=INTEGER},
-      attention_count = #{record.attentionCount,jdbcType=INTEGER},
-      read_count = #{record.readCount,jdbcType=INTEGER},
-      award_name = #{record.awardName,jdbcType=VARCHAR},
-      attend_type = #{record.attendType,jdbcType=VARCHAR}
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      start_time = #{record.start_time,jdbcType=TIMESTAMP},
+      end_time = #{record.end_time,jdbcType=TIMESTAMP},
+      attend_count = #{record.attend_count,jdbcType=INTEGER},
+      attention_count = #{record.attention_count,jdbcType=INTEGER},
+      read_count = #{record.read_count,jdbcType=INTEGER},
+      award_name = #{record.award_name,jdbcType=VARCHAR},
+      attend_type = #{record.attend_type,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -307,35 +309,35 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.CmsTopic">
     update cms_topic
     <set>
-      <if test="categoryId != null">
-        category_id = #{categoryId,jdbcType=BIGINT},
+      <if test="category_id != null">
+        category_id = #{category_id,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="startTime != null">
-        start_time = #{startTime,jdbcType=TIMESTAMP},
+      <if test="start_time != null">
+        start_time = #{start_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="endTime != null">
-        end_time = #{endTime,jdbcType=TIMESTAMP},
+      <if test="end_time != null">
+        end_time = #{end_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="attendCount != null">
-        attend_count = #{attendCount,jdbcType=INTEGER},
+      <if test="attend_count != null">
+        attend_count = #{attend_count,jdbcType=INTEGER},
       </if>
-      <if test="attentionCount != null">
-        attention_count = #{attentionCount,jdbcType=INTEGER},
+      <if test="attention_count != null">
+        attention_count = #{attention_count,jdbcType=INTEGER},
       </if>
-      <if test="readCount != null">
-        read_count = #{readCount,jdbcType=INTEGER},
+      <if test="read_count != null">
+        read_count = #{read_count,jdbcType=INTEGER},
       </if>
-      <if test="awardName != null">
-        award_name = #{awardName,jdbcType=VARCHAR},
+      <if test="award_name != null">
+        award_name = #{award_name,jdbcType=VARCHAR},
       </if>
-      <if test="attendType != null">
-        attend_type = #{attendType,jdbcType=VARCHAR},
+      <if test="attend_type != null">
+        attend_type = #{attend_type,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=LONGVARCHAR},
@@ -345,31 +347,31 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.CmsTopic">
     update cms_topic
-    set category_id = #{categoryId,jdbcType=BIGINT},
+    set category_id = #{category_id,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      start_time = #{startTime,jdbcType=TIMESTAMP},
-      end_time = #{endTime,jdbcType=TIMESTAMP},
-      attend_count = #{attendCount,jdbcType=INTEGER},
-      attention_count = #{attentionCount,jdbcType=INTEGER},
-      read_count = #{readCount,jdbcType=INTEGER},
-      award_name = #{awardName,jdbcType=VARCHAR},
-      attend_type = #{attendType,jdbcType=VARCHAR},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      start_time = #{start_time,jdbcType=TIMESTAMP},
+      end_time = #{end_time,jdbcType=TIMESTAMP},
+      attend_count = #{attend_count,jdbcType=INTEGER},
+      attention_count = #{attention_count,jdbcType=INTEGER},
+      read_count = #{read_count,jdbcType=INTEGER},
+      award_name = #{award_name,jdbcType=VARCHAR},
+      attend_type = #{attend_type,jdbcType=VARCHAR},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.CmsTopic">
     update cms_topic
-    set category_id = #{categoryId,jdbcType=BIGINT},
+    set category_id = #{category_id,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      start_time = #{startTime,jdbcType=TIMESTAMP},
-      end_time = #{endTime,jdbcType=TIMESTAMP},
-      attend_count = #{attendCount,jdbcType=INTEGER},
-      attention_count = #{attentionCount,jdbcType=INTEGER},
-      read_count = #{readCount,jdbcType=INTEGER},
-      award_name = #{awardName,jdbcType=VARCHAR},
-      attend_type = #{attendType,jdbcType=VARCHAR}
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      start_time = #{start_time,jdbcType=TIMESTAMP},
+      end_time = #{end_time,jdbcType=TIMESTAMP},
+      attend_count = #{attend_count,jdbcType=INTEGER},
+      attention_count = #{attention_count,jdbcType=INTEGER},
+      read_count = #{read_count,jdbcType=INTEGER},
+      award_name = #{award_name,jdbcType=VARCHAR},
+      attend_type = #{attend_type,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

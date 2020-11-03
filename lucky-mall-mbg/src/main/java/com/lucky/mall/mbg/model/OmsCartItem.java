@@ -8,11 +8,11 @@ import java.util.Date;
 public class OmsCartItem implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private Long productSkuId;
+    private Long product_sku_id;
 
-    private Long memberId;
+    private Long member_id;
 
     @ApiModelProperty(value = "购买数量")
     private Integer quantity;
@@ -21,38 +21,38 @@ public class OmsCartItem implements Serializable {
     private BigDecimal price;
 
     @ApiModelProperty(value = "商品主图")
-    private String productPic;
+    private String product_pic;
 
     @ApiModelProperty(value = "商品名称")
-    private String productName;
+    private String product_name;
 
     @ApiModelProperty(value = "商品副标题（卖点）")
-    private String productSubTitle;
+    private String product_sub_title;
 
     @ApiModelProperty(value = "商品sku条码")
-    private String productSkuCode;
+    private String product_sku_code;
 
     @ApiModelProperty(value = "会员昵称")
-    private String memberNickname;
+    private String member_nickname;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createDate;
+    private Date create_date;
 
     @ApiModelProperty(value = "修改时间")
-    private Date modifyDate;
+    private Date modify_date;
 
     @ApiModelProperty(value = "是否删除")
-    private Integer deleteStatus;
+    private Integer delete_status;
 
     @ApiModelProperty(value = "商品分类")
-    private Long productCategoryId;
+    private Long product_category_id;
 
-    private String productBrand;
+    private String product_brand;
 
-    private String productSn;
+    private String product_sn;
 
     @ApiModelProperty(value = "商品销售属性:[{'key':'颜色','value':'颜色'},{'key':'容量','value':'4G'}]")
-    private String productAttr;
+    private String product_attr;
 
     private static final long serialVersionUID = 1L;
 
@@ -64,28 +64,28 @@ public class OmsCartItem implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public Long getProductSkuId() {
-        return productSkuId;
+    public Long getProduct_sku_id() {
+        return product_sku_id;
     }
 
-    public void setProductSkuId(Long productSkuId) {
-        this.productSkuId = productSkuId;
+    public void setProduct_sku_id(Long product_sku_id) {
+        this.product_sku_id = product_sku_id;
     }
 
-    public Long getMemberId() {
-        return memberId;
+    public Long getMember_id() {
+        return member_id;
     }
 
-    public void setMemberId(Long memberId) {
-        this.memberId = memberId;
+    public void setMember_id(Long member_id) {
+        this.member_id = member_id;
     }
 
     public Integer getQuantity() {
@@ -104,100 +104,100 @@ public class OmsCartItem implements Serializable {
         this.price = price;
     }
 
-    public String getProductPic() {
-        return productPic;
+    public String getProduct_pic() {
+        return product_pic;
     }
 
-    public void setProductPic(String productPic) {
-        this.productPic = productPic;
+    public void setProduct_pic(String product_pic) {
+        this.product_pic = product_pic;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
-    public String getProductSubTitle() {
-        return productSubTitle;
+    public String getProduct_sub_title() {
+        return product_sub_title;
     }
 
-    public void setProductSubTitle(String productSubTitle) {
-        this.productSubTitle = productSubTitle;
+    public void setProduct_sub_title(String product_sub_title) {
+        this.product_sub_title = product_sub_title;
     }
 
-    public String getProductSkuCode() {
-        return productSkuCode;
+    public String getProduct_sku_code() {
+        return product_sku_code;
     }
 
-    public void setProductSkuCode(String productSkuCode) {
-        this.productSkuCode = productSkuCode;
+    public void setProduct_sku_code(String product_sku_code) {
+        this.product_sku_code = product_sku_code;
     }
 
-    public String getMemberNickname() {
-        return memberNickname;
+    public String getMember_nickname() {
+        return member_nickname;
     }
 
-    public void setMemberNickname(String memberNickname) {
-        this.memberNickname = memberNickname;
+    public void setMember_nickname(String member_nickname) {
+        this.member_nickname = member_nickname;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public Date getCreate_date() {
+        return create_date;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCreate_date(Date create_date) {
+        this.create_date = create_date;
     }
 
-    public Date getModifyDate() {
-        return modifyDate;
+    public Date getModify_date() {
+        return modify_date;
     }
 
-    public void setModifyDate(Date modifyDate) {
-        this.modifyDate = modifyDate;
+    public void setModify_date(Date modify_date) {
+        this.modify_date = modify_date;
     }
 
-    public Integer getDeleteStatus() {
-        return deleteStatus;
+    public Integer getDelete_status() {
+        return delete_status;
     }
 
-    public void setDeleteStatus(Integer deleteStatus) {
-        this.deleteStatus = deleteStatus;
+    public void setDelete_status(Integer delete_status) {
+        this.delete_status = delete_status;
     }
 
-    public Long getProductCategoryId() {
-        return productCategoryId;
+    public Long getProduct_category_id() {
+        return product_category_id;
     }
 
-    public void setProductCategoryId(Long productCategoryId) {
-        this.productCategoryId = productCategoryId;
+    public void setProduct_category_id(Long product_category_id) {
+        this.product_category_id = product_category_id;
     }
 
-    public String getProductBrand() {
-        return productBrand;
+    public String getProduct_brand() {
+        return product_brand;
     }
 
-    public void setProductBrand(String productBrand) {
-        this.productBrand = productBrand;
+    public void setProduct_brand(String product_brand) {
+        this.product_brand = product_brand;
     }
 
-    public String getProductSn() {
-        return productSn;
+    public String getProduct_sn() {
+        return product_sn;
     }
 
-    public void setProductSn(String productSn) {
-        this.productSn = productSn;
+    public void setProduct_sn(String product_sn) {
+        this.product_sn = product_sn;
     }
 
-    public String getProductAttr() {
-        return productAttr;
+    public String getProduct_attr() {
+        return product_attr;
     }
 
-    public void setProductAttr(String productAttr) {
-        this.productAttr = productAttr;
+    public void setProduct_attr(String product_attr) {
+        this.product_attr = product_attr;
     }
 
     @Override
@@ -207,23 +207,23 @@ public class OmsCartItem implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", productSkuId=").append(productSkuId);
-        sb.append(", memberId=").append(memberId);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", product_sku_id=").append(product_sku_id);
+        sb.append(", member_id=").append(member_id);
         sb.append(", quantity=").append(quantity);
         sb.append(", price=").append(price);
-        sb.append(", productPic=").append(productPic);
-        sb.append(", productName=").append(productName);
-        sb.append(", productSubTitle=").append(productSubTitle);
-        sb.append(", productSkuCode=").append(productSkuCode);
-        sb.append(", memberNickname=").append(memberNickname);
-        sb.append(", createDate=").append(createDate);
-        sb.append(", modifyDate=").append(modifyDate);
-        sb.append(", deleteStatus=").append(deleteStatus);
-        sb.append(", productCategoryId=").append(productCategoryId);
-        sb.append(", productBrand=").append(productBrand);
-        sb.append(", productSn=").append(productSn);
-        sb.append(", productAttr=").append(productAttr);
+        sb.append(", product_pic=").append(product_pic);
+        sb.append(", product_name=").append(product_name);
+        sb.append(", product_sub_title=").append(product_sub_title);
+        sb.append(", product_sku_code=").append(product_sku_code);
+        sb.append(", member_nickname=").append(member_nickname);
+        sb.append(", create_date=").append(create_date);
+        sb.append(", modify_date=").append(modify_date);
+        sb.append(", delete_status=").append(delete_status);
+        sb.append(", product_category_id=").append(product_category_id);
+        sb.append(", product_brand=").append(product_brand);
+        sb.append(", product_sn=").append(product_sn);
+        sb.append(", product_attr=").append(product_attr);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

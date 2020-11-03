@@ -165,253 +165,253 @@ public class PmsMemberPriceExample {
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNull() {
+        public Criteria andProduct_idIsNull() {
             addCriterion("product_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIsNotNull() {
+        public Criteria andProduct_idIsNotNull() {
             addCriterion("product_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdEqualTo(Long value) {
-            addCriterion("product_id =", value, "productId");
+        public Criteria andProduct_idEqualTo(Long value) {
+            addCriterion("product_id =", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotEqualTo(Long value) {
-            addCriterion("product_id <>", value, "productId");
+        public Criteria andProduct_idNotEqualTo(Long value) {
+            addCriterion("product_id <>", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThan(Long value) {
-            addCriterion("product_id >", value, "productId");
+        public Criteria andProduct_idGreaterThan(Long value) {
+            addCriterion("product_id >", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("product_id >=", value, "productId");
+        public Criteria andProduct_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("product_id >=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThan(Long value) {
-            addCriterion("product_id <", value, "productId");
+        public Criteria andProduct_idLessThan(Long value) {
+            addCriterion("product_id <", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdLessThanOrEqualTo(Long value) {
-            addCriterion("product_id <=", value, "productId");
+        public Criteria andProduct_idLessThanOrEqualTo(Long value) {
+            addCriterion("product_id <=", value, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdIn(List<Long> values) {
-            addCriterion("product_id in", values, "productId");
+        public Criteria andProduct_idIn(List<Long> values) {
+            addCriterion("product_id in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotIn(List<Long> values) {
-            addCriterion("product_id not in", values, "productId");
+        public Criteria andProduct_idNotIn(List<Long> values) {
+            addCriterion("product_id not in", values, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdBetween(Long value1, Long value2) {
-            addCriterion("product_id between", value1, value2, "productId");
+        public Criteria andProduct_idBetween(Long value1, Long value2) {
+            addCriterion("product_id between", value1, value2, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andProductIdNotBetween(Long value1, Long value2) {
-            addCriterion("product_id not between", value1, value2, "productId");
+        public Criteria andProduct_idNotBetween(Long value1, Long value2) {
+            addCriterion("product_id not between", value1, value2, "product_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIsNull() {
+        public Criteria andMember_level_idIsNull() {
             addCriterion("member_level_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIsNotNull() {
+        public Criteria andMember_level_idIsNotNull() {
             addCriterion("member_level_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdEqualTo(Long value) {
-            addCriterion("member_level_id =", value, "memberLevelId");
+        public Criteria andMember_level_idEqualTo(Long value) {
+            addCriterion("member_level_id =", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotEqualTo(Long value) {
-            addCriterion("member_level_id <>", value, "memberLevelId");
+        public Criteria andMember_level_idNotEqualTo(Long value) {
+            addCriterion("member_level_id <>", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdGreaterThan(Long value) {
-            addCriterion("member_level_id >", value, "memberLevelId");
+        public Criteria andMember_level_idGreaterThan(Long value) {
+            addCriterion("member_level_id >", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("member_level_id >=", value, "memberLevelId");
+        public Criteria andMember_level_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("member_level_id >=", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdLessThan(Long value) {
-            addCriterion("member_level_id <", value, "memberLevelId");
+        public Criteria andMember_level_idLessThan(Long value) {
+            addCriterion("member_level_id <", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdLessThanOrEqualTo(Long value) {
-            addCriterion("member_level_id <=", value, "memberLevelId");
+        public Criteria andMember_level_idLessThanOrEqualTo(Long value) {
+            addCriterion("member_level_id <=", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIn(List<Long> values) {
-            addCriterion("member_level_id in", values, "memberLevelId");
+        public Criteria andMember_level_idIn(List<Long> values) {
+            addCriterion("member_level_id in", values, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotIn(List<Long> values) {
-            addCriterion("member_level_id not in", values, "memberLevelId");
+        public Criteria andMember_level_idNotIn(List<Long> values) {
+            addCriterion("member_level_id not in", values, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdBetween(Long value1, Long value2) {
-            addCriterion("member_level_id between", value1, value2, "memberLevelId");
+        public Criteria andMember_level_idBetween(Long value1, Long value2) {
+            addCriterion("member_level_id between", value1, value2, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotBetween(Long value1, Long value2) {
-            addCriterion("member_level_id not between", value1, value2, "memberLevelId");
+        public Criteria andMember_level_idNotBetween(Long value1, Long value2) {
+            addCriterion("member_level_id not between", value1, value2, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceIsNull() {
+        public Criteria andMember_priceIsNull() {
             addCriterion("member_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceIsNotNull() {
+        public Criteria andMember_priceIsNotNull() {
             addCriterion("member_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceEqualTo(BigDecimal value) {
-            addCriterion("member_price =", value, "memberPrice");
+        public Criteria andMember_priceEqualTo(BigDecimal value) {
+            addCriterion("member_price =", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceNotEqualTo(BigDecimal value) {
-            addCriterion("member_price <>", value, "memberPrice");
+        public Criteria andMember_priceNotEqualTo(BigDecimal value) {
+            addCriterion("member_price <>", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceGreaterThan(BigDecimal value) {
-            addCriterion("member_price >", value, "memberPrice");
+        public Criteria andMember_priceGreaterThan(BigDecimal value) {
+            addCriterion("member_price >", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("member_price >=", value, "memberPrice");
+        public Criteria andMember_priceGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("member_price >=", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceLessThan(BigDecimal value) {
-            addCriterion("member_price <", value, "memberPrice");
+        public Criteria andMember_priceLessThan(BigDecimal value) {
+            addCriterion("member_price <", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("member_price <=", value, "memberPrice");
+        public Criteria andMember_priceLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("member_price <=", value, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceIn(List<BigDecimal> values) {
-            addCriterion("member_price in", values, "memberPrice");
+        public Criteria andMember_priceIn(List<BigDecimal> values) {
+            addCriterion("member_price in", values, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceNotIn(List<BigDecimal> values) {
-            addCriterion("member_price not in", values, "memberPrice");
+        public Criteria andMember_priceNotIn(List<BigDecimal> values) {
+            addCriterion("member_price not in", values, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("member_price between", value1, value2, "memberPrice");
+        public Criteria andMember_priceBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("member_price between", value1, value2, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberPriceNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("member_price not between", value1, value2, "memberPrice");
+        public Criteria andMember_priceNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("member_price not between", value1, value2, "member_price");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameIsNull() {
+        public Criteria andMember_level_nameIsNull() {
             addCriterion("member_level_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameIsNotNull() {
+        public Criteria andMember_level_nameIsNotNull() {
             addCriterion("member_level_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameEqualTo(String value) {
-            addCriterion("member_level_name =", value, "memberLevelName");
+        public Criteria andMember_level_nameEqualTo(String value) {
+            addCriterion("member_level_name =", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameNotEqualTo(String value) {
-            addCriterion("member_level_name <>", value, "memberLevelName");
+        public Criteria andMember_level_nameNotEqualTo(String value) {
+            addCriterion("member_level_name <>", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameGreaterThan(String value) {
-            addCriterion("member_level_name >", value, "memberLevelName");
+        public Criteria andMember_level_nameGreaterThan(String value) {
+            addCriterion("member_level_name >", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameGreaterThanOrEqualTo(String value) {
-            addCriterion("member_level_name >=", value, "memberLevelName");
+        public Criteria andMember_level_nameGreaterThanOrEqualTo(String value) {
+            addCriterion("member_level_name >=", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameLessThan(String value) {
-            addCriterion("member_level_name <", value, "memberLevelName");
+        public Criteria andMember_level_nameLessThan(String value) {
+            addCriterion("member_level_name <", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameLessThanOrEqualTo(String value) {
-            addCriterion("member_level_name <=", value, "memberLevelName");
+        public Criteria andMember_level_nameLessThanOrEqualTo(String value) {
+            addCriterion("member_level_name <=", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameLike(String value) {
-            addCriterion("member_level_name like", value, "memberLevelName");
+        public Criteria andMember_level_nameLike(String value) {
+            addCriterion("member_level_name like", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameNotLike(String value) {
-            addCriterion("member_level_name not like", value, "memberLevelName");
+        public Criteria andMember_level_nameNotLike(String value) {
+            addCriterion("member_level_name not like", value, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameIn(List<String> values) {
-            addCriterion("member_level_name in", values, "memberLevelName");
+        public Criteria andMember_level_nameIn(List<String> values) {
+            addCriterion("member_level_name in", values, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameNotIn(List<String> values) {
-            addCriterion("member_level_name not in", values, "memberLevelName");
+        public Criteria andMember_level_nameNotIn(List<String> values) {
+            addCriterion("member_level_name not in", values, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameBetween(String value1, String value2) {
-            addCriterion("member_level_name between", value1, value2, "memberLevelName");
+        public Criteria andMember_level_nameBetween(String value1, String value2) {
+            addCriterion("member_level_name between", value1, value2, "member_level_name");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNameNotBetween(String value1, String value2) {
-            addCriterion("member_level_name not between", value1, value2, "memberLevelName");
+        public Criteria andMember_level_nameNotBetween(String value1, String value2) {
+            addCriterion("member_level_name not between", value1, value2, "member_level_name");
             return (Criteria) this;
         }
     }

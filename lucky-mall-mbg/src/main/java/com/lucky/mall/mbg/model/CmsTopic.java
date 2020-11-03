@@ -7,29 +7,29 @@ import java.util.Date;
 public class CmsTopic implements Serializable {
     private Long id;
 
-    private Long categoryId;
+    private Long category_id;
 
     private String name;
 
-    private Date createTime;
+    private Date create_time;
 
-    private Date startTime;
+    private Date start_time;
 
-    private Date endTime;
+    private Date end_time;
 
     @ApiModelProperty(value = "参与人数")
-    private Integer attendCount;
+    private Integer attend_count;
 
     @ApiModelProperty(value = "关注人数")
-    private Integer attentionCount;
+    private Integer attention_count;
 
-    private Integer readCount;
+    private Integer read_count;
 
     @ApiModelProperty(value = "奖品名称")
-    private String awardName;
+    private String award_name;
 
     @ApiModelProperty(value = "参与方式")
-    private String attendType;
+    private String attend_type;
 
     @ApiModelProperty(value = "话题内容")
     private String content;
@@ -44,12 +44,12 @@ public class CmsTopic implements Serializable {
         this.id = id;
     }
 
-    public Long getCategoryId() {
-        return categoryId;
+    public Long getCategory_id() {
+        return category_id;
     }
 
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory_id(Long category_id) {
+        this.category_id = category_id;
     }
 
     public String getName() {
@@ -60,68 +60,68 @@ public class CmsTopic implements Serializable {
         this.name = name;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public Date getStartTime() {
-        return startTime;
+    public Date getStart_time() {
+        return start_time;
     }
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setStart_time(Date start_time) {
+        this.start_time = start_time;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getEnd_time() {
+        return end_time;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
     }
 
-    public Integer getAttendCount() {
-        return attendCount;
+    public Integer getAttend_count() {
+        return attend_count;
     }
 
-    public void setAttendCount(Integer attendCount) {
-        this.attendCount = attendCount;
+    public void setAttend_count(Integer attend_count) {
+        this.attend_count = attend_count;
     }
 
-    public Integer getAttentionCount() {
-        return attentionCount;
+    public Integer getAttention_count() {
+        return attention_count;
     }
 
-    public void setAttentionCount(Integer attentionCount) {
-        this.attentionCount = attentionCount;
+    public void setAttention_count(Integer attention_count) {
+        this.attention_count = attention_count;
     }
 
-    public Integer getReadCount() {
-        return readCount;
+    public Integer getRead_count() {
+        return read_count;
     }
 
-    public void setReadCount(Integer readCount) {
-        this.readCount = readCount;
+    public void setRead_count(Integer read_count) {
+        this.read_count = read_count;
     }
 
-    public String getAwardName() {
-        return awardName;
+    public String getAward_name() {
+        return award_name;
     }
 
-    public void setAwardName(String awardName) {
-        this.awardName = awardName;
+    public void setAward_name(String award_name) {
+        this.award_name = award_name;
     }
 
-    public String getAttendType() {
-        return attendType;
+    public String getAttend_type() {
+        return attend_type;
     }
 
-    public void setAttendType(String attendType) {
-        this.attendType = attendType;
+    public void setAttend_type(String attend_type) {
+        this.attend_type = attend_type;
     }
 
     public String getContent() {
@@ -139,16 +139,16 @@ public class CmsTopic implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", categoryId=").append(categoryId);
+        sb.append(", category_id=").append(category_id);
         sb.append(", name=").append(name);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", startTime=").append(startTime);
-        sb.append(", endTime=").append(endTime);
-        sb.append(", attendCount=").append(attendCount);
-        sb.append(", attentionCount=").append(attentionCount);
-        sb.append(", readCount=").append(readCount);
-        sb.append(", awardName=").append(awardName);
-        sb.append(", attendType=").append(attendType);
+        sb.append(", create_time=").append(create_time);
+        sb.append(", start_time=").append(start_time);
+        sb.append(", end_time=").append(end_time);
+        sb.append(", attend_count=").append(attend_count);
+        sb.append(", attention_count=").append(attention_count);
+        sb.append(", read_count=").append(read_count);
+        sb.append(", award_name=").append(award_name);
+        sb.append(", attend_type=").append(attend_type);
         sb.append(", content=").append(content);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

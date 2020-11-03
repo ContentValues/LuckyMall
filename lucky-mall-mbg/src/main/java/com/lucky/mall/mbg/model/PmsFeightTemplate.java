@@ -10,17 +10,17 @@ public class PmsFeightTemplate implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "计费类型:0->按重量；1->按件数")
-    private Integer chargeType;
+    private Integer charge_type;
 
     @ApiModelProperty(value = "首重kg")
-    private BigDecimal firstWeight;
+    private BigDecimal first_weight;
 
     @ApiModelProperty(value = "首费（元）")
-    private BigDecimal firstFee;
+    private BigDecimal first_fee;
 
-    private BigDecimal continueWeight;
+    private BigDecimal continue_weight;
 
-    private BigDecimal continmeFee;
+    private BigDecimal continme_fee;
 
     @ApiModelProperty(value = "目的地（省、市）")
     private String dest;
@@ -43,44 +43,44 @@ public class PmsFeightTemplate implements Serializable {
         this.name = name;
     }
 
-    public Integer getChargeType() {
-        return chargeType;
+    public Integer getCharge_type() {
+        return charge_type;
     }
 
-    public void setChargeType(Integer chargeType) {
-        this.chargeType = chargeType;
+    public void setCharge_type(Integer charge_type) {
+        this.charge_type = charge_type;
     }
 
-    public BigDecimal getFirstWeight() {
-        return firstWeight;
+    public BigDecimal getFirst_weight() {
+        return first_weight;
     }
 
-    public void setFirstWeight(BigDecimal firstWeight) {
-        this.firstWeight = firstWeight;
+    public void setFirst_weight(BigDecimal first_weight) {
+        this.first_weight = first_weight;
     }
 
-    public BigDecimal getFirstFee() {
-        return firstFee;
+    public BigDecimal getFirst_fee() {
+        return first_fee;
     }
 
-    public void setFirstFee(BigDecimal firstFee) {
-        this.firstFee = firstFee;
+    public void setFirst_fee(BigDecimal first_fee) {
+        this.first_fee = first_fee;
     }
 
-    public BigDecimal getContinueWeight() {
-        return continueWeight;
+    public BigDecimal getContinue_weight() {
+        return continue_weight;
     }
 
-    public void setContinueWeight(BigDecimal continueWeight) {
-        this.continueWeight = continueWeight;
+    public void setContinue_weight(BigDecimal continue_weight) {
+        this.continue_weight = continue_weight;
     }
 
-    public BigDecimal getContinmeFee() {
-        return continmeFee;
+    public BigDecimal getContinme_fee() {
+        return continme_fee;
     }
 
-    public void setContinmeFee(BigDecimal continmeFee) {
-        this.continmeFee = continmeFee;
+    public void setContinme_fee(BigDecimal continme_fee) {
+        this.continme_fee = continme_fee;
     }
 
     public String getDest() {
@@ -99,11 +99,11 @@ public class PmsFeightTemplate implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", chargeType=").append(chargeType);
-        sb.append(", firstWeight=").append(firstWeight);
-        sb.append(", firstFee=").append(firstFee);
-        sb.append(", continueWeight=").append(continueWeight);
-        sb.append(", continmeFee=").append(continmeFee);
+        sb.append(", charge_type=").append(charge_type);
+        sb.append(", first_weight=").append(first_weight);
+        sb.append(", first_fee=").append(first_fee);
+        sb.append(", continue_weight=").append(continue_weight);
+        sb.append(", continme_fee=").append(continme_fee);
         sb.append(", dest=").append(dest);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

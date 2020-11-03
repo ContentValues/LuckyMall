@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class UmsMemberMemberTagRelation implements Serializable {
     private Long id;
 
-    private Long memberId;
+    private Long member_id;
 
-    private Long tagId;
+    private Long tag_id;
 
     private static final long serialVersionUID = 1L;
 
@@ -20,20 +20,20 @@ public class UmsMemberMemberTagRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getMemberId() {
-        return memberId;
+    public Long getMember_id() {
+        return member_id;
     }
 
-    public void setMemberId(Long memberId) {
-        this.memberId = memberId;
+    public void setMember_id(Long member_id) {
+        this.member_id = member_id;
     }
 
-    public Long getTagId() {
-        return tagId;
+    public Long getTag_id() {
+        return tag_id;
     }
 
-    public void setTagId(Long tagId) {
-        this.tagId = tagId;
+    public void setTag_id(Long tag_id) {
+        this.tag_id = tag_id;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class UmsMemberMemberTagRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", memberId=").append(memberId);
-        sb.append(", tagId=").append(tagId);
+        sb.append(", member_id=").append(member_id);
+        sb.append(", tag_id=").append(tag_id);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -7,10 +7,10 @@ import java.math.BigDecimal;
 public class PmsSkuStock implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
     @ApiModelProperty(value = "sku编码")
-    private String skuCode;
+    private String sku_code;
 
     private BigDecimal price;
 
@@ -18,7 +18,7 @@ public class PmsSkuStock implements Serializable {
     private Integer stock;
 
     @ApiModelProperty(value = "预警库存")
-    private Integer lowStock;
+    private Integer low_stock;
 
     @ApiModelProperty(value = "展示图片")
     private String pic;
@@ -27,13 +27,13 @@ public class PmsSkuStock implements Serializable {
     private Integer sale;
 
     @ApiModelProperty(value = "单品促销价格")
-    private BigDecimal promotionPrice;
+    private BigDecimal promotion_price;
 
     @ApiModelProperty(value = "锁定库存")
-    private Integer lockStock;
+    private Integer lock_stock;
 
     @ApiModelProperty(value = "商品销售属性，json格式")
-    private String spData;
+    private String sp_data;
 
     private static final long serialVersionUID = 1L;
 
@@ -45,20 +45,20 @@ public class PmsSkuStock implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public String getSkuCode() {
-        return skuCode;
+    public String getSku_code() {
+        return sku_code;
     }
 
-    public void setSkuCode(String skuCode) {
-        this.skuCode = skuCode;
+    public void setSku_code(String sku_code) {
+        this.sku_code = sku_code;
     }
 
     public BigDecimal getPrice() {
@@ -77,12 +77,12 @@ public class PmsSkuStock implements Serializable {
         this.stock = stock;
     }
 
-    public Integer getLowStock() {
-        return lowStock;
+    public Integer getLow_stock() {
+        return low_stock;
     }
 
-    public void setLowStock(Integer lowStock) {
-        this.lowStock = lowStock;
+    public void setLow_stock(Integer low_stock) {
+        this.low_stock = low_stock;
     }
 
     public String getPic() {
@@ -101,28 +101,28 @@ public class PmsSkuStock implements Serializable {
         this.sale = sale;
     }
 
-    public BigDecimal getPromotionPrice() {
-        return promotionPrice;
+    public BigDecimal getPromotion_price() {
+        return promotion_price;
     }
 
-    public void setPromotionPrice(BigDecimal promotionPrice) {
-        this.promotionPrice = promotionPrice;
+    public void setPromotion_price(BigDecimal promotion_price) {
+        this.promotion_price = promotion_price;
     }
 
-    public Integer getLockStock() {
-        return lockStock;
+    public Integer getLock_stock() {
+        return lock_stock;
     }
 
-    public void setLockStock(Integer lockStock) {
-        this.lockStock = lockStock;
+    public void setLock_stock(Integer lock_stock) {
+        this.lock_stock = lock_stock;
     }
 
-    public String getSpData() {
-        return spData;
+    public String getSp_data() {
+        return sp_data;
     }
 
-    public void setSpData(String spData) {
-        this.spData = spData;
+    public void setSp_data(String sp_data) {
+        this.sp_data = sp_data;
     }
 
     @Override
@@ -132,16 +132,16 @@ public class PmsSkuStock implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", skuCode=").append(skuCode);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", sku_code=").append(sku_code);
         sb.append(", price=").append(price);
         sb.append(", stock=").append(stock);
-        sb.append(", lowStock=").append(lowStock);
+        sb.append(", low_stock=").append(low_stock);
         sb.append(", pic=").append(pic);
         sb.append(", sale=").append(sale);
-        sb.append(", promotionPrice=").append(promotionPrice);
-        sb.append(", lockStock=").append(lockStock);
-        sb.append(", spData=").append(spData);
+        sb.append(", promotion_price=").append(promotion_price);
+        sb.append(", lock_stock=").append(lock_stock);
+        sb.append(", sp_data=").append(sp_data);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

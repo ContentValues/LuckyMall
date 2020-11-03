@@ -12,9 +12,9 @@ public class CmsHelpCategory implements Serializable {
     private String icon;
 
     @ApiModelProperty(value = "专题数量")
-    private Integer helpCount;
+    private Integer help_count;
 
-    private Integer showStatus;
+    private Integer show_status;
 
     private Integer sort;
 
@@ -44,20 +44,20 @@ public class CmsHelpCategory implements Serializable {
         this.icon = icon;
     }
 
-    public Integer getHelpCount() {
-        return helpCount;
+    public Integer getHelp_count() {
+        return help_count;
     }
 
-    public void setHelpCount(Integer helpCount) {
-        this.helpCount = helpCount;
+    public void setHelp_count(Integer help_count) {
+        this.help_count = help_count;
     }
 
-    public Integer getShowStatus() {
-        return showStatus;
+    public Integer getShow_status() {
+        return show_status;
     }
 
-    public void setShowStatus(Integer showStatus) {
-        this.showStatus = showStatus;
+    public void setShow_status(Integer show_status) {
+        this.show_status = show_status;
     }
 
     public Integer getSort() {
@@ -77,8 +77,8 @@ public class CmsHelpCategory implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", icon=").append(icon);
-        sb.append(", helpCount=").append(helpCount);
-        sb.append(", showStatus=").append(showStatus);
+        sb.append(", help_count=").append(help_count);
+        sb.append(", show_status=").append(show_status);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

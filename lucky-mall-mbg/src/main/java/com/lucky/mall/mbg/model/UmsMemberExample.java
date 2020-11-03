@@ -192,63 +192,63 @@ public class UmsMemberExample {
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIsNull() {
+        public Criteria andMember_level_idIsNull() {
             addCriterion("member_level_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIsNotNull() {
+        public Criteria andMember_level_idIsNotNull() {
             addCriterion("member_level_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdEqualTo(Long value) {
-            addCriterion("member_level_id =", value, "memberLevelId");
+        public Criteria andMember_level_idEqualTo(Long value) {
+            addCriterion("member_level_id =", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotEqualTo(Long value) {
-            addCriterion("member_level_id <>", value, "memberLevelId");
+        public Criteria andMember_level_idNotEqualTo(Long value) {
+            addCriterion("member_level_id <>", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdGreaterThan(Long value) {
-            addCriterion("member_level_id >", value, "memberLevelId");
+        public Criteria andMember_level_idGreaterThan(Long value) {
+            addCriterion("member_level_id >", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("member_level_id >=", value, "memberLevelId");
+        public Criteria andMember_level_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("member_level_id >=", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdLessThan(Long value) {
-            addCriterion("member_level_id <", value, "memberLevelId");
+        public Criteria andMember_level_idLessThan(Long value) {
+            addCriterion("member_level_id <", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdLessThanOrEqualTo(Long value) {
-            addCriterion("member_level_id <=", value, "memberLevelId");
+        public Criteria andMember_level_idLessThanOrEqualTo(Long value) {
+            addCriterion("member_level_id <=", value, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdIn(List<Long> values) {
-            addCriterion("member_level_id in", values, "memberLevelId");
+        public Criteria andMember_level_idIn(List<Long> values) {
+            addCriterion("member_level_id in", values, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotIn(List<Long> values) {
-            addCriterion("member_level_id not in", values, "memberLevelId");
+        public Criteria andMember_level_idNotIn(List<Long> values) {
+            addCriterion("member_level_id not in", values, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdBetween(Long value1, Long value2) {
-            addCriterion("member_level_id between", value1, value2, "memberLevelId");
+        public Criteria andMember_level_idBetween(Long value1, Long value2) {
+            addCriterion("member_level_id between", value1, value2, "member_level_id");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIdNotBetween(Long value1, Long value2) {
-            addCriterion("member_level_id not between", value1, value2, "memberLevelId");
+        public Criteria andMember_level_idNotBetween(Long value1, Long value2) {
+            addCriterion("member_level_id not between", value1, value2, "member_level_id");
             return (Criteria) this;
         }
 
@@ -592,63 +592,63 @@ public class UmsMemberExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIsNull() {
+        public Criteria andCreate_timeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIsNotNull() {
+        public Criteria andCreate_timeIsNotNull() {
             addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeEqualTo(Date value) {
-            addCriterion("create_time =", value, "createTime");
+        public Criteria andCreate_timeEqualTo(Date value) {
+            addCriterion("create_time =", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "createTime");
+        public Criteria andCreate_timeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "createTime");
+        public Criteria andCreate_timeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "createTime");
+        public Criteria andCreate_timeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThan(Date value) {
-            addCriterion("create_time <", value, "createTime");
+        public Criteria andCreate_timeLessThan(Date value) {
+            addCriterion("create_time <", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "createTime");
+        public Criteria andCreate_timeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIn(List<Date> values) {
-            addCriterion("create_time in", values, "createTime");
+        public Criteria andCreate_timeIn(List<Date> values) {
+            addCriterion("create_time in", values, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "createTime");
+        public Criteria andCreate_timeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "createTime");
+        public Criteria andCreate_timeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "create_time");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "createTime");
+        public Criteria andCreate_timeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "create_time");
             return (Criteria) this;
         }
 
@@ -982,133 +982,133 @@ public class UmsMemberExample {
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureIsNull() {
+        public Criteria andPersonalized_signatureIsNull() {
             addCriterion("personalized_signature is null");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureIsNotNull() {
+        public Criteria andPersonalized_signatureIsNotNull() {
             addCriterion("personalized_signature is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureEqualTo(String value) {
-            addCriterion("personalized_signature =", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureEqualTo(String value) {
+            addCriterion("personalized_signature =", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureNotEqualTo(String value) {
-            addCriterion("personalized_signature <>", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureNotEqualTo(String value) {
+            addCriterion("personalized_signature <>", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureGreaterThan(String value) {
-            addCriterion("personalized_signature >", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureGreaterThan(String value) {
+            addCriterion("personalized_signature >", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureGreaterThanOrEqualTo(String value) {
-            addCriterion("personalized_signature >=", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureGreaterThanOrEqualTo(String value) {
+            addCriterion("personalized_signature >=", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureLessThan(String value) {
-            addCriterion("personalized_signature <", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureLessThan(String value) {
+            addCriterion("personalized_signature <", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureLessThanOrEqualTo(String value) {
-            addCriterion("personalized_signature <=", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureLessThanOrEqualTo(String value) {
+            addCriterion("personalized_signature <=", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureLike(String value) {
-            addCriterion("personalized_signature like", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureLike(String value) {
+            addCriterion("personalized_signature like", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureNotLike(String value) {
-            addCriterion("personalized_signature not like", value, "personalizedSignature");
+        public Criteria andPersonalized_signatureNotLike(String value) {
+            addCriterion("personalized_signature not like", value, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureIn(List<String> values) {
-            addCriterion("personalized_signature in", values, "personalizedSignature");
+        public Criteria andPersonalized_signatureIn(List<String> values) {
+            addCriterion("personalized_signature in", values, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureNotIn(List<String> values) {
-            addCriterion("personalized_signature not in", values, "personalizedSignature");
+        public Criteria andPersonalized_signatureNotIn(List<String> values) {
+            addCriterion("personalized_signature not in", values, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureBetween(String value1, String value2) {
-            addCriterion("personalized_signature between", value1, value2, "personalizedSignature");
+        public Criteria andPersonalized_signatureBetween(String value1, String value2) {
+            addCriterion("personalized_signature between", value1, value2, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andPersonalizedSignatureNotBetween(String value1, String value2) {
-            addCriterion("personalized_signature not between", value1, value2, "personalizedSignature");
+        public Criteria andPersonalized_signatureNotBetween(String value1, String value2) {
+            addCriterion("personalized_signature not between", value1, value2, "personalized_signature");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeIsNull() {
+        public Criteria andSource_typeIsNull() {
             addCriterion("source_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeIsNotNull() {
+        public Criteria andSource_typeIsNotNull() {
             addCriterion("source_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeEqualTo(Integer value) {
-            addCriterion("source_type =", value, "sourceType");
+        public Criteria andSource_typeEqualTo(Integer value) {
+            addCriterion("source_type =", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeNotEqualTo(Integer value) {
-            addCriterion("source_type <>", value, "sourceType");
+        public Criteria andSource_typeNotEqualTo(Integer value) {
+            addCriterion("source_type <>", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeGreaterThan(Integer value) {
-            addCriterion("source_type >", value, "sourceType");
+        public Criteria andSource_typeGreaterThan(Integer value) {
+            addCriterion("source_type >", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("source_type >=", value, "sourceType");
+        public Criteria andSource_typeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("source_type >=", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeLessThan(Integer value) {
-            addCriterion("source_type <", value, "sourceType");
+        public Criteria andSource_typeLessThan(Integer value) {
+            addCriterion("source_type <", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeLessThanOrEqualTo(Integer value) {
-            addCriterion("source_type <=", value, "sourceType");
+        public Criteria andSource_typeLessThanOrEqualTo(Integer value) {
+            addCriterion("source_type <=", value, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeIn(List<Integer> values) {
-            addCriterion("source_type in", values, "sourceType");
+        public Criteria andSource_typeIn(List<Integer> values) {
+            addCriterion("source_type in", values, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeNotIn(List<Integer> values) {
-            addCriterion("source_type not in", values, "sourceType");
+        public Criteria andSource_typeNotIn(List<Integer> values) {
+            addCriterion("source_type not in", values, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeBetween(Integer value1, Integer value2) {
-            addCriterion("source_type between", value1, value2, "sourceType");
+        public Criteria andSource_typeBetween(Integer value1, Integer value2) {
+            addCriterion("source_type between", value1, value2, "source_type");
             return (Criteria) this;
         }
 
-        public Criteria andSourceTypeNotBetween(Integer value1, Integer value2) {
-            addCriterion("source_type not between", value1, value2, "sourceType");
+        public Criteria andSource_typeNotBetween(Integer value1, Integer value2) {
+            addCriterion("source_type not between", value1, value2, "source_type");
             return (Criteria) this;
         }
 
@@ -1232,123 +1232,123 @@ public class UmsMemberExample {
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountIsNull() {
+        public Criteria andLuckey_countIsNull() {
             addCriterion("luckey_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountIsNotNull() {
+        public Criteria andLuckey_countIsNotNull() {
             addCriterion("luckey_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountEqualTo(Integer value) {
-            addCriterion("luckey_count =", value, "luckeyCount");
+        public Criteria andLuckey_countEqualTo(Integer value) {
+            addCriterion("luckey_count =", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountNotEqualTo(Integer value) {
-            addCriterion("luckey_count <>", value, "luckeyCount");
+        public Criteria andLuckey_countNotEqualTo(Integer value) {
+            addCriterion("luckey_count <>", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountGreaterThan(Integer value) {
-            addCriterion("luckey_count >", value, "luckeyCount");
+        public Criteria andLuckey_countGreaterThan(Integer value) {
+            addCriterion("luckey_count >", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("luckey_count >=", value, "luckeyCount");
+        public Criteria andLuckey_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("luckey_count >=", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountLessThan(Integer value) {
-            addCriterion("luckey_count <", value, "luckeyCount");
+        public Criteria andLuckey_countLessThan(Integer value) {
+            addCriterion("luckey_count <", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountLessThanOrEqualTo(Integer value) {
-            addCriterion("luckey_count <=", value, "luckeyCount");
+        public Criteria andLuckey_countLessThanOrEqualTo(Integer value) {
+            addCriterion("luckey_count <=", value, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountIn(List<Integer> values) {
-            addCriterion("luckey_count in", values, "luckeyCount");
+        public Criteria andLuckey_countIn(List<Integer> values) {
+            addCriterion("luckey_count in", values, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountNotIn(List<Integer> values) {
-            addCriterion("luckey_count not in", values, "luckeyCount");
+        public Criteria andLuckey_countNotIn(List<Integer> values) {
+            addCriterion("luckey_count not in", values, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountBetween(Integer value1, Integer value2) {
-            addCriterion("luckey_count between", value1, value2, "luckeyCount");
+        public Criteria andLuckey_countBetween(Integer value1, Integer value2) {
+            addCriterion("luckey_count between", value1, value2, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andLuckeyCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("luckey_count not between", value1, value2, "luckeyCount");
+        public Criteria andLuckey_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("luckey_count not between", value1, value2, "luckey_count");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationIsNull() {
+        public Criteria andHistory_integrationIsNull() {
             addCriterion("history_integration is null");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationIsNotNull() {
+        public Criteria andHistory_integrationIsNotNull() {
             addCriterion("history_integration is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationEqualTo(Integer value) {
-            addCriterion("history_integration =", value, "historyIntegration");
+        public Criteria andHistory_integrationEqualTo(Integer value) {
+            addCriterion("history_integration =", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationNotEqualTo(Integer value) {
-            addCriterion("history_integration <>", value, "historyIntegration");
+        public Criteria andHistory_integrationNotEqualTo(Integer value) {
+            addCriterion("history_integration <>", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationGreaterThan(Integer value) {
-            addCriterion("history_integration >", value, "historyIntegration");
+        public Criteria andHistory_integrationGreaterThan(Integer value) {
+            addCriterion("history_integration >", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationGreaterThanOrEqualTo(Integer value) {
-            addCriterion("history_integration >=", value, "historyIntegration");
+        public Criteria andHistory_integrationGreaterThanOrEqualTo(Integer value) {
+            addCriterion("history_integration >=", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationLessThan(Integer value) {
-            addCriterion("history_integration <", value, "historyIntegration");
+        public Criteria andHistory_integrationLessThan(Integer value) {
+            addCriterion("history_integration <", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationLessThanOrEqualTo(Integer value) {
-            addCriterion("history_integration <=", value, "historyIntegration");
+        public Criteria andHistory_integrationLessThanOrEqualTo(Integer value) {
+            addCriterion("history_integration <=", value, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationIn(List<Integer> values) {
-            addCriterion("history_integration in", values, "historyIntegration");
+        public Criteria andHistory_integrationIn(List<Integer> values) {
+            addCriterion("history_integration in", values, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationNotIn(List<Integer> values) {
-            addCriterion("history_integration not in", values, "historyIntegration");
+        public Criteria andHistory_integrationNotIn(List<Integer> values) {
+            addCriterion("history_integration not in", values, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationBetween(Integer value1, Integer value2) {
-            addCriterion("history_integration between", value1, value2, "historyIntegration");
+        public Criteria andHistory_integrationBetween(Integer value1, Integer value2) {
+            addCriterion("history_integration between", value1, value2, "history_integration");
             return (Criteria) this;
         }
 
-        public Criteria andHistoryIntegrationNotBetween(Integer value1, Integer value2) {
-            addCriterion("history_integration not between", value1, value2, "historyIntegration");
+        public Criteria andHistory_integrationNotBetween(Integer value1, Integer value2) {
+            addCriterion("history_integration not between", value1, value2, "history_integration");
             return (Criteria) this;
         }
     }

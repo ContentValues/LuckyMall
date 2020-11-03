@@ -476,303 +476,303 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitIsNull() {
+        public Criteria andPer_limitIsNull() {
             addCriterion("per_limit is null");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitIsNotNull() {
+        public Criteria andPer_limitIsNotNull() {
             addCriterion("per_limit is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitEqualTo(Integer value) {
-            addCriterion("per_limit =", value, "perLimit");
+        public Criteria andPer_limitEqualTo(Integer value) {
+            addCriterion("per_limit =", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitNotEqualTo(Integer value) {
-            addCriterion("per_limit <>", value, "perLimit");
+        public Criteria andPer_limitNotEqualTo(Integer value) {
+            addCriterion("per_limit <>", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitGreaterThan(Integer value) {
-            addCriterion("per_limit >", value, "perLimit");
+        public Criteria andPer_limitGreaterThan(Integer value) {
+            addCriterion("per_limit >", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitGreaterThanOrEqualTo(Integer value) {
-            addCriterion("per_limit >=", value, "perLimit");
+        public Criteria andPer_limitGreaterThanOrEqualTo(Integer value) {
+            addCriterion("per_limit >=", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitLessThan(Integer value) {
-            addCriterion("per_limit <", value, "perLimit");
+        public Criteria andPer_limitLessThan(Integer value) {
+            addCriterion("per_limit <", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitLessThanOrEqualTo(Integer value) {
-            addCriterion("per_limit <=", value, "perLimit");
+        public Criteria andPer_limitLessThanOrEqualTo(Integer value) {
+            addCriterion("per_limit <=", value, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitIn(List<Integer> values) {
-            addCriterion("per_limit in", values, "perLimit");
+        public Criteria andPer_limitIn(List<Integer> values) {
+            addCriterion("per_limit in", values, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitNotIn(List<Integer> values) {
-            addCriterion("per_limit not in", values, "perLimit");
+        public Criteria andPer_limitNotIn(List<Integer> values) {
+            addCriterion("per_limit not in", values, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitBetween(Integer value1, Integer value2) {
-            addCriterion("per_limit between", value1, value2, "perLimit");
+        public Criteria andPer_limitBetween(Integer value1, Integer value2) {
+            addCriterion("per_limit between", value1, value2, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andPerLimitNotBetween(Integer value1, Integer value2) {
-            addCriterion("per_limit not between", value1, value2, "perLimit");
+        public Criteria andPer_limitNotBetween(Integer value1, Integer value2) {
+            addCriterion("per_limit not between", value1, value2, "per_limit");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointIsNull() {
+        public Criteria andMin_pointIsNull() {
             addCriterion("min_point is null");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointIsNotNull() {
+        public Criteria andMin_pointIsNotNull() {
             addCriterion("min_point is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointEqualTo(BigDecimal value) {
-            addCriterion("min_point =", value, "minPoint");
+        public Criteria andMin_pointEqualTo(BigDecimal value) {
+            addCriterion("min_point =", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointNotEqualTo(BigDecimal value) {
-            addCriterion("min_point <>", value, "minPoint");
+        public Criteria andMin_pointNotEqualTo(BigDecimal value) {
+            addCriterion("min_point <>", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointGreaterThan(BigDecimal value) {
-            addCriterion("min_point >", value, "minPoint");
+        public Criteria andMin_pointGreaterThan(BigDecimal value) {
+            addCriterion("min_point >", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("min_point >=", value, "minPoint");
+        public Criteria andMin_pointGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("min_point >=", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointLessThan(BigDecimal value) {
-            addCriterion("min_point <", value, "minPoint");
+        public Criteria andMin_pointLessThan(BigDecimal value) {
+            addCriterion("min_point <", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("min_point <=", value, "minPoint");
+        public Criteria andMin_pointLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("min_point <=", value, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointIn(List<BigDecimal> values) {
-            addCriterion("min_point in", values, "minPoint");
+        public Criteria andMin_pointIn(List<BigDecimal> values) {
+            addCriterion("min_point in", values, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointNotIn(List<BigDecimal> values) {
-            addCriterion("min_point not in", values, "minPoint");
+        public Criteria andMin_pointNotIn(List<BigDecimal> values) {
+            addCriterion("min_point not in", values, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("min_point between", value1, value2, "minPoint");
+        public Criteria andMin_pointBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("min_point between", value1, value2, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andMinPointNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("min_point not between", value1, value2, "minPoint");
+        public Criteria andMin_pointNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("min_point not between", value1, value2, "min_point");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIsNull() {
+        public Criteria andStart_timeIsNull() {
             addCriterion("start_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIsNotNull() {
+        public Criteria andStart_timeIsNotNull() {
             addCriterion("start_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeEqualTo(Date value) {
-            addCriterion("start_time =", value, "startTime");
+        public Criteria andStart_timeEqualTo(Date value) {
+            addCriterion("start_time =", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotEqualTo(Date value) {
-            addCriterion("start_time <>", value, "startTime");
+        public Criteria andStart_timeNotEqualTo(Date value) {
+            addCriterion("start_time <>", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThan(Date value) {
-            addCriterion("start_time >", value, "startTime");
+        public Criteria andStart_timeGreaterThan(Date value) {
+            addCriterion("start_time >", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("start_time >=", value, "startTime");
+        public Criteria andStart_timeGreaterThanOrEqualTo(Date value) {
+            addCriterion("start_time >=", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThan(Date value) {
-            addCriterion("start_time <", value, "startTime");
+        public Criteria andStart_timeLessThan(Date value) {
+            addCriterion("start_time <", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThanOrEqualTo(Date value) {
-            addCriterion("start_time <=", value, "startTime");
+        public Criteria andStart_timeLessThanOrEqualTo(Date value) {
+            addCriterion("start_time <=", value, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIn(List<Date> values) {
-            addCriterion("start_time in", values, "startTime");
+        public Criteria andStart_timeIn(List<Date> values) {
+            addCriterion("start_time in", values, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotIn(List<Date> values) {
-            addCriterion("start_time not in", values, "startTime");
+        public Criteria andStart_timeNotIn(List<Date> values) {
+            addCriterion("start_time not in", values, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeBetween(Date value1, Date value2) {
-            addCriterion("start_time between", value1, value2, "startTime");
+        public Criteria andStart_timeBetween(Date value1, Date value2) {
+            addCriterion("start_time between", value1, value2, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotBetween(Date value1, Date value2) {
-            addCriterion("start_time not between", value1, value2, "startTime");
+        public Criteria andStart_timeNotBetween(Date value1, Date value2) {
+            addCriterion("start_time not between", value1, value2, "start_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeIsNull() {
+        public Criteria andEnd_timeIsNull() {
             addCriterion("end_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeIsNotNull() {
+        public Criteria andEnd_timeIsNotNull() {
             addCriterion("end_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeEqualTo(Date value) {
-            addCriterion("end_time =", value, "endTime");
+        public Criteria andEnd_timeEqualTo(Date value) {
+            addCriterion("end_time =", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotEqualTo(Date value) {
-            addCriterion("end_time <>", value, "endTime");
+        public Criteria andEnd_timeNotEqualTo(Date value) {
+            addCriterion("end_time <>", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeGreaterThan(Date value) {
-            addCriterion("end_time >", value, "endTime");
+        public Criteria andEnd_timeGreaterThan(Date value) {
+            addCriterion("end_time >", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("end_time >=", value, "endTime");
+        public Criteria andEnd_timeGreaterThanOrEqualTo(Date value) {
+            addCriterion("end_time >=", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeLessThan(Date value) {
-            addCriterion("end_time <", value, "endTime");
+        public Criteria andEnd_timeLessThan(Date value) {
+            addCriterion("end_time <", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeLessThanOrEqualTo(Date value) {
-            addCriterion("end_time <=", value, "endTime");
+        public Criteria andEnd_timeLessThanOrEqualTo(Date value) {
+            addCriterion("end_time <=", value, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeIn(List<Date> values) {
-            addCriterion("end_time in", values, "endTime");
+        public Criteria andEnd_timeIn(List<Date> values) {
+            addCriterion("end_time in", values, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotIn(List<Date> values) {
-            addCriterion("end_time not in", values, "endTime");
+        public Criteria andEnd_timeNotIn(List<Date> values) {
+            addCriterion("end_time not in", values, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeBetween(Date value1, Date value2) {
-            addCriterion("end_time between", value1, value2, "endTime");
+        public Criteria andEnd_timeBetween(Date value1, Date value2) {
+            addCriterion("end_time between", value1, value2, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andEndTimeNotBetween(Date value1, Date value2) {
-            addCriterion("end_time not between", value1, value2, "endTime");
+        public Criteria andEnd_timeNotBetween(Date value1, Date value2) {
+            addCriterion("end_time not between", value1, value2, "end_time");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeIsNull() {
+        public Criteria andUse_typeIsNull() {
             addCriterion("use_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeIsNotNull() {
+        public Criteria andUse_typeIsNotNull() {
             addCriterion("use_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeEqualTo(Integer value) {
-            addCriterion("use_type =", value, "useType");
+        public Criteria andUse_typeEqualTo(Integer value) {
+            addCriterion("use_type =", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeNotEqualTo(Integer value) {
-            addCriterion("use_type <>", value, "useType");
+        public Criteria andUse_typeNotEqualTo(Integer value) {
+            addCriterion("use_type <>", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeGreaterThan(Integer value) {
-            addCriterion("use_type >", value, "useType");
+        public Criteria andUse_typeGreaterThan(Integer value) {
+            addCriterion("use_type >", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("use_type >=", value, "useType");
+        public Criteria andUse_typeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("use_type >=", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeLessThan(Integer value) {
-            addCriterion("use_type <", value, "useType");
+        public Criteria andUse_typeLessThan(Integer value) {
+            addCriterion("use_type <", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeLessThanOrEqualTo(Integer value) {
-            addCriterion("use_type <=", value, "useType");
+        public Criteria andUse_typeLessThanOrEqualTo(Integer value) {
+            addCriterion("use_type <=", value, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeIn(List<Integer> values) {
-            addCriterion("use_type in", values, "useType");
+        public Criteria andUse_typeIn(List<Integer> values) {
+            addCriterion("use_type in", values, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeNotIn(List<Integer> values) {
-            addCriterion("use_type not in", values, "useType");
+        public Criteria andUse_typeNotIn(List<Integer> values) {
+            addCriterion("use_type not in", values, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeBetween(Integer value1, Integer value2) {
-            addCriterion("use_type between", value1, value2, "useType");
+        public Criteria andUse_typeBetween(Integer value1, Integer value2) {
+            addCriterion("use_type between", value1, value2, "use_type");
             return (Criteria) this;
         }
 
-        public Criteria andUseTypeNotBetween(Integer value1, Integer value2) {
-            addCriterion("use_type not between", value1, value2, "useType");
+        public Criteria andUse_typeNotBetween(Integer value1, Integer value2) {
+            addCriterion("use_type not between", value1, value2, "use_type");
             return (Criteria) this;
         }
 
@@ -846,243 +846,243 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountIsNull() {
+        public Criteria andPublish_countIsNull() {
             addCriterion("publish_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountIsNotNull() {
+        public Criteria andPublish_countIsNotNull() {
             addCriterion("publish_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountEqualTo(Integer value) {
-            addCriterion("publish_count =", value, "publishCount");
+        public Criteria andPublish_countEqualTo(Integer value) {
+            addCriterion("publish_count =", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountNotEqualTo(Integer value) {
-            addCriterion("publish_count <>", value, "publishCount");
+        public Criteria andPublish_countNotEqualTo(Integer value) {
+            addCriterion("publish_count <>", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountGreaterThan(Integer value) {
-            addCriterion("publish_count >", value, "publishCount");
+        public Criteria andPublish_countGreaterThan(Integer value) {
+            addCriterion("publish_count >", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("publish_count >=", value, "publishCount");
+        public Criteria andPublish_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("publish_count >=", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountLessThan(Integer value) {
-            addCriterion("publish_count <", value, "publishCount");
+        public Criteria andPublish_countLessThan(Integer value) {
+            addCriterion("publish_count <", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountLessThanOrEqualTo(Integer value) {
-            addCriterion("publish_count <=", value, "publishCount");
+        public Criteria andPublish_countLessThanOrEqualTo(Integer value) {
+            addCriterion("publish_count <=", value, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountIn(List<Integer> values) {
-            addCriterion("publish_count in", values, "publishCount");
+        public Criteria andPublish_countIn(List<Integer> values) {
+            addCriterion("publish_count in", values, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountNotIn(List<Integer> values) {
-            addCriterion("publish_count not in", values, "publishCount");
+        public Criteria andPublish_countNotIn(List<Integer> values) {
+            addCriterion("publish_count not in", values, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountBetween(Integer value1, Integer value2) {
-            addCriterion("publish_count between", value1, value2, "publishCount");
+        public Criteria andPublish_countBetween(Integer value1, Integer value2) {
+            addCriterion("publish_count between", value1, value2, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andPublishCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("publish_count not between", value1, value2, "publishCount");
+        public Criteria andPublish_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("publish_count not between", value1, value2, "publish_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountIsNull() {
+        public Criteria andUse_countIsNull() {
             addCriterion("use_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountIsNotNull() {
+        public Criteria andUse_countIsNotNull() {
             addCriterion("use_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountEqualTo(Integer value) {
-            addCriterion("use_count =", value, "useCount");
+        public Criteria andUse_countEqualTo(Integer value) {
+            addCriterion("use_count =", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountNotEqualTo(Integer value) {
-            addCriterion("use_count <>", value, "useCount");
+        public Criteria andUse_countNotEqualTo(Integer value) {
+            addCriterion("use_count <>", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountGreaterThan(Integer value) {
-            addCriterion("use_count >", value, "useCount");
+        public Criteria andUse_countGreaterThan(Integer value) {
+            addCriterion("use_count >", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("use_count >=", value, "useCount");
+        public Criteria andUse_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("use_count >=", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountLessThan(Integer value) {
-            addCriterion("use_count <", value, "useCount");
+        public Criteria andUse_countLessThan(Integer value) {
+            addCriterion("use_count <", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountLessThanOrEqualTo(Integer value) {
-            addCriterion("use_count <=", value, "useCount");
+        public Criteria andUse_countLessThanOrEqualTo(Integer value) {
+            addCriterion("use_count <=", value, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountIn(List<Integer> values) {
-            addCriterion("use_count in", values, "useCount");
+        public Criteria andUse_countIn(List<Integer> values) {
+            addCriterion("use_count in", values, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountNotIn(List<Integer> values) {
-            addCriterion("use_count not in", values, "useCount");
+        public Criteria andUse_countNotIn(List<Integer> values) {
+            addCriterion("use_count not in", values, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountBetween(Integer value1, Integer value2) {
-            addCriterion("use_count between", value1, value2, "useCount");
+        public Criteria andUse_countBetween(Integer value1, Integer value2) {
+            addCriterion("use_count between", value1, value2, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andUseCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("use_count not between", value1, value2, "useCount");
+        public Criteria andUse_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("use_count not between", value1, value2, "use_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountIsNull() {
+        public Criteria andReceive_countIsNull() {
             addCriterion("receive_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountIsNotNull() {
+        public Criteria andReceive_countIsNotNull() {
             addCriterion("receive_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountEqualTo(Integer value) {
-            addCriterion("receive_count =", value, "receiveCount");
+        public Criteria andReceive_countEqualTo(Integer value) {
+            addCriterion("receive_count =", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountNotEqualTo(Integer value) {
-            addCriterion("receive_count <>", value, "receiveCount");
+        public Criteria andReceive_countNotEqualTo(Integer value) {
+            addCriterion("receive_count <>", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountGreaterThan(Integer value) {
-            addCriterion("receive_count >", value, "receiveCount");
+        public Criteria andReceive_countGreaterThan(Integer value) {
+            addCriterion("receive_count >", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("receive_count >=", value, "receiveCount");
+        public Criteria andReceive_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("receive_count >=", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountLessThan(Integer value) {
-            addCriterion("receive_count <", value, "receiveCount");
+        public Criteria andReceive_countLessThan(Integer value) {
+            addCriterion("receive_count <", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountLessThanOrEqualTo(Integer value) {
-            addCriterion("receive_count <=", value, "receiveCount");
+        public Criteria andReceive_countLessThanOrEqualTo(Integer value) {
+            addCriterion("receive_count <=", value, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountIn(List<Integer> values) {
-            addCriterion("receive_count in", values, "receiveCount");
+        public Criteria andReceive_countIn(List<Integer> values) {
+            addCriterion("receive_count in", values, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountNotIn(List<Integer> values) {
-            addCriterion("receive_count not in", values, "receiveCount");
+        public Criteria andReceive_countNotIn(List<Integer> values) {
+            addCriterion("receive_count not in", values, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountBetween(Integer value1, Integer value2) {
-            addCriterion("receive_count between", value1, value2, "receiveCount");
+        public Criteria andReceive_countBetween(Integer value1, Integer value2) {
+            addCriterion("receive_count between", value1, value2, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("receive_count not between", value1, value2, "receiveCount");
+        public Criteria andReceive_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("receive_count not between", value1, value2, "receive_count");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeIsNull() {
+        public Criteria andEnable_timeIsNull() {
             addCriterion("enable_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeIsNotNull() {
+        public Criteria andEnable_timeIsNotNull() {
             addCriterion("enable_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeEqualTo(Date value) {
-            addCriterion("enable_time =", value, "enableTime");
+        public Criteria andEnable_timeEqualTo(Date value) {
+            addCriterion("enable_time =", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotEqualTo(Date value) {
-            addCriterion("enable_time <>", value, "enableTime");
+        public Criteria andEnable_timeNotEqualTo(Date value) {
+            addCriterion("enable_time <>", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeGreaterThan(Date value) {
-            addCriterion("enable_time >", value, "enableTime");
+        public Criteria andEnable_timeGreaterThan(Date value) {
+            addCriterion("enable_time >", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("enable_time >=", value, "enableTime");
+        public Criteria andEnable_timeGreaterThanOrEqualTo(Date value) {
+            addCriterion("enable_time >=", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeLessThan(Date value) {
-            addCriterion("enable_time <", value, "enableTime");
+        public Criteria andEnable_timeLessThan(Date value) {
+            addCriterion("enable_time <", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeLessThanOrEqualTo(Date value) {
-            addCriterion("enable_time <=", value, "enableTime");
+        public Criteria andEnable_timeLessThanOrEqualTo(Date value) {
+            addCriterion("enable_time <=", value, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeIn(List<Date> values) {
-            addCriterion("enable_time in", values, "enableTime");
+        public Criteria andEnable_timeIn(List<Date> values) {
+            addCriterion("enable_time in", values, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotIn(List<Date> values) {
-            addCriterion("enable_time not in", values, "enableTime");
+        public Criteria andEnable_timeNotIn(List<Date> values) {
+            addCriterion("enable_time not in", values, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeBetween(Date value1, Date value2) {
-            addCriterion("enable_time between", value1, value2, "enableTime");
+        public Criteria andEnable_timeBetween(Date value1, Date value2) {
+            addCriterion("enable_time between", value1, value2, "enable_time");
             return (Criteria) this;
         }
 
-        public Criteria andEnableTimeNotBetween(Date value1, Date value2) {
-            addCriterion("enable_time not between", value1, value2, "enableTime");
+        public Criteria andEnable_timeNotBetween(Date value1, Date value2) {
+            addCriterion("enable_time not between", value1, value2, "enable_time");
             return (Criteria) this;
         }
 
@@ -1156,63 +1156,63 @@ public class SmsCouponExample {
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIsNull() {
+        public Criteria andMember_levelIsNull() {
             addCriterion("member_level is null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIsNotNull() {
+        public Criteria andMember_levelIsNotNull() {
             addCriterion("member_level is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelEqualTo(Integer value) {
-            addCriterion("member_level =", value, "memberLevel");
+        public Criteria andMember_levelEqualTo(Integer value) {
+            addCriterion("member_level =", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNotEqualTo(Integer value) {
-            addCriterion("member_level <>", value, "memberLevel");
+        public Criteria andMember_levelNotEqualTo(Integer value) {
+            addCriterion("member_level <>", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelGreaterThan(Integer value) {
-            addCriterion("member_level >", value, "memberLevel");
+        public Criteria andMember_levelGreaterThan(Integer value) {
+            addCriterion("member_level >", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelGreaterThanOrEqualTo(Integer value) {
-            addCriterion("member_level >=", value, "memberLevel");
+        public Criteria andMember_levelGreaterThanOrEqualTo(Integer value) {
+            addCriterion("member_level >=", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelLessThan(Integer value) {
-            addCriterion("member_level <", value, "memberLevel");
+        public Criteria andMember_levelLessThan(Integer value) {
+            addCriterion("member_level <", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelLessThanOrEqualTo(Integer value) {
-            addCriterion("member_level <=", value, "memberLevel");
+        public Criteria andMember_levelLessThanOrEqualTo(Integer value) {
+            addCriterion("member_level <=", value, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelIn(List<Integer> values) {
-            addCriterion("member_level in", values, "memberLevel");
+        public Criteria andMember_levelIn(List<Integer> values) {
+            addCriterion("member_level in", values, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNotIn(List<Integer> values) {
-            addCriterion("member_level not in", values, "memberLevel");
+        public Criteria andMember_levelNotIn(List<Integer> values) {
+            addCriterion("member_level not in", values, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelBetween(Integer value1, Integer value2) {
-            addCriterion("member_level between", value1, value2, "memberLevel");
+        public Criteria andMember_levelBetween(Integer value1, Integer value2) {
+            addCriterion("member_level between", value1, value2, "member_level");
             return (Criteria) this;
         }
 
-        public Criteria andMemberLevelNotBetween(Integer value1, Integer value2) {
-            addCriterion("member_level not between", value1, value2, "memberLevel");
+        public Criteria andMember_levelNotBetween(Integer value1, Integer value2) {
+            addCriterion("member_level not between", value1, value2, "member_level");
             return (Criteria) this;
         }
     }

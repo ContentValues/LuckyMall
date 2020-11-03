@@ -234,73 +234,73 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterIsNull() {
+        public Criteria andFirst_letterIsNull() {
             addCriterion("first_letter is null");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterIsNotNull() {
+        public Criteria andFirst_letterIsNotNull() {
             addCriterion("first_letter is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterEqualTo(String value) {
-            addCriterion("first_letter =", value, "firstLetter");
+        public Criteria andFirst_letterEqualTo(String value) {
+            addCriterion("first_letter =", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterNotEqualTo(String value) {
-            addCriterion("first_letter <>", value, "firstLetter");
+        public Criteria andFirst_letterNotEqualTo(String value) {
+            addCriterion("first_letter <>", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterGreaterThan(String value) {
-            addCriterion("first_letter >", value, "firstLetter");
+        public Criteria andFirst_letterGreaterThan(String value) {
+            addCriterion("first_letter >", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterGreaterThanOrEqualTo(String value) {
-            addCriterion("first_letter >=", value, "firstLetter");
+        public Criteria andFirst_letterGreaterThanOrEqualTo(String value) {
+            addCriterion("first_letter >=", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterLessThan(String value) {
-            addCriterion("first_letter <", value, "firstLetter");
+        public Criteria andFirst_letterLessThan(String value) {
+            addCriterion("first_letter <", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterLessThanOrEqualTo(String value) {
-            addCriterion("first_letter <=", value, "firstLetter");
+        public Criteria andFirst_letterLessThanOrEqualTo(String value) {
+            addCriterion("first_letter <=", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterLike(String value) {
-            addCriterion("first_letter like", value, "firstLetter");
+        public Criteria andFirst_letterLike(String value) {
+            addCriterion("first_letter like", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterNotLike(String value) {
-            addCriterion("first_letter not like", value, "firstLetter");
+        public Criteria andFirst_letterNotLike(String value) {
+            addCriterion("first_letter not like", value, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterIn(List<String> values) {
-            addCriterion("first_letter in", values, "firstLetter");
+        public Criteria andFirst_letterIn(List<String> values) {
+            addCriterion("first_letter in", values, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterNotIn(List<String> values) {
-            addCriterion("first_letter not in", values, "firstLetter");
+        public Criteria andFirst_letterNotIn(List<String> values) {
+            addCriterion("first_letter not in", values, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterBetween(String value1, String value2) {
-            addCriterion("first_letter between", value1, value2, "firstLetter");
+        public Criteria andFirst_letterBetween(String value1, String value2) {
+            addCriterion("first_letter between", value1, value2, "first_letter");
             return (Criteria) this;
         }
 
-        public Criteria andFirstLetterNotBetween(String value1, String value2) {
-            addCriterion("first_letter not between", value1, value2, "firstLetter");
+        public Criteria andFirst_letterNotBetween(String value1, String value2) {
+            addCriterion("first_letter not between", value1, value2, "first_letter");
             return (Criteria) this;
         }
 
@@ -364,243 +364,243 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusIsNull() {
+        public Criteria andFactory_statusIsNull() {
             addCriterion("factory_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusIsNotNull() {
+        public Criteria andFactory_statusIsNotNull() {
             addCriterion("factory_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusEqualTo(Integer value) {
-            addCriterion("factory_status =", value, "factoryStatus");
+        public Criteria andFactory_statusEqualTo(Integer value) {
+            addCriterion("factory_status =", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusNotEqualTo(Integer value) {
-            addCriterion("factory_status <>", value, "factoryStatus");
+        public Criteria andFactory_statusNotEqualTo(Integer value) {
+            addCriterion("factory_status <>", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusGreaterThan(Integer value) {
-            addCriterion("factory_status >", value, "factoryStatus");
+        public Criteria andFactory_statusGreaterThan(Integer value) {
+            addCriterion("factory_status >", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("factory_status >=", value, "factoryStatus");
+        public Criteria andFactory_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("factory_status >=", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusLessThan(Integer value) {
-            addCriterion("factory_status <", value, "factoryStatus");
+        public Criteria andFactory_statusLessThan(Integer value) {
+            addCriterion("factory_status <", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("factory_status <=", value, "factoryStatus");
+        public Criteria andFactory_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("factory_status <=", value, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusIn(List<Integer> values) {
-            addCriterion("factory_status in", values, "factoryStatus");
+        public Criteria andFactory_statusIn(List<Integer> values) {
+            addCriterion("factory_status in", values, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusNotIn(List<Integer> values) {
-            addCriterion("factory_status not in", values, "factoryStatus");
+        public Criteria andFactory_statusNotIn(List<Integer> values) {
+            addCriterion("factory_status not in", values, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusBetween(Integer value1, Integer value2) {
-            addCriterion("factory_status between", value1, value2, "factoryStatus");
+        public Criteria andFactory_statusBetween(Integer value1, Integer value2) {
+            addCriterion("factory_status between", value1, value2, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andFactoryStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("factory_status not between", value1, value2, "factoryStatus");
+        public Criteria andFactory_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("factory_status not between", value1, value2, "factory_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNull() {
+        public Criteria andShow_statusIsNull() {
             addCriterion("show_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNotNull() {
+        public Criteria andShow_statusIsNotNull() {
             addCriterion("show_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusEqualTo(Integer value) {
-            addCriterion("show_status =", value, "showStatus");
+        public Criteria andShow_statusEqualTo(Integer value) {
+            addCriterion("show_status =", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotEqualTo(Integer value) {
-            addCriterion("show_status <>", value, "showStatus");
+        public Criteria andShow_statusNotEqualTo(Integer value) {
+            addCriterion("show_status <>", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThan(Integer value) {
-            addCriterion("show_status >", value, "showStatus");
+        public Criteria andShow_statusGreaterThan(Integer value) {
+            addCriterion("show_status >", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("show_status >=", value, "showStatus");
+        public Criteria andShow_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("show_status >=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThan(Integer value) {
-            addCriterion("show_status <", value, "showStatus");
+        public Criteria andShow_statusLessThan(Integer value) {
+            addCriterion("show_status <", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("show_status <=", value, "showStatus");
+        public Criteria andShow_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("show_status <=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIn(List<Integer> values) {
-            addCriterion("show_status in", values, "showStatus");
+        public Criteria andShow_statusIn(List<Integer> values) {
+            addCriterion("show_status in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotIn(List<Integer> values) {
-            addCriterion("show_status not in", values, "showStatus");
+        public Criteria andShow_statusNotIn(List<Integer> values) {
+            addCriterion("show_status not in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusBetween(Integer value1, Integer value2) {
-            addCriterion("show_status between", value1, value2, "showStatus");
+        public Criteria andShow_statusBetween(Integer value1, Integer value2) {
+            addCriterion("show_status between", value1, value2, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("show_status not between", value1, value2, "showStatus");
+        public Criteria andShow_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("show_status not between", value1, value2, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountIsNull() {
+        public Criteria andProduct_countIsNull() {
             addCriterion("product_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountIsNotNull() {
+        public Criteria andProduct_countIsNotNull() {
             addCriterion("product_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountEqualTo(Integer value) {
-            addCriterion("product_count =", value, "productCount");
+        public Criteria andProduct_countEqualTo(Integer value) {
+            addCriterion("product_count =", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountNotEqualTo(Integer value) {
-            addCriterion("product_count <>", value, "productCount");
+        public Criteria andProduct_countNotEqualTo(Integer value) {
+            addCriterion("product_count <>", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountGreaterThan(Integer value) {
-            addCriterion("product_count >", value, "productCount");
+        public Criteria andProduct_countGreaterThan(Integer value) {
+            addCriterion("product_count >", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("product_count >=", value, "productCount");
+        public Criteria andProduct_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("product_count >=", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountLessThan(Integer value) {
-            addCriterion("product_count <", value, "productCount");
+        public Criteria andProduct_countLessThan(Integer value) {
+            addCriterion("product_count <", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountLessThanOrEqualTo(Integer value) {
-            addCriterion("product_count <=", value, "productCount");
+        public Criteria andProduct_countLessThanOrEqualTo(Integer value) {
+            addCriterion("product_count <=", value, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountIn(List<Integer> values) {
-            addCriterion("product_count in", values, "productCount");
+        public Criteria andProduct_countIn(List<Integer> values) {
+            addCriterion("product_count in", values, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountNotIn(List<Integer> values) {
-            addCriterion("product_count not in", values, "productCount");
+        public Criteria andProduct_countNotIn(List<Integer> values) {
+            addCriterion("product_count not in", values, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountBetween(Integer value1, Integer value2) {
-            addCriterion("product_count between", value1, value2, "productCount");
+        public Criteria andProduct_countBetween(Integer value1, Integer value2) {
+            addCriterion("product_count between", value1, value2, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("product_count not between", value1, value2, "productCount");
+        public Criteria andProduct_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("product_count not between", value1, value2, "product_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountIsNull() {
+        public Criteria andProduct_comment_countIsNull() {
             addCriterion("product_comment_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountIsNotNull() {
+        public Criteria andProduct_comment_countIsNotNull() {
             addCriterion("product_comment_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountEqualTo(Integer value) {
-            addCriterion("product_comment_count =", value, "productCommentCount");
+        public Criteria andProduct_comment_countEqualTo(Integer value) {
+            addCriterion("product_comment_count =", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountNotEqualTo(Integer value) {
-            addCriterion("product_comment_count <>", value, "productCommentCount");
+        public Criteria andProduct_comment_countNotEqualTo(Integer value) {
+            addCriterion("product_comment_count <>", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountGreaterThan(Integer value) {
-            addCriterion("product_comment_count >", value, "productCommentCount");
+        public Criteria andProduct_comment_countGreaterThan(Integer value) {
+            addCriterion("product_comment_count >", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("product_comment_count >=", value, "productCommentCount");
+        public Criteria andProduct_comment_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("product_comment_count >=", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountLessThan(Integer value) {
-            addCriterion("product_comment_count <", value, "productCommentCount");
+        public Criteria andProduct_comment_countLessThan(Integer value) {
+            addCriterion("product_comment_count <", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountLessThanOrEqualTo(Integer value) {
-            addCriterion("product_comment_count <=", value, "productCommentCount");
+        public Criteria andProduct_comment_countLessThanOrEqualTo(Integer value) {
+            addCriterion("product_comment_count <=", value, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountIn(List<Integer> values) {
-            addCriterion("product_comment_count in", values, "productCommentCount");
+        public Criteria andProduct_comment_countIn(List<Integer> values) {
+            addCriterion("product_comment_count in", values, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountNotIn(List<Integer> values) {
-            addCriterion("product_comment_count not in", values, "productCommentCount");
+        public Criteria andProduct_comment_countNotIn(List<Integer> values) {
+            addCriterion("product_comment_count not in", values, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountBetween(Integer value1, Integer value2) {
-            addCriterion("product_comment_count between", value1, value2, "productCommentCount");
+        public Criteria andProduct_comment_countBetween(Integer value1, Integer value2) {
+            addCriterion("product_comment_count between", value1, value2, "product_comment_count");
             return (Criteria) this;
         }
 
-        public Criteria andProductCommentCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("product_comment_count not between", value1, value2, "productCommentCount");
+        public Criteria andProduct_comment_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("product_comment_count not between", value1, value2, "product_comment_count");
             return (Criteria) this;
         }
 
@@ -674,73 +674,73 @@ public class PmsBrandExample {
             return (Criteria) this;
         }
 
-        public Criteria andBigPicIsNull() {
+        public Criteria andBig_picIsNull() {
             addCriterion("big_pic is null");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicIsNotNull() {
+        public Criteria andBig_picIsNotNull() {
             addCriterion("big_pic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicEqualTo(String value) {
-            addCriterion("big_pic =", value, "bigPic");
+        public Criteria andBig_picEqualTo(String value) {
+            addCriterion("big_pic =", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicNotEqualTo(String value) {
-            addCriterion("big_pic <>", value, "bigPic");
+        public Criteria andBig_picNotEqualTo(String value) {
+            addCriterion("big_pic <>", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicGreaterThan(String value) {
-            addCriterion("big_pic >", value, "bigPic");
+        public Criteria andBig_picGreaterThan(String value) {
+            addCriterion("big_pic >", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicGreaterThanOrEqualTo(String value) {
-            addCriterion("big_pic >=", value, "bigPic");
+        public Criteria andBig_picGreaterThanOrEqualTo(String value) {
+            addCriterion("big_pic >=", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicLessThan(String value) {
-            addCriterion("big_pic <", value, "bigPic");
+        public Criteria andBig_picLessThan(String value) {
+            addCriterion("big_pic <", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicLessThanOrEqualTo(String value) {
-            addCriterion("big_pic <=", value, "bigPic");
+        public Criteria andBig_picLessThanOrEqualTo(String value) {
+            addCriterion("big_pic <=", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicLike(String value) {
-            addCriterion("big_pic like", value, "bigPic");
+        public Criteria andBig_picLike(String value) {
+            addCriterion("big_pic like", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicNotLike(String value) {
-            addCriterion("big_pic not like", value, "bigPic");
+        public Criteria andBig_picNotLike(String value) {
+            addCriterion("big_pic not like", value, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicIn(List<String> values) {
-            addCriterion("big_pic in", values, "bigPic");
+        public Criteria andBig_picIn(List<String> values) {
+            addCriterion("big_pic in", values, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicNotIn(List<String> values) {
-            addCriterion("big_pic not in", values, "bigPic");
+        public Criteria andBig_picNotIn(List<String> values) {
+            addCriterion("big_pic not in", values, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicBetween(String value1, String value2) {
-            addCriterion("big_pic between", value1, value2, "bigPic");
+        public Criteria andBig_picBetween(String value1, String value2) {
+            addCriterion("big_pic between", value1, value2, "big_pic");
             return (Criteria) this;
         }
 
-        public Criteria andBigPicNotBetween(String value1, String value2) {
-            addCriterion("big_pic not between", value1, value2, "bigPic");
+        public Criteria andBig_picNotBetween(String value1, String value2) {
+            addCriterion("big_pic not between", value1, value2, "big_pic");
             return (Criteria) this;
         }
     }

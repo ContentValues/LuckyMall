@@ -3,11 +3,11 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.OmsOrderSettingMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.OmsOrderSetting">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="flash_order_overtime" jdbcType="INTEGER" property="flashOrderOvertime" />
-    <result column="normal_order_overtime" jdbcType="INTEGER" property="normalOrderOvertime" />
-    <result column="confirm_overtime" jdbcType="INTEGER" property="confirmOvertime" />
-    <result column="finish_overtime" jdbcType="INTEGER" property="finishOvertime" />
-    <result column="comment_overtime" jdbcType="INTEGER" property="commentOvertime" />
+    <result column="flash_order_overtime" jdbcType="INTEGER" property="flash_order_overtime" />
+    <result column="normal_order_overtime" jdbcType="INTEGER" property="normal_order_overtime" />
+    <result column="confirm_overtime" jdbcType="INTEGER" property="confirm_overtime" />
+    <result column="finish_overtime" jdbcType="INTEGER" property="finish_overtime" />
+    <result column="comment_overtime" jdbcType="INTEGER" property="comment_overtime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -102,53 +102,53 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.OmsOrderSetting">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into oms_order_setting (flash_order_overtime, normal_order_overtime, 
+    insert into oms_order_setting (id, flash_order_overtime, normal_order_overtime, 
       confirm_overtime, finish_overtime, comment_overtime
       )
-    values (#{flashOrderOvertime,jdbcType=INTEGER}, #{normalOrderOvertime,jdbcType=INTEGER}, 
-      #{confirmOvertime,jdbcType=INTEGER}, #{finishOvertime,jdbcType=INTEGER}, #{commentOvertime,jdbcType=INTEGER}
+    values (#{id,jdbcType=BIGINT}, #{flash_order_overtime,jdbcType=INTEGER}, #{normal_order_overtime,jdbcType=INTEGER}, 
+      #{confirm_overtime,jdbcType=INTEGER}, #{finish_overtime,jdbcType=INTEGER}, #{comment_overtime,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.OmsOrderSetting">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into oms_order_setting
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="flashOrderOvertime != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="flash_order_overtime != null">
         flash_order_overtime,
       </if>
-      <if test="normalOrderOvertime != null">
+      <if test="normal_order_overtime != null">
         normal_order_overtime,
       </if>
-      <if test="confirmOvertime != null">
+      <if test="confirm_overtime != null">
         confirm_overtime,
       </if>
-      <if test="finishOvertime != null">
+      <if test="finish_overtime != null">
         finish_overtime,
       </if>
-      <if test="commentOvertime != null">
+      <if test="comment_overtime != null">
         comment_overtime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="flashOrderOvertime != null">
-        #{flashOrderOvertime,jdbcType=INTEGER},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="normalOrderOvertime != null">
-        #{normalOrderOvertime,jdbcType=INTEGER},
+      <if test="flash_order_overtime != null">
+        #{flash_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="confirmOvertime != null">
-        #{confirmOvertime,jdbcType=INTEGER},
+      <if test="normal_order_overtime != null">
+        #{normal_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="finishOvertime != null">
-        #{finishOvertime,jdbcType=INTEGER},
+      <if test="confirm_overtime != null">
+        #{confirm_overtime,jdbcType=INTEGER},
       </if>
-      <if test="commentOvertime != null">
-        #{commentOvertime,jdbcType=INTEGER},
+      <if test="finish_overtime != null">
+        #{finish_overtime,jdbcType=INTEGER},
+      </if>
+      <if test="comment_overtime != null">
+        #{comment_overtime,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -164,20 +164,20 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.flashOrderOvertime != null">
-        flash_order_overtime = #{record.flashOrderOvertime,jdbcType=INTEGER},
+      <if test="record.flash_order_overtime != null">
+        flash_order_overtime = #{record.flash_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="record.normalOrderOvertime != null">
-        normal_order_overtime = #{record.normalOrderOvertime,jdbcType=INTEGER},
+      <if test="record.normal_order_overtime != null">
+        normal_order_overtime = #{record.normal_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="record.confirmOvertime != null">
-        confirm_overtime = #{record.confirmOvertime,jdbcType=INTEGER},
+      <if test="record.confirm_overtime != null">
+        confirm_overtime = #{record.confirm_overtime,jdbcType=INTEGER},
       </if>
-      <if test="record.finishOvertime != null">
-        finish_overtime = #{record.finishOvertime,jdbcType=INTEGER},
+      <if test="record.finish_overtime != null">
+        finish_overtime = #{record.finish_overtime,jdbcType=INTEGER},
       </if>
-      <if test="record.commentOvertime != null">
-        comment_overtime = #{record.commentOvertime,jdbcType=INTEGER},
+      <if test="record.comment_overtime != null">
+        comment_overtime = #{record.comment_overtime,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -187,11 +187,11 @@
   <update id="updateByExample" parameterType="map">
     update oms_order_setting
     set id = #{record.id,jdbcType=BIGINT},
-      flash_order_overtime = #{record.flashOrderOvertime,jdbcType=INTEGER},
-      normal_order_overtime = #{record.normalOrderOvertime,jdbcType=INTEGER},
-      confirm_overtime = #{record.confirmOvertime,jdbcType=INTEGER},
-      finish_overtime = #{record.finishOvertime,jdbcType=INTEGER},
-      comment_overtime = #{record.commentOvertime,jdbcType=INTEGER}
+      flash_order_overtime = #{record.flash_order_overtime,jdbcType=INTEGER},
+      normal_order_overtime = #{record.normal_order_overtime,jdbcType=INTEGER},
+      confirm_overtime = #{record.confirm_overtime,jdbcType=INTEGER},
+      finish_overtime = #{record.finish_overtime,jdbcType=INTEGER},
+      comment_overtime = #{record.comment_overtime,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -199,31 +199,31 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.OmsOrderSetting">
     update oms_order_setting
     <set>
-      <if test="flashOrderOvertime != null">
-        flash_order_overtime = #{flashOrderOvertime,jdbcType=INTEGER},
+      <if test="flash_order_overtime != null">
+        flash_order_overtime = #{flash_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="normalOrderOvertime != null">
-        normal_order_overtime = #{normalOrderOvertime,jdbcType=INTEGER},
+      <if test="normal_order_overtime != null">
+        normal_order_overtime = #{normal_order_overtime,jdbcType=INTEGER},
       </if>
-      <if test="confirmOvertime != null">
-        confirm_overtime = #{confirmOvertime,jdbcType=INTEGER},
+      <if test="confirm_overtime != null">
+        confirm_overtime = #{confirm_overtime,jdbcType=INTEGER},
       </if>
-      <if test="finishOvertime != null">
-        finish_overtime = #{finishOvertime,jdbcType=INTEGER},
+      <if test="finish_overtime != null">
+        finish_overtime = #{finish_overtime,jdbcType=INTEGER},
       </if>
-      <if test="commentOvertime != null">
-        comment_overtime = #{commentOvertime,jdbcType=INTEGER},
+      <if test="comment_overtime != null">
+        comment_overtime = #{comment_overtime,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.OmsOrderSetting">
     update oms_order_setting
-    set flash_order_overtime = #{flashOrderOvertime,jdbcType=INTEGER},
-      normal_order_overtime = #{normalOrderOvertime,jdbcType=INTEGER},
-      confirm_overtime = #{confirmOvertime,jdbcType=INTEGER},
-      finish_overtime = #{finishOvertime,jdbcType=INTEGER},
-      comment_overtime = #{commentOvertime,jdbcType=INTEGER}
+    set flash_order_overtime = #{flash_order_overtime,jdbcType=INTEGER},
+      normal_order_overtime = #{normal_order_overtime,jdbcType=INTEGER},
+      confirm_overtime = #{confirm_overtime,jdbcType=INTEGER},
+      finish_overtime = #{finish_overtime,jdbcType=INTEGER},
+      comment_overtime = #{comment_overtime,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

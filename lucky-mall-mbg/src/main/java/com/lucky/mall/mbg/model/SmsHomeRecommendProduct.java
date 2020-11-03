@@ -6,11 +6,11 @@ import java.io.Serializable;
 public class SmsHomeRecommendProduct implements Serializable {
     private Long id;
 
-    private Long productId;
+    private Long product_id;
 
-    private String productName;
+    private String product_name;
 
-    private Integer recommendStatus;
+    private Integer recommend_status;
 
     private Integer sort;
 
@@ -24,28 +24,28 @@ public class SmsHomeRecommendProduct implements Serializable {
         this.id = id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
-    public Integer getRecommendStatus() {
-        return recommendStatus;
+    public Integer getRecommend_status() {
+        return recommend_status;
     }
 
-    public void setRecommendStatus(Integer recommendStatus) {
-        this.recommendStatus = recommendStatus;
+    public void setRecommend_status(Integer recommend_status) {
+        this.recommend_status = recommend_status;
     }
 
     public Integer getSort() {
@@ -63,9 +63,9 @@ public class SmsHomeRecommendProduct implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", productName=").append(productName);
-        sb.append(", recommendStatus=").append(recommendStatus);
+        sb.append(", product_id=").append(product_id);
+        sb.append(", product_name=").append(product_name);
+        sb.append(", recommend_status=").append(recommend_status);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

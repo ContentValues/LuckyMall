@@ -3,8 +3,8 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsRoleMenuRelationMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsRoleMenuRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="role_id" jdbcType="BIGINT" property="roleId" />
-    <result column="menu_id" jdbcType="BIGINT" property="menuId" />
+    <result column="role_id" jdbcType="BIGINT" property="role_id" />
+    <result column="menu_id" jdbcType="BIGINT" property="menu_id" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -98,31 +98,33 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsRoleMenuRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into ums_role_menu_relation (role_id, menu_id)
-    values (#{roleId,jdbcType=BIGINT}, #{menuId,jdbcType=BIGINT})
+    insert into ums_role_menu_relation (id, role_id, menu_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{role_id,jdbcType=BIGINT}, #{menu_id,jdbcType=BIGINT}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsRoleMenuRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into ums_role_menu_relation
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="role_id != null">
         role_id,
       </if>
-      <if test="menuId != null">
+      <if test="menu_id != null">
         menu_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="roleId != null">
-        #{roleId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="menuId != null">
-        #{menuId,jdbcType=BIGINT},
+      <if test="role_id != null">
+        #{role_id,jdbcType=BIGINT},
+      </if>
+      <if test="menu_id != null">
+        #{menu_id,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -138,11 +140,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.roleId != null">
-        role_id = #{record.roleId,jdbcType=BIGINT},
+      <if test="record.role_id != null">
+        role_id = #{record.role_id,jdbcType=BIGINT},
       </if>
-      <if test="record.menuId != null">
-        menu_id = #{record.menuId,jdbcType=BIGINT},
+      <if test="record.menu_id != null">
+        menu_id = #{record.menu_id,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -152,8 +154,8 @@
   <update id="updateByExample" parameterType="map">
     update ums_role_menu_relation
     set id = #{record.id,jdbcType=BIGINT},
-      role_id = #{record.roleId,jdbcType=BIGINT},
-      menu_id = #{record.menuId,jdbcType=BIGINT}
+      role_id = #{record.role_id,jdbcType=BIGINT},
+      menu_id = #{record.menu_id,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -161,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsRoleMenuRelation">
     update ums_role_menu_relation
     <set>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=BIGINT},
+      <if test="role_id != null">
+        role_id = #{role_id,jdbcType=BIGINT},
       </if>
-      <if test="menuId != null">
-        menu_id = #{menuId,jdbcType=BIGINT},
+      <if test="menu_id != null">
+        menu_id = #{menu_id,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsRoleMenuRelation">
     update ums_role_menu_relation
-    set role_id = #{roleId,jdbcType=BIGINT},
-      menu_id = #{menuId,jdbcType=BIGINT}
+    set role_id = #{role_id,jdbcType=BIGINT},
+      menu_id = #{menu_id,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -3,12 +3,12 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.CmsMemberReportMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsMemberReport">
     <result column="id" jdbcType="BIGINT" property="id" />
-    <result column="report_type" jdbcType="INTEGER" property="reportType" />
-    <result column="report_member_name" jdbcType="VARCHAR" property="reportMemberName" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="report_object" jdbcType="VARCHAR" property="reportObject" />
-    <result column="report_status" jdbcType="INTEGER" property="reportStatus" />
-    <result column="handle_status" jdbcType="INTEGER" property="handleStatus" />
+    <result column="report_type" jdbcType="INTEGER" property="report_type" />
+    <result column="report_member_name" jdbcType="VARCHAR" property="report_member_name" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="report_object" jdbcType="VARCHAR" property="report_object" />
+    <result column="report_status" jdbcType="INTEGER" property="report_status" />
+    <result column="handle_status" jdbcType="INTEGER" property="handle_status" />
     <result column="note" jdbcType="VARCHAR" property="note" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -94,38 +94,35 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsMemberReport">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_member_report (report_type, report_member_name, create_time, 
-      report_object, report_status, handle_status, 
-      note)
-    values (#{reportType,jdbcType=INTEGER}, #{reportMemberName,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{reportObject,jdbcType=VARCHAR}, #{reportStatus,jdbcType=INTEGER}, #{handleStatus,jdbcType=INTEGER}, 
-      #{note,jdbcType=VARCHAR})
+    insert into cms_member_report (id, report_type, report_member_name, 
+      create_time, report_object, report_status, 
+      handle_status, note)
+    values (#{id,jdbcType=BIGINT}, #{report_type,jdbcType=INTEGER}, #{report_member_name,jdbcType=VARCHAR}, 
+      #{create_time,jdbcType=TIMESTAMP}, #{report_object,jdbcType=VARCHAR}, #{report_status,jdbcType=INTEGER}, 
+      #{handle_status,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsMemberReport">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_member_report
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="reportType != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="report_type != null">
         report_type,
       </if>
-      <if test="reportMemberName != null">
+      <if test="report_member_name != null">
         report_member_name,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
-      <if test="reportObject != null">
+      <if test="report_object != null">
         report_object,
       </if>
-      <if test="reportStatus != null">
+      <if test="report_status != null">
         report_status,
       </if>
-      <if test="handleStatus != null">
+      <if test="handle_status != null">
         handle_status,
       </if>
       <if test="note != null">
@@ -133,23 +130,26 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="reportType != null">
-        #{reportType,jdbcType=INTEGER},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="reportMemberName != null">
-        #{reportMemberName,jdbcType=VARCHAR},
+      <if test="report_type != null">
+        #{report_type,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="report_member_name != null">
+        #{report_member_name,jdbcType=VARCHAR},
       </if>
-      <if test="reportObject != null">
-        #{reportObject,jdbcType=VARCHAR},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="reportStatus != null">
-        #{reportStatus,jdbcType=INTEGER},
+      <if test="report_object != null">
+        #{report_object,jdbcType=VARCHAR},
       </if>
-      <if test="handleStatus != null">
-        #{handleStatus,jdbcType=INTEGER},
+      <if test="report_status != null">
+        #{report_status,jdbcType=INTEGER},
+      </if>
+      <if test="handle_status != null">
+        #{handle_status,jdbcType=INTEGER},
       </if>
       <if test="note != null">
         #{note,jdbcType=VARCHAR},
@@ -168,23 +168,23 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.reportType != null">
-        report_type = #{record.reportType,jdbcType=INTEGER},
+      <if test="record.report_type != null">
+        report_type = #{record.report_type,jdbcType=INTEGER},
       </if>
-      <if test="record.reportMemberName != null">
-        report_member_name = #{record.reportMemberName,jdbcType=VARCHAR},
+      <if test="record.report_member_name != null">
+        report_member_name = #{record.report_member_name,jdbcType=VARCHAR},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.reportObject != null">
-        report_object = #{record.reportObject,jdbcType=VARCHAR},
+      <if test="record.report_object != null">
+        report_object = #{record.report_object,jdbcType=VARCHAR},
       </if>
-      <if test="record.reportStatus != null">
-        report_status = #{record.reportStatus,jdbcType=INTEGER},
+      <if test="record.report_status != null">
+        report_status = #{record.report_status,jdbcType=INTEGER},
       </if>
-      <if test="record.handleStatus != null">
-        handle_status = #{record.handleStatus,jdbcType=INTEGER},
+      <if test="record.handle_status != null">
+        handle_status = #{record.handle_status,jdbcType=INTEGER},
       </if>
       <if test="record.note != null">
         note = #{record.note,jdbcType=VARCHAR},
@@ -197,12 +197,12 @@
   <update id="updateByExample" parameterType="map">
     update cms_member_report
     set id = #{record.id,jdbcType=BIGINT},
-      report_type = #{record.reportType,jdbcType=INTEGER},
-      report_member_name = #{record.reportMemberName,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      report_object = #{record.reportObject,jdbcType=VARCHAR},
-      report_status = #{record.reportStatus,jdbcType=INTEGER},
-      handle_status = #{record.handleStatus,jdbcType=INTEGER},
+      report_type = #{record.report_type,jdbcType=INTEGER},
+      report_member_name = #{record.report_member_name,jdbcType=VARCHAR},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      report_object = #{record.report_object,jdbcType=VARCHAR},
+      report_status = #{record.report_status,jdbcType=INTEGER},
+      handle_status = #{record.handle_status,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />

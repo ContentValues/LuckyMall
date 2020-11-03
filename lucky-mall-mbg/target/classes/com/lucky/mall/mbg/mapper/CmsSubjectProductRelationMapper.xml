@@ -3,8 +3,8 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.CmsSubjectProductRelationMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsSubjectProductRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="subject_id" jdbcType="BIGINT" property="subjectId" />
-    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="subject_id" jdbcType="BIGINT" property="subject_id" />
+    <result column="product_id" jdbcType="BIGINT" property="product_id" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -98,31 +98,33 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsSubjectProductRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into cms_subject_product_relation (subject_id, product_id)
-    values (#{subjectId,jdbcType=BIGINT}, #{productId,jdbcType=BIGINT})
+    insert into cms_subject_product_relation (id, subject_id, product_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{subject_id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsSubjectProductRelation">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into cms_subject_product_relation
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="subjectId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="subject_id != null">
         subject_id,
       </if>
-      <if test="productId != null">
+      <if test="product_id != null">
         product_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="subjectId != null">
-        #{subjectId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="productId != null">
-        #{productId,jdbcType=BIGINT},
+      <if test="subject_id != null">
+        #{subject_id,jdbcType=BIGINT},
+      </if>
+      <if test="product_id != null">
+        #{product_id,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -138,11 +140,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.subjectId != null">
-        subject_id = #{record.subjectId,jdbcType=BIGINT},
+      <if test="record.subject_id != null">
+        subject_id = #{record.subject_id,jdbcType=BIGINT},
       </if>
-      <if test="record.productId != null">
-        product_id = #{record.productId,jdbcType=BIGINT},
+      <if test="record.product_id != null">
+        product_id = #{record.product_id,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -152,8 +154,8 @@
   <update id="updateByExample" parameterType="map">
     update cms_subject_product_relation
     set id = #{record.id,jdbcType=BIGINT},
-      subject_id = #{record.subjectId,jdbcType=BIGINT},
-      product_id = #{record.productId,jdbcType=BIGINT}
+      subject_id = #{record.subject_id,jdbcType=BIGINT},
+      product_id = #{record.product_id,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -161,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.CmsSubjectProductRelation">
     update cms_subject_product_relation
     <set>
-      <if test="subjectId != null">
-        subject_id = #{subjectId,jdbcType=BIGINT},
+      <if test="subject_id != null">
+        subject_id = #{subject_id,jdbcType=BIGINT},
       </if>
-      <if test="productId != null">
-        product_id = #{productId,jdbcType=BIGINT},
+      <if test="product_id != null">
+        product_id = #{product_id,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.CmsSubjectProductRelation">
     update cms_subject_product_relation
-    set subject_id = #{subjectId,jdbcType=BIGINT},
-      product_id = #{productId,jdbcType=BIGINT}
+    set subject_id = #{subject_id,jdbcType=BIGINT},
+      product_id = #{product_id,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -3,15 +3,15 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsMemberReceiveAddressMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsMemberReceiveAddress">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="member_id" jdbcType="BIGINT" property="memberId" />
+    <result column="member_id" jdbcType="BIGINT" property="member_id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
-    <result column="default_status" jdbcType="INTEGER" property="defaultStatus" />
-    <result column="post_code" jdbcType="VARCHAR" property="postCode" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phone_number" />
+    <result column="default_status" jdbcType="INTEGER" property="default_status" />
+    <result column="post_code" jdbcType="VARCHAR" property="post_code" />
     <result column="province" jdbcType="VARCHAR" property="province" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="region" jdbcType="VARCHAR" property="region" />
-    <result column="detail_address" jdbcType="VARCHAR" property="detailAddress" />
+    <result column="detail_address" jdbcType="VARCHAR" property="detail_address" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -106,37 +106,34 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsMemberReceiveAddress">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into ums_member_receive_address (member_id, name, phone_number, 
-      default_status, post_code, province, 
-      city, region, detail_address
-      )
-    values (#{memberId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
-      #{defaultStatus,jdbcType=INTEGER}, #{postCode,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
-      #{city,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, #{detailAddress,jdbcType=VARCHAR}
-      )
+    insert into ums_member_receive_address (id, member_id, name, 
+      phone_number, default_status, post_code, 
+      province, city, region, 
+      detail_address)
+    values (#{id,jdbcType=BIGINT}, #{member_id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{phone_number,jdbcType=VARCHAR}, #{default_status,jdbcType=INTEGER}, #{post_code,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, 
+      #{detail_address,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsMemberReceiveAddress">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into ums_member_receive_address
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="memberId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="member_id != null">
         member_id,
       </if>
       <if test="name != null">
         name,
       </if>
-      <if test="phoneNumber != null">
+      <if test="phone_number != null">
         phone_number,
       </if>
-      <if test="defaultStatus != null">
+      <if test="default_status != null">
         default_status,
       </if>
-      <if test="postCode != null">
+      <if test="post_code != null">
         post_code,
       </if>
       <if test="province != null">
@@ -148,25 +145,28 @@
       <if test="region != null">
         region,
       </if>
-      <if test="detailAddress != null">
+      <if test="detail_address != null">
         detail_address,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="memberId != null">
-        #{memberId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="member_id != null">
+        #{member_id,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="phoneNumber != null">
-        #{phoneNumber,jdbcType=VARCHAR},
+      <if test="phone_number != null">
+        #{phone_number,jdbcType=VARCHAR},
       </if>
-      <if test="defaultStatus != null">
-        #{defaultStatus,jdbcType=INTEGER},
+      <if test="default_status != null">
+        #{default_status,jdbcType=INTEGER},
       </if>
-      <if test="postCode != null">
-        #{postCode,jdbcType=VARCHAR},
+      <if test="post_code != null">
+        #{post_code,jdbcType=VARCHAR},
       </if>
       <if test="province != null">
         #{province,jdbcType=VARCHAR},
@@ -177,8 +177,8 @@
       <if test="region != null">
         #{region,jdbcType=VARCHAR},
       </if>
-      <if test="detailAddress != null">
-        #{detailAddress,jdbcType=VARCHAR},
+      <if test="detail_address != null">
+        #{detail_address,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -194,20 +194,20 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.memberId != null">
-        member_id = #{record.memberId,jdbcType=BIGINT},
+      <if test="record.member_id != null">
+        member_id = #{record.member_id,jdbcType=BIGINT},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.phoneNumber != null">
-        phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
+      <if test="record.phone_number != null">
+        phone_number = #{record.phone_number,jdbcType=VARCHAR},
       </if>
-      <if test="record.defaultStatus != null">
-        default_status = #{record.defaultStatus,jdbcType=INTEGER},
+      <if test="record.default_status != null">
+        default_status = #{record.default_status,jdbcType=INTEGER},
       </if>
-      <if test="record.postCode != null">
-        post_code = #{record.postCode,jdbcType=VARCHAR},
+      <if test="record.post_code != null">
+        post_code = #{record.post_code,jdbcType=VARCHAR},
       </if>
       <if test="record.province != null">
         province = #{record.province,jdbcType=VARCHAR},
@@ -218,8 +218,8 @@
       <if test="record.region != null">
         region = #{record.region,jdbcType=VARCHAR},
       </if>
-      <if test="record.detailAddress != null">
-        detail_address = #{record.detailAddress,jdbcType=VARCHAR},
+      <if test="record.detail_address != null">
+        detail_address = #{record.detail_address,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -229,15 +229,15 @@
   <update id="updateByExample" parameterType="map">
     update ums_member_receive_address
     set id = #{record.id,jdbcType=BIGINT},
-      member_id = #{record.memberId,jdbcType=BIGINT},
+      member_id = #{record.member_id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      phone_number = #{record.phoneNumber,jdbcType=VARCHAR},
-      default_status = #{record.defaultStatus,jdbcType=INTEGER},
-      post_code = #{record.postCode,jdbcType=VARCHAR},
+      phone_number = #{record.phone_number,jdbcType=VARCHAR},
+      default_status = #{record.default_status,jdbcType=INTEGER},
+      post_code = #{record.post_code,jdbcType=VARCHAR},
       province = #{record.province,jdbcType=VARCHAR},
       city = #{record.city,jdbcType=VARCHAR},
       region = #{record.region,jdbcType=VARCHAR},
-      detail_address = #{record.detailAddress,jdbcType=VARCHAR}
+      detail_address = #{record.detail_address,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -245,20 +245,20 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsMemberReceiveAddress">
     update ums_member_receive_address
     <set>
-      <if test="memberId != null">
-        member_id = #{memberId,jdbcType=BIGINT},
+      <if test="member_id != null">
+        member_id = #{member_id,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="phoneNumber != null">
-        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      <if test="phone_number != null">
+        phone_number = #{phone_number,jdbcType=VARCHAR},
       </if>
-      <if test="defaultStatus != null">
-        default_status = #{defaultStatus,jdbcType=INTEGER},
+      <if test="default_status != null">
+        default_status = #{default_status,jdbcType=INTEGER},
       </if>
-      <if test="postCode != null">
-        post_code = #{postCode,jdbcType=VARCHAR},
+      <if test="post_code != null">
+        post_code = #{post_code,jdbcType=VARCHAR},
       </if>
       <if test="province != null">
         province = #{province,jdbcType=VARCHAR},
@@ -269,23 +269,23 @@
       <if test="region != null">
         region = #{region,jdbcType=VARCHAR},
       </if>
-      <if test="detailAddress != null">
-        detail_address = #{detailAddress,jdbcType=VARCHAR},
+      <if test="detail_address != null">
+        detail_address = #{detail_address,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsMemberReceiveAddress">
     update ums_member_receive_address
-    set member_id = #{memberId,jdbcType=BIGINT},
+    set member_id = #{member_id,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
-      phone_number = #{phoneNumber,jdbcType=VARCHAR},
-      default_status = #{defaultStatus,jdbcType=INTEGER},
-      post_code = #{postCode,jdbcType=VARCHAR},
+      phone_number = #{phone_number,jdbcType=VARCHAR},
+      default_status = #{default_status,jdbcType=INTEGER},
+      post_code = #{post_code,jdbcType=VARCHAR},
       province = #{province,jdbcType=VARCHAR},
       city = #{city,jdbcType=VARCHAR},
       region = #{region,jdbcType=VARCHAR},
-      detail_address = #{detailAddress,jdbcType=VARCHAR}
+      detail_address = #{detail_address,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

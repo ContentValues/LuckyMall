@@ -4,10 +4,10 @@
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.SmsFlashPromotion">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="start_date" jdbcType="DATE" property="startDate" />
-    <result column="end_date" jdbcType="DATE" property="endDate" />
+    <result column="start_date" jdbcType="DATE" property="start_date" />
+    <result column="end_date" jdbcType="DATE" property="end_date" />
     <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -101,51 +101,53 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsFlashPromotion">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into sms_flash_promotion (title, start_date, end_date, 
-      status, create_time)
-    values (#{title,jdbcType=VARCHAR}, #{startDate,jdbcType=DATE}, #{endDate,jdbcType=DATE}, 
-      #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+    insert into sms_flash_promotion (id, title, start_date, 
+      end_date, status, create_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{start_date,jdbcType=DATE}, 
+      #{end_date,jdbcType=DATE}, #{status,jdbcType=INTEGER}, #{create_time,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsFlashPromotion">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into sms_flash_promotion
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="title != null">
         title,
       </if>
-      <if test="startDate != null">
+      <if test="start_date != null">
         start_date,
       </if>
-      <if test="endDate != null">
+      <if test="end_date != null">
         end_date,
       </if>
       <if test="status != null">
         status,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="startDate != null">
-        #{startDate,jdbcType=DATE},
+      <if test="start_date != null">
+        #{start_date,jdbcType=DATE},
       </if>
-      <if test="endDate != null">
-        #{endDate,jdbcType=DATE},
+      <if test="end_date != null">
+        #{end_date,jdbcType=DATE},
       </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -164,17 +166,17 @@
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.startDate != null">
-        start_date = #{record.startDate,jdbcType=DATE},
+      <if test="record.start_date != null">
+        start_date = #{record.start_date,jdbcType=DATE},
       </if>
-      <if test="record.endDate != null">
-        end_date = #{record.endDate,jdbcType=DATE},
+      <if test="record.end_date != null">
+        end_date = #{record.end_date,jdbcType=DATE},
       </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=INTEGER},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -185,10 +187,10 @@
     update sms_flash_promotion
     set id = #{record.id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
-      start_date = #{record.startDate,jdbcType=DATE},
-      end_date = #{record.endDate,jdbcType=DATE},
+      start_date = #{record.start_date,jdbcType=DATE},
+      end_date = #{record.end_date,jdbcType=DATE},
       status = #{record.status,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP}
+      create_time = #{record.create_time,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -199,17 +201,17 @@
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="startDate != null">
-        start_date = #{startDate,jdbcType=DATE},
+      <if test="start_date != null">
+        start_date = #{start_date,jdbcType=DATE},
       </if>
-      <if test="endDate != null">
-        end_date = #{endDate,jdbcType=DATE},
+      <if test="end_date != null">
+        end_date = #{end_date,jdbcType=DATE},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -217,10 +219,10 @@
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.SmsFlashPromotion">
     update sms_flash_promotion
     set title = #{title,jdbcType=VARCHAR},
-      start_date = #{startDate,jdbcType=DATE},
-      end_date = #{endDate,jdbcType=DATE},
+      start_date = #{start_date,jdbcType=DATE},
+      end_date = #{end_date,jdbcType=DATE},
       status = #{status,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
+      create_time = #{create_time,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

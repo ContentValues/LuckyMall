@@ -164,193 +164,193 @@ public class SmsHomeRecommendSubjectExample {
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdIsNull() {
+        public Criteria andSubject_idIsNull() {
             addCriterion("subject_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdIsNotNull() {
+        public Criteria andSubject_idIsNotNull() {
             addCriterion("subject_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdEqualTo(Long value) {
-            addCriterion("subject_id =", value, "subjectId");
+        public Criteria andSubject_idEqualTo(Long value) {
+            addCriterion("subject_id =", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdNotEqualTo(Long value) {
-            addCriterion("subject_id <>", value, "subjectId");
+        public Criteria andSubject_idNotEqualTo(Long value) {
+            addCriterion("subject_id <>", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdGreaterThan(Long value) {
-            addCriterion("subject_id >", value, "subjectId");
+        public Criteria andSubject_idGreaterThan(Long value) {
+            addCriterion("subject_id >", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("subject_id >=", value, "subjectId");
+        public Criteria andSubject_idGreaterThanOrEqualTo(Long value) {
+            addCriterion("subject_id >=", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdLessThan(Long value) {
-            addCriterion("subject_id <", value, "subjectId");
+        public Criteria andSubject_idLessThan(Long value) {
+            addCriterion("subject_id <", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdLessThanOrEqualTo(Long value) {
-            addCriterion("subject_id <=", value, "subjectId");
+        public Criteria andSubject_idLessThanOrEqualTo(Long value) {
+            addCriterion("subject_id <=", value, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdIn(List<Long> values) {
-            addCriterion("subject_id in", values, "subjectId");
+        public Criteria andSubject_idIn(List<Long> values) {
+            addCriterion("subject_id in", values, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdNotIn(List<Long> values) {
-            addCriterion("subject_id not in", values, "subjectId");
+        public Criteria andSubject_idNotIn(List<Long> values) {
+            addCriterion("subject_id not in", values, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdBetween(Long value1, Long value2) {
-            addCriterion("subject_id between", value1, value2, "subjectId");
+        public Criteria andSubject_idBetween(Long value1, Long value2) {
+            addCriterion("subject_id between", value1, value2, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectIdNotBetween(Long value1, Long value2) {
-            addCriterion("subject_id not between", value1, value2, "subjectId");
+        public Criteria andSubject_idNotBetween(Long value1, Long value2) {
+            addCriterion("subject_id not between", value1, value2, "subject_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameIsNull() {
+        public Criteria andSubject_nameIsNull() {
             addCriterion("subject_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameIsNotNull() {
+        public Criteria andSubject_nameIsNotNull() {
             addCriterion("subject_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameEqualTo(String value) {
-            addCriterion("subject_name =", value, "subjectName");
+        public Criteria andSubject_nameEqualTo(String value) {
+            addCriterion("subject_name =", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameNotEqualTo(String value) {
-            addCriterion("subject_name <>", value, "subjectName");
+        public Criteria andSubject_nameNotEqualTo(String value) {
+            addCriterion("subject_name <>", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameGreaterThan(String value) {
-            addCriterion("subject_name >", value, "subjectName");
+        public Criteria andSubject_nameGreaterThan(String value) {
+            addCriterion("subject_name >", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameGreaterThanOrEqualTo(String value) {
-            addCriterion("subject_name >=", value, "subjectName");
+        public Criteria andSubject_nameGreaterThanOrEqualTo(String value) {
+            addCriterion("subject_name >=", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameLessThan(String value) {
-            addCriterion("subject_name <", value, "subjectName");
+        public Criteria andSubject_nameLessThan(String value) {
+            addCriterion("subject_name <", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameLessThanOrEqualTo(String value) {
-            addCriterion("subject_name <=", value, "subjectName");
+        public Criteria andSubject_nameLessThanOrEqualTo(String value) {
+            addCriterion("subject_name <=", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameLike(String value) {
-            addCriterion("subject_name like", value, "subjectName");
+        public Criteria andSubject_nameLike(String value) {
+            addCriterion("subject_name like", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameNotLike(String value) {
-            addCriterion("subject_name not like", value, "subjectName");
+        public Criteria andSubject_nameNotLike(String value) {
+            addCriterion("subject_name not like", value, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameIn(List<String> values) {
-            addCriterion("subject_name in", values, "subjectName");
+        public Criteria andSubject_nameIn(List<String> values) {
+            addCriterion("subject_name in", values, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameNotIn(List<String> values) {
-            addCriterion("subject_name not in", values, "subjectName");
+        public Criteria andSubject_nameNotIn(List<String> values) {
+            addCriterion("subject_name not in", values, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameBetween(String value1, String value2) {
-            addCriterion("subject_name between", value1, value2, "subjectName");
+        public Criteria andSubject_nameBetween(String value1, String value2) {
+            addCriterion("subject_name between", value1, value2, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectNameNotBetween(String value1, String value2) {
-            addCriterion("subject_name not between", value1, value2, "subjectName");
+        public Criteria andSubject_nameNotBetween(String value1, String value2) {
+            addCriterion("subject_name not between", value1, value2, "subject_name");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusIsNull() {
+        public Criteria andRecommend_statusIsNull() {
             addCriterion("recommend_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusIsNotNull() {
+        public Criteria andRecommend_statusIsNotNull() {
             addCriterion("recommend_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusEqualTo(Integer value) {
-            addCriterion("recommend_status =", value, "recommendStatus");
+        public Criteria andRecommend_statusEqualTo(Integer value) {
+            addCriterion("recommend_status =", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusNotEqualTo(Integer value) {
-            addCriterion("recommend_status <>", value, "recommendStatus");
+        public Criteria andRecommend_statusNotEqualTo(Integer value) {
+            addCriterion("recommend_status <>", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusGreaterThan(Integer value) {
-            addCriterion("recommend_status >", value, "recommendStatus");
+        public Criteria andRecommend_statusGreaterThan(Integer value) {
+            addCriterion("recommend_status >", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("recommend_status >=", value, "recommendStatus");
+        public Criteria andRecommend_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("recommend_status >=", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusLessThan(Integer value) {
-            addCriterion("recommend_status <", value, "recommendStatus");
+        public Criteria andRecommend_statusLessThan(Integer value) {
+            addCriterion("recommend_status <", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("recommend_status <=", value, "recommendStatus");
+        public Criteria andRecommend_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("recommend_status <=", value, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusIn(List<Integer> values) {
-            addCriterion("recommend_status in", values, "recommendStatus");
+        public Criteria andRecommend_statusIn(List<Integer> values) {
+            addCriterion("recommend_status in", values, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusNotIn(List<Integer> values) {
-            addCriterion("recommend_status not in", values, "recommendStatus");
+        public Criteria andRecommend_statusNotIn(List<Integer> values) {
+            addCriterion("recommend_status not in", values, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusBetween(Integer value1, Integer value2) {
-            addCriterion("recommend_status between", value1, value2, "recommendStatus");
+        public Criteria andRecommend_statusBetween(Integer value1, Integer value2) {
+            addCriterion("recommend_status between", value1, value2, "recommend_status");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("recommend_status not between", value1, value2, "recommendStatus");
+        public Criteria andRecommend_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("recommend_status not between", value1, value2, "recommend_status");
             return (Criteria) this;
         }
 

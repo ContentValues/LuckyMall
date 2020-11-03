@@ -235,123 +235,123 @@ public class UmsMemberTagExample {
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountIsNull() {
+        public Criteria andFinish_order_countIsNull() {
             addCriterion("finish_order_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountIsNotNull() {
+        public Criteria andFinish_order_countIsNotNull() {
             addCriterion("finish_order_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountEqualTo(Integer value) {
-            addCriterion("finish_order_count =", value, "finishOrderCount");
+        public Criteria andFinish_order_countEqualTo(Integer value) {
+            addCriterion("finish_order_count =", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountNotEqualTo(Integer value) {
-            addCriterion("finish_order_count <>", value, "finishOrderCount");
+        public Criteria andFinish_order_countNotEqualTo(Integer value) {
+            addCriterion("finish_order_count <>", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountGreaterThan(Integer value) {
-            addCriterion("finish_order_count >", value, "finishOrderCount");
+        public Criteria andFinish_order_countGreaterThan(Integer value) {
+            addCriterion("finish_order_count >", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("finish_order_count >=", value, "finishOrderCount");
+        public Criteria andFinish_order_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("finish_order_count >=", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountLessThan(Integer value) {
-            addCriterion("finish_order_count <", value, "finishOrderCount");
+        public Criteria andFinish_order_countLessThan(Integer value) {
+            addCriterion("finish_order_count <", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountLessThanOrEqualTo(Integer value) {
-            addCriterion("finish_order_count <=", value, "finishOrderCount");
+        public Criteria andFinish_order_countLessThanOrEqualTo(Integer value) {
+            addCriterion("finish_order_count <=", value, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountIn(List<Integer> values) {
-            addCriterion("finish_order_count in", values, "finishOrderCount");
+        public Criteria andFinish_order_countIn(List<Integer> values) {
+            addCriterion("finish_order_count in", values, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountNotIn(List<Integer> values) {
-            addCriterion("finish_order_count not in", values, "finishOrderCount");
+        public Criteria andFinish_order_countNotIn(List<Integer> values) {
+            addCriterion("finish_order_count not in", values, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountBetween(Integer value1, Integer value2) {
-            addCriterion("finish_order_count between", value1, value2, "finishOrderCount");
+        public Criteria andFinish_order_countBetween(Integer value1, Integer value2) {
+            addCriterion("finish_order_count between", value1, value2, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("finish_order_count not between", value1, value2, "finishOrderCount");
+        public Criteria andFinish_order_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("finish_order_count not between", value1, value2, "finish_order_count");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountIsNull() {
+        public Criteria andFinish_order_amountIsNull() {
             addCriterion("finish_order_amount is null");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountIsNotNull() {
+        public Criteria andFinish_order_amountIsNotNull() {
             addCriterion("finish_order_amount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountEqualTo(BigDecimal value) {
-            addCriterion("finish_order_amount =", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountEqualTo(BigDecimal value) {
+            addCriterion("finish_order_amount =", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountNotEqualTo(BigDecimal value) {
-            addCriterion("finish_order_amount <>", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountNotEqualTo(BigDecimal value) {
+            addCriterion("finish_order_amount <>", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountGreaterThan(BigDecimal value) {
-            addCriterion("finish_order_amount >", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountGreaterThan(BigDecimal value) {
+            addCriterion("finish_order_amount >", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("finish_order_amount >=", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("finish_order_amount >=", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountLessThan(BigDecimal value) {
-            addCriterion("finish_order_amount <", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountLessThan(BigDecimal value) {
+            addCriterion("finish_order_amount <", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("finish_order_amount <=", value, "finishOrderAmount");
+        public Criteria andFinish_order_amountLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("finish_order_amount <=", value, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountIn(List<BigDecimal> values) {
-            addCriterion("finish_order_amount in", values, "finishOrderAmount");
+        public Criteria andFinish_order_amountIn(List<BigDecimal> values) {
+            addCriterion("finish_order_amount in", values, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountNotIn(List<BigDecimal> values) {
-            addCriterion("finish_order_amount not in", values, "finishOrderAmount");
+        public Criteria andFinish_order_amountNotIn(List<BigDecimal> values) {
+            addCriterion("finish_order_amount not in", values, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("finish_order_amount between", value1, value2, "finishOrderAmount");
+        public Criteria andFinish_order_amountBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("finish_order_amount between", value1, value2, "finish_order_amount");
             return (Criteria) this;
         }
 
-        public Criteria andFinishOrderAmountNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("finish_order_amount not between", value1, value2, "finishOrderAmount");
+        public Criteria andFinish_order_amountNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("finish_order_amount not between", value1, value2, "finish_order_amount");
             return (Criteria) this;
         }
     }

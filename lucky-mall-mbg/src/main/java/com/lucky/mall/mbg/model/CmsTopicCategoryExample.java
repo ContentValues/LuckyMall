@@ -304,123 +304,123 @@ public class CmsTopicCategoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountIsNull() {
+        public Criteria andSubject_countIsNull() {
             addCriterion("subject_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountIsNotNull() {
+        public Criteria andSubject_countIsNotNull() {
             addCriterion("subject_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountEqualTo(Integer value) {
-            addCriterion("subject_count =", value, "subjectCount");
+        public Criteria andSubject_countEqualTo(Integer value) {
+            addCriterion("subject_count =", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountNotEqualTo(Integer value) {
-            addCriterion("subject_count <>", value, "subjectCount");
+        public Criteria andSubject_countNotEqualTo(Integer value) {
+            addCriterion("subject_count <>", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountGreaterThan(Integer value) {
-            addCriterion("subject_count >", value, "subjectCount");
+        public Criteria andSubject_countGreaterThan(Integer value) {
+            addCriterion("subject_count >", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("subject_count >=", value, "subjectCount");
+        public Criteria andSubject_countGreaterThanOrEqualTo(Integer value) {
+            addCriterion("subject_count >=", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountLessThan(Integer value) {
-            addCriterion("subject_count <", value, "subjectCount");
+        public Criteria andSubject_countLessThan(Integer value) {
+            addCriterion("subject_count <", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountLessThanOrEqualTo(Integer value) {
-            addCriterion("subject_count <=", value, "subjectCount");
+        public Criteria andSubject_countLessThanOrEqualTo(Integer value) {
+            addCriterion("subject_count <=", value, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountIn(List<Integer> values) {
-            addCriterion("subject_count in", values, "subjectCount");
+        public Criteria andSubject_countIn(List<Integer> values) {
+            addCriterion("subject_count in", values, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountNotIn(List<Integer> values) {
-            addCriterion("subject_count not in", values, "subjectCount");
+        public Criteria andSubject_countNotIn(List<Integer> values) {
+            addCriterion("subject_count not in", values, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountBetween(Integer value1, Integer value2) {
-            addCriterion("subject_count between", value1, value2, "subjectCount");
+        public Criteria andSubject_countBetween(Integer value1, Integer value2) {
+            addCriterion("subject_count between", value1, value2, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andSubjectCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("subject_count not between", value1, value2, "subjectCount");
+        public Criteria andSubject_countNotBetween(Integer value1, Integer value2) {
+            addCriterion("subject_count not between", value1, value2, "subject_count");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNull() {
+        public Criteria andShow_statusIsNull() {
             addCriterion("show_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIsNotNull() {
+        public Criteria andShow_statusIsNotNull() {
             addCriterion("show_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusEqualTo(Integer value) {
-            addCriterion("show_status =", value, "showStatus");
+        public Criteria andShow_statusEqualTo(Integer value) {
+            addCriterion("show_status =", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotEqualTo(Integer value) {
-            addCriterion("show_status <>", value, "showStatus");
+        public Criteria andShow_statusNotEqualTo(Integer value) {
+            addCriterion("show_status <>", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThan(Integer value) {
-            addCriterion("show_status >", value, "showStatus");
+        public Criteria andShow_statusGreaterThan(Integer value) {
+            addCriterion("show_status >", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("show_status >=", value, "showStatus");
+        public Criteria andShow_statusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("show_status >=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThan(Integer value) {
-            addCriterion("show_status <", value, "showStatus");
+        public Criteria andShow_statusLessThan(Integer value) {
+            addCriterion("show_status <", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusLessThanOrEqualTo(Integer value) {
-            addCriterion("show_status <=", value, "showStatus");
+        public Criteria andShow_statusLessThanOrEqualTo(Integer value) {
+            addCriterion("show_status <=", value, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusIn(List<Integer> values) {
-            addCriterion("show_status in", values, "showStatus");
+        public Criteria andShow_statusIn(List<Integer> values) {
+            addCriterion("show_status in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotIn(List<Integer> values) {
-            addCriterion("show_status not in", values, "showStatus");
+        public Criteria andShow_statusNotIn(List<Integer> values) {
+            addCriterion("show_status not in", values, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusBetween(Integer value1, Integer value2) {
-            addCriterion("show_status between", value1, value2, "showStatus");
+        public Criteria andShow_statusBetween(Integer value1, Integer value2) {
+            addCriterion("show_status between", value1, value2, "show_status");
             return (Criteria) this;
         }
 
-        public Criteria andShowStatusNotBetween(Integer value1, Integer value2) {
-            addCriterion("show_status not between", value1, value2, "showStatus");
+        public Criteria andShow_statusNotBetween(Integer value1, Integer value2) {
+            addCriterion("show_status not between", value1, value2, "show_status");
             return (Criteria) this;
         }
 

@@ -8,16 +8,16 @@ public class OmsOrderOperateHistory implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "订单id")
-    private Long orderId;
+    private Long order_id;
 
     @ApiModelProperty(value = "操作人：用户；系统；后台管理员")
-    private String operateMan;
+    private String operate_man;
 
     @ApiModelProperty(value = "操作时间")
-    private Date createTime;
+    private Date create_time;
 
     @ApiModelProperty(value = "订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单")
-    private Integer orderStatus;
+    private Integer order_status;
 
     @ApiModelProperty(value = "备注")
     private String note;
@@ -32,36 +32,36 @@ public class OmsOrderOperateHistory implements Serializable {
         this.id = id;
     }
 
-    public Long getOrderId() {
-        return orderId;
+    public Long getOrder_id() {
+        return order_id;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public void setOrder_id(Long order_id) {
+        this.order_id = order_id;
     }
 
-    public String getOperateMan() {
-        return operateMan;
+    public String getOperate_man() {
+        return operate_man;
     }
 
-    public void setOperateMan(String operateMan) {
-        this.operateMan = operateMan;
+    public void setOperate_man(String operate_man) {
+        this.operate_man = operate_man;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public Integer getOrderStatus() {
-        return orderStatus;
+    public Integer getOrder_status() {
+        return order_status;
     }
 
-    public void setOrderStatus(Integer orderStatus) {
-        this.orderStatus = orderStatus;
+    public void setOrder_status(Integer order_status) {
+        this.order_status = order_status;
     }
 
     public String getNote() {
@@ -79,10 +79,10 @@ public class OmsOrderOperateHistory implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", orderId=").append(orderId);
-        sb.append(", operateMan=").append(operateMan);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", orderStatus=").append(orderStatus);
+        sb.append(", order_id=").append(order_id);
+        sb.append(", operate_man=").append(operate_man);
+        sb.append(", create_time=").append(create_time);
+        sb.append(", order_status=").append(order_status);
         sb.append(", note=").append(note);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

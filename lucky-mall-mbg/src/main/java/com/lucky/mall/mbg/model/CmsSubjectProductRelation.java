@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class CmsSubjectProductRelation implements Serializable {
     private Long id;
 
-    private Long subjectId;
+    private Long subject_id;
 
-    private Long productId;
+    private Long product_id;
 
     private static final long serialVersionUID = 1L;
 
@@ -20,20 +20,20 @@ public class CmsSubjectProductRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getSubjectId() {
-        return subjectId;
+    public Long getSubject_id() {
+        return subject_id;
     }
 
-    public void setSubjectId(Long subjectId) {
-        this.subjectId = subjectId;
+    public void setSubject_id(Long subject_id) {
+        this.subject_id = subject_id;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class CmsSubjectProductRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", subjectId=").append(subjectId);
-        sb.append(", productId=").append(productId);
+        sb.append(", subject_id=").append(subject_id);
+        sb.append(", product_id=").append(product_id);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -3,11 +3,11 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsCommentReplayMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsCommentReplay">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="comment_id" jdbcType="BIGINT" property="commentId" />
-    <result column="member_nick_name" jdbcType="VARCHAR" property="memberNickName" />
-    <result column="member_icon" jdbcType="VARCHAR" property="memberIcon" />
+    <result column="comment_id" jdbcType="BIGINT" property="comment_id" />
+    <result column="member_nick_name" jdbcType="VARCHAR" property="member_nick_name" />
+    <result column="member_icon" jdbcType="VARCHAR" property="member_icon" />
     <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
     <result column="type" jdbcType="INTEGER" property="type" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -102,35 +102,32 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsCommentReplay">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into pms_comment_replay (comment_id, member_nick_name, member_icon, 
-      content, create_time, type
-      )
-    values (#{commentId,jdbcType=BIGINT}, #{memberNickName,jdbcType=VARCHAR}, #{memberIcon,jdbcType=VARCHAR}, 
-      #{content,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{type,jdbcType=INTEGER}
-      )
+    insert into pms_comment_replay (id, comment_id, member_nick_name, 
+      member_icon, content, create_time, 
+      type)
+    values (#{id,jdbcType=BIGINT}, #{comment_id,jdbcType=BIGINT}, #{member_nick_name,jdbcType=VARCHAR}, 
+      #{member_icon,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{create_time,jdbcType=TIMESTAMP}, 
+      #{type,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsCommentReplay">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into pms_comment_replay
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="commentId != null">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="comment_id != null">
         comment_id,
       </if>
-      <if test="memberNickName != null">
+      <if test="member_nick_name != null">
         member_nick_name,
       </if>
-      <if test="memberIcon != null">
+      <if test="member_icon != null">
         member_icon,
       </if>
       <if test="content != null">
         content,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
       <if test="type != null">
@@ -138,20 +135,23 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="commentId != null">
-        #{commentId,jdbcType=BIGINT},
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="memberNickName != null">
-        #{memberNickName,jdbcType=VARCHAR},
+      <if test="comment_id != null">
+        #{comment_id,jdbcType=BIGINT},
       </if>
-      <if test="memberIcon != null">
-        #{memberIcon,jdbcType=VARCHAR},
+      <if test="member_nick_name != null">
+        #{member_nick_name,jdbcType=VARCHAR},
+      </if>
+      <if test="member_icon != null">
+        #{member_icon,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         #{content,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="type != null">
         #{type,jdbcType=INTEGER},
@@ -170,20 +170,20 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.commentId != null">
-        comment_id = #{record.commentId,jdbcType=BIGINT},
+      <if test="record.comment_id != null">
+        comment_id = #{record.comment_id,jdbcType=BIGINT},
       </if>
-      <if test="record.memberNickName != null">
-        member_nick_name = #{record.memberNickName,jdbcType=VARCHAR},
+      <if test="record.member_nick_name != null">
+        member_nick_name = #{record.member_nick_name,jdbcType=VARCHAR},
       </if>
-      <if test="record.memberIcon != null">
-        member_icon = #{record.memberIcon,jdbcType=VARCHAR},
+      <if test="record.member_icon != null">
+        member_icon = #{record.member_icon,jdbcType=VARCHAR},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=VARCHAR},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="record.type != null">
         type = #{record.type,jdbcType=INTEGER},
@@ -196,11 +196,11 @@
   <update id="updateByExample" parameterType="map">
     update pms_comment_replay
     set id = #{record.id,jdbcType=BIGINT},
-      comment_id = #{record.commentId,jdbcType=BIGINT},
-      member_nick_name = #{record.memberNickName,jdbcType=VARCHAR},
-      member_icon = #{record.memberIcon,jdbcType=VARCHAR},
+      comment_id = #{record.comment_id,jdbcType=BIGINT},
+      member_nick_name = #{record.member_nick_name,jdbcType=VARCHAR},
+      member_icon = #{record.member_icon,jdbcType=VARCHAR},
       content = #{record.content,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
       type = #{record.type,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -209,20 +209,20 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsCommentReplay">
     update pms_comment_replay
     <set>
-      <if test="commentId != null">
-        comment_id = #{commentId,jdbcType=BIGINT},
+      <if test="comment_id != null">
+        comment_id = #{comment_id,jdbcType=BIGINT},
       </if>
-      <if test="memberNickName != null">
-        member_nick_name = #{memberNickName,jdbcType=VARCHAR},
+      <if test="member_nick_name != null">
+        member_nick_name = #{member_nick_name,jdbcType=VARCHAR},
       </if>
-      <if test="memberIcon != null">
-        member_icon = #{memberIcon,jdbcType=VARCHAR},
+      <if test="member_icon != null">
+        member_icon = #{member_icon,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="type != null">
         type = #{type,jdbcType=INTEGER},
@@ -232,11 +232,11 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsCommentReplay">
     update pms_comment_replay
-    set comment_id = #{commentId,jdbcType=BIGINT},
-      member_nick_name = #{memberNickName,jdbcType=VARCHAR},
-      member_icon = #{memberIcon,jdbcType=VARCHAR},
+    set comment_id = #{comment_id,jdbcType=BIGINT},
+      member_nick_name = #{member_nick_name,jdbcType=VARCHAR},
+      member_icon = #{member_icon,jdbcType=VARCHAR},
       content = #{content,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
       type = #{type,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

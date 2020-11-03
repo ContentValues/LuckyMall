@@ -29,7 +29,7 @@ public class UmsPermission implements Serializable {
     private Integer status;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createTime;
+    private Date create_time;
 
     @ApiModelProperty(value = "排序")
     private Integer sort;
@@ -100,12 +100,12 @@ public class UmsPermission implements Serializable {
         this.status = status;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
     public Integer getSort() {
@@ -130,7 +130,7 @@ public class UmsPermission implements Serializable {
         sb.append(", type=").append(type);
         sb.append(", uri=").append(uri);
         sb.append(", status=").append(status);
-        sb.append(", createTime=").append(createTime);
+        sb.append(", create_time=").append(create_time);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

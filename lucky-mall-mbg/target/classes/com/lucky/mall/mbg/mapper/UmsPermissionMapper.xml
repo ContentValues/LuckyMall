@@ -10,7 +10,7 @@
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="uri" jdbcType="VARCHAR" property="uri" />
     <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -105,22 +105,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsPermission">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into ums_permission (pid, name, value, 
-      icon, type, uri, status, 
-      create_time, sort)
-    values (#{pid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
-      #{icon,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{uri,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{sort,jdbcType=INTEGER})
+    insert into ums_permission (id, pid, name, 
+      value, icon, type, 
+      uri, status, create_time, 
+      sort)
+    values (#{id,jdbcType=BIGINT}, #{pid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{value,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{uri,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{create_time,jdbcType=TIMESTAMP}, 
+      #{sort,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsPermission">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into ums_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="pid != null">
         pid,
       </if>
@@ -142,7 +141,7 @@
       <if test="status != null">
         status,
       </if>
-      <if test="createTime != null">
+      <if test="create_time != null">
         create_time,
       </if>
       <if test="sort != null">
@@ -150,6 +149,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
       <if test="pid != null">
         #{pid,jdbcType=BIGINT},
       </if>
@@ -171,8 +173,8 @@
       <if test="status != null">
         #{status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
@@ -212,8 +214,8 @@
       <if test="record.status != null">
         status = #{record.status,jdbcType=INTEGER},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.create_time != null">
+        create_time = #{record.create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
@@ -233,7 +235,7 @@
       type = #{record.type,jdbcType=INTEGER},
       uri = #{record.uri,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_time = #{record.create_time,jdbcType=TIMESTAMP},
       sort = #{record.sort,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -263,8 +265,8 @@
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
@@ -281,7 +283,7 @@
       type = #{type,jdbcType=INTEGER},
       uri = #{uri,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
       sort = #{sort,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

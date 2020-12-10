@@ -8,9 +8,9 @@ public class PmsAlbum implements Serializable {
 
     private String name;
 
-    private String cover_pic;
+    private String coverPic;
 
-    private Integer pic_count;
+    private Integer picCount;
 
     private Integer sort;
 
@@ -34,20 +34,20 @@ public class PmsAlbum implements Serializable {
         this.name = name;
     }
 
-    public String getCover_pic() {
-        return cover_pic;
+    public String getCoverPic() {
+        return coverPic;
     }
 
-    public void setCover_pic(String cover_pic) {
-        this.cover_pic = cover_pic;
+    public void setCoverPic(String coverPic) {
+        this.coverPic = coverPic;
     }
 
-    public Integer getPic_count() {
-        return pic_count;
+    public Integer getPicCount() {
+        return picCount;
     }
 
-    public void setPic_count(Integer pic_count) {
-        this.pic_count = pic_count;
+    public void setPicCount(Integer picCount) {
+        this.picCount = picCount;
     }
 
     public Integer getSort() {
@@ -74,8 +74,8 @@ public class PmsAlbum implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", cover_pic=").append(cover_pic);
-        sb.append(", pic_count=").append(pic_count);
+        sb.append(", coverPic=").append(coverPic);
+        sb.append(", picCount=").append(picCount);
         sb.append(", sort=").append(sort);
         sb.append(", description=").append(description);
         sb.append(", serialVersionUID=").append(serialVersionUID);

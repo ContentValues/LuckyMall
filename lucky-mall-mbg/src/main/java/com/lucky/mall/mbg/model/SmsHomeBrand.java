@@ -6,11 +6,11 @@ import java.io.Serializable;
 public class SmsHomeBrand implements Serializable {
     private Long id;
 
-    private Long brand_id;
+    private Long brandId;
 
-    private String brand_name;
+    private String brandName;
 
-    private Integer recommend_status;
+    private Integer recommendStatus;
 
     private Integer sort;
 
@@ -24,28 +24,28 @@ public class SmsHomeBrand implements Serializable {
         this.id = id;
     }
 
-    public Long getBrand_id() {
-        return brand_id;
+    public Long getBrandId() {
+        return brandId;
     }
 
-    public void setBrand_id(Long brand_id) {
-        this.brand_id = brand_id;
+    public void setBrandId(Long brandId) {
+        this.brandId = brandId;
     }
 
-    public String getBrand_name() {
-        return brand_name;
+    public String getBrandName() {
+        return brandName;
     }
 
-    public void setBrand_name(String brand_name) {
-        this.brand_name = brand_name;
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
     }
 
-    public Integer getRecommend_status() {
-        return recommend_status;
+    public Integer getRecommendStatus() {
+        return recommendStatus;
     }
 
-    public void setRecommend_status(Integer recommend_status) {
-        this.recommend_status = recommend_status;
+    public void setRecommendStatus(Integer recommendStatus) {
+        this.recommendStatus = recommendStatus;
     }
 
     public Integer getSort() {
@@ -63,9 +63,9 @@ public class SmsHomeBrand implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", brand_id=").append(brand_id);
-        sb.append(", brand_name=").append(brand_name);
-        sb.append(", recommend_status=").append(recommend_status);
+        sb.append(", brandId=").append(brandId);
+        sb.append(", brandName=").append(brandName);
+        sb.append(", recommendStatus=").append(recommendStatus);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

@@ -3,17 +3,17 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsProductOperateLogMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsProductOperateLog">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_id" jdbcType="BIGINT" property="product_id" />
-    <result column="price_old" jdbcType="DECIMAL" property="price_old" />
-    <result column="price_new" jdbcType="DECIMAL" property="price_new" />
-    <result column="sale_price_old" jdbcType="DECIMAL" property="sale_price_old" />
-    <result column="sale_price_new" jdbcType="DECIMAL" property="sale_price_new" />
-    <result column="gift_point_old" jdbcType="INTEGER" property="gift_point_old" />
-    <result column="gift_point_new" jdbcType="INTEGER" property="gift_point_new" />
-    <result column="use_point_limit_old" jdbcType="INTEGER" property="use_point_limit_old" />
-    <result column="use_point_limit_new" jdbcType="INTEGER" property="use_point_limit_new" />
-    <result column="operate_man" jdbcType="VARCHAR" property="operate_man" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="price_old" jdbcType="DECIMAL" property="priceOld" />
+    <result column="price_new" jdbcType="DECIMAL" property="priceNew" />
+    <result column="sale_price_old" jdbcType="DECIMAL" property="salePriceOld" />
+    <result column="sale_price_new" jdbcType="DECIMAL" property="salePriceNew" />
+    <result column="gift_point_old" jdbcType="INTEGER" property="giftPointOld" />
+    <result column="gift_point_new" jdbcType="INTEGER" property="giftPointNew" />
+    <result column="use_point_limit_old" jdbcType="INTEGER" property="usePointLimitOld" />
+    <result column="use_point_limit_new" jdbcType="INTEGER" property="usePointLimitNew" />
+    <result column="operate_man" jdbcType="VARCHAR" property="operateMan" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -108,93 +108,91 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsProductOperateLog">
-    insert into pms_product_operate_log (id, product_id, price_old, 
-      price_new, sale_price_old, sale_price_new, 
-      gift_point_old, gift_point_new, use_point_limit_old, 
-      use_point_limit_new, operate_man, create_time
-      )
-    values (#{id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}, #{price_old,jdbcType=DECIMAL}, 
-      #{price_new,jdbcType=DECIMAL}, #{sale_price_old,jdbcType=DECIMAL}, #{sale_price_new,jdbcType=DECIMAL}, 
-      #{gift_point_old,jdbcType=INTEGER}, #{gift_point_new,jdbcType=INTEGER}, #{use_point_limit_old,jdbcType=INTEGER}, 
-      #{use_point_limit_new,jdbcType=INTEGER}, #{operate_man,jdbcType=VARCHAR}, #{create_time,jdbcType=TIMESTAMP}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_product_operate_log (product_id, price_old, price_new, 
+      sale_price_old, sale_price_new, gift_point_old, 
+      gift_point_new, use_point_limit_old, use_point_limit_new, 
+      operate_man, create_time)
+    values (#{productId,jdbcType=BIGINT}, #{priceOld,jdbcType=DECIMAL}, #{priceNew,jdbcType=DECIMAL}, 
+      #{salePriceOld,jdbcType=DECIMAL}, #{salePriceNew,jdbcType=DECIMAL}, #{giftPointOld,jdbcType=INTEGER}, 
+      #{giftPointNew,jdbcType=INTEGER}, #{usePointLimitOld,jdbcType=INTEGER}, #{usePointLimitNew,jdbcType=INTEGER}, 
+      #{operateMan,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsProductOperateLog">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_product_operate_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_id != null">
+      <if test="productId != null">
         product_id,
       </if>
-      <if test="price_old != null">
+      <if test="priceOld != null">
         price_old,
       </if>
-      <if test="price_new != null">
+      <if test="priceNew != null">
         price_new,
       </if>
-      <if test="sale_price_old != null">
+      <if test="salePriceOld != null">
         sale_price_old,
       </if>
-      <if test="sale_price_new != null">
+      <if test="salePriceNew != null">
         sale_price_new,
       </if>
-      <if test="gift_point_old != null">
+      <if test="giftPointOld != null">
         gift_point_old,
       </if>
-      <if test="gift_point_new != null">
+      <if test="giftPointNew != null">
         gift_point_new,
       </if>
-      <if test="use_point_limit_old != null">
+      <if test="usePointLimitOld != null">
         use_point_limit_old,
       </if>
-      <if test="use_point_limit_new != null">
+      <if test="usePointLimitNew != null">
         use_point_limit_new,
       </if>
-      <if test="operate_man != null">
+      <if test="operateMan != null">
         operate_man,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
       </if>
-      <if test="product_id != null">
-        #{product_id,jdbcType=BIGINT},
+      <if test="priceOld != null">
+        #{priceOld,jdbcType=DECIMAL},
       </if>
-      <if test="price_old != null">
-        #{price_old,jdbcType=DECIMAL},
+      <if test="priceNew != null">
+        #{priceNew,jdbcType=DECIMAL},
       </if>
-      <if test="price_new != null">
-        #{price_new,jdbcType=DECIMAL},
+      <if test="salePriceOld != null">
+        #{salePriceOld,jdbcType=DECIMAL},
       </if>
-      <if test="sale_price_old != null">
-        #{sale_price_old,jdbcType=DECIMAL},
+      <if test="salePriceNew != null">
+        #{salePriceNew,jdbcType=DECIMAL},
       </if>
-      <if test="sale_price_new != null">
-        #{sale_price_new,jdbcType=DECIMAL},
+      <if test="giftPointOld != null">
+        #{giftPointOld,jdbcType=INTEGER},
       </if>
-      <if test="gift_point_old != null">
-        #{gift_point_old,jdbcType=INTEGER},
+      <if test="giftPointNew != null">
+        #{giftPointNew,jdbcType=INTEGER},
       </if>
-      <if test="gift_point_new != null">
-        #{gift_point_new,jdbcType=INTEGER},
+      <if test="usePointLimitOld != null">
+        #{usePointLimitOld,jdbcType=INTEGER},
       </if>
-      <if test="use_point_limit_old != null">
-        #{use_point_limit_old,jdbcType=INTEGER},
+      <if test="usePointLimitNew != null">
+        #{usePointLimitNew,jdbcType=INTEGER},
       </if>
-      <if test="use_point_limit_new != null">
-        #{use_point_limit_new,jdbcType=INTEGER},
+      <if test="operateMan != null">
+        #{operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="operate_man != null">
-        #{operate_man,jdbcType=VARCHAR},
-      </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -210,38 +208,38 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_id != null">
-        product_id = #{record.product_id,jdbcType=BIGINT},
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=BIGINT},
       </if>
-      <if test="record.price_old != null">
-        price_old = #{record.price_old,jdbcType=DECIMAL},
+      <if test="record.priceOld != null">
+        price_old = #{record.priceOld,jdbcType=DECIMAL},
       </if>
-      <if test="record.price_new != null">
-        price_new = #{record.price_new,jdbcType=DECIMAL},
+      <if test="record.priceNew != null">
+        price_new = #{record.priceNew,jdbcType=DECIMAL},
       </if>
-      <if test="record.sale_price_old != null">
-        sale_price_old = #{record.sale_price_old,jdbcType=DECIMAL},
+      <if test="record.salePriceOld != null">
+        sale_price_old = #{record.salePriceOld,jdbcType=DECIMAL},
       </if>
-      <if test="record.sale_price_new != null">
-        sale_price_new = #{record.sale_price_new,jdbcType=DECIMAL},
+      <if test="record.salePriceNew != null">
+        sale_price_new = #{record.salePriceNew,jdbcType=DECIMAL},
       </if>
-      <if test="record.gift_point_old != null">
-        gift_point_old = #{record.gift_point_old,jdbcType=INTEGER},
+      <if test="record.giftPointOld != null">
+        gift_point_old = #{record.giftPointOld,jdbcType=INTEGER},
       </if>
-      <if test="record.gift_point_new != null">
-        gift_point_new = #{record.gift_point_new,jdbcType=INTEGER},
+      <if test="record.giftPointNew != null">
+        gift_point_new = #{record.giftPointNew,jdbcType=INTEGER},
       </if>
-      <if test="record.use_point_limit_old != null">
-        use_point_limit_old = #{record.use_point_limit_old,jdbcType=INTEGER},
+      <if test="record.usePointLimitOld != null">
+        use_point_limit_old = #{record.usePointLimitOld,jdbcType=INTEGER},
       </if>
-      <if test="record.use_point_limit_new != null">
-        use_point_limit_new = #{record.use_point_limit_new,jdbcType=INTEGER},
+      <if test="record.usePointLimitNew != null">
+        use_point_limit_new = #{record.usePointLimitNew,jdbcType=INTEGER},
       </if>
-      <if test="record.operate_man != null">
-        operate_man = #{record.operate_man,jdbcType=VARCHAR},
+      <if test="record.operateMan != null">
+        operate_man = #{record.operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -251,17 +249,17 @@
   <update id="updateByExample" parameterType="map">
     update pms_product_operate_log
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
-      price_old = #{record.price_old,jdbcType=DECIMAL},
-      price_new = #{record.price_new,jdbcType=DECIMAL},
-      sale_price_old = #{record.sale_price_old,jdbcType=DECIMAL},
-      sale_price_new = #{record.sale_price_new,jdbcType=DECIMAL},
-      gift_point_old = #{record.gift_point_old,jdbcType=INTEGER},
-      gift_point_new = #{record.gift_point_new,jdbcType=INTEGER},
-      use_point_limit_old = #{record.use_point_limit_old,jdbcType=INTEGER},
-      use_point_limit_new = #{record.use_point_limit_new,jdbcType=INTEGER},
-      operate_man = #{record.operate_man,jdbcType=VARCHAR},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP}
+      product_id = #{record.productId,jdbcType=BIGINT},
+      price_old = #{record.priceOld,jdbcType=DECIMAL},
+      price_new = #{record.priceNew,jdbcType=DECIMAL},
+      sale_price_old = #{record.salePriceOld,jdbcType=DECIMAL},
+      sale_price_new = #{record.salePriceNew,jdbcType=DECIMAL},
+      gift_point_old = #{record.giftPointOld,jdbcType=INTEGER},
+      gift_point_new = #{record.giftPointNew,jdbcType=INTEGER},
+      use_point_limit_old = #{record.usePointLimitOld,jdbcType=INTEGER},
+      use_point_limit_new = #{record.usePointLimitNew,jdbcType=INTEGER},
+      operate_man = #{record.operateMan,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -269,55 +267,55 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsProductOperateLog">
     update pms_product_operate_log
     <set>
-      <if test="product_id != null">
-        product_id = #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
       </if>
-      <if test="price_old != null">
-        price_old = #{price_old,jdbcType=DECIMAL},
+      <if test="priceOld != null">
+        price_old = #{priceOld,jdbcType=DECIMAL},
       </if>
-      <if test="price_new != null">
-        price_new = #{price_new,jdbcType=DECIMAL},
+      <if test="priceNew != null">
+        price_new = #{priceNew,jdbcType=DECIMAL},
       </if>
-      <if test="sale_price_old != null">
-        sale_price_old = #{sale_price_old,jdbcType=DECIMAL},
+      <if test="salePriceOld != null">
+        sale_price_old = #{salePriceOld,jdbcType=DECIMAL},
       </if>
-      <if test="sale_price_new != null">
-        sale_price_new = #{sale_price_new,jdbcType=DECIMAL},
+      <if test="salePriceNew != null">
+        sale_price_new = #{salePriceNew,jdbcType=DECIMAL},
       </if>
-      <if test="gift_point_old != null">
-        gift_point_old = #{gift_point_old,jdbcType=INTEGER},
+      <if test="giftPointOld != null">
+        gift_point_old = #{giftPointOld,jdbcType=INTEGER},
       </if>
-      <if test="gift_point_new != null">
-        gift_point_new = #{gift_point_new,jdbcType=INTEGER},
+      <if test="giftPointNew != null">
+        gift_point_new = #{giftPointNew,jdbcType=INTEGER},
       </if>
-      <if test="use_point_limit_old != null">
-        use_point_limit_old = #{use_point_limit_old,jdbcType=INTEGER},
+      <if test="usePointLimitOld != null">
+        use_point_limit_old = #{usePointLimitOld,jdbcType=INTEGER},
       </if>
-      <if test="use_point_limit_new != null">
-        use_point_limit_new = #{use_point_limit_new,jdbcType=INTEGER},
+      <if test="usePointLimitNew != null">
+        use_point_limit_new = #{usePointLimitNew,jdbcType=INTEGER},
       </if>
-      <if test="operate_man != null">
-        operate_man = #{operate_man,jdbcType=VARCHAR},
+      <if test="operateMan != null">
+        operate_man = #{operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsProductOperateLog">
     update pms_product_operate_log
-    set product_id = #{product_id,jdbcType=BIGINT},
-      price_old = #{price_old,jdbcType=DECIMAL},
-      price_new = #{price_new,jdbcType=DECIMAL},
-      sale_price_old = #{sale_price_old,jdbcType=DECIMAL},
-      sale_price_new = #{sale_price_new,jdbcType=DECIMAL},
-      gift_point_old = #{gift_point_old,jdbcType=INTEGER},
-      gift_point_new = #{gift_point_new,jdbcType=INTEGER},
-      use_point_limit_old = #{use_point_limit_old,jdbcType=INTEGER},
-      use_point_limit_new = #{use_point_limit_new,jdbcType=INTEGER},
-      operate_man = #{operate_man,jdbcType=VARCHAR},
-      create_time = #{create_time,jdbcType=TIMESTAMP}
+    set product_id = #{productId,jdbcType=BIGINT},
+      price_old = #{priceOld,jdbcType=DECIMAL},
+      price_new = #{priceNew,jdbcType=DECIMAL},
+      sale_price_old = #{salePriceOld,jdbcType=DECIMAL},
+      sale_price_new = #{salePriceNew,jdbcType=DECIMAL},
+      gift_point_old = #{giftPointOld,jdbcType=INTEGER},
+      gift_point_new = #{giftPointNew,jdbcType=INTEGER},
+      use_point_limit_old = #{usePointLimitOld,jdbcType=INTEGER},
+      use_point_limit_new = #{usePointLimitNew,jdbcType=INTEGER},
+      operate_man = #{operateMan,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

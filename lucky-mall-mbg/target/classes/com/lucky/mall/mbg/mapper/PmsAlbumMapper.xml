@@ -4,8 +4,8 @@
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsAlbum">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="cover_pic" jdbcType="VARCHAR" property="cover_pic" />
-    <result column="pic_count" jdbcType="INTEGER" property="pic_count" />
+    <result column="cover_pic" jdbcType="VARCHAR" property="coverPic" />
+    <result column="pic_count" jdbcType="INTEGER" property="picCount" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
     <result column="description" jdbcType="VARCHAR" property="description" />
   </resultMap>
@@ -101,26 +101,27 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsAlbum">
-    insert into pms_album (id, name, cover_pic, 
-      pic_count, sort, description
-      )
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{cover_pic,jdbcType=VARCHAR}, 
-      #{pic_count,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_album (name, cover_pic, pic_count, 
+      sort, description)
+    values (#{name,jdbcType=VARCHAR}, #{coverPic,jdbcType=VARCHAR}, #{picCount,jdbcType=INTEGER}, 
+      #{sort,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsAlbum">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_album
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
       <if test="name != null">
         name,
       </if>
-      <if test="cover_pic != null">
+      <if test="coverPic != null">
         cover_pic,
       </if>
-      <if test="pic_count != null">
+      <if test="picCount != null">
         pic_count,
       </if>
       <if test="sort != null">
@@ -131,17 +132,14 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="cover_pic != null">
-        #{cover_pic,jdbcType=VARCHAR},
+      <if test="coverPic != null">
+        #{coverPic,jdbcType=VARCHAR},
       </if>
-      <if test="pic_count != null">
-        #{pic_count,jdbcType=INTEGER},
+      <if test="picCount != null">
+        #{picCount,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
@@ -166,11 +164,11 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.cover_pic != null">
-        cover_pic = #{record.cover_pic,jdbcType=VARCHAR},
+      <if test="record.coverPic != null">
+        cover_pic = #{record.coverPic,jdbcType=VARCHAR},
       </if>
-      <if test="record.pic_count != null">
-        pic_count = #{record.pic_count,jdbcType=INTEGER},
+      <if test="record.picCount != null">
+        pic_count = #{record.picCount,jdbcType=INTEGER},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
@@ -187,8 +185,8 @@
     update pms_album
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      cover_pic = #{record.cover_pic,jdbcType=VARCHAR},
-      pic_count = #{record.pic_count,jdbcType=INTEGER},
+      cover_pic = #{record.coverPic,jdbcType=VARCHAR},
+      pic_count = #{record.picCount,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER},
       description = #{record.description,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -201,11 +199,11 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="cover_pic != null">
-        cover_pic = #{cover_pic,jdbcType=VARCHAR},
+      <if test="coverPic != null">
+        cover_pic = #{coverPic,jdbcType=VARCHAR},
       </if>
-      <if test="pic_count != null">
-        pic_count = #{pic_count,jdbcType=INTEGER},
+      <if test="picCount != null">
+        pic_count = #{picCount,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
@@ -219,8 +217,8 @@
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsAlbum">
     update pms_album
     set name = #{name,jdbcType=VARCHAR},
-      cover_pic = #{cover_pic,jdbcType=VARCHAR},
-      pic_count = #{pic_count,jdbcType=INTEGER},
+      cover_pic = #{coverPic,jdbcType=VARCHAR},
+      pic_count = #{picCount,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},
       description = #{description,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}

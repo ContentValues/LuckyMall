@@ -12,9 +12,9 @@ public class CmsSubjectCategory implements Serializable {
     private String icon;
 
     @ApiModelProperty(value = "专题数量")
-    private Integer subject_count;
+    private Integer subjectCount;
 
-    private Integer show_status;
+    private Integer showStatus;
 
     private Integer sort;
 
@@ -44,20 +44,20 @@ public class CmsSubjectCategory implements Serializable {
         this.icon = icon;
     }
 
-    public Integer getSubject_count() {
-        return subject_count;
+    public Integer getSubjectCount() {
+        return subjectCount;
     }
 
-    public void setSubject_count(Integer subject_count) {
-        this.subject_count = subject_count;
+    public void setSubjectCount(Integer subjectCount) {
+        this.subjectCount = subjectCount;
     }
 
-    public Integer getShow_status() {
-        return show_status;
+    public Integer getShowStatus() {
+        return showStatus;
     }
 
-    public void setShow_status(Integer show_status) {
-        this.show_status = show_status;
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
     }
 
     public Integer getSort() {
@@ -77,8 +77,8 @@ public class CmsSubjectCategory implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", icon=").append(icon);
-        sb.append(", subject_count=").append(subject_count);
-        sb.append(", show_status=").append(show_status);
+        sb.append(", subjectCount=").append(subjectCount);
+        sb.append(", showStatus=").append(showStatus);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

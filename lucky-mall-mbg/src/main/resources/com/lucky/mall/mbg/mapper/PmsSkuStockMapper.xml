@@ -3,16 +3,16 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsSkuStockMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsSkuStock">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_id" jdbcType="BIGINT" property="product_id" />
-    <result column="sku_code" jdbcType="VARCHAR" property="sku_code" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="sku_code" jdbcType="VARCHAR" property="skuCode" />
     <result column="price" jdbcType="DECIMAL" property="price" />
     <result column="stock" jdbcType="INTEGER" property="stock" />
-    <result column="low_stock" jdbcType="INTEGER" property="low_stock" />
+    <result column="low_stock" jdbcType="INTEGER" property="lowStock" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
     <result column="sale" jdbcType="INTEGER" property="sale" />
-    <result column="promotion_price" jdbcType="DECIMAL" property="promotion_price" />
-    <result column="lock_stock" jdbcType="INTEGER" property="lock_stock" />
-    <result column="sp_data" jdbcType="VARCHAR" property="sp_data" />
+    <result column="promotion_price" jdbcType="DECIMAL" property="promotionPrice" />
+    <result column="lock_stock" jdbcType="INTEGER" property="lockStock" />
+    <result column="sp_data" jdbcType="VARCHAR" property="spData" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -107,25 +107,28 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsSkuStock">
-    insert into pms_sku_stock (id, product_id, sku_code, 
-      price, stock, low_stock, 
-      pic, sale, promotion_price, 
-      lock_stock, sp_data)
-    values (#{id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}, #{sku_code,jdbcType=VARCHAR}, 
-      #{price,jdbcType=DECIMAL}, #{stock,jdbcType=INTEGER}, #{low_stock,jdbcType=INTEGER}, 
-      #{pic,jdbcType=VARCHAR}, #{sale,jdbcType=INTEGER}, #{promotion_price,jdbcType=DECIMAL}, 
-      #{lock_stock,jdbcType=INTEGER}, #{sp_data,jdbcType=VARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_sku_stock (product_id, sku_code, price, 
+      stock, low_stock, pic, 
+      sale, promotion_price, lock_stock, 
+      sp_data)
+    values (#{productId,jdbcType=BIGINT}, #{skuCode,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, 
+      #{stock,jdbcType=INTEGER}, #{lowStock,jdbcType=INTEGER}, #{pic,jdbcType=VARCHAR}, 
+      #{sale,jdbcType=INTEGER}, #{promotionPrice,jdbcType=DECIMAL}, #{lockStock,jdbcType=INTEGER}, 
+      #{spData,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsSkuStock">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_sku_stock
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_id != null">
+      <if test="productId != null">
         product_id,
       </if>
-      <if test="sku_code != null">
+      <if test="skuCode != null">
         sku_code,
       </if>
       <if test="price != null">
@@ -134,7 +137,7 @@
       <if test="stock != null">
         stock,
       </if>
-      <if test="low_stock != null">
+      <if test="lowStock != null">
         low_stock,
       </if>
       <if test="pic != null">
@@ -143,25 +146,22 @@
       <if test="sale != null">
         sale,
       </if>
-      <if test="promotion_price != null">
+      <if test="promotionPrice != null">
         promotion_price,
       </if>
-      <if test="lock_stock != null">
+      <if test="lockStock != null">
         lock_stock,
       </if>
-      <if test="sp_data != null">
+      <if test="spData != null">
         sp_data,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
       </if>
-      <if test="product_id != null">
-        #{product_id,jdbcType=BIGINT},
-      </if>
-      <if test="sku_code != null">
-        #{sku_code,jdbcType=VARCHAR},
+      <if test="skuCode != null">
+        #{skuCode,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
         #{price,jdbcType=DECIMAL},
@@ -169,8 +169,8 @@
       <if test="stock != null">
         #{stock,jdbcType=INTEGER},
       </if>
-      <if test="low_stock != null">
-        #{low_stock,jdbcType=INTEGER},
+      <if test="lowStock != null">
+        #{lowStock,jdbcType=INTEGER},
       </if>
       <if test="pic != null">
         #{pic,jdbcType=VARCHAR},
@@ -178,14 +178,14 @@
       <if test="sale != null">
         #{sale,jdbcType=INTEGER},
       </if>
-      <if test="promotion_price != null">
-        #{promotion_price,jdbcType=DECIMAL},
+      <if test="promotionPrice != null">
+        #{promotionPrice,jdbcType=DECIMAL},
       </if>
-      <if test="lock_stock != null">
-        #{lock_stock,jdbcType=INTEGER},
+      <if test="lockStock != null">
+        #{lockStock,jdbcType=INTEGER},
       </if>
-      <if test="sp_data != null">
-        #{sp_data,jdbcType=VARCHAR},
+      <if test="spData != null">
+        #{spData,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -201,11 +201,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_id != null">
-        product_id = #{record.product_id,jdbcType=BIGINT},
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=BIGINT},
       </if>
-      <if test="record.sku_code != null">
-        sku_code = #{record.sku_code,jdbcType=VARCHAR},
+      <if test="record.skuCode != null">
+        sku_code = #{record.skuCode,jdbcType=VARCHAR},
       </if>
       <if test="record.price != null">
         price = #{record.price,jdbcType=DECIMAL},
@@ -213,8 +213,8 @@
       <if test="record.stock != null">
         stock = #{record.stock,jdbcType=INTEGER},
       </if>
-      <if test="record.low_stock != null">
-        low_stock = #{record.low_stock,jdbcType=INTEGER},
+      <if test="record.lowStock != null">
+        low_stock = #{record.lowStock,jdbcType=INTEGER},
       </if>
       <if test="record.pic != null">
         pic = #{record.pic,jdbcType=VARCHAR},
@@ -222,14 +222,14 @@
       <if test="record.sale != null">
         sale = #{record.sale,jdbcType=INTEGER},
       </if>
-      <if test="record.promotion_price != null">
-        promotion_price = #{record.promotion_price,jdbcType=DECIMAL},
+      <if test="record.promotionPrice != null">
+        promotion_price = #{record.promotionPrice,jdbcType=DECIMAL},
       </if>
-      <if test="record.lock_stock != null">
-        lock_stock = #{record.lock_stock,jdbcType=INTEGER},
+      <if test="record.lockStock != null">
+        lock_stock = #{record.lockStock,jdbcType=INTEGER},
       </if>
-      <if test="record.sp_data != null">
-        sp_data = #{record.sp_data,jdbcType=VARCHAR},
+      <if test="record.spData != null">
+        sp_data = #{record.spData,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -239,16 +239,16 @@
   <update id="updateByExample" parameterType="map">
     update pms_sku_stock
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
-      sku_code = #{record.sku_code,jdbcType=VARCHAR},
+      product_id = #{record.productId,jdbcType=BIGINT},
+      sku_code = #{record.skuCode,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=DECIMAL},
       stock = #{record.stock,jdbcType=INTEGER},
-      low_stock = #{record.low_stock,jdbcType=INTEGER},
+      low_stock = #{record.lowStock,jdbcType=INTEGER},
       pic = #{record.pic,jdbcType=VARCHAR},
       sale = #{record.sale,jdbcType=INTEGER},
-      promotion_price = #{record.promotion_price,jdbcType=DECIMAL},
-      lock_stock = #{record.lock_stock,jdbcType=INTEGER},
-      sp_data = #{record.sp_data,jdbcType=VARCHAR}
+      promotion_price = #{record.promotionPrice,jdbcType=DECIMAL},
+      lock_stock = #{record.lockStock,jdbcType=INTEGER},
+      sp_data = #{record.spData,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -256,11 +256,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsSkuStock">
     update pms_sku_stock
     <set>
-      <if test="product_id != null">
-        product_id = #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
       </if>
-      <if test="sku_code != null">
-        sku_code = #{sku_code,jdbcType=VARCHAR},
+      <if test="skuCode != null">
+        sku_code = #{skuCode,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
         price = #{price,jdbcType=DECIMAL},
@@ -268,8 +268,8 @@
       <if test="stock != null">
         stock = #{stock,jdbcType=INTEGER},
       </if>
-      <if test="low_stock != null">
-        low_stock = #{low_stock,jdbcType=INTEGER},
+      <if test="lowStock != null">
+        low_stock = #{lowStock,jdbcType=INTEGER},
       </if>
       <if test="pic != null">
         pic = #{pic,jdbcType=VARCHAR},
@@ -277,30 +277,30 @@
       <if test="sale != null">
         sale = #{sale,jdbcType=INTEGER},
       </if>
-      <if test="promotion_price != null">
-        promotion_price = #{promotion_price,jdbcType=DECIMAL},
+      <if test="promotionPrice != null">
+        promotion_price = #{promotionPrice,jdbcType=DECIMAL},
       </if>
-      <if test="lock_stock != null">
-        lock_stock = #{lock_stock,jdbcType=INTEGER},
+      <if test="lockStock != null">
+        lock_stock = #{lockStock,jdbcType=INTEGER},
       </if>
-      <if test="sp_data != null">
-        sp_data = #{sp_data,jdbcType=VARCHAR},
+      <if test="spData != null">
+        sp_data = #{spData,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsSkuStock">
     update pms_sku_stock
-    set product_id = #{product_id,jdbcType=BIGINT},
-      sku_code = #{sku_code,jdbcType=VARCHAR},
+    set product_id = #{productId,jdbcType=BIGINT},
+      sku_code = #{skuCode,jdbcType=VARCHAR},
       price = #{price,jdbcType=DECIMAL},
       stock = #{stock,jdbcType=INTEGER},
-      low_stock = #{low_stock,jdbcType=INTEGER},
+      low_stock = #{lowStock,jdbcType=INTEGER},
       pic = #{pic,jdbcType=VARCHAR},
       sale = #{sale,jdbcType=INTEGER},
-      promotion_price = #{promotion_price,jdbcType=DECIMAL},
-      lock_stock = #{lock_stock,jdbcType=INTEGER},
-      sp_data = #{sp_data,jdbcType=VARCHAR}
+      promotion_price = #{promotionPrice,jdbcType=DECIMAL},
+      lock_stock = #{lockStock,jdbcType=INTEGER},
+      sp_data = #{spData,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

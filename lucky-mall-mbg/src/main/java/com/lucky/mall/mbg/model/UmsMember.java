@@ -7,7 +7,7 @@ import java.util.Date;
 public class UmsMember implements Serializable {
     private Long id;
 
-    private Long member_level_id;
+    private Long memberLevelId;
 
     @ApiModelProperty(value = "用户名")
     private String username;
@@ -25,7 +25,7 @@ public class UmsMember implements Serializable {
     private Integer status;
 
     @ApiModelProperty(value = "注册时间")
-    private Date create_time;
+    private Date createTime;
 
     @ApiModelProperty(value = "头像")
     private String icon;
@@ -43,10 +43,10 @@ public class UmsMember implements Serializable {
     private String job;
 
     @ApiModelProperty(value = "个性签名")
-    private String personalized_signature;
+    private String personalizedSignature;
 
     @ApiModelProperty(value = "用户来源")
-    private Integer source_type;
+    private Integer sourceType;
 
     @ApiModelProperty(value = "积分")
     private Integer integration;
@@ -55,10 +55,10 @@ public class UmsMember implements Serializable {
     private Integer growth;
 
     @ApiModelProperty(value = "剩余抽奖次数")
-    private Integer luckey_count;
+    private Integer luckeyCount;
 
     @ApiModelProperty(value = "历史积分数量")
-    private Integer history_integration;
+    private Integer historyIntegration;
 
     private static final long serialVersionUID = 1L;
 
@@ -70,12 +70,12 @@ public class UmsMember implements Serializable {
         this.id = id;
     }
 
-    public Long getMember_level_id() {
-        return member_level_id;
+    public Long getMemberLevelId() {
+        return memberLevelId;
     }
 
-    public void setMember_level_id(Long member_level_id) {
-        this.member_level_id = member_level_id;
+    public void setMemberLevelId(Long memberLevelId) {
+        this.memberLevelId = memberLevelId;
     }
 
     public String getUsername() {
@@ -118,12 +118,12 @@ public class UmsMember implements Serializable {
         this.status = status;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public String getIcon() {
@@ -166,20 +166,20 @@ public class UmsMember implements Serializable {
         this.job = job;
     }
 
-    public String getPersonalized_signature() {
-        return personalized_signature;
+    public String getPersonalizedSignature() {
+        return personalizedSignature;
     }
 
-    public void setPersonalized_signature(String personalized_signature) {
-        this.personalized_signature = personalized_signature;
+    public void setPersonalizedSignature(String personalizedSignature) {
+        this.personalizedSignature = personalizedSignature;
     }
 
-    public Integer getSource_type() {
-        return source_type;
+    public Integer getSourceType() {
+        return sourceType;
     }
 
-    public void setSource_type(Integer source_type) {
-        this.source_type = source_type;
+    public void setSourceType(Integer sourceType) {
+        this.sourceType = sourceType;
     }
 
     public Integer getIntegration() {
@@ -198,20 +198,20 @@ public class UmsMember implements Serializable {
         this.growth = growth;
     }
 
-    public Integer getLuckey_count() {
-        return luckey_count;
+    public Integer getLuckeyCount() {
+        return luckeyCount;
     }
 
-    public void setLuckey_count(Integer luckey_count) {
-        this.luckey_count = luckey_count;
+    public void setLuckeyCount(Integer luckeyCount) {
+        this.luckeyCount = luckeyCount;
     }
 
-    public Integer getHistory_integration() {
-        return history_integration;
+    public Integer getHistoryIntegration() {
+        return historyIntegration;
     }
 
-    public void setHistory_integration(Integer history_integration) {
-        this.history_integration = history_integration;
+    public void setHistoryIntegration(Integer historyIntegration) {
+        this.historyIntegration = historyIntegration;
     }
 
     @Override
@@ -221,24 +221,24 @@ public class UmsMember implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", member_level_id=").append(member_level_id);
+        sb.append(", memberLevelId=").append(memberLevelId);
         sb.append(", username=").append(username);
         sb.append(", password=").append(password);
         sb.append(", nickname=").append(nickname);
         sb.append(", phone=").append(phone);
         sb.append(", status=").append(status);
-        sb.append(", create_time=").append(create_time);
+        sb.append(", createTime=").append(createTime);
         sb.append(", icon=").append(icon);
         sb.append(", gender=").append(gender);
         sb.append(", birthday=").append(birthday);
         sb.append(", city=").append(city);
         sb.append(", job=").append(job);
-        sb.append(", personalized_signature=").append(personalized_signature);
-        sb.append(", source_type=").append(source_type);
+        sb.append(", personalizedSignature=").append(personalizedSignature);
+        sb.append(", sourceType=").append(sourceType);
         sb.append(", integration=").append(integration);
         sb.append(", growth=").append(growth);
-        sb.append(", luckey_count=").append(luckey_count);
-        sb.append(", history_integration=").append(history_integration);
+        sb.append(", luckeyCount=").append(luckeyCount);
+        sb.append(", historyIntegration=").append(historyIntegration);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

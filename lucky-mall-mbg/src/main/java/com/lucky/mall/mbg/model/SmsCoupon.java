@@ -23,38 +23,38 @@ public class SmsCoupon implements Serializable {
     private BigDecimal amount;
 
     @ApiModelProperty(value = "每人限领张数")
-    private Integer per_limit;
+    private Integer perLimit;
 
     @ApiModelProperty(value = "使用门槛；0表示无门槛")
-    private BigDecimal min_point;
+    private BigDecimal minPoint;
 
-    private Date start_time;
+    private Date startTime;
 
-    private Date end_time;
+    private Date endTime;
 
     @ApiModelProperty(value = "使用类型：0->全场通用；1->指定分类；2->指定商品")
-    private Integer use_type;
+    private Integer useType;
 
     @ApiModelProperty(value = "备注")
     private String note;
 
     @ApiModelProperty(value = "发行数量")
-    private Integer publish_count;
+    private Integer publishCount;
 
     @ApiModelProperty(value = "已使用数量")
-    private Integer use_count;
+    private Integer useCount;
 
     @ApiModelProperty(value = "领取数量")
-    private Integer receive_count;
+    private Integer receiveCount;
 
     @ApiModelProperty(value = "可以领取的日期")
-    private Date enable_time;
+    private Date enableTime;
 
     @ApiModelProperty(value = "优惠码")
     private String code;
 
     @ApiModelProperty(value = "可领取的会员类型：0->无限时")
-    private Integer member_level;
+    private Integer memberLevel;
 
     private static final long serialVersionUID = 1L;
 
@@ -106,44 +106,44 @@ public class SmsCoupon implements Serializable {
         this.amount = amount;
     }
 
-    public Integer getPer_limit() {
-        return per_limit;
+    public Integer getPerLimit() {
+        return perLimit;
     }
 
-    public void setPer_limit(Integer per_limit) {
-        this.per_limit = per_limit;
+    public void setPerLimit(Integer perLimit) {
+        this.perLimit = perLimit;
     }
 
-    public BigDecimal getMin_point() {
-        return min_point;
+    public BigDecimal getMinPoint() {
+        return minPoint;
     }
 
-    public void setMin_point(BigDecimal min_point) {
-        this.min_point = min_point;
+    public void setMinPoint(BigDecimal minPoint) {
+        this.minPoint = minPoint;
     }
 
-    public Date getStart_time() {
-        return start_time;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setStart_time(Date start_time) {
-        this.start_time = start_time;
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
     }
 
-    public Date getEnd_time() {
-        return end_time;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
-    public Integer getUse_type() {
-        return use_type;
+    public Integer getUseType() {
+        return useType;
     }
 
-    public void setUse_type(Integer use_type) {
-        this.use_type = use_type;
+    public void setUseType(Integer useType) {
+        this.useType = useType;
     }
 
     public String getNote() {
@@ -154,36 +154,36 @@ public class SmsCoupon implements Serializable {
         this.note = note;
     }
 
-    public Integer getPublish_count() {
-        return publish_count;
+    public Integer getPublishCount() {
+        return publishCount;
     }
 
-    public void setPublish_count(Integer publish_count) {
-        this.publish_count = publish_count;
+    public void setPublishCount(Integer publishCount) {
+        this.publishCount = publishCount;
     }
 
-    public Integer getUse_count() {
-        return use_count;
+    public Integer getUseCount() {
+        return useCount;
     }
 
-    public void setUse_count(Integer use_count) {
-        this.use_count = use_count;
+    public void setUseCount(Integer useCount) {
+        this.useCount = useCount;
     }
 
-    public Integer getReceive_count() {
-        return receive_count;
+    public Integer getReceiveCount() {
+        return receiveCount;
     }
 
-    public void setReceive_count(Integer receive_count) {
-        this.receive_count = receive_count;
+    public void setReceiveCount(Integer receiveCount) {
+        this.receiveCount = receiveCount;
     }
 
-    public Date getEnable_time() {
-        return enable_time;
+    public Date getEnableTime() {
+        return enableTime;
     }
 
-    public void setEnable_time(Date enable_time) {
-        this.enable_time = enable_time;
+    public void setEnableTime(Date enableTime) {
+        this.enableTime = enableTime;
     }
 
     public String getCode() {
@@ -194,12 +194,12 @@ public class SmsCoupon implements Serializable {
         this.code = code;
     }
 
-    public Integer getMember_level() {
-        return member_level;
+    public Integer getMemberLevel() {
+        return memberLevel;
     }
 
-    public void setMember_level(Integer member_level) {
-        this.member_level = member_level;
+    public void setMemberLevel(Integer memberLevel) {
+        this.memberLevel = memberLevel;
     }
 
     @Override
@@ -214,18 +214,18 @@ public class SmsCoupon implements Serializable {
         sb.append(", platform=").append(platform);
         sb.append(", count=").append(count);
         sb.append(", amount=").append(amount);
-        sb.append(", per_limit=").append(per_limit);
-        sb.append(", min_point=").append(min_point);
-        sb.append(", start_time=").append(start_time);
-        sb.append(", end_time=").append(end_time);
-        sb.append(", use_type=").append(use_type);
+        sb.append(", perLimit=").append(perLimit);
+        sb.append(", minPoint=").append(minPoint);
+        sb.append(", startTime=").append(startTime);
+        sb.append(", endTime=").append(endTime);
+        sb.append(", useType=").append(useType);
         sb.append(", note=").append(note);
-        sb.append(", publish_count=").append(publish_count);
-        sb.append(", use_count=").append(use_count);
-        sb.append(", receive_count=").append(receive_count);
-        sb.append(", enable_time=").append(enable_time);
+        sb.append(", publishCount=").append(publishCount);
+        sb.append(", useCount=").append(useCount);
+        sb.append(", receiveCount=").append(receiveCount);
+        sb.append(", enableTime=").append(enableTime);
         sb.append(", code=").append(code);
-        sb.append(", member_level=").append(member_level);
+        sb.append(", memberLevel=").append(memberLevel);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

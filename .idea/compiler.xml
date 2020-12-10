@@ -10,6 +10,7 @@
         <module name="lucky-mall-mbg" />
         <module name="lucky-mall-security" />
         <module name="lucky-mall-admin" />
+        <module name="lucky-mall-gateway" />
         <module name="lucky-mall-common" />
       </profile>
     </annotationProcessing>
@@ -19,8 +20,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LuckyMall" options="-parameters" />
       <module name="lucky-mall-admin" options="-parameters" />
       <module name="lucky-mall-common" options="-parameters" />
+      <module name="lucky-mall-gateway" options="-parameters" />
       <module name="lucky-mall-mb" options="-parameters" />
       <module name="lucky-mall-mbg" options="-parameters" />
       <module name="lucky-mall-security" options="-parameters" />

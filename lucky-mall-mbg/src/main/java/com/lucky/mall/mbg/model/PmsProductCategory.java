@@ -7,22 +7,22 @@ public class PmsProductCategory implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "上机分类的编号：0表示一级分类")
-    private Long parent_id;
+    private Long parentId;
 
     private String name;
 
     @ApiModelProperty(value = "分类级别：0->1级；1->2级")
     private Integer level;
 
-    private Integer product_count;
+    private Integer productCount;
 
-    private String product_unit;
+    private String productUnit;
 
     @ApiModelProperty(value = "是否显示在导航栏：0->不显示；1->显示")
-    private Integer nav_status;
+    private Integer navStatus;
 
     @ApiModelProperty(value = "显示状态：0->不显示；1->显示")
-    private Integer show_status;
+    private Integer showStatus;
 
     private Integer sort;
 
@@ -44,12 +44,12 @@ public class PmsProductCategory implements Serializable {
         this.id = id;
     }
 
-    public Long getParent_id() {
-        return parent_id;
+    public Long getParentId() {
+        return parentId;
     }
 
-    public void setParent_id(Long parent_id) {
-        this.parent_id = parent_id;
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
     }
 
     public String getName() {
@@ -68,36 +68,36 @@ public class PmsProductCategory implements Serializable {
         this.level = level;
     }
 
-    public Integer getProduct_count() {
-        return product_count;
+    public Integer getProductCount() {
+        return productCount;
     }
 
-    public void setProduct_count(Integer product_count) {
-        this.product_count = product_count;
+    public void setProductCount(Integer productCount) {
+        this.productCount = productCount;
     }
 
-    public String getProduct_unit() {
-        return product_unit;
+    public String getProductUnit() {
+        return productUnit;
     }
 
-    public void setProduct_unit(String product_unit) {
-        this.product_unit = product_unit;
+    public void setProductUnit(String productUnit) {
+        this.productUnit = productUnit;
     }
 
-    public Integer getNav_status() {
-        return nav_status;
+    public Integer getNavStatus() {
+        return navStatus;
     }
 
-    public void setNav_status(Integer nav_status) {
-        this.nav_status = nav_status;
+    public void setNavStatus(Integer navStatus) {
+        this.navStatus = navStatus;
     }
 
-    public Integer getShow_status() {
-        return show_status;
+    public Integer getShowStatus() {
+        return showStatus;
     }
 
-    public void setShow_status(Integer show_status) {
-        this.show_status = show_status;
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
     }
 
     public Integer getSort() {
@@ -139,13 +139,13 @@ public class PmsProductCategory implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", parent_id=").append(parent_id);
+        sb.append(", parentId=").append(parentId);
         sb.append(", name=").append(name);
         sb.append(", level=").append(level);
-        sb.append(", product_count=").append(product_count);
-        sb.append(", product_unit=").append(product_unit);
-        sb.append(", nav_status=").append(nav_status);
-        sb.append(", show_status=").append(show_status);
+        sb.append(", productCount=").append(productCount);
+        sb.append(", productUnit=").append(productUnit);
+        sb.append(", navStatus=").append(navStatus);
+        sb.append(", showStatus=").append(showStatus);
         sb.append(", sort=").append(sort);
         sb.append(", icon=").append(icon);
         sb.append(", keywords=").append(keywords);

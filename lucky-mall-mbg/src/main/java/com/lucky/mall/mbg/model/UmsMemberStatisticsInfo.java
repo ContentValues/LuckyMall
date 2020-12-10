@@ -8,44 +8,44 @@ import java.util.Date;
 public class UmsMemberStatisticsInfo implements Serializable {
     private Long id;
 
-    private Long member_id;
+    private Long memberId;
 
     @ApiModelProperty(value = "累计消费金额")
-    private BigDecimal consume_amount;
+    private BigDecimal consumeAmount;
 
     @ApiModelProperty(value = "订单数量")
-    private Integer order_count;
+    private Integer orderCount;
 
     @ApiModelProperty(value = "优惠券数量")
-    private Integer coupon_count;
+    private Integer couponCount;
 
     @ApiModelProperty(value = "评价数")
-    private Integer comment_count;
+    private Integer commentCount;
 
     @ApiModelProperty(value = "退货数量")
-    private Integer return_order_count;
+    private Integer returnOrderCount;
 
     @ApiModelProperty(value = "登录次数")
-    private Integer login_count;
+    private Integer loginCount;
 
     @ApiModelProperty(value = "关注数量")
-    private Integer attend_count;
+    private Integer attendCount;
 
     @ApiModelProperty(value = "粉丝数量")
-    private Integer fans_count;
+    private Integer fansCount;
 
-    private Integer collect_product_count;
+    private Integer collectProductCount;
 
-    private Integer collect_subject_count;
+    private Integer collectSubjectCount;
 
-    private Integer collect_topic_count;
+    private Integer collectTopicCount;
 
-    private Integer collect_comment_count;
+    private Integer collectCommentCount;
 
-    private Integer invite_friend_count;
+    private Integer inviteFriendCount;
 
     @ApiModelProperty(value = "最后一次下订单时间")
-    private Date recent_order_time;
+    private Date recentOrderTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -57,124 +57,124 @@ public class UmsMemberStatisticsInfo implements Serializable {
         this.id = id;
     }
 
-    public Long getMember_id() {
-        return member_id;
+    public Long getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Long member_id) {
-        this.member_id = member_id;
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
     }
 
-    public BigDecimal getConsume_amount() {
-        return consume_amount;
+    public BigDecimal getConsumeAmount() {
+        return consumeAmount;
     }
 
-    public void setConsume_amount(BigDecimal consume_amount) {
-        this.consume_amount = consume_amount;
+    public void setConsumeAmount(BigDecimal consumeAmount) {
+        this.consumeAmount = consumeAmount;
     }
 
-    public Integer getOrder_count() {
-        return order_count;
+    public Integer getOrderCount() {
+        return orderCount;
     }
 
-    public void setOrder_count(Integer order_count) {
-        this.order_count = order_count;
+    public void setOrderCount(Integer orderCount) {
+        this.orderCount = orderCount;
     }
 
-    public Integer getCoupon_count() {
-        return coupon_count;
+    public Integer getCouponCount() {
+        return couponCount;
     }
 
-    public void setCoupon_count(Integer coupon_count) {
-        this.coupon_count = coupon_count;
+    public void setCouponCount(Integer couponCount) {
+        this.couponCount = couponCount;
     }
 
-    public Integer getComment_count() {
-        return comment_count;
+    public Integer getCommentCount() {
+        return commentCount;
     }
 
-    public void setComment_count(Integer comment_count) {
-        this.comment_count = comment_count;
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
     }
 
-    public Integer getReturn_order_count() {
-        return return_order_count;
+    public Integer getReturnOrderCount() {
+        return returnOrderCount;
     }
 
-    public void setReturn_order_count(Integer return_order_count) {
-        this.return_order_count = return_order_count;
+    public void setReturnOrderCount(Integer returnOrderCount) {
+        this.returnOrderCount = returnOrderCount;
     }
 
-    public Integer getLogin_count() {
-        return login_count;
+    public Integer getLoginCount() {
+        return loginCount;
     }
 
-    public void setLogin_count(Integer login_count) {
-        this.login_count = login_count;
+    public void setLoginCount(Integer loginCount) {
+        this.loginCount = loginCount;
     }
 
-    public Integer getAttend_count() {
-        return attend_count;
+    public Integer getAttendCount() {
+        return attendCount;
     }
 
-    public void setAttend_count(Integer attend_count) {
-        this.attend_count = attend_count;
+    public void setAttendCount(Integer attendCount) {
+        this.attendCount = attendCount;
     }
 
-    public Integer getFans_count() {
-        return fans_count;
+    public Integer getFansCount() {
+        return fansCount;
     }
 
-    public void setFans_count(Integer fans_count) {
-        this.fans_count = fans_count;
+    public void setFansCount(Integer fansCount) {
+        this.fansCount = fansCount;
     }
 
-    public Integer getCollect_product_count() {
-        return collect_product_count;
+    public Integer getCollectProductCount() {
+        return collectProductCount;
     }
 
-    public void setCollect_product_count(Integer collect_product_count) {
-        this.collect_product_count = collect_product_count;
+    public void setCollectProductCount(Integer collectProductCount) {
+        this.collectProductCount = collectProductCount;
     }
 
-    public Integer getCollect_subject_count() {
-        return collect_subject_count;
+    public Integer getCollectSubjectCount() {
+        return collectSubjectCount;
     }
 
-    public void setCollect_subject_count(Integer collect_subject_count) {
-        this.collect_subject_count = collect_subject_count;
+    public void setCollectSubjectCount(Integer collectSubjectCount) {
+        this.collectSubjectCount = collectSubjectCount;
     }
 
-    public Integer getCollect_topic_count() {
-        return collect_topic_count;
+    public Integer getCollectTopicCount() {
+        return collectTopicCount;
     }
 
-    public void setCollect_topic_count(Integer collect_topic_count) {
-        this.collect_topic_count = collect_topic_count;
+    public void setCollectTopicCount(Integer collectTopicCount) {
+        this.collectTopicCount = collectTopicCount;
     }
 
-    public Integer getCollect_comment_count() {
-        return collect_comment_count;
+    public Integer getCollectCommentCount() {
+        return collectCommentCount;
     }
 
-    public void setCollect_comment_count(Integer collect_comment_count) {
-        this.collect_comment_count = collect_comment_count;
+    public void setCollectCommentCount(Integer collectCommentCount) {
+        this.collectCommentCount = collectCommentCount;
     }
 
-    public Integer getInvite_friend_count() {
-        return invite_friend_count;
+    public Integer getInviteFriendCount() {
+        return inviteFriendCount;
     }
 
-    public void setInvite_friend_count(Integer invite_friend_count) {
-        this.invite_friend_count = invite_friend_count;
+    public void setInviteFriendCount(Integer inviteFriendCount) {
+        this.inviteFriendCount = inviteFriendCount;
     }
 
-    public Date getRecent_order_time() {
-        return recent_order_time;
+    public Date getRecentOrderTime() {
+        return recentOrderTime;
     }
 
-    public void setRecent_order_time(Date recent_order_time) {
-        this.recent_order_time = recent_order_time;
+    public void setRecentOrderTime(Date recentOrderTime) {
+        this.recentOrderTime = recentOrderTime;
     }
 
     @Override
@@ -184,21 +184,21 @@ public class UmsMemberStatisticsInfo implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", member_id=").append(member_id);
-        sb.append(", consume_amount=").append(consume_amount);
-        sb.append(", order_count=").append(order_count);
-        sb.append(", coupon_count=").append(coupon_count);
-        sb.append(", comment_count=").append(comment_count);
-        sb.append(", return_order_count=").append(return_order_count);
-        sb.append(", login_count=").append(login_count);
-        sb.append(", attend_count=").append(attend_count);
-        sb.append(", fans_count=").append(fans_count);
-        sb.append(", collect_product_count=").append(collect_product_count);
-        sb.append(", collect_subject_count=").append(collect_subject_count);
-        sb.append(", collect_topic_count=").append(collect_topic_count);
-        sb.append(", collect_comment_count=").append(collect_comment_count);
-        sb.append(", invite_friend_count=").append(invite_friend_count);
-        sb.append(", recent_order_time=").append(recent_order_time);
+        sb.append(", memberId=").append(memberId);
+        sb.append(", consumeAmount=").append(consumeAmount);
+        sb.append(", orderCount=").append(orderCount);
+        sb.append(", couponCount=").append(couponCount);
+        sb.append(", commentCount=").append(commentCount);
+        sb.append(", returnOrderCount=").append(returnOrderCount);
+        sb.append(", loginCount=").append(loginCount);
+        sb.append(", attendCount=").append(attendCount);
+        sb.append(", fansCount=").append(fansCount);
+        sb.append(", collectProductCount=").append(collectProductCount);
+        sb.append(", collectSubjectCount=").append(collectSubjectCount);
+        sb.append(", collectTopicCount=").append(collectTopicCount);
+        sb.append(", collectCommentCount=").append(collectCommentCount);
+        sb.append(", inviteFriendCount=").append(inviteFriendCount);
+        sb.append(", recentOrderTime=").append(recentOrderTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

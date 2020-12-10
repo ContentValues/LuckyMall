@@ -305,123 +305,123 @@ public class UmsRoleExample {
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countIsNull() {
+        public Criteria andAdminCountIsNull() {
             addCriterion("admin_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countIsNotNull() {
+        public Criteria andAdminCountIsNotNull() {
             addCriterion("admin_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countEqualTo(Integer value) {
-            addCriterion("admin_count =", value, "admin_count");
+        public Criteria andAdminCountEqualTo(Integer value) {
+            addCriterion("admin_count =", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countNotEqualTo(Integer value) {
-            addCriterion("admin_count <>", value, "admin_count");
+        public Criteria andAdminCountNotEqualTo(Integer value) {
+            addCriterion("admin_count <>", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countGreaterThan(Integer value) {
-            addCriterion("admin_count >", value, "admin_count");
+        public Criteria andAdminCountGreaterThan(Integer value) {
+            addCriterion("admin_count >", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countGreaterThanOrEqualTo(Integer value) {
-            addCriterion("admin_count >=", value, "admin_count");
+        public Criteria andAdminCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("admin_count >=", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countLessThan(Integer value) {
-            addCriterion("admin_count <", value, "admin_count");
+        public Criteria andAdminCountLessThan(Integer value) {
+            addCriterion("admin_count <", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countLessThanOrEqualTo(Integer value) {
-            addCriterion("admin_count <=", value, "admin_count");
+        public Criteria andAdminCountLessThanOrEqualTo(Integer value) {
+            addCriterion("admin_count <=", value, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countIn(List<Integer> values) {
-            addCriterion("admin_count in", values, "admin_count");
+        public Criteria andAdminCountIn(List<Integer> values) {
+            addCriterion("admin_count in", values, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countNotIn(List<Integer> values) {
-            addCriterion("admin_count not in", values, "admin_count");
+        public Criteria andAdminCountNotIn(List<Integer> values) {
+            addCriterion("admin_count not in", values, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countBetween(Integer value1, Integer value2) {
-            addCriterion("admin_count between", value1, value2, "admin_count");
+        public Criteria andAdminCountBetween(Integer value1, Integer value2) {
+            addCriterion("admin_count between", value1, value2, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andAdmin_countNotBetween(Integer value1, Integer value2) {
-            addCriterion("admin_count not between", value1, value2, "admin_count");
+        public Criteria andAdminCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("admin_count not between", value1, value2, "adminCount");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNull() {
+        public Criteria andCreateTimeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNotNull() {
+        public Criteria andCreateTimeIsNotNull() {
             addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeEqualTo(Date value) {
-            addCriterion("create_time =", value, "create_time");
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "create_time");
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "create_time");
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "create_time");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThan(Date value) {
-            addCriterion("create_time <", value, "create_time");
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "create_time");
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIn(List<Date> values) {
-            addCriterion("create_time in", values, "create_time");
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "create_time");
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "create_time");
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "create_time");
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
 

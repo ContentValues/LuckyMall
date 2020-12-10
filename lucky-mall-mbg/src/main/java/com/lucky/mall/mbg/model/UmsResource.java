@@ -8,7 +8,7 @@ public class UmsResource implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "创建时间")
-    private Date create_time;
+    private Date createTime;
 
     @ApiModelProperty(value = "资源名称")
     private String name;
@@ -20,7 +20,7 @@ public class UmsResource implements Serializable {
     private String description;
 
     @ApiModelProperty(value = "资源分类ID")
-    private Long category_id;
+    private Long categoryId;
 
     private static final long serialVersionUID = 1L;
 
@@ -32,12 +32,12 @@ public class UmsResource implements Serializable {
         this.id = id;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public String getName() {
@@ -64,12 +64,12 @@ public class UmsResource implements Serializable {
         this.description = description;
     }
 
-    public Long getCategory_id() {
-        return category_id;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(Long category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     @Override
@@ -79,11 +79,11 @@ public class UmsResource implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", create_time=").append(create_time);
+        sb.append(", createTime=").append(createTime);
         sb.append(", name=").append(name);
         sb.append(", url=").append(url);
         sb.append(", description=").append(description);
-        sb.append(", category_id=").append(category_id);
+        sb.append(", categoryId=").append(categoryId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

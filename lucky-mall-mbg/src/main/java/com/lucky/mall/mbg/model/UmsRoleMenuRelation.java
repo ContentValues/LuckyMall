@@ -7,10 +7,10 @@ public class UmsRoleMenuRelation implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "角色ID")
-    private Long role_id;
+    private Long roleId;
 
     @ApiModelProperty(value = "菜单ID")
-    private Long menu_id;
+    private Long menuId;
 
     private static final long serialVersionUID = 1L;
 
@@ -22,20 +22,20 @@ public class UmsRoleMenuRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getRole_id() {
-        return role_id;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setRole_id(Long role_id) {
-        this.role_id = role_id;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
-    public Long getMenu_id() {
-        return menu_id;
+    public Long getMenuId() {
+        return menuId;
     }
 
-    public void setMenu_id(Long menu_id) {
-        this.menu_id = menu_id;
+    public void setMenuId(Long menuId) {
+        this.menuId = menuId;
     }
 
     @Override
@@ -45,8 +45,8 @@ public class UmsRoleMenuRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", role_id=").append(role_id);
-        sb.append(", menu_id=").append(menu_id);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", menuId=").append(menuId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

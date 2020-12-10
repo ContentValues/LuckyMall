@@ -18,16 +18,16 @@ public class UmsAdmin implements Serializable {
     private String email;
 
     @ApiModelProperty(value = "昵称")
-    private String nick_name;
+    private String nickName;
 
     @ApiModelProperty(value = "备注信息")
     private String note;
 
     @ApiModelProperty(value = "创建时间")
-    private Date create_time;
+    private Date createTime;
 
     @ApiModelProperty(value = "最后登录时间")
-    private Date login_time;
+    private Date loginTime;
 
     @ApiModelProperty(value = "帐号启用状态：0->禁用；1->启用")
     private Integer status;
@@ -74,12 +74,12 @@ public class UmsAdmin implements Serializable {
         this.email = email;
     }
 
-    public String getNick_name() {
-        return nick_name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getNote() {
@@ -90,20 +90,20 @@ public class UmsAdmin implements Serializable {
         this.note = note;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getLogin_time() {
-        return login_time;
+    public Date getLoginTime() {
+        return loginTime;
     }
 
-    public void setLogin_time(Date login_time) {
-        this.login_time = login_time;
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
     }
 
     public Integer getStatus() {
@@ -125,10 +125,10 @@ public class UmsAdmin implements Serializable {
         sb.append(", password=").append(password);
         sb.append(", icon=").append(icon);
         sb.append(", email=").append(email);
-        sb.append(", nick_name=").append(nick_name);
+        sb.append(", nickName=").append(nickName);
         sb.append(", note=").append(note);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", login_time=").append(login_time);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", loginTime=").append(loginTime);
         sb.append(", status=").append(status);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

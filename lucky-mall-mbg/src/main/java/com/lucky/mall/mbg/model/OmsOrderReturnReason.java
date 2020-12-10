@@ -16,7 +16,7 @@ public class OmsOrderReturnReason implements Serializable {
     private Integer status;
 
     @ApiModelProperty(value = "添加时间")
-    private Date create_time;
+    private Date createTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -52,12 +52,12 @@ public class OmsOrderReturnReason implements Serializable {
         this.status = status;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override
@@ -70,7 +70,7 @@ public class OmsOrderReturnReason implements Serializable {
         sb.append(", name=").append(name);
         sb.append(", sort=").append(sort);
         sb.append(", status=").append(status);
-        sb.append(", create_time=").append(create_time);
+        sb.append(", createTime=").append(createTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

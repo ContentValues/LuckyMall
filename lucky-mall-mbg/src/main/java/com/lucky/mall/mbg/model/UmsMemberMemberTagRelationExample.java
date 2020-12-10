@@ -164,123 +164,123 @@ public class UmsMemberMemberTagRelationExample {
             return (Criteria) this;
         }
 
-        public Criteria andMember_idIsNull() {
+        public Criteria andMemberIdIsNull() {
             addCriterion("member_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idIsNotNull() {
+        public Criteria andMemberIdIsNotNull() {
             addCriterion("member_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idEqualTo(Long value) {
-            addCriterion("member_id =", value, "member_id");
+        public Criteria andMemberIdEqualTo(Long value) {
+            addCriterion("member_id =", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idNotEqualTo(Long value) {
-            addCriterion("member_id <>", value, "member_id");
+        public Criteria andMemberIdNotEqualTo(Long value) {
+            addCriterion("member_id <>", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idGreaterThan(Long value) {
-            addCriterion("member_id >", value, "member_id");
+        public Criteria andMemberIdGreaterThan(Long value) {
+            addCriterion("member_id >", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("member_id >=", value, "member_id");
+        public Criteria andMemberIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("member_id >=", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idLessThan(Long value) {
-            addCriterion("member_id <", value, "member_id");
+        public Criteria andMemberIdLessThan(Long value) {
+            addCriterion("member_id <", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idLessThanOrEqualTo(Long value) {
-            addCriterion("member_id <=", value, "member_id");
+        public Criteria andMemberIdLessThanOrEqualTo(Long value) {
+            addCriterion("member_id <=", value, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idIn(List<Long> values) {
-            addCriterion("member_id in", values, "member_id");
+        public Criteria andMemberIdIn(List<Long> values) {
+            addCriterion("member_id in", values, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idNotIn(List<Long> values) {
-            addCriterion("member_id not in", values, "member_id");
+        public Criteria andMemberIdNotIn(List<Long> values) {
+            addCriterion("member_id not in", values, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idBetween(Long value1, Long value2) {
-            addCriterion("member_id between", value1, value2, "member_id");
+        public Criteria andMemberIdBetween(Long value1, Long value2) {
+            addCriterion("member_id between", value1, value2, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andMember_idNotBetween(Long value1, Long value2) {
-            addCriterion("member_id not between", value1, value2, "member_id");
+        public Criteria andMemberIdNotBetween(Long value1, Long value2) {
+            addCriterion("member_id not between", value1, value2, "memberId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idIsNull() {
+        public Criteria andTagIdIsNull() {
             addCriterion("tag_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idIsNotNull() {
+        public Criteria andTagIdIsNotNull() {
             addCriterion("tag_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idEqualTo(Long value) {
-            addCriterion("tag_id =", value, "tag_id");
+        public Criteria andTagIdEqualTo(Long value) {
+            addCriterion("tag_id =", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idNotEqualTo(Long value) {
-            addCriterion("tag_id <>", value, "tag_id");
+        public Criteria andTagIdNotEqualTo(Long value) {
+            addCriterion("tag_id <>", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idGreaterThan(Long value) {
-            addCriterion("tag_id >", value, "tag_id");
+        public Criteria andTagIdGreaterThan(Long value) {
+            addCriterion("tag_id >", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("tag_id >=", value, "tag_id");
+        public Criteria andTagIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("tag_id >=", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idLessThan(Long value) {
-            addCriterion("tag_id <", value, "tag_id");
+        public Criteria andTagIdLessThan(Long value) {
+            addCriterion("tag_id <", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idLessThanOrEqualTo(Long value) {
-            addCriterion("tag_id <=", value, "tag_id");
+        public Criteria andTagIdLessThanOrEqualTo(Long value) {
+            addCriterion("tag_id <=", value, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idIn(List<Long> values) {
-            addCriterion("tag_id in", values, "tag_id");
+        public Criteria andTagIdIn(List<Long> values) {
+            addCriterion("tag_id in", values, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idNotIn(List<Long> values) {
-            addCriterion("tag_id not in", values, "tag_id");
+        public Criteria andTagIdNotIn(List<Long> values) {
+            addCriterion("tag_id not in", values, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idBetween(Long value1, Long value2) {
-            addCriterion("tag_id between", value1, value2, "tag_id");
+        public Criteria andTagIdBetween(Long value1, Long value2) {
+            addCriterion("tag_id between", value1, value2, "tagId");
             return (Criteria) this;
         }
 
-        public Criteria andTag_idNotBetween(Long value1, Long value2) {
-            addCriterion("tag_id not between", value1, value2, "tag_id");
+        public Criteria andTagIdNotBetween(Long value1, Long value2) {
+            addCriterion("tag_id not between", value1, value2, "tagId");
             return (Criteria) this;
         }
     }

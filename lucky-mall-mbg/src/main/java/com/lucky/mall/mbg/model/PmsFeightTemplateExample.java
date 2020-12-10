@@ -235,303 +235,303 @@ public class PmsFeightTemplateExample {
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeIsNull() {
+        public Criteria andChargeTypeIsNull() {
             addCriterion("charge_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeIsNotNull() {
+        public Criteria andChargeTypeIsNotNull() {
             addCriterion("charge_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeEqualTo(Integer value) {
-            addCriterion("charge_type =", value, "charge_type");
+        public Criteria andChargeTypeEqualTo(Integer value) {
+            addCriterion("charge_type =", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeNotEqualTo(Integer value) {
-            addCriterion("charge_type <>", value, "charge_type");
+        public Criteria andChargeTypeNotEqualTo(Integer value) {
+            addCriterion("charge_type <>", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeGreaterThan(Integer value) {
-            addCriterion("charge_type >", value, "charge_type");
+        public Criteria andChargeTypeGreaterThan(Integer value) {
+            addCriterion("charge_type >", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("charge_type >=", value, "charge_type");
+        public Criteria andChargeTypeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("charge_type >=", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeLessThan(Integer value) {
-            addCriterion("charge_type <", value, "charge_type");
+        public Criteria andChargeTypeLessThan(Integer value) {
+            addCriterion("charge_type <", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeLessThanOrEqualTo(Integer value) {
-            addCriterion("charge_type <=", value, "charge_type");
+        public Criteria andChargeTypeLessThanOrEqualTo(Integer value) {
+            addCriterion("charge_type <=", value, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeIn(List<Integer> values) {
-            addCriterion("charge_type in", values, "charge_type");
+        public Criteria andChargeTypeIn(List<Integer> values) {
+            addCriterion("charge_type in", values, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeNotIn(List<Integer> values) {
-            addCriterion("charge_type not in", values, "charge_type");
+        public Criteria andChargeTypeNotIn(List<Integer> values) {
+            addCriterion("charge_type not in", values, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeBetween(Integer value1, Integer value2) {
-            addCriterion("charge_type between", value1, value2, "charge_type");
+        public Criteria andChargeTypeBetween(Integer value1, Integer value2) {
+            addCriterion("charge_type between", value1, value2, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andCharge_typeNotBetween(Integer value1, Integer value2) {
-            addCriterion("charge_type not between", value1, value2, "charge_type");
+        public Criteria andChargeTypeNotBetween(Integer value1, Integer value2) {
+            addCriterion("charge_type not between", value1, value2, "chargeType");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightIsNull() {
+        public Criteria andFirstWeightIsNull() {
             addCriterion("first_weight is null");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightIsNotNull() {
+        public Criteria andFirstWeightIsNotNull() {
             addCriterion("first_weight is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightEqualTo(BigDecimal value) {
-            addCriterion("first_weight =", value, "first_weight");
+        public Criteria andFirstWeightEqualTo(BigDecimal value) {
+            addCriterion("first_weight =", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightNotEqualTo(BigDecimal value) {
-            addCriterion("first_weight <>", value, "first_weight");
+        public Criteria andFirstWeightNotEqualTo(BigDecimal value) {
+            addCriterion("first_weight <>", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightGreaterThan(BigDecimal value) {
-            addCriterion("first_weight >", value, "first_weight");
+        public Criteria andFirstWeightGreaterThan(BigDecimal value) {
+            addCriterion("first_weight >", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("first_weight >=", value, "first_weight");
+        public Criteria andFirstWeightGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("first_weight >=", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightLessThan(BigDecimal value) {
-            addCriterion("first_weight <", value, "first_weight");
+        public Criteria andFirstWeightLessThan(BigDecimal value) {
+            addCriterion("first_weight <", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("first_weight <=", value, "first_weight");
+        public Criteria andFirstWeightLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("first_weight <=", value, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightIn(List<BigDecimal> values) {
-            addCriterion("first_weight in", values, "first_weight");
+        public Criteria andFirstWeightIn(List<BigDecimal> values) {
+            addCriterion("first_weight in", values, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightNotIn(List<BigDecimal> values) {
-            addCriterion("first_weight not in", values, "first_weight");
+        public Criteria andFirstWeightNotIn(List<BigDecimal> values) {
+            addCriterion("first_weight not in", values, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("first_weight between", value1, value2, "first_weight");
+        public Criteria andFirstWeightBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("first_weight between", value1, value2, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_weightNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("first_weight not between", value1, value2, "first_weight");
+        public Criteria andFirstWeightNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("first_weight not between", value1, value2, "firstWeight");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeIsNull() {
+        public Criteria andFirstFeeIsNull() {
             addCriterion("first_fee is null");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeIsNotNull() {
+        public Criteria andFirstFeeIsNotNull() {
             addCriterion("first_fee is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeEqualTo(BigDecimal value) {
-            addCriterion("first_fee =", value, "first_fee");
+        public Criteria andFirstFeeEqualTo(BigDecimal value) {
+            addCriterion("first_fee =", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeNotEqualTo(BigDecimal value) {
-            addCriterion("first_fee <>", value, "first_fee");
+        public Criteria andFirstFeeNotEqualTo(BigDecimal value) {
+            addCriterion("first_fee <>", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeGreaterThan(BigDecimal value) {
-            addCriterion("first_fee >", value, "first_fee");
+        public Criteria andFirstFeeGreaterThan(BigDecimal value) {
+            addCriterion("first_fee >", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("first_fee >=", value, "first_fee");
+        public Criteria andFirstFeeGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("first_fee >=", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeLessThan(BigDecimal value) {
-            addCriterion("first_fee <", value, "first_fee");
+        public Criteria andFirstFeeLessThan(BigDecimal value) {
+            addCriterion("first_fee <", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("first_fee <=", value, "first_fee");
+        public Criteria andFirstFeeLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("first_fee <=", value, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeIn(List<BigDecimal> values) {
-            addCriterion("first_fee in", values, "first_fee");
+        public Criteria andFirstFeeIn(List<BigDecimal> values) {
+            addCriterion("first_fee in", values, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeNotIn(List<BigDecimal> values) {
-            addCriterion("first_fee not in", values, "first_fee");
+        public Criteria andFirstFeeNotIn(List<BigDecimal> values) {
+            addCriterion("first_fee not in", values, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("first_fee between", value1, value2, "first_fee");
+        public Criteria andFirstFeeBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("first_fee between", value1, value2, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andFirst_feeNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("first_fee not between", value1, value2, "first_fee");
+        public Criteria andFirstFeeNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("first_fee not between", value1, value2, "firstFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightIsNull() {
+        public Criteria andContinueWeightIsNull() {
             addCriterion("continue_weight is null");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightIsNotNull() {
+        public Criteria andContinueWeightIsNotNull() {
             addCriterion("continue_weight is not null");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightEqualTo(BigDecimal value) {
-            addCriterion("continue_weight =", value, "continue_weight");
+        public Criteria andContinueWeightEqualTo(BigDecimal value) {
+            addCriterion("continue_weight =", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightNotEqualTo(BigDecimal value) {
-            addCriterion("continue_weight <>", value, "continue_weight");
+        public Criteria andContinueWeightNotEqualTo(BigDecimal value) {
+            addCriterion("continue_weight <>", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightGreaterThan(BigDecimal value) {
-            addCriterion("continue_weight >", value, "continue_weight");
+        public Criteria andContinueWeightGreaterThan(BigDecimal value) {
+            addCriterion("continue_weight >", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("continue_weight >=", value, "continue_weight");
+        public Criteria andContinueWeightGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("continue_weight >=", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightLessThan(BigDecimal value) {
-            addCriterion("continue_weight <", value, "continue_weight");
+        public Criteria andContinueWeightLessThan(BigDecimal value) {
+            addCriterion("continue_weight <", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("continue_weight <=", value, "continue_weight");
+        public Criteria andContinueWeightLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("continue_weight <=", value, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightIn(List<BigDecimal> values) {
-            addCriterion("continue_weight in", values, "continue_weight");
+        public Criteria andContinueWeightIn(List<BigDecimal> values) {
+            addCriterion("continue_weight in", values, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightNotIn(List<BigDecimal> values) {
-            addCriterion("continue_weight not in", values, "continue_weight");
+        public Criteria andContinueWeightNotIn(List<BigDecimal> values) {
+            addCriterion("continue_weight not in", values, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("continue_weight between", value1, value2, "continue_weight");
+        public Criteria andContinueWeightBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("continue_weight between", value1, value2, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinue_weightNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("continue_weight not between", value1, value2, "continue_weight");
+        public Criteria andContinueWeightNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("continue_weight not between", value1, value2, "continueWeight");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeIsNull() {
+        public Criteria andContinmeFeeIsNull() {
             addCriterion("continme_fee is null");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeIsNotNull() {
+        public Criteria andContinmeFeeIsNotNull() {
             addCriterion("continme_fee is not null");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeEqualTo(BigDecimal value) {
-            addCriterion("continme_fee =", value, "continme_fee");
+        public Criteria andContinmeFeeEqualTo(BigDecimal value) {
+            addCriterion("continme_fee =", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeNotEqualTo(BigDecimal value) {
-            addCriterion("continme_fee <>", value, "continme_fee");
+        public Criteria andContinmeFeeNotEqualTo(BigDecimal value) {
+            addCriterion("continme_fee <>", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeGreaterThan(BigDecimal value) {
-            addCriterion("continme_fee >", value, "continme_fee");
+        public Criteria andContinmeFeeGreaterThan(BigDecimal value) {
+            addCriterion("continme_fee >", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("continme_fee >=", value, "continme_fee");
+        public Criteria andContinmeFeeGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("continme_fee >=", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeLessThan(BigDecimal value) {
-            addCriterion("continme_fee <", value, "continme_fee");
+        public Criteria andContinmeFeeLessThan(BigDecimal value) {
+            addCriterion("continme_fee <", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("continme_fee <=", value, "continme_fee");
+        public Criteria andContinmeFeeLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("continme_fee <=", value, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeIn(List<BigDecimal> values) {
-            addCriterion("continme_fee in", values, "continme_fee");
+        public Criteria andContinmeFeeIn(List<BigDecimal> values) {
+            addCriterion("continme_fee in", values, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeNotIn(List<BigDecimal> values) {
-            addCriterion("continme_fee not in", values, "continme_fee");
+        public Criteria andContinmeFeeNotIn(List<BigDecimal> values) {
+            addCriterion("continme_fee not in", values, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("continme_fee between", value1, value2, "continme_fee");
+        public Criteria andContinmeFeeBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("continme_fee between", value1, value2, "continmeFee");
             return (Criteria) this;
         }
 
-        public Criteria andContinme_feeNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("continme_fee not between", value1, value2, "continme_fee");
+        public Criteria andContinmeFeeNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("continme_fee not between", value1, value2, "continmeFee");
             return (Criteria) this;
         }
 

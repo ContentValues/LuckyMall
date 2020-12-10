@@ -3,10 +3,10 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsMemberPriceMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsMemberPrice">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_id" jdbcType="BIGINT" property="product_id" />
-    <result column="member_level_id" jdbcType="BIGINT" property="member_level_id" />
-    <result column="member_price" jdbcType="DECIMAL" property="member_price" />
-    <result column="member_level_name" jdbcType="VARCHAR" property="member_level_name" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="member_level_id" jdbcType="BIGINT" property="memberLevelId" />
+    <result column="member_price" jdbcType="DECIMAL" property="memberPrice" />
+    <result column="member_level_name" jdbcType="VARCHAR" property="memberLevelName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -100,45 +100,45 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsMemberPrice">
-    insert into pms_member_price (id, product_id, member_level_id, 
-      member_price, member_level_name)
-    values (#{id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}, #{member_level_id,jdbcType=BIGINT}, 
-      #{member_price,jdbcType=DECIMAL}, #{member_level_name,jdbcType=VARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_member_price (product_id, member_level_id, member_price, 
+      member_level_name)
+    values (#{productId,jdbcType=BIGINT}, #{memberLevelId,jdbcType=BIGINT}, #{memberPrice,jdbcType=DECIMAL}, 
+      #{memberLevelName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsMemberPrice">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_member_price
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_id != null">
+      <if test="productId != null">
         product_id,
       </if>
-      <if test="member_level_id != null">
+      <if test="memberLevelId != null">
         member_level_id,
       </if>
-      <if test="member_price != null">
+      <if test="memberPrice != null">
         member_price,
       </if>
-      <if test="member_level_name != null">
+      <if test="memberLevelName != null">
         member_level_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
       </if>
-      <if test="product_id != null">
-        #{product_id,jdbcType=BIGINT},
+      <if test="memberLevelId != null">
+        #{memberLevelId,jdbcType=BIGINT},
       </if>
-      <if test="member_level_id != null">
-        #{member_level_id,jdbcType=BIGINT},
+      <if test="memberPrice != null">
+        #{memberPrice,jdbcType=DECIMAL},
       </if>
-      <if test="member_price != null">
-        #{member_price,jdbcType=DECIMAL},
-      </if>
-      <if test="member_level_name != null">
-        #{member_level_name,jdbcType=VARCHAR},
+      <if test="memberLevelName != null">
+        #{memberLevelName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -154,17 +154,17 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_id != null">
-        product_id = #{record.product_id,jdbcType=BIGINT},
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=BIGINT},
       </if>
-      <if test="record.member_level_id != null">
-        member_level_id = #{record.member_level_id,jdbcType=BIGINT},
+      <if test="record.memberLevelId != null">
+        member_level_id = #{record.memberLevelId,jdbcType=BIGINT},
       </if>
-      <if test="record.member_price != null">
-        member_price = #{record.member_price,jdbcType=DECIMAL},
+      <if test="record.memberPrice != null">
+        member_price = #{record.memberPrice,jdbcType=DECIMAL},
       </if>
-      <if test="record.member_level_name != null">
-        member_level_name = #{record.member_level_name,jdbcType=VARCHAR},
+      <if test="record.memberLevelName != null">
+        member_level_name = #{record.memberLevelName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -174,10 +174,10 @@
   <update id="updateByExample" parameterType="map">
     update pms_member_price
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
-      member_level_id = #{record.member_level_id,jdbcType=BIGINT},
-      member_price = #{record.member_price,jdbcType=DECIMAL},
-      member_level_name = #{record.member_level_name,jdbcType=VARCHAR}
+      product_id = #{record.productId,jdbcType=BIGINT},
+      member_level_id = #{record.memberLevelId,jdbcType=BIGINT},
+      member_price = #{record.memberPrice,jdbcType=DECIMAL},
+      member_level_name = #{record.memberLevelName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -185,27 +185,27 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsMemberPrice">
     update pms_member_price
     <set>
-      <if test="product_id != null">
-        product_id = #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
       </if>
-      <if test="member_level_id != null">
-        member_level_id = #{member_level_id,jdbcType=BIGINT},
+      <if test="memberLevelId != null">
+        member_level_id = #{memberLevelId,jdbcType=BIGINT},
       </if>
-      <if test="member_price != null">
-        member_price = #{member_price,jdbcType=DECIMAL},
+      <if test="memberPrice != null">
+        member_price = #{memberPrice,jdbcType=DECIMAL},
       </if>
-      <if test="member_level_name != null">
-        member_level_name = #{member_level_name,jdbcType=VARCHAR},
+      <if test="memberLevelName != null">
+        member_level_name = #{memberLevelName,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsMemberPrice">
     update pms_member_price
-    set product_id = #{product_id,jdbcType=BIGINT},
-      member_level_id = #{member_level_id,jdbcType=BIGINT},
-      member_price = #{member_price,jdbcType=DECIMAL},
-      member_level_name = #{member_level_name,jdbcType=VARCHAR}
+    set product_id = #{productId,jdbcType=BIGINT},
+      member_level_id = #{memberLevelId,jdbcType=BIGINT},
+      member_price = #{memberPrice,jdbcType=DECIMAL},
+      member_level_name = #{memberLevelName,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

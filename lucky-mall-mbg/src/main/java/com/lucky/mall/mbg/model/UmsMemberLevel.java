@@ -9,34 +9,34 @@ public class UmsMemberLevel implements Serializable {
 
     private String name;
 
-    private Integer growth_point;
+    private Integer growthPoint;
 
     @ApiModelProperty(value = "是否为默认等级：0->不是；1->是")
-    private Integer default_status;
+    private Integer defaultStatus;
 
     @ApiModelProperty(value = "免运费标准")
-    private BigDecimal free_freight_point;
+    private BigDecimal freeFreightPoint;
 
     @ApiModelProperty(value = "每次评价获取的成长值")
-    private Integer comment_growth_point;
+    private Integer commentGrowthPoint;
 
     @ApiModelProperty(value = "是否有免邮特权")
-    private Integer priviledge_free_freight;
+    private Integer priviledgeFreeFreight;
 
     @ApiModelProperty(value = "是否有签到特权")
-    private Integer priviledge_sign_in;
+    private Integer priviledgeSignIn;
 
     @ApiModelProperty(value = "是否有评论获奖励特权")
-    private Integer priviledge_comment;
+    private Integer priviledgeComment;
 
     @ApiModelProperty(value = "是否有专享活动特权")
-    private Integer priviledge_promotion;
+    private Integer priviledgePromotion;
 
     @ApiModelProperty(value = "是否有会员价格特权")
-    private Integer priviledge_member_price;
+    private Integer priviledgeMemberPrice;
 
     @ApiModelProperty(value = "是否有生日特权")
-    private Integer priviledge_birthday;
+    private Integer priviledgeBirthday;
 
     private String note;
 
@@ -58,84 +58,84 @@ public class UmsMemberLevel implements Serializable {
         this.name = name;
     }
 
-    public Integer getGrowth_point() {
-        return growth_point;
+    public Integer getGrowthPoint() {
+        return growthPoint;
     }
 
-    public void setGrowth_point(Integer growth_point) {
-        this.growth_point = growth_point;
+    public void setGrowthPoint(Integer growthPoint) {
+        this.growthPoint = growthPoint;
     }
 
-    public Integer getDefault_status() {
-        return default_status;
+    public Integer getDefaultStatus() {
+        return defaultStatus;
     }
 
-    public void setDefault_status(Integer default_status) {
-        this.default_status = default_status;
+    public void setDefaultStatus(Integer defaultStatus) {
+        this.defaultStatus = defaultStatus;
     }
 
-    public BigDecimal getFree_freight_point() {
-        return free_freight_point;
+    public BigDecimal getFreeFreightPoint() {
+        return freeFreightPoint;
     }
 
-    public void setFree_freight_point(BigDecimal free_freight_point) {
-        this.free_freight_point = free_freight_point;
+    public void setFreeFreightPoint(BigDecimal freeFreightPoint) {
+        this.freeFreightPoint = freeFreightPoint;
     }
 
-    public Integer getComment_growth_point() {
-        return comment_growth_point;
+    public Integer getCommentGrowthPoint() {
+        return commentGrowthPoint;
     }
 
-    public void setComment_growth_point(Integer comment_growth_point) {
-        this.comment_growth_point = comment_growth_point;
+    public void setCommentGrowthPoint(Integer commentGrowthPoint) {
+        this.commentGrowthPoint = commentGrowthPoint;
     }
 
-    public Integer getPriviledge_free_freight() {
-        return priviledge_free_freight;
+    public Integer getPriviledgeFreeFreight() {
+        return priviledgeFreeFreight;
     }
 
-    public void setPriviledge_free_freight(Integer priviledge_free_freight) {
-        this.priviledge_free_freight = priviledge_free_freight;
+    public void setPriviledgeFreeFreight(Integer priviledgeFreeFreight) {
+        this.priviledgeFreeFreight = priviledgeFreeFreight;
     }
 
-    public Integer getPriviledge_sign_in() {
-        return priviledge_sign_in;
+    public Integer getPriviledgeSignIn() {
+        return priviledgeSignIn;
     }
 
-    public void setPriviledge_sign_in(Integer priviledge_sign_in) {
-        this.priviledge_sign_in = priviledge_sign_in;
+    public void setPriviledgeSignIn(Integer priviledgeSignIn) {
+        this.priviledgeSignIn = priviledgeSignIn;
     }
 
-    public Integer getPriviledge_comment() {
-        return priviledge_comment;
+    public Integer getPriviledgeComment() {
+        return priviledgeComment;
     }
 
-    public void setPriviledge_comment(Integer priviledge_comment) {
-        this.priviledge_comment = priviledge_comment;
+    public void setPriviledgeComment(Integer priviledgeComment) {
+        this.priviledgeComment = priviledgeComment;
     }
 
-    public Integer getPriviledge_promotion() {
-        return priviledge_promotion;
+    public Integer getPriviledgePromotion() {
+        return priviledgePromotion;
     }
 
-    public void setPriviledge_promotion(Integer priviledge_promotion) {
-        this.priviledge_promotion = priviledge_promotion;
+    public void setPriviledgePromotion(Integer priviledgePromotion) {
+        this.priviledgePromotion = priviledgePromotion;
     }
 
-    public Integer getPriviledge_member_price() {
-        return priviledge_member_price;
+    public Integer getPriviledgeMemberPrice() {
+        return priviledgeMemberPrice;
     }
 
-    public void setPriviledge_member_price(Integer priviledge_member_price) {
-        this.priviledge_member_price = priviledge_member_price;
+    public void setPriviledgeMemberPrice(Integer priviledgeMemberPrice) {
+        this.priviledgeMemberPrice = priviledgeMemberPrice;
     }
 
-    public Integer getPriviledge_birthday() {
-        return priviledge_birthday;
+    public Integer getPriviledgeBirthday() {
+        return priviledgeBirthday;
     }
 
-    public void setPriviledge_birthday(Integer priviledge_birthday) {
-        this.priviledge_birthday = priviledge_birthday;
+    public void setPriviledgeBirthday(Integer priviledgeBirthday) {
+        this.priviledgeBirthday = priviledgeBirthday;
     }
 
     public String getNote() {
@@ -154,16 +154,16 @@ public class UmsMemberLevel implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", growth_point=").append(growth_point);
-        sb.append(", default_status=").append(default_status);
-        sb.append(", free_freight_point=").append(free_freight_point);
-        sb.append(", comment_growth_point=").append(comment_growth_point);
-        sb.append(", priviledge_free_freight=").append(priviledge_free_freight);
-        sb.append(", priviledge_sign_in=").append(priviledge_sign_in);
-        sb.append(", priviledge_comment=").append(priviledge_comment);
-        sb.append(", priviledge_promotion=").append(priviledge_promotion);
-        sb.append(", priviledge_member_price=").append(priviledge_member_price);
-        sb.append(", priviledge_birthday=").append(priviledge_birthday);
+        sb.append(", growthPoint=").append(growthPoint);
+        sb.append(", defaultStatus=").append(defaultStatus);
+        sb.append(", freeFreightPoint=").append(freeFreightPoint);
+        sb.append(", commentGrowthPoint=").append(commentGrowthPoint);
+        sb.append(", priviledgeFreeFreight=").append(priviledgeFreeFreight);
+        sb.append(", priviledgeSignIn=").append(priviledgeSignIn);
+        sb.append(", priviledgeComment=").append(priviledgeComment);
+        sb.append(", priviledgePromotion=").append(priviledgePromotion);
+        sb.append(", priviledgeMemberPrice=").append(priviledgeMemberPrice);
+        sb.append(", priviledgeBirthday=").append(priviledgeBirthday);
         sb.append(", note=").append(note);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

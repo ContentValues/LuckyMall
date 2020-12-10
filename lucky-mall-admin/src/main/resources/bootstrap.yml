@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: lucky-mall-admin
+  servlet:
+    multipart:
+      max-file-size: 10MB #限制文件上传大小为10M
+      enabled: true

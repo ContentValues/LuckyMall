@@ -3,7 +3,7 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsProductLadderMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsProductLadder">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_id" jdbcType="BIGINT" property="product_id" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
     <result column="count" jdbcType="INTEGER" property="count" />
     <result column="discount" jdbcType="DECIMAL" property="discount" />
     <result column="price" jdbcType="DECIMAL" property="price" />
@@ -100,18 +100,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsProductLadder">
-    insert into pms_product_ladder (id, product_id, count, 
-      discount, price)
-    values (#{id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}, #{count,jdbcType=INTEGER}, 
-      #{discount,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_product_ladder (product_id, count, discount, 
+      price)
+    values (#{productId,jdbcType=BIGINT}, #{count,jdbcType=INTEGER}, #{discount,jdbcType=DECIMAL}, 
+      #{price,jdbcType=DECIMAL})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsProductLadder">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_product_ladder
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_id != null">
+      <if test="productId != null">
         product_id,
       </if>
       <if test="count != null">
@@ -125,11 +128,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="product_id != null">
-        #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
       </if>
       <if test="count != null">
         #{count,jdbcType=INTEGER},
@@ -154,8 +154,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_id != null">
-        product_id = #{record.product_id,jdbcType=BIGINT},
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=BIGINT},
       </if>
       <if test="record.count != null">
         count = #{record.count,jdbcType=INTEGER},
@@ -174,7 +174,7 @@
   <update id="updateByExample" parameterType="map">
     update pms_product_ladder
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
+      product_id = #{record.productId,jdbcType=BIGINT},
       count = #{record.count,jdbcType=INTEGER},
       discount = #{record.discount,jdbcType=DECIMAL},
       price = #{record.price,jdbcType=DECIMAL}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsProductLadder">
     update pms_product_ladder
     <set>
-      <if test="product_id != null">
-        product_id = #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
       </if>
       <if test="count != null">
         count = #{count,jdbcType=INTEGER},
@@ -202,7 +202,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsProductLadder">
     update pms_product_ladder
-    set product_id = #{product_id,jdbcType=BIGINT},
+    set product_id = #{productId,jdbcType=BIGINT},
       count = #{count,jdbcType=INTEGER},
       discount = #{discount,jdbcType=DECIMAL},
       price = #{price,jdbcType=DECIMAL}

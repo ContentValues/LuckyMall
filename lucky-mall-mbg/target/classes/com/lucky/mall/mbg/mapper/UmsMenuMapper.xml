@@ -3,8 +3,8 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsMenuMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsMenu">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="parent_id" jdbcType="BIGINT" property="parent_id" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="level" jdbcType="INTEGER" property="level" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
@@ -104,23 +104,26 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsMenu">
-    insert into ums_menu (id, parent_id, create_time, 
-      title, level, sort, 
-      name, icon, hidden)
-    values (#{id,jdbcType=BIGINT}, #{parent_id,jdbcType=BIGINT}, #{create_time,jdbcType=TIMESTAMP}, 
-      #{title,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, 
-      #{name,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{hidden,jdbcType=INTEGER})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ums_menu (parent_id, create_time, title, 
+      level, sort, name, 
+      icon, hidden)
+    values (#{parentId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{title,jdbcType=VARCHAR}, 
+      #{level,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{icon,jdbcType=VARCHAR}, #{hidden,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsMenu">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into ums_menu
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="parent_id != null">
+      <if test="parentId != null">
         parent_id,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
       <if test="title != null">
@@ -143,14 +146,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="parentId != null">
+        #{parentId,jdbcType=BIGINT},
       </if>
-      <if test="parent_id != null">
-        #{parent_id,jdbcType=BIGINT},
-      </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -184,11 +184,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.parent_id != null">
-        parent_id = #{record.parent_id,jdbcType=BIGINT},
+      <if test="record.parentId != null">
+        parent_id = #{record.parentId,jdbcType=BIGINT},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
@@ -216,8 +216,8 @@
   <update id="updateByExample" parameterType="map">
     update ums_menu
     set id = #{record.id,jdbcType=BIGINT},
-      parent_id = #{record.parent_id,jdbcType=BIGINT},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      parent_id = #{record.parentId,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       title = #{record.title,jdbcType=VARCHAR},
       level = #{record.level,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER},
@@ -231,11 +231,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsMenu">
     update ums_menu
     <set>
-      <if test="parent_id != null">
-        parent_id = #{parent_id,jdbcType=BIGINT},
+      <if test="parentId != null">
+        parent_id = #{parentId,jdbcType=BIGINT},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
@@ -260,8 +260,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsMenu">
     update ums_menu
-    set parent_id = #{parent_id,jdbcType=BIGINT},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
+    set parent_id = #{parentId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
       title = #{title,jdbcType=VARCHAR},
       level = #{level,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER},

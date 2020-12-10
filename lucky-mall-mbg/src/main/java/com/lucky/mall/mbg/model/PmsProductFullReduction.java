@@ -7,11 +7,11 @@ import java.math.BigDecimal;
 public class PmsProductFullReduction implements Serializable {
     private Long id;
 
-    private Long product_id;
+    private Long productId;
 
-    private BigDecimal full_price;
+    private BigDecimal fullPrice;
 
-    private BigDecimal reduce_price;
+    private BigDecimal reducePrice;
 
     private static final long serialVersionUID = 1L;
 
@@ -23,28 +23,28 @@ public class PmsProductFullReduction implements Serializable {
         this.id = id;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public BigDecimal getFull_price() {
-        return full_price;
+    public BigDecimal getFullPrice() {
+        return fullPrice;
     }
 
-    public void setFull_price(BigDecimal full_price) {
-        this.full_price = full_price;
+    public void setFullPrice(BigDecimal fullPrice) {
+        this.fullPrice = fullPrice;
     }
 
-    public BigDecimal getReduce_price() {
-        return reduce_price;
+    public BigDecimal getReducePrice() {
+        return reducePrice;
     }
 
-    public void setReduce_price(BigDecimal reduce_price) {
-        this.reduce_price = reduce_price;
+    public void setReducePrice(BigDecimal reducePrice) {
+        this.reducePrice = reducePrice;
     }
 
     @Override
@@ -54,9 +54,9 @@ public class PmsProductFullReduction implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", product_id=").append(product_id);
-        sb.append(", full_price=").append(full_price);
-        sb.append(", reduce_price=").append(reduce_price);
+        sb.append(", productId=").append(productId);
+        sb.append(", fullPrice=").append(fullPrice);
+        sb.append(", reducePrice=").append(reducePrice);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -3,19 +3,19 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsCommentMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsComment">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_id" jdbcType="BIGINT" property="product_id" />
-    <result column="member_nick_name" jdbcType="VARCHAR" property="member_nick_name" />
-    <result column="product_name" jdbcType="VARCHAR" property="product_name" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="member_nick_name" jdbcType="VARCHAR" property="memberNickName" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
     <result column="star" jdbcType="INTEGER" property="star" />
-    <result column="member_ip" jdbcType="VARCHAR" property="member_ip" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
-    <result column="show_status" jdbcType="INTEGER" property="show_status" />
-    <result column="product_attribute" jdbcType="VARCHAR" property="product_attribute" />
-    <result column="collect_couont" jdbcType="INTEGER" property="collect_couont" />
-    <result column="read_count" jdbcType="INTEGER" property="read_count" />
+    <result column="member_ip" jdbcType="VARCHAR" property="memberIp" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="product_attribute" jdbcType="VARCHAR" property="productAttribute" />
+    <result column="collect_couont" jdbcType="INTEGER" property="collectCouont" />
+    <result column="read_count" jdbcType="INTEGER" property="readCount" />
     <result column="pics" jdbcType="VARCHAR" property="pics" />
-    <result column="member_icon" jdbcType="VARCHAR" property="member_icon" />
-    <result column="replay_count" jdbcType="INTEGER" property="replay_count" />
+    <result column="member_icon" jdbcType="VARCHAR" property="memberIcon" />
+    <result column="replay_count" jdbcType="INTEGER" property="replayCount" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.PmsComment">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
@@ -134,62 +134,63 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsComment">
-    insert into pms_comment (id, product_id, member_nick_name, 
-      product_name, star, member_ip, 
-      create_time, show_status, product_attribute, 
-      collect_couont, read_count, pics, 
-      member_icon, replay_count, content
-      )
-    values (#{id,jdbcType=BIGINT}, #{product_id,jdbcType=BIGINT}, #{member_nick_name,jdbcType=VARCHAR}, 
-      #{product_name,jdbcType=VARCHAR}, #{star,jdbcType=INTEGER}, #{member_ip,jdbcType=VARCHAR}, 
-      #{create_time,jdbcType=TIMESTAMP}, #{show_status,jdbcType=INTEGER}, #{product_attribute,jdbcType=VARCHAR}, 
-      #{collect_couont,jdbcType=INTEGER}, #{read_count,jdbcType=INTEGER}, #{pics,jdbcType=VARCHAR}, 
-      #{member_icon,jdbcType=VARCHAR}, #{replay_count,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_comment (product_id, member_nick_name, product_name, 
+      star, member_ip, create_time, 
+      show_status, product_attribute, collect_couont, 
+      read_count, pics, member_icon, 
+      replay_count, content)
+    values (#{productId,jdbcType=BIGINT}, #{memberNickName,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR}, 
+      #{star,jdbcType=INTEGER}, #{memberIp,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{showStatus,jdbcType=INTEGER}, #{productAttribute,jdbcType=VARCHAR}, #{collectCouont,jdbcType=INTEGER}, 
+      #{readCount,jdbcType=INTEGER}, #{pics,jdbcType=VARCHAR}, #{memberIcon,jdbcType=VARCHAR}, 
+      #{replayCount,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsComment">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_comment
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_id != null">
+      <if test="productId != null">
         product_id,
       </if>
-      <if test="member_nick_name != null">
+      <if test="memberNickName != null">
         member_nick_name,
       </if>
-      <if test="product_name != null">
+      <if test="productName != null">
         product_name,
       </if>
       <if test="star != null">
         star,
       </if>
-      <if test="member_ip != null">
+      <if test="memberIp != null">
         member_ip,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="show_status != null">
+      <if test="showStatus != null">
         show_status,
       </if>
-      <if test="product_attribute != null">
+      <if test="productAttribute != null">
         product_attribute,
       </if>
-      <if test="collect_couont != null">
+      <if test="collectCouont != null">
         collect_couont,
       </if>
-      <if test="read_count != null">
+      <if test="readCount != null">
         read_count,
       </if>
       <if test="pics != null">
         pics,
       </if>
-      <if test="member_icon != null">
+      <if test="memberIcon != null">
         member_icon,
       </if>
-      <if test="replay_count != null">
+      <if test="replayCount != null">
         replay_count,
       </if>
       <if test="content != null">
@@ -197,47 +198,44 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="productId != null">
+        #{productId,jdbcType=BIGINT},
       </if>
-      <if test="product_id != null">
-        #{product_id,jdbcType=BIGINT},
+      <if test="memberNickName != null">
+        #{memberNickName,jdbcType=VARCHAR},
       </if>
-      <if test="member_nick_name != null">
-        #{member_nick_name,jdbcType=VARCHAR},
-      </if>
-      <if test="product_name != null">
-        #{product_name,jdbcType=VARCHAR},
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
       </if>
       <if test="star != null">
         #{star,jdbcType=INTEGER},
       </if>
-      <if test="member_ip != null">
-        #{member_ip,jdbcType=VARCHAR},
+      <if test="memberIp != null">
+        #{memberIp,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="show_status != null">
-        #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="product_attribute != null">
-        #{product_attribute,jdbcType=VARCHAR},
+      <if test="productAttribute != null">
+        #{productAttribute,jdbcType=VARCHAR},
       </if>
-      <if test="collect_couont != null">
-        #{collect_couont,jdbcType=INTEGER},
+      <if test="collectCouont != null">
+        #{collectCouont,jdbcType=INTEGER},
       </if>
-      <if test="read_count != null">
-        #{read_count,jdbcType=INTEGER},
+      <if test="readCount != null">
+        #{readCount,jdbcType=INTEGER},
       </if>
       <if test="pics != null">
         #{pics,jdbcType=VARCHAR},
       </if>
-      <if test="member_icon != null">
-        #{member_icon,jdbcType=VARCHAR},
+      <if test="memberIcon != null">
+        #{memberIcon,jdbcType=VARCHAR},
       </if>
-      <if test="replay_count != null">
-        #{replay_count,jdbcType=INTEGER},
+      <if test="replayCount != null">
+        #{replayCount,jdbcType=INTEGER},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
@@ -256,44 +254,44 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_id != null">
-        product_id = #{record.product_id,jdbcType=BIGINT},
+      <if test="record.productId != null">
+        product_id = #{record.productId,jdbcType=BIGINT},
       </if>
-      <if test="record.member_nick_name != null">
-        member_nick_name = #{record.member_nick_name,jdbcType=VARCHAR},
+      <if test="record.memberNickName != null">
+        member_nick_name = #{record.memberNickName,jdbcType=VARCHAR},
       </if>
-      <if test="record.product_name != null">
-        product_name = #{record.product_name,jdbcType=VARCHAR},
+      <if test="record.productName != null">
+        product_name = #{record.productName,jdbcType=VARCHAR},
       </if>
       <if test="record.star != null">
         star = #{record.star,jdbcType=INTEGER},
       </if>
-      <if test="record.member_ip != null">
-        member_ip = #{record.member_ip,jdbcType=VARCHAR},
+      <if test="record.memberIp != null">
+        member_ip = #{record.memberIp,jdbcType=VARCHAR},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.show_status != null">
-        show_status = #{record.show_status,jdbcType=INTEGER},
+      <if test="record.showStatus != null">
+        show_status = #{record.showStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.product_attribute != null">
-        product_attribute = #{record.product_attribute,jdbcType=VARCHAR},
+      <if test="record.productAttribute != null">
+        product_attribute = #{record.productAttribute,jdbcType=VARCHAR},
       </if>
-      <if test="record.collect_couont != null">
-        collect_couont = #{record.collect_couont,jdbcType=INTEGER},
+      <if test="record.collectCouont != null">
+        collect_couont = #{record.collectCouont,jdbcType=INTEGER},
       </if>
-      <if test="record.read_count != null">
-        read_count = #{record.read_count,jdbcType=INTEGER},
+      <if test="record.readCount != null">
+        read_count = #{record.readCount,jdbcType=INTEGER},
       </if>
       <if test="record.pics != null">
         pics = #{record.pics,jdbcType=VARCHAR},
       </if>
-      <if test="record.member_icon != null">
-        member_icon = #{record.member_icon,jdbcType=VARCHAR},
+      <if test="record.memberIcon != null">
+        member_icon = #{record.memberIcon,jdbcType=VARCHAR},
       </if>
-      <if test="record.replay_count != null">
-        replay_count = #{record.replay_count,jdbcType=INTEGER},
+      <if test="record.replayCount != null">
+        replay_count = #{record.replayCount,jdbcType=INTEGER},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=LONGVARCHAR},
@@ -306,19 +304,19 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update pms_comment
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
-      member_nick_name = #{record.member_nick_name,jdbcType=VARCHAR},
-      product_name = #{record.product_name,jdbcType=VARCHAR},
+      product_id = #{record.productId,jdbcType=BIGINT},
+      member_nick_name = #{record.memberNickName,jdbcType=VARCHAR},
+      product_name = #{record.productName,jdbcType=VARCHAR},
       star = #{record.star,jdbcType=INTEGER},
-      member_ip = #{record.member_ip,jdbcType=VARCHAR},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      product_attribute = #{record.product_attribute,jdbcType=VARCHAR},
-      collect_couont = #{record.collect_couont,jdbcType=INTEGER},
-      read_count = #{record.read_count,jdbcType=INTEGER},
+      member_ip = #{record.memberIp,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      product_attribute = #{record.productAttribute,jdbcType=VARCHAR},
+      collect_couont = #{record.collectCouont,jdbcType=INTEGER},
+      read_count = #{record.readCount,jdbcType=INTEGER},
       pics = #{record.pics,jdbcType=VARCHAR},
-      member_icon = #{record.member_icon,jdbcType=VARCHAR},
-      replay_count = #{record.replay_count,jdbcType=INTEGER},
+      member_icon = #{record.memberIcon,jdbcType=VARCHAR},
+      replay_count = #{record.replayCount,jdbcType=INTEGER},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -327,19 +325,19 @@
   <update id="updateByExample" parameterType="map">
     update pms_comment
     set id = #{record.id,jdbcType=BIGINT},
-      product_id = #{record.product_id,jdbcType=BIGINT},
-      member_nick_name = #{record.member_nick_name,jdbcType=VARCHAR},
-      product_name = #{record.product_name,jdbcType=VARCHAR},
+      product_id = #{record.productId,jdbcType=BIGINT},
+      member_nick_name = #{record.memberNickName,jdbcType=VARCHAR},
+      product_name = #{record.productName,jdbcType=VARCHAR},
       star = #{record.star,jdbcType=INTEGER},
-      member_ip = #{record.member_ip,jdbcType=VARCHAR},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      product_attribute = #{record.product_attribute,jdbcType=VARCHAR},
-      collect_couont = #{record.collect_couont,jdbcType=INTEGER},
-      read_count = #{record.read_count,jdbcType=INTEGER},
+      member_ip = #{record.memberIp,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      product_attribute = #{record.productAttribute,jdbcType=VARCHAR},
+      collect_couont = #{record.collectCouont,jdbcType=INTEGER},
+      read_count = #{record.readCount,jdbcType=INTEGER},
       pics = #{record.pics,jdbcType=VARCHAR},
-      member_icon = #{record.member_icon,jdbcType=VARCHAR},
-      replay_count = #{record.replay_count,jdbcType=INTEGER}
+      member_icon = #{record.memberIcon,jdbcType=VARCHAR},
+      replay_count = #{record.replayCount,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -347,44 +345,44 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsComment">
     update pms_comment
     <set>
-      <if test="product_id != null">
-        product_id = #{product_id,jdbcType=BIGINT},
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=BIGINT},
       </if>
-      <if test="member_nick_name != null">
-        member_nick_name = #{member_nick_name,jdbcType=VARCHAR},
+      <if test="memberNickName != null">
+        member_nick_name = #{memberNickName,jdbcType=VARCHAR},
       </if>
-      <if test="product_name != null">
-        product_name = #{product_name,jdbcType=VARCHAR},
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
       </if>
       <if test="star != null">
         star = #{star,jdbcType=INTEGER},
       </if>
-      <if test="member_ip != null">
-        member_ip = #{member_ip,jdbcType=VARCHAR},
+      <if test="memberIp != null">
+        member_ip = #{memberIp,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="show_status != null">
-        show_status = #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        show_status = #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="product_attribute != null">
-        product_attribute = #{product_attribute,jdbcType=VARCHAR},
+      <if test="productAttribute != null">
+        product_attribute = #{productAttribute,jdbcType=VARCHAR},
       </if>
-      <if test="collect_couont != null">
-        collect_couont = #{collect_couont,jdbcType=INTEGER},
+      <if test="collectCouont != null">
+        collect_couont = #{collectCouont,jdbcType=INTEGER},
       </if>
-      <if test="read_count != null">
-        read_count = #{read_count,jdbcType=INTEGER},
+      <if test="readCount != null">
+        read_count = #{readCount,jdbcType=INTEGER},
       </if>
       <if test="pics != null">
         pics = #{pics,jdbcType=VARCHAR},
       </if>
-      <if test="member_icon != null">
-        member_icon = #{member_icon,jdbcType=VARCHAR},
+      <if test="memberIcon != null">
+        member_icon = #{memberIcon,jdbcType=VARCHAR},
       </if>
-      <if test="replay_count != null">
-        replay_count = #{replay_count,jdbcType=INTEGER},
+      <if test="replayCount != null">
+        replay_count = #{replayCount,jdbcType=INTEGER},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=LONGVARCHAR},
@@ -394,37 +392,37 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.PmsComment">
     update pms_comment
-    set product_id = #{product_id,jdbcType=BIGINT},
-      member_nick_name = #{member_nick_name,jdbcType=VARCHAR},
-      product_name = #{product_name,jdbcType=VARCHAR},
+    set product_id = #{productId,jdbcType=BIGINT},
+      member_nick_name = #{memberNickName,jdbcType=VARCHAR},
+      product_name = #{productName,jdbcType=VARCHAR},
       star = #{star,jdbcType=INTEGER},
-      member_ip = #{member_ip,jdbcType=VARCHAR},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      show_status = #{show_status,jdbcType=INTEGER},
-      product_attribute = #{product_attribute,jdbcType=VARCHAR},
-      collect_couont = #{collect_couont,jdbcType=INTEGER},
-      read_count = #{read_count,jdbcType=INTEGER},
+      member_ip = #{memberIp,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      show_status = #{showStatus,jdbcType=INTEGER},
+      product_attribute = #{productAttribute,jdbcType=VARCHAR},
+      collect_couont = #{collectCouont,jdbcType=INTEGER},
+      read_count = #{readCount,jdbcType=INTEGER},
       pics = #{pics,jdbcType=VARCHAR},
-      member_icon = #{member_icon,jdbcType=VARCHAR},
-      replay_count = #{replay_count,jdbcType=INTEGER},
+      member_icon = #{memberIcon,jdbcType=VARCHAR},
+      replay_count = #{replayCount,jdbcType=INTEGER},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsComment">
     update pms_comment
-    set product_id = #{product_id,jdbcType=BIGINT},
-      member_nick_name = #{member_nick_name,jdbcType=VARCHAR},
-      product_name = #{product_name,jdbcType=VARCHAR},
+    set product_id = #{productId,jdbcType=BIGINT},
+      member_nick_name = #{memberNickName,jdbcType=VARCHAR},
+      product_name = #{productName,jdbcType=VARCHAR},
       star = #{star,jdbcType=INTEGER},
-      member_ip = #{member_ip,jdbcType=VARCHAR},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      show_status = #{show_status,jdbcType=INTEGER},
-      product_attribute = #{product_attribute,jdbcType=VARCHAR},
-      collect_couont = #{collect_couont,jdbcType=INTEGER},
-      read_count = #{read_count,jdbcType=INTEGER},
+      member_ip = #{memberIp,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      show_status = #{showStatus,jdbcType=INTEGER},
+      product_attribute = #{productAttribute,jdbcType=VARCHAR},
+      collect_couont = #{collectCouont,jdbcType=INTEGER},
+      read_count = #{readCount,jdbcType=INTEGER},
       pics = #{pics,jdbcType=VARCHAR},
-      member_icon = #{member_icon,jdbcType=VARCHAR},
-      replay_count = #{replay_count,jdbcType=INTEGER}
+      member_icon = #{memberIcon,jdbcType=VARCHAR},
+      replay_count = #{replayCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -1,10 +1,5 @@
-spring:
-  profiles:
-    active: dev #默认为开发环境
-  servlet:
-    multipart:
-      enabled: true #开启文件上传
-      max-file-size: 10MB #限制文件上传大小为10M
+server:
+  port: 8081
 
 mybatis:
   mapper-locations:
@@ -66,9 +61,10 @@ minio:
   accessKey: minioadmin #访问的key
   secretKey: minioadmin #访问的秘钥
 
-#logging:
-#  level:
-#    root: DEBUG #日志配置DEBUG,INFO,WARN,ERROR
+
+logging:
+  level:
+    root: DEBUG #日志配置DEBUG,INFO,WARN,ERROR
 ##    com.macro.mall: debug
 ##  file: demo_log.log #配置日志生成路径
 #  path: /var/logs #配置日志文件名称

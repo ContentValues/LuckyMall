@@ -6,15 +6,15 @@ import java.io.Serializable;
 public class SmsCouponProductCategoryRelation implements Serializable {
     private Long id;
 
-    private Long coupon_id;
+    private Long couponId;
 
-    private Long product_category_id;
+    private Long productCategoryId;
 
     @ApiModelProperty(value = "产品分类名称")
-    private String product_category_name;
+    private String productCategoryName;
 
     @ApiModelProperty(value = "父分类名称")
-    private String parent_category_name;
+    private String parentCategoryName;
 
     private static final long serialVersionUID = 1L;
 
@@ -26,36 +26,36 @@ public class SmsCouponProductCategoryRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getCoupon_id() {
-        return coupon_id;
+    public Long getCouponId() {
+        return couponId;
     }
 
-    public void setCoupon_id(Long coupon_id) {
-        this.coupon_id = coupon_id;
+    public void setCouponId(Long couponId) {
+        this.couponId = couponId;
     }
 
-    public Long getProduct_category_id() {
-        return product_category_id;
+    public Long getProductCategoryId() {
+        return productCategoryId;
     }
 
-    public void setProduct_category_id(Long product_category_id) {
-        this.product_category_id = product_category_id;
+    public void setProductCategoryId(Long productCategoryId) {
+        this.productCategoryId = productCategoryId;
     }
 
-    public String getProduct_category_name() {
-        return product_category_name;
+    public String getProductCategoryName() {
+        return productCategoryName;
     }
 
-    public void setProduct_category_name(String product_category_name) {
-        this.product_category_name = product_category_name;
+    public void setProductCategoryName(String productCategoryName) {
+        this.productCategoryName = productCategoryName;
     }
 
-    public String getParent_category_name() {
-        return parent_category_name;
+    public String getParentCategoryName() {
+        return parentCategoryName;
     }
 
-    public void setParent_category_name(String parent_category_name) {
-        this.parent_category_name = parent_category_name;
+    public void setParentCategoryName(String parentCategoryName) {
+        this.parentCategoryName = parentCategoryName;
     }
 
     @Override
@@ -65,10 +65,10 @@ public class SmsCouponProductCategoryRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", coupon_id=").append(coupon_id);
-        sb.append(", product_category_id=").append(product_category_id);
-        sb.append(", product_category_name=").append(product_category_name);
-        sb.append(", parent_category_name=").append(parent_category_name);
+        sb.append(", couponId=").append(couponId);
+        sb.append(", productCategoryId=").append(productCategoryId);
+        sb.append(", productCategoryName=").append(productCategoryName);
+        sb.append(", parentCategoryName=").append(parentCategoryName);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

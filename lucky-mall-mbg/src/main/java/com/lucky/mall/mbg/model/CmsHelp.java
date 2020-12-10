@@ -7,17 +7,17 @@ import java.util.Date;
 public class CmsHelp implements Serializable {
     private Long id;
 
-    private Long category_id;
+    private Long categoryId;
 
     private String icon;
 
     private String title;
 
-    private Integer show_status;
+    private Integer showStatus;
 
-    private Date create_time;
+    private Date createTime;
 
-    private Integer read_count;
+    private Integer readCount;
 
     private String content;
 
@@ -31,12 +31,12 @@ public class CmsHelp implements Serializable {
         this.id = id;
     }
 
-    public Long getCategory_id() {
-        return category_id;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(Long category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getIcon() {
@@ -55,28 +55,28 @@ public class CmsHelp implements Serializable {
         this.title = title;
     }
 
-    public Integer getShow_status() {
-        return show_status;
+    public Integer getShowStatus() {
+        return showStatus;
     }
 
-    public void setShow_status(Integer show_status) {
-        this.show_status = show_status;
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Integer getRead_count() {
-        return read_count;
+    public Integer getReadCount() {
+        return readCount;
     }
 
-    public void setRead_count(Integer read_count) {
-        this.read_count = read_count;
+    public void setReadCount(Integer readCount) {
+        this.readCount = readCount;
     }
 
     public String getContent() {
@@ -94,12 +94,12 @@ public class CmsHelp implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", category_id=").append(category_id);
+        sb.append(", categoryId=").append(categoryId);
         sb.append(", icon=").append(icon);
         sb.append(", title=").append(title);
-        sb.append(", show_status=").append(show_status);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", read_count=").append(read_count);
+        sb.append(", showStatus=").append(showStatus);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", readCount=").append(readCount);
         sb.append(", content=").append(content);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

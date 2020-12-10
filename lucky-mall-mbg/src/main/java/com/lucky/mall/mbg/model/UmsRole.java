@@ -14,10 +14,10 @@ public class UmsRole implements Serializable {
     private String description;
 
     @ApiModelProperty(value = "后台用户数量")
-    private Integer admin_count;
+    private Integer adminCount;
 
     @ApiModelProperty(value = "创建时间")
-    private Date create_time;
+    private Date createTime;
 
     @ApiModelProperty(value = "启用状态：0->禁用；1->启用")
     private Integer status;
@@ -50,29 +50,21 @@ public class UmsRole implements Serializable {
         this.description = description;
     }
 
-    public Integer getAdmin_count() {
-        return admin_count;
+    public Integer getAdminCount() {
+        return adminCount;
     }
 
-    public void setAdmin_count(Integer admin_count) {
-        this.admin_count = admin_count;
+    public void setAdminCount(Integer adminCount) {
+        this.adminCount = adminCount;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
-
-    //    public Date getCreate_time() {
-//        return create_time;
-//    }
-//
-//    public void setCreate_time(Date create_time) {
-//        this.create_time = create_time;
-//    }
 
     public Integer getStatus() {
         return status;
@@ -99,8 +91,8 @@ public class UmsRole implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", description=").append(description);
-        sb.append(", admin_count=").append(admin_count);
-        sb.append(", create_time=").append(create_time);
+        sb.append(", adminCount=").append(adminCount);
+        sb.append(", createTime=").append(createTime);
         sb.append(", status=").append(status);
         sb.append(", sort=").append(sort);
         sb.append(", serialVersionUID=").append(serialVersionUID);

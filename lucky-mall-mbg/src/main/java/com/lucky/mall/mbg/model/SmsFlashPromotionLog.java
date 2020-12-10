@@ -7,18 +7,18 @@ import java.util.Date;
 public class SmsFlashPromotionLog implements Serializable {
     private Integer id;
 
-    private Integer member_id;
+    private Integer memberId;
 
-    private Long product_id;
+    private Long productId;
 
-    private String member_phone;
+    private String memberPhone;
 
-    private String product_name;
+    private String productName;
 
     @ApiModelProperty(value = "会员订阅时间")
-    private Date subscribe_time;
+    private Date subscribeTime;
 
-    private Date send_time;
+    private Date sendTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -30,52 +30,52 @@ public class SmsFlashPromotionLog implements Serializable {
         this.id = id;
     }
 
-    public Integer getMember_id() {
-        return member_id;
+    public Integer getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Integer member_id) {
-        this.member_id = member_id;
+    public void setMemberId(Integer memberId) {
+        this.memberId = memberId;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public String getMember_phone() {
-        return member_phone;
+    public String getMemberPhone() {
+        return memberPhone;
     }
 
-    public void setMember_phone(String member_phone) {
-        this.member_phone = member_phone;
+    public void setMemberPhone(String memberPhone) {
+        this.memberPhone = memberPhone;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public Date getSubscribe_time() {
-        return subscribe_time;
+    public Date getSubscribeTime() {
+        return subscribeTime;
     }
 
-    public void setSubscribe_time(Date subscribe_time) {
-        this.subscribe_time = subscribe_time;
+    public void setSubscribeTime(Date subscribeTime) {
+        this.subscribeTime = subscribeTime;
     }
 
-    public Date getSend_time() {
-        return send_time;
+    public Date getSendTime() {
+        return sendTime;
     }
 
-    public void setSend_time(Date send_time) {
-        this.send_time = send_time;
+    public void setSendTime(Date sendTime) {
+        this.sendTime = sendTime;
     }
 
     @Override
@@ -85,12 +85,12 @@ public class SmsFlashPromotionLog implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", member_id=").append(member_id);
-        sb.append(", product_id=").append(product_id);
-        sb.append(", member_phone=").append(member_phone);
-        sb.append(", product_name=").append(product_name);
-        sb.append(", subscribe_time=").append(subscribe_time);
-        sb.append(", send_time=").append(send_time);
+        sb.append(", memberId=").append(memberId);
+        sb.append(", productId=").append(productId);
+        sb.append(", memberPhone=").append(memberPhone);
+        sb.append(", productName=").append(productName);
+        sb.append(", subscribeTime=").append(subscribeTime);
+        sb.append(", sendTime=").append(sendTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

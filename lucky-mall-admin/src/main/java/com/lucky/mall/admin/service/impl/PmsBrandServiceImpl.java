@@ -24,12 +24,19 @@ public class PmsBrandServiceImpl implements PmsBrandService {
 
     @Override
     public int create(PmsBrandParam param) {
-        return 0;
+        PmsBrand pmsBrand = new PmsBrand();
+        BeanUtils.copyProperties(param,pmsBrand);
+        if(!StringUtils.isEmpty(pmsBrand.getName().trim())){
+            pmsBrand.setFirstLetter(pmsBrand.getName().trim().substring(0,1));
+        }
+        return pmsBrandMapper.insertSelective(pmsBrand);
     }
 
     @Override
     public int delete(List<Long> ids) {
-        return 0;
+        PmsBrandExample example = new PmsBrandExample();
+        example.createCriteria().andIdIn(ids);
+        return pmsBrandMapper.deleteByExample(example);
     }
 
     @Override
@@ -37,22 +44,34 @@ public class PmsBrandServiceImpl implements PmsBrandService {
         PmsBrand pmsBrand = new PmsBrand();
         pmsBrand.setId(id);
         BeanUtils.copyProperties(param,pmsBrand);
+        if(!StringUtils.isEmpty(pmsBrand.getName().trim())){
+            pmsBrand.setFirstLetter(pmsBrand.getName().trim().substring(0,1));
+        }
         return pmsBrandMapper.updateByPrimaryKeySelective(pmsBrand);
+    }
+
+    @Override
+    public int updateShowStatus(List<Long> ids, Integer showStatus) {
+        PmsBrand pmsBrand = new PmsBrand();
+        pmsBrand.setShowStatus(showStatus);
+        PmsBrandExample example = new PmsBrandExample();
+        example.createCriteria().andIdIn(ids);
+        return pmsBrandMapper.updateByExampleSelective(pmsBrand,example);
+    }
+
+    @Override
+    public int updateFactoryStatus(List<Long> ids, Integer factoryStatus) {
+        PmsBrand pmsBrand = new PmsBrand();
+        pmsBrand.setFactoryStatus(factoryStatus);
+        PmsBrandExample example = new PmsBrandExample();
+        example.createCriteria().andIdIn(ids);
+        return pmsBrandMapper.updateByExampleSelective(pmsBrand,example);
     }
 
     @Override
     public PmsBrand getBrand(Long id) {
         return pmsBrandMapper.selectByPrimaryKey(id);
     }
-
-//    @Override
-//    public List<PmsBrand> listAll(String keyWord) {
-//        PmsBrandExample example = new PmsBrandExample();
-//        if(!StringUtils.isEmpty(keyWord)){
-//            example.createCriteria().andNameLike("%"+keyWord+"%");
-//        }
-//        return pmsBrandMapper.selectByExample(example);
-//    }
 
 
     @Override

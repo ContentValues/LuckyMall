@@ -4,11 +4,11 @@
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsFeightTemplate">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="charge_type" jdbcType="INTEGER" property="charge_type" />
-    <result column="first_weight" jdbcType="DECIMAL" property="first_weight" />
-    <result column="first_fee" jdbcType="DECIMAL" property="first_fee" />
-    <result column="continue_weight" jdbcType="DECIMAL" property="continue_weight" />
-    <result column="continme_fee" jdbcType="DECIMAL" property="continme_fee" />
+    <result column="charge_type" jdbcType="INTEGER" property="chargeType" />
+    <result column="first_weight" jdbcType="DECIMAL" property="firstWeight" />
+    <result column="first_fee" jdbcType="DECIMAL" property="firstFee" />
+    <result column="continue_weight" jdbcType="DECIMAL" property="continueWeight" />
+    <result column="continme_fee" jdbcType="DECIMAL" property="continmeFee" />
     <result column="dest" jdbcType="VARCHAR" property="dest" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -103,35 +103,38 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsFeightTemplate">
-    insert into pms_feight_template (id, name, charge_type, 
-      first_weight, first_fee, continue_weight, 
-      continme_fee, dest)
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{charge_type,jdbcType=INTEGER}, 
-      #{first_weight,jdbcType=DECIMAL}, #{first_fee,jdbcType=DECIMAL}, #{continue_weight,jdbcType=DECIMAL}, 
-      #{continme_fee,jdbcType=DECIMAL}, #{dest,jdbcType=VARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_feight_template (name, charge_type, first_weight, 
+      first_fee, continue_weight, continme_fee, 
+      dest)
+    values (#{name,jdbcType=VARCHAR}, #{chargeType,jdbcType=INTEGER}, #{firstWeight,jdbcType=DECIMAL}, 
+      #{firstFee,jdbcType=DECIMAL}, #{continueWeight,jdbcType=DECIMAL}, #{continmeFee,jdbcType=DECIMAL}, 
+      #{dest,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsFeightTemplate">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_feight_template
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
       <if test="name != null">
         name,
       </if>
-      <if test="charge_type != null">
+      <if test="chargeType != null">
         charge_type,
       </if>
-      <if test="first_weight != null">
+      <if test="firstWeight != null">
         first_weight,
       </if>
-      <if test="first_fee != null">
+      <if test="firstFee != null">
         first_fee,
       </if>
-      <if test="continue_weight != null">
+      <if test="continueWeight != null">
         continue_weight,
       </if>
-      <if test="continme_fee != null">
+      <if test="continmeFee != null">
         continme_fee,
       </if>
       <if test="dest != null">
@@ -139,26 +142,23 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="charge_type != null">
-        #{charge_type,jdbcType=INTEGER},
+      <if test="chargeType != null">
+        #{chargeType,jdbcType=INTEGER},
       </if>
-      <if test="first_weight != null">
-        #{first_weight,jdbcType=DECIMAL},
+      <if test="firstWeight != null">
+        #{firstWeight,jdbcType=DECIMAL},
       </if>
-      <if test="first_fee != null">
-        #{first_fee,jdbcType=DECIMAL},
+      <if test="firstFee != null">
+        #{firstFee,jdbcType=DECIMAL},
       </if>
-      <if test="continue_weight != null">
-        #{continue_weight,jdbcType=DECIMAL},
+      <if test="continueWeight != null">
+        #{continueWeight,jdbcType=DECIMAL},
       </if>
-      <if test="continme_fee != null">
-        #{continme_fee,jdbcType=DECIMAL},
+      <if test="continmeFee != null">
+        #{continmeFee,jdbcType=DECIMAL},
       </if>
       <if test="dest != null">
         #{dest,jdbcType=VARCHAR},
@@ -180,20 +180,20 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.charge_type != null">
-        charge_type = #{record.charge_type,jdbcType=INTEGER},
+      <if test="record.chargeType != null">
+        charge_type = #{record.chargeType,jdbcType=INTEGER},
       </if>
-      <if test="record.first_weight != null">
-        first_weight = #{record.first_weight,jdbcType=DECIMAL},
+      <if test="record.firstWeight != null">
+        first_weight = #{record.firstWeight,jdbcType=DECIMAL},
       </if>
-      <if test="record.first_fee != null">
-        first_fee = #{record.first_fee,jdbcType=DECIMAL},
+      <if test="record.firstFee != null">
+        first_fee = #{record.firstFee,jdbcType=DECIMAL},
       </if>
-      <if test="record.continue_weight != null">
-        continue_weight = #{record.continue_weight,jdbcType=DECIMAL},
+      <if test="record.continueWeight != null">
+        continue_weight = #{record.continueWeight,jdbcType=DECIMAL},
       </if>
-      <if test="record.continme_fee != null">
-        continme_fee = #{record.continme_fee,jdbcType=DECIMAL},
+      <if test="record.continmeFee != null">
+        continme_fee = #{record.continmeFee,jdbcType=DECIMAL},
       </if>
       <if test="record.dest != null">
         dest = #{record.dest,jdbcType=VARCHAR},
@@ -207,11 +207,11 @@
     update pms_feight_template
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      charge_type = #{record.charge_type,jdbcType=INTEGER},
-      first_weight = #{record.first_weight,jdbcType=DECIMAL},
-      first_fee = #{record.first_fee,jdbcType=DECIMAL},
-      continue_weight = #{record.continue_weight,jdbcType=DECIMAL},
-      continme_fee = #{record.continme_fee,jdbcType=DECIMAL},
+      charge_type = #{record.chargeType,jdbcType=INTEGER},
+      first_weight = #{record.firstWeight,jdbcType=DECIMAL},
+      first_fee = #{record.firstFee,jdbcType=DECIMAL},
+      continue_weight = #{record.continueWeight,jdbcType=DECIMAL},
+      continme_fee = #{record.continmeFee,jdbcType=DECIMAL},
       dest = #{record.dest,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -223,20 +223,20 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="charge_type != null">
-        charge_type = #{charge_type,jdbcType=INTEGER},
+      <if test="chargeType != null">
+        charge_type = #{chargeType,jdbcType=INTEGER},
       </if>
-      <if test="first_weight != null">
-        first_weight = #{first_weight,jdbcType=DECIMAL},
+      <if test="firstWeight != null">
+        first_weight = #{firstWeight,jdbcType=DECIMAL},
       </if>
-      <if test="first_fee != null">
-        first_fee = #{first_fee,jdbcType=DECIMAL},
+      <if test="firstFee != null">
+        first_fee = #{firstFee,jdbcType=DECIMAL},
       </if>
-      <if test="continue_weight != null">
-        continue_weight = #{continue_weight,jdbcType=DECIMAL},
+      <if test="continueWeight != null">
+        continue_weight = #{continueWeight,jdbcType=DECIMAL},
       </if>
-      <if test="continme_fee != null">
-        continme_fee = #{continme_fee,jdbcType=DECIMAL},
+      <if test="continmeFee != null">
+        continme_fee = #{continmeFee,jdbcType=DECIMAL},
       </if>
       <if test="dest != null">
         dest = #{dest,jdbcType=VARCHAR},
@@ -247,11 +247,11 @@
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsFeightTemplate">
     update pms_feight_template
     set name = #{name,jdbcType=VARCHAR},
-      charge_type = #{charge_type,jdbcType=INTEGER},
-      first_weight = #{first_weight,jdbcType=DECIMAL},
-      first_fee = #{first_fee,jdbcType=DECIMAL},
-      continue_weight = #{continue_weight,jdbcType=DECIMAL},
-      continme_fee = #{continme_fee,jdbcType=DECIMAL},
+      charge_type = #{chargeType,jdbcType=INTEGER},
+      first_weight = #{firstWeight,jdbcType=DECIMAL},
+      first_fee = #{firstFee,jdbcType=DECIMAL},
+      continue_weight = #{continueWeight,jdbcType=DECIMAL},
+      continme_fee = #{continmeFee,jdbcType=DECIMAL},
       dest = #{dest,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

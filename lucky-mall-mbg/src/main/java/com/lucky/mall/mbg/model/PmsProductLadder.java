@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public class PmsProductLadder implements Serializable {
     private Long id;
 
-    private Long product_id;
+    private Long productId;
 
     @ApiModelProperty(value = "满足的商品数量")
     private Integer count;
@@ -28,12 +28,12 @@ public class PmsProductLadder implements Serializable {
         this.id = id;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public Integer getCount() {
@@ -67,7 +67,7 @@ public class PmsProductLadder implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", product_id=").append(product_id);
+        sb.append(", productId=").append(productId);
         sb.append(", count=").append(count);
         sb.append(", discount=").append(discount);
         sb.append(", price=").append(price);

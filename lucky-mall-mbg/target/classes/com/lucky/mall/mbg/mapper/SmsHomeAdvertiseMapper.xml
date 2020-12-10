@@ -6,11 +6,11 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
-    <result column="start_time" jdbcType="TIMESTAMP" property="start_time" />
-    <result column="end_time" jdbcType="TIMESTAMP" property="end_time" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
     <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="click_count" jdbcType="INTEGER" property="click_count" />
-    <result column="order_count" jdbcType="INTEGER" property="order_count" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="order_count" jdbcType="INTEGER" property="orderCount" />
     <result column="url" jdbcType="VARCHAR" property="url" />
     <result column="note" jdbcType="VARCHAR" property="note" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
@@ -108,21 +108,24 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsHomeAdvertise">
-    insert into sms_home_advertise (id, name, type, 
-      pic, start_time, end_time, 
-      status, click_count, order_count, 
-      url, note, sort)
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
-      #{pic,jdbcType=VARCHAR}, #{start_time,jdbcType=TIMESTAMP}, #{end_time,jdbcType=TIMESTAMP}, 
-      #{status,jdbcType=INTEGER}, #{click_count,jdbcType=INTEGER}, #{order_count,jdbcType=INTEGER}, 
-      #{url,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_home_advertise (name, type, pic, 
+      start_time, end_time, status, 
+      click_count, order_count, url, 
+      note, sort)
+    values (#{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{pic,jdbcType=VARCHAR}, 
+      #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, 
+      #{clickCount,jdbcType=INTEGER}, #{orderCount,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
+      #{note,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsHomeAdvertise">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into sms_home_advertise
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
       <if test="name != null">
         name,
       </if>
@@ -132,19 +135,19 @@
       <if test="pic != null">
         pic,
       </if>
-      <if test="start_time != null">
+      <if test="startTime != null">
         start_time,
       </if>
-      <if test="end_time != null">
+      <if test="endTime != null">
         end_time,
       </if>
       <if test="status != null">
         status,
       </if>
-      <if test="click_count != null">
+      <if test="clickCount != null">
         click_count,
       </if>
-      <if test="order_count != null">
+      <if test="orderCount != null">
         order_count,
       </if>
       <if test="url != null">
@@ -158,9 +161,6 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
@@ -170,20 +170,20 @@
       <if test="pic != null">
         #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="start_time != null">
-        #{start_time,jdbcType=TIMESTAMP},
+      <if test="startTime != null">
+        #{startTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="end_time != null">
-        #{end_time,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
       </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
       </if>
-      <if test="click_count != null">
-        #{click_count,jdbcType=INTEGER},
+      <if test="clickCount != null">
+        #{clickCount,jdbcType=INTEGER},
       </if>
-      <if test="order_count != null">
-        #{order_count,jdbcType=INTEGER},
+      <if test="orderCount != null">
+        #{orderCount,jdbcType=INTEGER},
       </if>
       <if test="url != null">
         #{url,jdbcType=VARCHAR},
@@ -217,20 +217,20 @@
       <if test="record.pic != null">
         pic = #{record.pic,jdbcType=VARCHAR},
       </if>
-      <if test="record.start_time != null">
-        start_time = #{record.start_time,jdbcType=TIMESTAMP},
+      <if test="record.startTime != null">
+        start_time = #{record.startTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.end_time != null">
-        end_time = #{record.end_time,jdbcType=TIMESTAMP},
+      <if test="record.endTime != null">
+        end_time = #{record.endTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=INTEGER},
       </if>
-      <if test="record.click_count != null">
-        click_count = #{record.click_count,jdbcType=INTEGER},
+      <if test="record.clickCount != null">
+        click_count = #{record.clickCount,jdbcType=INTEGER},
       </if>
-      <if test="record.order_count != null">
-        order_count = #{record.order_count,jdbcType=INTEGER},
+      <if test="record.orderCount != null">
+        order_count = #{record.orderCount,jdbcType=INTEGER},
       </if>
       <if test="record.url != null">
         url = #{record.url,jdbcType=VARCHAR},
@@ -252,11 +252,11 @@
       name = #{record.name,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=INTEGER},
       pic = #{record.pic,jdbcType=VARCHAR},
-      start_time = #{record.start_time,jdbcType=TIMESTAMP},
-      end_time = #{record.end_time,jdbcType=TIMESTAMP},
+      start_time = #{record.startTime,jdbcType=TIMESTAMP},
+      end_time = #{record.endTime,jdbcType=TIMESTAMP},
       status = #{record.status,jdbcType=INTEGER},
-      click_count = #{record.click_count,jdbcType=INTEGER},
-      order_count = #{record.order_count,jdbcType=INTEGER},
+      click_count = #{record.clickCount,jdbcType=INTEGER},
+      order_count = #{record.orderCount,jdbcType=INTEGER},
       url = #{record.url,jdbcType=VARCHAR},
       note = #{record.note,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER}
@@ -276,20 +276,20 @@
       <if test="pic != null">
         pic = #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="start_time != null">
-        start_time = #{start_time,jdbcType=TIMESTAMP},
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="end_time != null">
-        end_time = #{end_time,jdbcType=TIMESTAMP},
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
       </if>
-      <if test="click_count != null">
-        click_count = #{click_count,jdbcType=INTEGER},
+      <if test="clickCount != null">
+        click_count = #{clickCount,jdbcType=INTEGER},
       </if>
-      <if test="order_count != null">
-        order_count = #{order_count,jdbcType=INTEGER},
+      <if test="orderCount != null">
+        order_count = #{orderCount,jdbcType=INTEGER},
       </if>
       <if test="url != null">
         url = #{url,jdbcType=VARCHAR},
@@ -308,11 +308,11 @@
     set name = #{name,jdbcType=VARCHAR},
       type = #{type,jdbcType=INTEGER},
       pic = #{pic,jdbcType=VARCHAR},
-      start_time = #{start_time,jdbcType=TIMESTAMP},
-      end_time = #{end_time,jdbcType=TIMESTAMP},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
       status = #{status,jdbcType=INTEGER},
-      click_count = #{click_count,jdbcType=INTEGER},
-      order_count = #{order_count,jdbcType=INTEGER},
+      click_count = #{clickCount,jdbcType=INTEGER},
+      order_count = #{orderCount,jdbcType=INTEGER},
       url = #{url,jdbcType=VARCHAR},
       note = #{note,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER}

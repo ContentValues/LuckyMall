@@ -164,243 +164,243 @@ public class UmsIntegrationConsumeSettingExample {
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountIsNull() {
+        public Criteria andDeductionPerAmountIsNull() {
             addCriterion("deduction_per_amount is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountIsNotNull() {
+        public Criteria andDeductionPerAmountIsNotNull() {
             addCriterion("deduction_per_amount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountEqualTo(Integer value) {
-            addCriterion("deduction_per_amount =", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountEqualTo(Integer value) {
+            addCriterion("deduction_per_amount =", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountNotEqualTo(Integer value) {
-            addCriterion("deduction_per_amount <>", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountNotEqualTo(Integer value) {
+            addCriterion("deduction_per_amount <>", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountGreaterThan(Integer value) {
-            addCriterion("deduction_per_amount >", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountGreaterThan(Integer value) {
+            addCriterion("deduction_per_amount >", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("deduction_per_amount >=", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("deduction_per_amount >=", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountLessThan(Integer value) {
-            addCriterion("deduction_per_amount <", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountLessThan(Integer value) {
+            addCriterion("deduction_per_amount <", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountLessThanOrEqualTo(Integer value) {
-            addCriterion("deduction_per_amount <=", value, "deduction_per_amount");
+        public Criteria andDeductionPerAmountLessThanOrEqualTo(Integer value) {
+            addCriterion("deduction_per_amount <=", value, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountIn(List<Integer> values) {
-            addCriterion("deduction_per_amount in", values, "deduction_per_amount");
+        public Criteria andDeductionPerAmountIn(List<Integer> values) {
+            addCriterion("deduction_per_amount in", values, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountNotIn(List<Integer> values) {
-            addCriterion("deduction_per_amount not in", values, "deduction_per_amount");
+        public Criteria andDeductionPerAmountNotIn(List<Integer> values) {
+            addCriterion("deduction_per_amount not in", values, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountBetween(Integer value1, Integer value2) {
-            addCriterion("deduction_per_amount between", value1, value2, "deduction_per_amount");
+        public Criteria andDeductionPerAmountBetween(Integer value1, Integer value2) {
+            addCriterion("deduction_per_amount between", value1, value2, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDeduction_per_amountNotBetween(Integer value1, Integer value2) {
-            addCriterion("deduction_per_amount not between", value1, value2, "deduction_per_amount");
+        public Criteria andDeductionPerAmountNotBetween(Integer value1, Integer value2) {
+            addCriterion("deduction_per_amount not between", value1, value2, "deductionPerAmount");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderIsNull() {
+        public Criteria andMaxPercentPerOrderIsNull() {
             addCriterion("max_percent_per_order is null");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderIsNotNull() {
+        public Criteria andMaxPercentPerOrderIsNotNull() {
             addCriterion("max_percent_per_order is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderEqualTo(Integer value) {
-            addCriterion("max_percent_per_order =", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderEqualTo(Integer value) {
+            addCriterion("max_percent_per_order =", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderNotEqualTo(Integer value) {
-            addCriterion("max_percent_per_order <>", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderNotEqualTo(Integer value) {
+            addCriterion("max_percent_per_order <>", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderGreaterThan(Integer value) {
-            addCriterion("max_percent_per_order >", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderGreaterThan(Integer value) {
+            addCriterion("max_percent_per_order >", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderGreaterThanOrEqualTo(Integer value) {
-            addCriterion("max_percent_per_order >=", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderGreaterThanOrEqualTo(Integer value) {
+            addCriterion("max_percent_per_order >=", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderLessThan(Integer value) {
-            addCriterion("max_percent_per_order <", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderLessThan(Integer value) {
+            addCriterion("max_percent_per_order <", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderLessThanOrEqualTo(Integer value) {
-            addCriterion("max_percent_per_order <=", value, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderLessThanOrEqualTo(Integer value) {
+            addCriterion("max_percent_per_order <=", value, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderIn(List<Integer> values) {
-            addCriterion("max_percent_per_order in", values, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderIn(List<Integer> values) {
+            addCriterion("max_percent_per_order in", values, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderNotIn(List<Integer> values) {
-            addCriterion("max_percent_per_order not in", values, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderNotIn(List<Integer> values) {
+            addCriterion("max_percent_per_order not in", values, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderBetween(Integer value1, Integer value2) {
-            addCriterion("max_percent_per_order between", value1, value2, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderBetween(Integer value1, Integer value2) {
+            addCriterion("max_percent_per_order between", value1, value2, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andMax_percent_per_orderNotBetween(Integer value1, Integer value2) {
-            addCriterion("max_percent_per_order not between", value1, value2, "max_percent_per_order");
+        public Criteria andMaxPercentPerOrderNotBetween(Integer value1, Integer value2) {
+            addCriterion("max_percent_per_order not between", value1, value2, "maxPercentPerOrder");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitIsNull() {
+        public Criteria andUseUnitIsNull() {
             addCriterion("use_unit is null");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitIsNotNull() {
+        public Criteria andUseUnitIsNotNull() {
             addCriterion("use_unit is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitEqualTo(Integer value) {
-            addCriterion("use_unit =", value, "use_unit");
+        public Criteria andUseUnitEqualTo(Integer value) {
+            addCriterion("use_unit =", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitNotEqualTo(Integer value) {
-            addCriterion("use_unit <>", value, "use_unit");
+        public Criteria andUseUnitNotEqualTo(Integer value) {
+            addCriterion("use_unit <>", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitGreaterThan(Integer value) {
-            addCriterion("use_unit >", value, "use_unit");
+        public Criteria andUseUnitGreaterThan(Integer value) {
+            addCriterion("use_unit >", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitGreaterThanOrEqualTo(Integer value) {
-            addCriterion("use_unit >=", value, "use_unit");
+        public Criteria andUseUnitGreaterThanOrEqualTo(Integer value) {
+            addCriterion("use_unit >=", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitLessThan(Integer value) {
-            addCriterion("use_unit <", value, "use_unit");
+        public Criteria andUseUnitLessThan(Integer value) {
+            addCriterion("use_unit <", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitLessThanOrEqualTo(Integer value) {
-            addCriterion("use_unit <=", value, "use_unit");
+        public Criteria andUseUnitLessThanOrEqualTo(Integer value) {
+            addCriterion("use_unit <=", value, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitIn(List<Integer> values) {
-            addCriterion("use_unit in", values, "use_unit");
+        public Criteria andUseUnitIn(List<Integer> values) {
+            addCriterion("use_unit in", values, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitNotIn(List<Integer> values) {
-            addCriterion("use_unit not in", values, "use_unit");
+        public Criteria andUseUnitNotIn(List<Integer> values) {
+            addCriterion("use_unit not in", values, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitBetween(Integer value1, Integer value2) {
-            addCriterion("use_unit between", value1, value2, "use_unit");
+        public Criteria andUseUnitBetween(Integer value1, Integer value2) {
+            addCriterion("use_unit between", value1, value2, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andUse_unitNotBetween(Integer value1, Integer value2) {
-            addCriterion("use_unit not between", value1, value2, "use_unit");
+        public Criteria andUseUnitNotBetween(Integer value1, Integer value2) {
+            addCriterion("use_unit not between", value1, value2, "useUnit");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusIsNull() {
+        public Criteria andCouponStatusIsNull() {
             addCriterion("coupon_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusIsNotNull() {
+        public Criteria andCouponStatusIsNotNull() {
             addCriterion("coupon_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusEqualTo(Integer value) {
-            addCriterion("coupon_status =", value, "coupon_status");
+        public Criteria andCouponStatusEqualTo(Integer value) {
+            addCriterion("coupon_status =", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusNotEqualTo(Integer value) {
-            addCriterion("coupon_status <>", value, "coupon_status");
+        public Criteria andCouponStatusNotEqualTo(Integer value) {
+            addCriterion("coupon_status <>", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusGreaterThan(Integer value) {
-            addCriterion("coupon_status >", value, "coupon_status");
+        public Criteria andCouponStatusGreaterThan(Integer value) {
+            addCriterion("coupon_status >", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusGreaterThanOrEqualTo(Integer value) {
-            addCriterion("coupon_status >=", value, "coupon_status");
+        public Criteria andCouponStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("coupon_status >=", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusLessThan(Integer value) {
-            addCriterion("coupon_status <", value, "coupon_status");
+        public Criteria andCouponStatusLessThan(Integer value) {
+            addCriterion("coupon_status <", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusLessThanOrEqualTo(Integer value) {
-            addCriterion("coupon_status <=", value, "coupon_status");
+        public Criteria andCouponStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("coupon_status <=", value, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusIn(List<Integer> values) {
-            addCriterion("coupon_status in", values, "coupon_status");
+        public Criteria andCouponStatusIn(List<Integer> values) {
+            addCriterion("coupon_status in", values, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusNotIn(List<Integer> values) {
-            addCriterion("coupon_status not in", values, "coupon_status");
+        public Criteria andCouponStatusNotIn(List<Integer> values) {
+            addCriterion("coupon_status not in", values, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusBetween(Integer value1, Integer value2) {
-            addCriterion("coupon_status between", value1, value2, "coupon_status");
+        public Criteria andCouponStatusBetween(Integer value1, Integer value2) {
+            addCriterion("coupon_status between", value1, value2, "couponStatus");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_statusNotBetween(Integer value1, Integer value2) {
-            addCriterion("coupon_status not between", value1, value2, "coupon_status");
+        public Criteria andCouponStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("coupon_status not between", value1, value2, "couponStatus");
             return (Criteria) this;
         }
     }

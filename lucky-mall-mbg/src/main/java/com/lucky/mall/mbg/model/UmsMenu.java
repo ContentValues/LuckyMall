@@ -8,10 +8,10 @@ public class UmsMenu implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "父级ID")
-    private Long parent_id;
+    private Long parentId;
 
     @ApiModelProperty(value = "创建时间")
-    private Date create_time;
+    private Date createTime;
 
     @ApiModelProperty(value = "菜单名称")
     private String title;
@@ -41,20 +41,20 @@ public class UmsMenu implements Serializable {
         this.id = id;
     }
 
-    public Long getParent_id() {
-        return parent_id;
+    public Long getParentId() {
+        return parentId;
     }
 
-    public void setParent_id(Long parent_id) {
-        this.parent_id = parent_id;
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public String getTitle() {
@@ -112,8 +112,8 @@ public class UmsMenu implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", parent_id=").append(parent_id);
-        sb.append(", create_time=").append(create_time);
+        sb.append(", parentId=").append(parentId);
+        sb.append(", createTime=").append(createTime);
         sb.append(", title=").append(title);
         sb.append(", level=").append(level);
         sb.append(", sort=").append(sort);

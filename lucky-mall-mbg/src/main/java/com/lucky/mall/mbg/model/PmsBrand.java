@@ -9,29 +9,29 @@ public class PmsBrand implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "首字母")
-    private String first_letter;
+    private String firstLetter;
 
     private Integer sort;
 
     @ApiModelProperty(value = "是否为品牌制造商：0->不是；1->是")
-    private Integer factory_status;
+    private Integer factoryStatus;
 
-    private Integer show_status;
+    private Integer showStatus;
 
     @ApiModelProperty(value = "产品数量")
-    private Integer product_count;
+    private Integer productCount;
 
     @ApiModelProperty(value = "产品评论数量")
-    private Integer product_comment_count;
+    private Integer productCommentCount;
 
     @ApiModelProperty(value = "品牌logo")
     private String logo;
 
     @ApiModelProperty(value = "专区大图")
-    private String big_pic;
+    private String bigPic;
 
     @ApiModelProperty(value = "品牌故事")
-    private String brand_story;
+    private String brandStory;
 
     private static final long serialVersionUID = 1L;
 
@@ -51,12 +51,12 @@ public class PmsBrand implements Serializable {
         this.name = name;
     }
 
-    public String getFirst_letter() {
-        return first_letter;
+    public String getFirstLetter() {
+        return firstLetter;
     }
 
-    public void setFirst_letter(String first_letter) {
-        this.first_letter = first_letter;
+    public void setFirstLetter(String firstLetter) {
+        this.firstLetter = firstLetter;
     }
 
     public Integer getSort() {
@@ -67,36 +67,36 @@ public class PmsBrand implements Serializable {
         this.sort = sort;
     }
 
-    public Integer getFactory_status() {
-        return factory_status;
+    public Integer getFactoryStatus() {
+        return factoryStatus;
     }
 
-    public void setFactory_status(Integer factory_status) {
-        this.factory_status = factory_status;
+    public void setFactoryStatus(Integer factoryStatus) {
+        this.factoryStatus = factoryStatus;
     }
 
-    public Integer getShow_status() {
-        return show_status;
+    public Integer getShowStatus() {
+        return showStatus;
     }
 
-    public void setShow_status(Integer show_status) {
-        this.show_status = show_status;
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
     }
 
-    public Integer getProduct_count() {
-        return product_count;
+    public Integer getProductCount() {
+        return productCount;
     }
 
-    public void setProduct_count(Integer product_count) {
-        this.product_count = product_count;
+    public void setProductCount(Integer productCount) {
+        this.productCount = productCount;
     }
 
-    public Integer getProduct_comment_count() {
-        return product_comment_count;
+    public Integer getProductCommentCount() {
+        return productCommentCount;
     }
 
-    public void setProduct_comment_count(Integer product_comment_count) {
-        this.product_comment_count = product_comment_count;
+    public void setProductCommentCount(Integer productCommentCount) {
+        this.productCommentCount = productCommentCount;
     }
 
     public String getLogo() {
@@ -107,20 +107,20 @@ public class PmsBrand implements Serializable {
         this.logo = logo;
     }
 
-    public String getBig_pic() {
-        return big_pic;
+    public String getBigPic() {
+        return bigPic;
     }
 
-    public void setBig_pic(String big_pic) {
-        this.big_pic = big_pic;
+    public void setBigPic(String bigPic) {
+        this.bigPic = bigPic;
     }
 
-    public String getBrand_story() {
-        return brand_story;
+    public String getBrandStory() {
+        return brandStory;
     }
 
-    public void setBrand_story(String brand_story) {
-        this.brand_story = brand_story;
+    public void setBrandStory(String brandStory) {
+        this.brandStory = brandStory;
     }
 
     @Override
@@ -131,15 +131,15 @@ public class PmsBrand implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", first_letter=").append(first_letter);
+        sb.append(", firstLetter=").append(firstLetter);
         sb.append(", sort=").append(sort);
-        sb.append(", factory_status=").append(factory_status);
-        sb.append(", show_status=").append(show_status);
-        sb.append(", product_count=").append(product_count);
-        sb.append(", product_comment_count=").append(product_comment_count);
+        sb.append(", factoryStatus=").append(factoryStatus);
+        sb.append(", showStatus=").append(showStatus);
+        sb.append(", productCount=").append(productCount);
+        sb.append(", productCommentCount=").append(productCommentCount);
         sb.append(", logo=").append(logo);
-        sb.append(", big_pic=").append(big_pic);
-        sb.append(", brand_story=").append(brand_story);
+        sb.append(", bigPic=").append(bigPic);
+        sb.append(", brandStory=").append(brandStory);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

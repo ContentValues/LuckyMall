@@ -165,193 +165,193 @@ public class PmsProductVertifyRecordExample {
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idIsNull() {
+        public Criteria andProductIdIsNull() {
             addCriterion("product_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idIsNotNull() {
+        public Criteria andProductIdIsNotNull() {
             addCriterion("product_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idEqualTo(Long value) {
-            addCriterion("product_id =", value, "product_id");
+        public Criteria andProductIdEqualTo(Long value) {
+            addCriterion("product_id =", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idNotEqualTo(Long value) {
-            addCriterion("product_id <>", value, "product_id");
+        public Criteria andProductIdNotEqualTo(Long value) {
+            addCriterion("product_id <>", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idGreaterThan(Long value) {
-            addCriterion("product_id >", value, "product_id");
+        public Criteria andProductIdGreaterThan(Long value) {
+            addCriterion("product_id >", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("product_id >=", value, "product_id");
+        public Criteria andProductIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("product_id >=", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idLessThan(Long value) {
-            addCriterion("product_id <", value, "product_id");
+        public Criteria andProductIdLessThan(Long value) {
+            addCriterion("product_id <", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idLessThanOrEqualTo(Long value) {
-            addCriterion("product_id <=", value, "product_id");
+        public Criteria andProductIdLessThanOrEqualTo(Long value) {
+            addCriterion("product_id <=", value, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idIn(List<Long> values) {
-            addCriterion("product_id in", values, "product_id");
+        public Criteria andProductIdIn(List<Long> values) {
+            addCriterion("product_id in", values, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idNotIn(List<Long> values) {
-            addCriterion("product_id not in", values, "product_id");
+        public Criteria andProductIdNotIn(List<Long> values) {
+            addCriterion("product_id not in", values, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idBetween(Long value1, Long value2) {
-            addCriterion("product_id between", value1, value2, "product_id");
+        public Criteria andProductIdBetween(Long value1, Long value2) {
+            addCriterion("product_id between", value1, value2, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_idNotBetween(Long value1, Long value2) {
-            addCriterion("product_id not between", value1, value2, "product_id");
+        public Criteria andProductIdNotBetween(Long value1, Long value2) {
+            addCriterion("product_id not between", value1, value2, "productId");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNull() {
+        public Criteria andCreateTimeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNotNull() {
+        public Criteria andCreateTimeIsNotNull() {
             addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeEqualTo(Date value) {
-            addCriterion("create_time =", value, "create_time");
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "create_time");
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "create_time");
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "create_time");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThan(Date value) {
-            addCriterion("create_time <", value, "create_time");
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "create_time");
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIn(List<Date> values) {
-            addCriterion("create_time in", values, "create_time");
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "create_time");
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "create_time");
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "create_time");
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manIsNull() {
+        public Criteria andVertifyManIsNull() {
             addCriterion("vertify_man is null");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manIsNotNull() {
+        public Criteria andVertifyManIsNotNull() {
             addCriterion("vertify_man is not null");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manEqualTo(String value) {
-            addCriterion("vertify_man =", value, "vertify_man");
+        public Criteria andVertifyManEqualTo(String value) {
+            addCriterion("vertify_man =", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manNotEqualTo(String value) {
-            addCriterion("vertify_man <>", value, "vertify_man");
+        public Criteria andVertifyManNotEqualTo(String value) {
+            addCriterion("vertify_man <>", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manGreaterThan(String value) {
-            addCriterion("vertify_man >", value, "vertify_man");
+        public Criteria andVertifyManGreaterThan(String value) {
+            addCriterion("vertify_man >", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manGreaterThanOrEqualTo(String value) {
-            addCriterion("vertify_man >=", value, "vertify_man");
+        public Criteria andVertifyManGreaterThanOrEqualTo(String value) {
+            addCriterion("vertify_man >=", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manLessThan(String value) {
-            addCriterion("vertify_man <", value, "vertify_man");
+        public Criteria andVertifyManLessThan(String value) {
+            addCriterion("vertify_man <", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manLessThanOrEqualTo(String value) {
-            addCriterion("vertify_man <=", value, "vertify_man");
+        public Criteria andVertifyManLessThanOrEqualTo(String value) {
+            addCriterion("vertify_man <=", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manLike(String value) {
-            addCriterion("vertify_man like", value, "vertify_man");
+        public Criteria andVertifyManLike(String value) {
+            addCriterion("vertify_man like", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manNotLike(String value) {
-            addCriterion("vertify_man not like", value, "vertify_man");
+        public Criteria andVertifyManNotLike(String value) {
+            addCriterion("vertify_man not like", value, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manIn(List<String> values) {
-            addCriterion("vertify_man in", values, "vertify_man");
+        public Criteria andVertifyManIn(List<String> values) {
+            addCriterion("vertify_man in", values, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manNotIn(List<String> values) {
-            addCriterion("vertify_man not in", values, "vertify_man");
+        public Criteria andVertifyManNotIn(List<String> values) {
+            addCriterion("vertify_man not in", values, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manBetween(String value1, String value2) {
-            addCriterion("vertify_man between", value1, value2, "vertify_man");
+        public Criteria andVertifyManBetween(String value1, String value2) {
+            addCriterion("vertify_man between", value1, value2, "vertifyMan");
             return (Criteria) this;
         }
 
-        public Criteria andVertify_manNotBetween(String value1, String value2) {
-            addCriterion("vertify_man not between", value1, value2, "vertify_man");
+        public Criteria andVertifyManNotBetween(String value1, String value2) {
+            addCriterion("vertify_man not between", value1, value2, "vertifyMan");
             return (Criteria) this;
         }
 

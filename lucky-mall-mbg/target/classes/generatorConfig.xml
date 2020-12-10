@@ -38,8 +38,8 @@
                              targetProject="lucky-mall-mbg/src/main/java"/>
         <!--生成全部表tableName设为%-->
         <table tableName="%">
-<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
-            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+<!--            <property name="useActualColumnNames" value="true"/>-->
         </table>
 <!--        <table tableName="zlpg_value" enableSelectByExample="false"-->
 <!--               enableDeleteByExample="false" enableCountByExample="false"-->

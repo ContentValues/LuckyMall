@@ -164,303 +164,303 @@ public class OmsOrderSettingExample {
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeIsNull() {
+        public Criteria andFlashOrderOvertimeIsNull() {
             addCriterion("flash_order_overtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeIsNotNull() {
+        public Criteria andFlashOrderOvertimeIsNotNull() {
             addCriterion("flash_order_overtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeEqualTo(Integer value) {
-            addCriterion("flash_order_overtime =", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeEqualTo(Integer value) {
+            addCriterion("flash_order_overtime =", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeNotEqualTo(Integer value) {
-            addCriterion("flash_order_overtime <>", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeNotEqualTo(Integer value) {
+            addCriterion("flash_order_overtime <>", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeGreaterThan(Integer value) {
-            addCriterion("flash_order_overtime >", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeGreaterThan(Integer value) {
+            addCriterion("flash_order_overtime >", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("flash_order_overtime >=", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("flash_order_overtime >=", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeLessThan(Integer value) {
-            addCriterion("flash_order_overtime <", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeLessThan(Integer value) {
+            addCriterion("flash_order_overtime <", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeLessThanOrEqualTo(Integer value) {
-            addCriterion("flash_order_overtime <=", value, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeLessThanOrEqualTo(Integer value) {
+            addCriterion("flash_order_overtime <=", value, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeIn(List<Integer> values) {
-            addCriterion("flash_order_overtime in", values, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeIn(List<Integer> values) {
+            addCriterion("flash_order_overtime in", values, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeNotIn(List<Integer> values) {
-            addCriterion("flash_order_overtime not in", values, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeNotIn(List<Integer> values) {
+            addCriterion("flash_order_overtime not in", values, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeBetween(Integer value1, Integer value2) {
-            addCriterion("flash_order_overtime between", value1, value2, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeBetween(Integer value1, Integer value2) {
+            addCriterion("flash_order_overtime between", value1, value2, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFlash_order_overtimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("flash_order_overtime not between", value1, value2, "flash_order_overtime");
+        public Criteria andFlashOrderOvertimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("flash_order_overtime not between", value1, value2, "flashOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeIsNull() {
+        public Criteria andNormalOrderOvertimeIsNull() {
             addCriterion("normal_order_overtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeIsNotNull() {
+        public Criteria andNormalOrderOvertimeIsNotNull() {
             addCriterion("normal_order_overtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeEqualTo(Integer value) {
-            addCriterion("normal_order_overtime =", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeEqualTo(Integer value) {
+            addCriterion("normal_order_overtime =", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeNotEqualTo(Integer value) {
-            addCriterion("normal_order_overtime <>", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeNotEqualTo(Integer value) {
+            addCriterion("normal_order_overtime <>", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeGreaterThan(Integer value) {
-            addCriterion("normal_order_overtime >", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeGreaterThan(Integer value) {
+            addCriterion("normal_order_overtime >", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("normal_order_overtime >=", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("normal_order_overtime >=", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeLessThan(Integer value) {
-            addCriterion("normal_order_overtime <", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeLessThan(Integer value) {
+            addCriterion("normal_order_overtime <", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeLessThanOrEqualTo(Integer value) {
-            addCriterion("normal_order_overtime <=", value, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeLessThanOrEqualTo(Integer value) {
+            addCriterion("normal_order_overtime <=", value, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeIn(List<Integer> values) {
-            addCriterion("normal_order_overtime in", values, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeIn(List<Integer> values) {
+            addCriterion("normal_order_overtime in", values, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeNotIn(List<Integer> values) {
-            addCriterion("normal_order_overtime not in", values, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeNotIn(List<Integer> values) {
+            addCriterion("normal_order_overtime not in", values, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeBetween(Integer value1, Integer value2) {
-            addCriterion("normal_order_overtime between", value1, value2, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeBetween(Integer value1, Integer value2) {
+            addCriterion("normal_order_overtime between", value1, value2, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andNormal_order_overtimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("normal_order_overtime not between", value1, value2, "normal_order_overtime");
+        public Criteria andNormalOrderOvertimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("normal_order_overtime not between", value1, value2, "normalOrderOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeIsNull() {
+        public Criteria andConfirmOvertimeIsNull() {
             addCriterion("confirm_overtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeIsNotNull() {
+        public Criteria andConfirmOvertimeIsNotNull() {
             addCriterion("confirm_overtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeEqualTo(Integer value) {
-            addCriterion("confirm_overtime =", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeEqualTo(Integer value) {
+            addCriterion("confirm_overtime =", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeNotEqualTo(Integer value) {
-            addCriterion("confirm_overtime <>", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeNotEqualTo(Integer value) {
+            addCriterion("confirm_overtime <>", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeGreaterThan(Integer value) {
-            addCriterion("confirm_overtime >", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeGreaterThan(Integer value) {
+            addCriterion("confirm_overtime >", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("confirm_overtime >=", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("confirm_overtime >=", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeLessThan(Integer value) {
-            addCriterion("confirm_overtime <", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeLessThan(Integer value) {
+            addCriterion("confirm_overtime <", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeLessThanOrEqualTo(Integer value) {
-            addCriterion("confirm_overtime <=", value, "confirm_overtime");
+        public Criteria andConfirmOvertimeLessThanOrEqualTo(Integer value) {
+            addCriterion("confirm_overtime <=", value, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeIn(List<Integer> values) {
-            addCriterion("confirm_overtime in", values, "confirm_overtime");
+        public Criteria andConfirmOvertimeIn(List<Integer> values) {
+            addCriterion("confirm_overtime in", values, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeNotIn(List<Integer> values) {
-            addCriterion("confirm_overtime not in", values, "confirm_overtime");
+        public Criteria andConfirmOvertimeNotIn(List<Integer> values) {
+            addCriterion("confirm_overtime not in", values, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeBetween(Integer value1, Integer value2) {
-            addCriterion("confirm_overtime between", value1, value2, "confirm_overtime");
+        public Criteria andConfirmOvertimeBetween(Integer value1, Integer value2) {
+            addCriterion("confirm_overtime between", value1, value2, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andConfirm_overtimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("confirm_overtime not between", value1, value2, "confirm_overtime");
+        public Criteria andConfirmOvertimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("confirm_overtime not between", value1, value2, "confirmOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeIsNull() {
+        public Criteria andFinishOvertimeIsNull() {
             addCriterion("finish_overtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeIsNotNull() {
+        public Criteria andFinishOvertimeIsNotNull() {
             addCriterion("finish_overtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeEqualTo(Integer value) {
-            addCriterion("finish_overtime =", value, "finish_overtime");
+        public Criteria andFinishOvertimeEqualTo(Integer value) {
+            addCriterion("finish_overtime =", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeNotEqualTo(Integer value) {
-            addCriterion("finish_overtime <>", value, "finish_overtime");
+        public Criteria andFinishOvertimeNotEqualTo(Integer value) {
+            addCriterion("finish_overtime <>", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeGreaterThan(Integer value) {
-            addCriterion("finish_overtime >", value, "finish_overtime");
+        public Criteria andFinishOvertimeGreaterThan(Integer value) {
+            addCriterion("finish_overtime >", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("finish_overtime >=", value, "finish_overtime");
+        public Criteria andFinishOvertimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("finish_overtime >=", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeLessThan(Integer value) {
-            addCriterion("finish_overtime <", value, "finish_overtime");
+        public Criteria andFinishOvertimeLessThan(Integer value) {
+            addCriterion("finish_overtime <", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeLessThanOrEqualTo(Integer value) {
-            addCriterion("finish_overtime <=", value, "finish_overtime");
+        public Criteria andFinishOvertimeLessThanOrEqualTo(Integer value) {
+            addCriterion("finish_overtime <=", value, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeIn(List<Integer> values) {
-            addCriterion("finish_overtime in", values, "finish_overtime");
+        public Criteria andFinishOvertimeIn(List<Integer> values) {
+            addCriterion("finish_overtime in", values, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeNotIn(List<Integer> values) {
-            addCriterion("finish_overtime not in", values, "finish_overtime");
+        public Criteria andFinishOvertimeNotIn(List<Integer> values) {
+            addCriterion("finish_overtime not in", values, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeBetween(Integer value1, Integer value2) {
-            addCriterion("finish_overtime between", value1, value2, "finish_overtime");
+        public Criteria andFinishOvertimeBetween(Integer value1, Integer value2) {
+            addCriterion("finish_overtime between", value1, value2, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andFinish_overtimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("finish_overtime not between", value1, value2, "finish_overtime");
+        public Criteria andFinishOvertimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("finish_overtime not between", value1, value2, "finishOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeIsNull() {
+        public Criteria andCommentOvertimeIsNull() {
             addCriterion("comment_overtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeIsNotNull() {
+        public Criteria andCommentOvertimeIsNotNull() {
             addCriterion("comment_overtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeEqualTo(Integer value) {
-            addCriterion("comment_overtime =", value, "comment_overtime");
+        public Criteria andCommentOvertimeEqualTo(Integer value) {
+            addCriterion("comment_overtime =", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeNotEqualTo(Integer value) {
-            addCriterion("comment_overtime <>", value, "comment_overtime");
+        public Criteria andCommentOvertimeNotEqualTo(Integer value) {
+            addCriterion("comment_overtime <>", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeGreaterThan(Integer value) {
-            addCriterion("comment_overtime >", value, "comment_overtime");
+        public Criteria andCommentOvertimeGreaterThan(Integer value) {
+            addCriterion("comment_overtime >", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("comment_overtime >=", value, "comment_overtime");
+        public Criteria andCommentOvertimeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("comment_overtime >=", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeLessThan(Integer value) {
-            addCriterion("comment_overtime <", value, "comment_overtime");
+        public Criteria andCommentOvertimeLessThan(Integer value) {
+            addCriterion("comment_overtime <", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeLessThanOrEqualTo(Integer value) {
-            addCriterion("comment_overtime <=", value, "comment_overtime");
+        public Criteria andCommentOvertimeLessThanOrEqualTo(Integer value) {
+            addCriterion("comment_overtime <=", value, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeIn(List<Integer> values) {
-            addCriterion("comment_overtime in", values, "comment_overtime");
+        public Criteria andCommentOvertimeIn(List<Integer> values) {
+            addCriterion("comment_overtime in", values, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeNotIn(List<Integer> values) {
-            addCriterion("comment_overtime not in", values, "comment_overtime");
+        public Criteria andCommentOvertimeNotIn(List<Integer> values) {
+            addCriterion("comment_overtime not in", values, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeBetween(Integer value1, Integer value2) {
-            addCriterion("comment_overtime between", value1, value2, "comment_overtime");
+        public Criteria andCommentOvertimeBetween(Integer value1, Integer value2) {
+            addCriterion("comment_overtime between", value1, value2, "commentOvertime");
             return (Criteria) this;
         }
 
-        public Criteria andComment_overtimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("comment_overtime not between", value1, value2, "comment_overtime");
+        public Criteria andCommentOvertimeNotBetween(Integer value1, Integer value2) {
+            addCriterion("comment_overtime not between", value1, value2, "commentOvertime");
             return (Criteria) this;
         }
     }

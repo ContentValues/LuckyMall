@@ -84,7 +84,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     public UmsAdmin register(UmsAdminParam umsAdminParam) {
         UmsAdmin umsAdmin = new UmsAdmin();
         BeanUtils.copyProperties(umsAdminParam, umsAdmin);
-        umsAdmin.setCreate_time(new Date());
+        umsAdmin.setCreateTime(new Date());
         umsAdmin.setStatus(1);
         //查询是否有相同用户名的用户
         UmsAdminExample example = new UmsAdminExample();
@@ -133,12 +133,12 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         UmsAdmin admin = getAdminByUsername(username);
         if (admin == null) return;
         UmsAdminLoginLog loginLog = new UmsAdminLoginLog();
-        loginLog.setAdmin_id(admin.getId());
-        loginLog.setCreate_time(new Date());
+        loginLog.setAdminId(admin.getId());
+        loginLog.setCreateTime(new Date());
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         loginLog.setIp(request.getRemoteAddr());
-        loginLog.setUser_agent(UUID.randomUUID() + "");
+        loginLog.setUserAgent(UUID.randomUUID() + "");
         loginLogMapper.insert(loginLog);
     }
 
@@ -148,12 +148,12 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         if (admin == null) return;
         for(int i=0;i<10000;i++){
             UmsAdminLoginLog loginLog = new UmsAdminLoginLog();
-            loginLog.setAdmin_id(admin.getId());
-            loginLog.setCreate_time(new Date());
+            loginLog.setAdminId(admin.getId());
+            loginLog.setCreateTime(new Date());
             ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
             HttpServletRequest request = attributes.getRequest();
             loginLog.setIp(request.getRemoteAddr());
-            loginLog.setUser_agent(UUID.randomUUID() + "");
+            loginLog.setUserAgent(UUID.randomUUID() + "");
             loginLogMapper.insert(loginLog);
         }
     }
@@ -163,7 +163,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
      */
     private void updateLoginTimeByUsername(String username) {
         UmsAdmin record = new UmsAdmin();
-        record.setLogin_time(new Date());
+        record.setLoginTime(new Date());
         UmsAdminExample example = new UmsAdminExample();
         example.createCriteria().andUsernameEqualTo(username);
         adminMapper.updateByExampleSelective(record, example);
@@ -186,7 +186,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         UmsAdminExample.Criteria criteria = example.createCriteria();
         if (!StringUtils.isEmpty(keyword)) {
             criteria.andUsernameLike("%" + keyword + "%");
-            example.or(example.createCriteria().andNick_nameLike("%" + keyword + "%"));
+            example.or(example.createCriteria().andNickNameLike("%" + keyword + "%"));
         }
         return adminMapper.selectByExample(example);
     }
@@ -225,15 +225,15 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         int count = roleIds == null ? 0 : roleIds.size();
         //先删除原来的关系
         UmsAdminRoleRelationExample adminRoleRelationExample = new UmsAdminRoleRelationExample();
-        adminRoleRelationExample.createCriteria().andAdmin_idEqualTo(adminId);
+        adminRoleRelationExample.createCriteria().andAdminIdEqualTo(adminId);
         adminRoleRelationMapper.deleteByExample(adminRoleRelationExample);
         //建立新关系
         if (!CollectionUtils.isEmpty(roleIds)) {
             List<UmsAdminRoleRelation> list = new ArrayList<>();
             for (Long roleId : roleIds) {
                 UmsAdminRoleRelation roleRelation = new UmsAdminRoleRelation();
-                roleRelation.setAdmin_id(adminId);
-                roleRelation.setRole_id(roleId);
+                roleRelation.setAdminId(adminId);
+                roleRelation.setRoleId(roleId);
                 list.add(roleRelation);
             }
             adminRoleRelationDao.insertList(list);
@@ -264,7 +264,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     public int updatePermission(Long adminId, List<Long> permissionIds) {
         //删除原所有权限关系
         UmsAdminPermissionRelationExample relationExample = new UmsAdminPermissionRelationExample();
-        relationExample.createCriteria().andAdmin_idEqualTo(adminId);
+        relationExample.createCriteria().andAdminIdEqualTo(adminId);
         adminPermissionRelationMapper.deleteByExample(relationExample);
         //获取用户所有角色权限
         List<UmsPermission> permissionList = adminRoleRelationDao.getRolePermissionList(adminId);
@@ -289,9 +289,9 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     private List<UmsAdminPermissionRelation> convert(Long adminId, Integer type, List<Long> permissionIdList) {
         List<UmsAdminPermissionRelation> relationList = permissionIdList.stream().map(permissionId -> {
             UmsAdminPermissionRelation relation = new UmsAdminPermissionRelation();
-            relation.setAdmin_id(adminId);
+            relation.setAdminId(adminId);
             relation.setType(type);
-            relation.setPermission_id(permissionId);
+            relation.setPermissionId(permissionId);
             return relation;
         }).collect(Collectors.toList());
         return relationList;

@@ -8,35 +8,35 @@ import java.util.Date;
 public class PmsProduct implements Serializable {
     private Long id;
 
-    private Long brand_id;
+    private Long brandId;
 
-    private Long product_category_id;
+    private Long productCategoryId;
 
-    private Long feight_template_id;
+    private Long feightTemplateId;
 
-    private Long product_attribute_category_id;
+    private Long productAttributeCategoryId;
 
     private String name;
 
     private String pic;
 
     @ApiModelProperty(value = "货号")
-    private String product_sn;
+    private String productSn;
 
     @ApiModelProperty(value = "删除状态：0->未删除；1->已删除")
-    private Integer delete_status;
+    private Integer deleteStatus;
 
     @ApiModelProperty(value = "上架状态：0->下架；1->上架")
-    private Integer publish_status;
+    private Integer publishStatus;
 
     @ApiModelProperty(value = "新品状态:0->不是新品；1->新品")
-    private Integer new_status;
+    private Integer newStatus;
 
     @ApiModelProperty(value = "推荐状态；0->不推荐；1->推荐")
-    private Integer recommand_status;
+    private Integer recommandStatus;
 
     @ApiModelProperty(value = "审核状态：0->未审核；1->审核通过")
-    private Integer verify_status;
+    private Integer verifyStatus;
 
     @ApiModelProperty(value = "排序")
     private Integer sort;
@@ -47,28 +47,28 @@ public class PmsProduct implements Serializable {
     private BigDecimal price;
 
     @ApiModelProperty(value = "促销价格")
-    private BigDecimal promotion_price;
+    private BigDecimal promotionPrice;
 
     @ApiModelProperty(value = "赠送的成长值")
-    private Integer gift_growth;
+    private Integer giftGrowth;
 
     @ApiModelProperty(value = "赠送的积分")
-    private Integer gift_point;
+    private Integer giftPoint;
 
     @ApiModelProperty(value = "限制使用的积分数")
-    private Integer use_point_limit;
+    private Integer usePointLimit;
 
     @ApiModelProperty(value = "副标题")
-    private String sub_title;
+    private String subTitle;
 
     @ApiModelProperty(value = "市场价")
-    private BigDecimal original_price;
+    private BigDecimal originalPrice;
 
     @ApiModelProperty(value = "库存")
     private Integer stock;
 
     @ApiModelProperty(value = "库存预警值")
-    private Integer low_stock;
+    private Integer lowStock;
 
     @ApiModelProperty(value = "单位")
     private String unit;
@@ -77,48 +77,48 @@ public class PmsProduct implements Serializable {
     private BigDecimal weight;
 
     @ApiModelProperty(value = "是否为预告商品：0->不是；1->是")
-    private Integer preview_status;
+    private Integer previewStatus;
 
     @ApiModelProperty(value = "以逗号分割的产品服务：1->无忧退货；2->快速退款；3->免费包邮")
-    private String service_ids;
+    private String serviceIds;
 
     private String keywords;
 
     private String note;
 
     @ApiModelProperty(value = "画册图片，连产品图片限制为5张，以逗号分割")
-    private String album_pics;
+    private String albumPics;
 
-    private String detail_title;
+    private String detailTitle;
 
     @ApiModelProperty(value = "促销开始时间")
-    private Date promotion_start_time;
+    private Date promotionStartTime;
 
     @ApiModelProperty(value = "促销结束时间")
-    private Date promotion_end_time;
+    private Date promotionEndTime;
 
     @ApiModelProperty(value = "活动限购数量")
-    private Integer promotion_per_limit;
+    private Integer promotionPerLimit;
 
     @ApiModelProperty(value = "促销类型：0->没有促销使用原价;1->使用促销价；2->使用会员价；3->使用阶梯价格；4->使用满减价格；5->限时购")
-    private Integer promotion_type;
+    private Integer promotionType;
 
     @ApiModelProperty(value = "品牌名称")
-    private String brand_name;
+    private String brandName;
 
     @ApiModelProperty(value = "商品分类名称")
-    private String product_category_name;
+    private String productCategoryName;
 
     @ApiModelProperty(value = "商品描述")
     private String description;
 
-    private String detail_desc;
+    private String detailDesc;
 
     @ApiModelProperty(value = "产品详情网页内容")
-    private String detail_html;
+    private String detailHtml;
 
     @ApiModelProperty(value = "移动端网页详情")
-    private String detail_mobile_html;
+    private String detailMobileHtml;
 
     private static final long serialVersionUID = 1L;
 
@@ -130,36 +130,36 @@ public class PmsProduct implements Serializable {
         this.id = id;
     }
 
-    public Long getBrand_id() {
-        return brand_id;
+    public Long getBrandId() {
+        return brandId;
     }
 
-    public void setBrand_id(Long brand_id) {
-        this.brand_id = brand_id;
+    public void setBrandId(Long brandId) {
+        this.brandId = brandId;
     }
 
-    public Long getProduct_category_id() {
-        return product_category_id;
+    public Long getProductCategoryId() {
+        return productCategoryId;
     }
 
-    public void setProduct_category_id(Long product_category_id) {
-        this.product_category_id = product_category_id;
+    public void setProductCategoryId(Long productCategoryId) {
+        this.productCategoryId = productCategoryId;
     }
 
-    public Long getFeight_template_id() {
-        return feight_template_id;
+    public Long getFeightTemplateId() {
+        return feightTemplateId;
     }
 
-    public void setFeight_template_id(Long feight_template_id) {
-        this.feight_template_id = feight_template_id;
+    public void setFeightTemplateId(Long feightTemplateId) {
+        this.feightTemplateId = feightTemplateId;
     }
 
-    public Long getProduct_attribute_category_id() {
-        return product_attribute_category_id;
+    public Long getProductAttributeCategoryId() {
+        return productAttributeCategoryId;
     }
 
-    public void setProduct_attribute_category_id(Long product_attribute_category_id) {
-        this.product_attribute_category_id = product_attribute_category_id;
+    public void setProductAttributeCategoryId(Long productAttributeCategoryId) {
+        this.productAttributeCategoryId = productAttributeCategoryId;
     }
 
     public String getName() {
@@ -178,52 +178,52 @@ public class PmsProduct implements Serializable {
         this.pic = pic;
     }
 
-    public String getProduct_sn() {
-        return product_sn;
+    public String getProductSn() {
+        return productSn;
     }
 
-    public void setProduct_sn(String product_sn) {
-        this.product_sn = product_sn;
+    public void setProductSn(String productSn) {
+        this.productSn = productSn;
     }
 
-    public Integer getDelete_status() {
-        return delete_status;
+    public Integer getDeleteStatus() {
+        return deleteStatus;
     }
 
-    public void setDelete_status(Integer delete_status) {
-        this.delete_status = delete_status;
+    public void setDeleteStatus(Integer deleteStatus) {
+        this.deleteStatus = deleteStatus;
     }
 
-    public Integer getPublish_status() {
-        return publish_status;
+    public Integer getPublishStatus() {
+        return publishStatus;
     }
 
-    public void setPublish_status(Integer publish_status) {
-        this.publish_status = publish_status;
+    public void setPublishStatus(Integer publishStatus) {
+        this.publishStatus = publishStatus;
     }
 
-    public Integer getNew_status() {
-        return new_status;
+    public Integer getNewStatus() {
+        return newStatus;
     }
 
-    public void setNew_status(Integer new_status) {
-        this.new_status = new_status;
+    public void setNewStatus(Integer newStatus) {
+        this.newStatus = newStatus;
     }
 
-    public Integer getRecommand_status() {
-        return recommand_status;
+    public Integer getRecommandStatus() {
+        return recommandStatus;
     }
 
-    public void setRecommand_status(Integer recommand_status) {
-        this.recommand_status = recommand_status;
+    public void setRecommandStatus(Integer recommandStatus) {
+        this.recommandStatus = recommandStatus;
     }
 
-    public Integer getVerify_status() {
-        return verify_status;
+    public Integer getVerifyStatus() {
+        return verifyStatus;
     }
 
-    public void setVerify_status(Integer verify_status) {
-        this.verify_status = verify_status;
+    public void setVerifyStatus(Integer verifyStatus) {
+        this.verifyStatus = verifyStatus;
     }
 
     public Integer getSort() {
@@ -250,52 +250,52 @@ public class PmsProduct implements Serializable {
         this.price = price;
     }
 
-    public BigDecimal getPromotion_price() {
-        return promotion_price;
+    public BigDecimal getPromotionPrice() {
+        return promotionPrice;
     }
 
-    public void setPromotion_price(BigDecimal promotion_price) {
-        this.promotion_price = promotion_price;
+    public void setPromotionPrice(BigDecimal promotionPrice) {
+        this.promotionPrice = promotionPrice;
     }
 
-    public Integer getGift_growth() {
-        return gift_growth;
+    public Integer getGiftGrowth() {
+        return giftGrowth;
     }
 
-    public void setGift_growth(Integer gift_growth) {
-        this.gift_growth = gift_growth;
+    public void setGiftGrowth(Integer giftGrowth) {
+        this.giftGrowth = giftGrowth;
     }
 
-    public Integer getGift_point() {
-        return gift_point;
+    public Integer getGiftPoint() {
+        return giftPoint;
     }
 
-    public void setGift_point(Integer gift_point) {
-        this.gift_point = gift_point;
+    public void setGiftPoint(Integer giftPoint) {
+        this.giftPoint = giftPoint;
     }
 
-    public Integer getUse_point_limit() {
-        return use_point_limit;
+    public Integer getUsePointLimit() {
+        return usePointLimit;
     }
 
-    public void setUse_point_limit(Integer use_point_limit) {
-        this.use_point_limit = use_point_limit;
+    public void setUsePointLimit(Integer usePointLimit) {
+        this.usePointLimit = usePointLimit;
     }
 
-    public String getSub_title() {
-        return sub_title;
+    public String getSubTitle() {
+        return subTitle;
     }
 
-    public void setSub_title(String sub_title) {
-        this.sub_title = sub_title;
+    public void setSubTitle(String subTitle) {
+        this.subTitle = subTitle;
     }
 
-    public BigDecimal getOriginal_price() {
-        return original_price;
+    public BigDecimal getOriginalPrice() {
+        return originalPrice;
     }
 
-    public void setOriginal_price(BigDecimal original_price) {
-        this.original_price = original_price;
+    public void setOriginalPrice(BigDecimal originalPrice) {
+        this.originalPrice = originalPrice;
     }
 
     public Integer getStock() {
@@ -306,12 +306,12 @@ public class PmsProduct implements Serializable {
         this.stock = stock;
     }
 
-    public Integer getLow_stock() {
-        return low_stock;
+    public Integer getLowStock() {
+        return lowStock;
     }
 
-    public void setLow_stock(Integer low_stock) {
-        this.low_stock = low_stock;
+    public void setLowStock(Integer lowStock) {
+        this.lowStock = lowStock;
     }
 
     public String getUnit() {
@@ -330,20 +330,20 @@ public class PmsProduct implements Serializable {
         this.weight = weight;
     }
 
-    public Integer getPreview_status() {
-        return preview_status;
+    public Integer getPreviewStatus() {
+        return previewStatus;
     }
 
-    public void setPreview_status(Integer preview_status) {
-        this.preview_status = preview_status;
+    public void setPreviewStatus(Integer previewStatus) {
+        this.previewStatus = previewStatus;
     }
 
-    public String getService_ids() {
-        return service_ids;
+    public String getServiceIds() {
+        return serviceIds;
     }
 
-    public void setService_ids(String service_ids) {
-        this.service_ids = service_ids;
+    public void setServiceIds(String serviceIds) {
+        this.serviceIds = serviceIds;
     }
 
     public String getKeywords() {
@@ -362,68 +362,68 @@ public class PmsProduct implements Serializable {
         this.note = note;
     }
 
-    public String getAlbum_pics() {
-        return album_pics;
+    public String getAlbumPics() {
+        return albumPics;
     }
 
-    public void setAlbum_pics(String album_pics) {
-        this.album_pics = album_pics;
+    public void setAlbumPics(String albumPics) {
+        this.albumPics = albumPics;
     }
 
-    public String getDetail_title() {
-        return detail_title;
+    public String getDetailTitle() {
+        return detailTitle;
     }
 
-    public void setDetail_title(String detail_title) {
-        this.detail_title = detail_title;
+    public void setDetailTitle(String detailTitle) {
+        this.detailTitle = detailTitle;
     }
 
-    public Date getPromotion_start_time() {
-        return promotion_start_time;
+    public Date getPromotionStartTime() {
+        return promotionStartTime;
     }
 
-    public void setPromotion_start_time(Date promotion_start_time) {
-        this.promotion_start_time = promotion_start_time;
+    public void setPromotionStartTime(Date promotionStartTime) {
+        this.promotionStartTime = promotionStartTime;
     }
 
-    public Date getPromotion_end_time() {
-        return promotion_end_time;
+    public Date getPromotionEndTime() {
+        return promotionEndTime;
     }
 
-    public void setPromotion_end_time(Date promotion_end_time) {
-        this.promotion_end_time = promotion_end_time;
+    public void setPromotionEndTime(Date promotionEndTime) {
+        this.promotionEndTime = promotionEndTime;
     }
 
-    public Integer getPromotion_per_limit() {
-        return promotion_per_limit;
+    public Integer getPromotionPerLimit() {
+        return promotionPerLimit;
     }
 
-    public void setPromotion_per_limit(Integer promotion_per_limit) {
-        this.promotion_per_limit = promotion_per_limit;
+    public void setPromotionPerLimit(Integer promotionPerLimit) {
+        this.promotionPerLimit = promotionPerLimit;
     }
 
-    public Integer getPromotion_type() {
-        return promotion_type;
+    public Integer getPromotionType() {
+        return promotionType;
     }
 
-    public void setPromotion_type(Integer promotion_type) {
-        this.promotion_type = promotion_type;
+    public void setPromotionType(Integer promotionType) {
+        this.promotionType = promotionType;
     }
 
-    public String getBrand_name() {
-        return brand_name;
+    public String getBrandName() {
+        return brandName;
     }
 
-    public void setBrand_name(String brand_name) {
-        this.brand_name = brand_name;
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
     }
 
-    public String getProduct_category_name() {
-        return product_category_name;
+    public String getProductCategoryName() {
+        return productCategoryName;
     }
 
-    public void setProduct_category_name(String product_category_name) {
-        this.product_category_name = product_category_name;
+    public void setProductCategoryName(String productCategoryName) {
+        this.productCategoryName = productCategoryName;
     }
 
     public String getDescription() {
@@ -434,28 +434,28 @@ public class PmsProduct implements Serializable {
         this.description = description;
     }
 
-    public String getDetail_desc() {
-        return detail_desc;
+    public String getDetailDesc() {
+        return detailDesc;
     }
 
-    public void setDetail_desc(String detail_desc) {
-        this.detail_desc = detail_desc;
+    public void setDetailDesc(String detailDesc) {
+        this.detailDesc = detailDesc;
     }
 
-    public String getDetail_html() {
-        return detail_html;
+    public String getDetailHtml() {
+        return detailHtml;
     }
 
-    public void setDetail_html(String detail_html) {
-        this.detail_html = detail_html;
+    public void setDetailHtml(String detailHtml) {
+        this.detailHtml = detailHtml;
     }
 
-    public String getDetail_mobile_html() {
-        return detail_mobile_html;
+    public String getDetailMobileHtml() {
+        return detailMobileHtml;
     }
 
-    public void setDetail_mobile_html(String detail_mobile_html) {
-        this.detail_mobile_html = detail_mobile_html;
+    public void setDetailMobileHtml(String detailMobileHtml) {
+        this.detailMobileHtml = detailMobileHtml;
     }
 
     @Override
@@ -465,47 +465,47 @@ public class PmsProduct implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", brand_id=").append(brand_id);
-        sb.append(", product_category_id=").append(product_category_id);
-        sb.append(", feight_template_id=").append(feight_template_id);
-        sb.append(", product_attribute_category_id=").append(product_attribute_category_id);
+        sb.append(", brandId=").append(brandId);
+        sb.append(", productCategoryId=").append(productCategoryId);
+        sb.append(", feightTemplateId=").append(feightTemplateId);
+        sb.append(", productAttributeCategoryId=").append(productAttributeCategoryId);
         sb.append(", name=").append(name);
         sb.append(", pic=").append(pic);
-        sb.append(", product_sn=").append(product_sn);
-        sb.append(", delete_status=").append(delete_status);
-        sb.append(", publish_status=").append(publish_status);
-        sb.append(", new_status=").append(new_status);
-        sb.append(", recommand_status=").append(recommand_status);
-        sb.append(", verify_status=").append(verify_status);
+        sb.append(", productSn=").append(productSn);
+        sb.append(", deleteStatus=").append(deleteStatus);
+        sb.append(", publishStatus=").append(publishStatus);
+        sb.append(", newStatus=").append(newStatus);
+        sb.append(", recommandStatus=").append(recommandStatus);
+        sb.append(", verifyStatus=").append(verifyStatus);
         sb.append(", sort=").append(sort);
         sb.append(", sale=").append(sale);
         sb.append(", price=").append(price);
-        sb.append(", promotion_price=").append(promotion_price);
-        sb.append(", gift_growth=").append(gift_growth);
-        sb.append(", gift_point=").append(gift_point);
-        sb.append(", use_point_limit=").append(use_point_limit);
-        sb.append(", sub_title=").append(sub_title);
-        sb.append(", original_price=").append(original_price);
+        sb.append(", promotionPrice=").append(promotionPrice);
+        sb.append(", giftGrowth=").append(giftGrowth);
+        sb.append(", giftPoint=").append(giftPoint);
+        sb.append(", usePointLimit=").append(usePointLimit);
+        sb.append(", subTitle=").append(subTitle);
+        sb.append(", originalPrice=").append(originalPrice);
         sb.append(", stock=").append(stock);
-        sb.append(", low_stock=").append(low_stock);
+        sb.append(", lowStock=").append(lowStock);
         sb.append(", unit=").append(unit);
         sb.append(", weight=").append(weight);
-        sb.append(", preview_status=").append(preview_status);
-        sb.append(", service_ids=").append(service_ids);
+        sb.append(", previewStatus=").append(previewStatus);
+        sb.append(", serviceIds=").append(serviceIds);
         sb.append(", keywords=").append(keywords);
         sb.append(", note=").append(note);
-        sb.append(", album_pics=").append(album_pics);
-        sb.append(", detail_title=").append(detail_title);
-        sb.append(", promotion_start_time=").append(promotion_start_time);
-        sb.append(", promotion_end_time=").append(promotion_end_time);
-        sb.append(", promotion_per_limit=").append(promotion_per_limit);
-        sb.append(", promotion_type=").append(promotion_type);
-        sb.append(", brand_name=").append(brand_name);
-        sb.append(", product_category_name=").append(product_category_name);
+        sb.append(", albumPics=").append(albumPics);
+        sb.append(", detailTitle=").append(detailTitle);
+        sb.append(", promotionStartTime=").append(promotionStartTime);
+        sb.append(", promotionEndTime=").append(promotionEndTime);
+        sb.append(", promotionPerLimit=").append(promotionPerLimit);
+        sb.append(", promotionType=").append(promotionType);
+        sb.append(", brandName=").append(brandName);
+        sb.append(", productCategoryName=").append(productCategoryName);
         sb.append(", description=").append(description);
-        sb.append(", detail_desc=").append(detail_desc);
-        sb.append(", detail_html=").append(detail_html);
-        sb.append(", detail_mobile_html=").append(detail_mobile_html);
+        sb.append(", detailDesc=").append(detailDesc);
+        sb.append(", detailHtml=").append(detailHtml);
+        sb.append(", detailMobileHtml=").append(detailMobileHtml);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

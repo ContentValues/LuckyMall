@@ -262,123 +262,123 @@ public class SmsFlashPromotionSessionExample {
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeIsNull() {
+        public Criteria andStartTimeIsNull() {
             addCriterion("start_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeIsNotNull() {
+        public Criteria andStartTimeIsNotNull() {
             addCriterion("start_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeEqualTo(Date value) {
-            addCriterionForJDBCTime("start_time =", value, "start_time");
+        public Criteria andStartTimeEqualTo(Date value) {
+            addCriterionForJDBCTime("start_time =", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeNotEqualTo(Date value) {
-            addCriterionForJDBCTime("start_time <>", value, "start_time");
+        public Criteria andStartTimeNotEqualTo(Date value) {
+            addCriterionForJDBCTime("start_time <>", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeGreaterThan(Date value) {
-            addCriterionForJDBCTime("start_time >", value, "start_time");
+        public Criteria andStartTimeGreaterThan(Date value) {
+            addCriterionForJDBCTime("start_time >", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("start_time >=", value, "start_time");
+        public Criteria andStartTimeGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCTime("start_time >=", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeLessThan(Date value) {
-            addCriterionForJDBCTime("start_time <", value, "start_time");
+        public Criteria andStartTimeLessThan(Date value) {
+            addCriterionForJDBCTime("start_time <", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("start_time <=", value, "start_time");
+        public Criteria andStartTimeLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCTime("start_time <=", value, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeIn(List<Date> values) {
-            addCriterionForJDBCTime("start_time in", values, "start_time");
+        public Criteria andStartTimeIn(List<Date> values) {
+            addCriterionForJDBCTime("start_time in", values, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeNotIn(List<Date> values) {
-            addCriterionForJDBCTime("start_time not in", values, "start_time");
+        public Criteria andStartTimeNotIn(List<Date> values) {
+            addCriterionForJDBCTime("start_time not in", values, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("start_time between", value1, value2, "start_time");
+        public Criteria andStartTimeBetween(Date value1, Date value2) {
+            addCriterionForJDBCTime("start_time between", value1, value2, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andStart_timeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("start_time not between", value1, value2, "start_time");
+        public Criteria andStartTimeNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCTime("start_time not between", value1, value2, "startTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeIsNull() {
+        public Criteria andEndTimeIsNull() {
             addCriterion("end_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeIsNotNull() {
+        public Criteria andEndTimeIsNotNull() {
             addCriterion("end_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeEqualTo(Date value) {
-            addCriterionForJDBCTime("end_time =", value, "end_time");
+        public Criteria andEndTimeEqualTo(Date value) {
+            addCriterionForJDBCTime("end_time =", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeNotEqualTo(Date value) {
-            addCriterionForJDBCTime("end_time <>", value, "end_time");
+        public Criteria andEndTimeNotEqualTo(Date value) {
+            addCriterionForJDBCTime("end_time <>", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeGreaterThan(Date value) {
-            addCriterionForJDBCTime("end_time >", value, "end_time");
+        public Criteria andEndTimeGreaterThan(Date value) {
+            addCriterionForJDBCTime("end_time >", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("end_time >=", value, "end_time");
+        public Criteria andEndTimeGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCTime("end_time >=", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeLessThan(Date value) {
-            addCriterionForJDBCTime("end_time <", value, "end_time");
+        public Criteria andEndTimeLessThan(Date value) {
+            addCriterionForJDBCTime("end_time <", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCTime("end_time <=", value, "end_time");
+        public Criteria andEndTimeLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCTime("end_time <=", value, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeIn(List<Date> values) {
-            addCriterionForJDBCTime("end_time in", values, "end_time");
+        public Criteria andEndTimeIn(List<Date> values) {
+            addCriterionForJDBCTime("end_time in", values, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeNotIn(List<Date> values) {
-            addCriterionForJDBCTime("end_time not in", values, "end_time");
+        public Criteria andEndTimeNotIn(List<Date> values) {
+            addCriterionForJDBCTime("end_time not in", values, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("end_time between", value1, value2, "end_time");
+        public Criteria andEndTimeBetween(Date value1, Date value2) {
+            addCriterionForJDBCTime("end_time between", value1, value2, "endTime");
             return (Criteria) this;
         }
 
-        public Criteria andEnd_timeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCTime("end_time not between", value1, value2, "end_time");
+        public Criteria andEndTimeNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCTime("end_time not between", value1, value2, "endTime");
             return (Criteria) this;
         }
 
@@ -442,63 +442,63 @@ public class SmsFlashPromotionSessionExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNull() {
+        public Criteria andCreateTimeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIsNotNull() {
+        public Criteria andCreateTimeIsNotNull() {
             addCriterion("create_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeEqualTo(Date value) {
-            addCriterion("create_time =", value, "create_time");
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "create_time");
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "create_time");
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "create_time");
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThan(Date value) {
-            addCriterion("create_time <", value, "create_time");
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "create_time");
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeIn(List<Date> values) {
-            addCriterion("create_time in", values, "create_time");
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "create_time");
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "create_time");
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreate_timeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "create_time");
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
     }

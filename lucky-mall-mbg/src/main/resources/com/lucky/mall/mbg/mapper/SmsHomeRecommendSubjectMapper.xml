@@ -3,9 +3,9 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.SmsHomeRecommendSubjectMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.SmsHomeRecommendSubject">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="subject_id" jdbcType="BIGINT" property="subject_id" />
-    <result column="subject_name" jdbcType="VARCHAR" property="subject_name" />
-    <result column="recommend_status" jdbcType="INTEGER" property="recommend_status" />
+    <result column="subject_id" jdbcType="BIGINT" property="subjectId" />
+    <result column="subject_name" jdbcType="VARCHAR" property="subjectName" />
+    <result column="recommend_status" jdbcType="INTEGER" property="recommendStatus" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -100,24 +100,27 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsHomeRecommendSubject">
-    insert into sms_home_recommend_subject (id, subject_id, subject_name, 
-      recommend_status, sort)
-    values (#{id,jdbcType=BIGINT}, #{subject_id,jdbcType=BIGINT}, #{subject_name,jdbcType=VARCHAR}, 
-      #{recommend_status,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_home_recommend_subject (subject_id, subject_name, recommend_status, 
+      sort)
+    values (#{subjectId,jdbcType=BIGINT}, #{subjectName,jdbcType=VARCHAR}, #{recommendStatus,jdbcType=INTEGER}, 
+      #{sort,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsHomeRecommendSubject">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into sms_home_recommend_subject
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="subject_id != null">
+      <if test="subjectId != null">
         subject_id,
       </if>
-      <if test="subject_name != null">
+      <if test="subjectName != null">
         subject_name,
       </if>
-      <if test="recommend_status != null">
+      <if test="recommendStatus != null">
         recommend_status,
       </if>
       <if test="sort != null">
@@ -125,17 +128,14 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="subjectId != null">
+        #{subjectId,jdbcType=BIGINT},
       </if>
-      <if test="subject_id != null">
-        #{subject_id,jdbcType=BIGINT},
+      <if test="subjectName != null">
+        #{subjectName,jdbcType=VARCHAR},
       </if>
-      <if test="subject_name != null">
-        #{subject_name,jdbcType=VARCHAR},
-      </if>
-      <if test="recommend_status != null">
-        #{recommend_status,jdbcType=INTEGER},
+      <if test="recommendStatus != null">
+        #{recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
@@ -154,14 +154,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.subject_id != null">
-        subject_id = #{record.subject_id,jdbcType=BIGINT},
+      <if test="record.subjectId != null">
+        subject_id = #{record.subjectId,jdbcType=BIGINT},
       </if>
-      <if test="record.subject_name != null">
-        subject_name = #{record.subject_name,jdbcType=VARCHAR},
+      <if test="record.subjectName != null">
+        subject_name = #{record.subjectName,jdbcType=VARCHAR},
       </if>
-      <if test="record.recommend_status != null">
-        recommend_status = #{record.recommend_status,jdbcType=INTEGER},
+      <if test="record.recommendStatus != null">
+        recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
@@ -174,9 +174,9 @@
   <update id="updateByExample" parameterType="map">
     update sms_home_recommend_subject
     set id = #{record.id,jdbcType=BIGINT},
-      subject_id = #{record.subject_id,jdbcType=BIGINT},
-      subject_name = #{record.subject_name,jdbcType=VARCHAR},
-      recommend_status = #{record.recommend_status,jdbcType=INTEGER},
+      subject_id = #{record.subjectId,jdbcType=BIGINT},
+      subject_name = #{record.subjectName,jdbcType=VARCHAR},
+      recommend_status = #{record.recommendStatus,jdbcType=INTEGER},
       sort = #{record.sort,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -185,14 +185,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.SmsHomeRecommendSubject">
     update sms_home_recommend_subject
     <set>
-      <if test="subject_id != null">
-        subject_id = #{subject_id,jdbcType=BIGINT},
+      <if test="subjectId != null">
+        subject_id = #{subjectId,jdbcType=BIGINT},
       </if>
-      <if test="subject_name != null">
-        subject_name = #{subject_name,jdbcType=VARCHAR},
+      <if test="subjectName != null">
+        subject_name = #{subjectName,jdbcType=VARCHAR},
       </if>
-      <if test="recommend_status != null">
-        recommend_status = #{recommend_status,jdbcType=INTEGER},
+      <if test="recommendStatus != null">
+        recommend_status = #{recommendStatus,jdbcType=INTEGER},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
@@ -202,9 +202,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.SmsHomeRecommendSubject">
     update sms_home_recommend_subject
-    set subject_id = #{subject_id,jdbcType=BIGINT},
-      subject_name = #{subject_name,jdbcType=VARCHAR},
-      recommend_status = #{recommend_status,jdbcType=INTEGER},
+    set subject_id = #{subjectId,jdbcType=BIGINT},
+      subject_name = #{subjectName,jdbcType=VARCHAR},
+      recommend_status = #{recommendStatus,jdbcType=INTEGER},
       sort = #{sort,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

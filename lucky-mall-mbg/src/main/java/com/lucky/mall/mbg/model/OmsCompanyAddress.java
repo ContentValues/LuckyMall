@@ -7,13 +7,13 @@ public class OmsCompanyAddress implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "地址名称")
-    private String address_name;
+    private String addressName;
 
     @ApiModelProperty(value = "默认发货地址：0->否；1->是")
-    private Integer send_status;
+    private Integer sendStatus;
 
     @ApiModelProperty(value = "是否默认收货地址：0->否；1->是")
-    private Integer receive_status;
+    private Integer receiveStatus;
 
     @ApiModelProperty(value = "收发货人姓名")
     private String name;
@@ -31,7 +31,7 @@ public class OmsCompanyAddress implements Serializable {
     private String region;
 
     @ApiModelProperty(value = "详细地址")
-    private String detail_address;
+    private String detailAddress;
 
     private static final long serialVersionUID = 1L;
 
@@ -43,28 +43,28 @@ public class OmsCompanyAddress implements Serializable {
         this.id = id;
     }
 
-    public String getAddress_name() {
-        return address_name;
+    public String getAddressName() {
+        return addressName;
     }
 
-    public void setAddress_name(String address_name) {
-        this.address_name = address_name;
+    public void setAddressName(String addressName) {
+        this.addressName = addressName;
     }
 
-    public Integer getSend_status() {
-        return send_status;
+    public Integer getSendStatus() {
+        return sendStatus;
     }
 
-    public void setSend_status(Integer send_status) {
-        this.send_status = send_status;
+    public void setSendStatus(Integer sendStatus) {
+        this.sendStatus = sendStatus;
     }
 
-    public Integer getReceive_status() {
-        return receive_status;
+    public Integer getReceiveStatus() {
+        return receiveStatus;
     }
 
-    public void setReceive_status(Integer receive_status) {
-        this.receive_status = receive_status;
+    public void setReceiveStatus(Integer receiveStatus) {
+        this.receiveStatus = receiveStatus;
     }
 
     public String getName() {
@@ -107,12 +107,12 @@ public class OmsCompanyAddress implements Serializable {
         this.region = region;
     }
 
-    public String getDetail_address() {
-        return detail_address;
+    public String getDetailAddress() {
+        return detailAddress;
     }
 
-    public void setDetail_address(String detail_address) {
-        this.detail_address = detail_address;
+    public void setDetailAddress(String detailAddress) {
+        this.detailAddress = detailAddress;
     }
 
     @Override
@@ -122,15 +122,15 @@ public class OmsCompanyAddress implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", address_name=").append(address_name);
-        sb.append(", send_status=").append(send_status);
-        sb.append(", receive_status=").append(receive_status);
+        sb.append(", addressName=").append(addressName);
+        sb.append(", sendStatus=").append(sendStatus);
+        sb.append(", receiveStatus=").append(receiveStatus);
         sb.append(", name=").append(name);
         sb.append(", phone=").append(phone);
         sb.append(", province=").append(province);
         sb.append(", city=").append(city);
         sb.append(", region=").append(region);
-        sb.append(", detail_address=").append(detail_address);
+        sb.append(", detailAddress=").append(detailAddress);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

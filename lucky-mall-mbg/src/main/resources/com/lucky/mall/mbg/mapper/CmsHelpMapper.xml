@@ -3,12 +3,12 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.CmsHelpMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.CmsHelp">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="category_id" jdbcType="BIGINT" property="category_id" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
     <result column="icon" jdbcType="VARCHAR" property="icon" />
     <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="show_status" jdbcType="INTEGER" property="show_status" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
-    <result column="read_count" jdbcType="INTEGER" property="read_count" />
+    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="read_count" jdbcType="INTEGER" property="readCount" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.CmsHelp">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
@@ -126,20 +126,23 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.CmsHelp">
-    insert into cms_help (id, category_id, icon, 
-      title, show_status, create_time, 
-      read_count, content)
-    values (#{id,jdbcType=BIGINT}, #{category_id,jdbcType=BIGINT}, #{icon,jdbcType=VARCHAR}, 
-      #{title,jdbcType=VARCHAR}, #{show_status,jdbcType=INTEGER}, #{create_time,jdbcType=TIMESTAMP}, 
-      #{read_count,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into cms_help (category_id, icon, title, 
+      show_status, create_time, read_count, 
+      content)
+    values (#{categoryId,jdbcType=BIGINT}, #{icon,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{showStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{readCount,jdbcType=INTEGER}, 
+      #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.CmsHelp">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into cms_help
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="category_id != null">
+      <if test="categoryId != null">
         category_id,
       </if>
       <if test="icon != null">
@@ -148,13 +151,13 @@
       <if test="title != null">
         title,
       </if>
-      <if test="show_status != null">
+      <if test="showStatus != null">
         show_status,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="read_count != null">
+      <if test="readCount != null">
         read_count,
       </if>
       <if test="content != null">
@@ -162,11 +165,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="category_id != null">
-        #{category_id,jdbcType=BIGINT},
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=BIGINT},
       </if>
       <if test="icon != null">
         #{icon,jdbcType=VARCHAR},
@@ -174,14 +174,14 @@
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="show_status != null">
-        #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="read_count != null">
-        #{read_count,jdbcType=INTEGER},
+      <if test="readCount != null">
+        #{readCount,jdbcType=INTEGER},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
@@ -200,8 +200,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.category_id != null">
-        category_id = #{record.category_id,jdbcType=BIGINT},
+      <if test="record.categoryId != null">
+        category_id = #{record.categoryId,jdbcType=BIGINT},
       </if>
       <if test="record.icon != null">
         icon = #{record.icon,jdbcType=VARCHAR},
@@ -209,14 +209,14 @@
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.show_status != null">
-        show_status = #{record.show_status,jdbcType=INTEGER},
+      <if test="record.showStatus != null">
+        show_status = #{record.showStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.read_count != null">
-        read_count = #{record.read_count,jdbcType=INTEGER},
+      <if test="record.readCount != null">
+        read_count = #{record.readCount,jdbcType=INTEGER},
       </if>
       <if test="record.content != null">
         content = #{record.content,jdbcType=LONGVARCHAR},
@@ -229,12 +229,12 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update cms_help
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.category_id,jdbcType=BIGINT},
+      category_id = #{record.categoryId,jdbcType=BIGINT},
       icon = #{record.icon,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
-      read_count = #{record.read_count,jdbcType=INTEGER},
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      read_count = #{record.readCount,jdbcType=INTEGER},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -243,12 +243,12 @@
   <update id="updateByExample" parameterType="map">
     update cms_help
     set id = #{record.id,jdbcType=BIGINT},
-      category_id = #{record.category_id,jdbcType=BIGINT},
+      category_id = #{record.categoryId,jdbcType=BIGINT},
       icon = #{record.icon,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
-      read_count = #{record.read_count,jdbcType=INTEGER}
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      read_count = #{record.readCount,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -256,8 +256,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.CmsHelp">
     update cms_help
     <set>
-      <if test="category_id != null">
-        category_id = #{category_id,jdbcType=BIGINT},
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=BIGINT},
       </if>
       <if test="icon != null">
         icon = #{icon,jdbcType=VARCHAR},
@@ -265,14 +265,14 @@
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="show_status != null">
-        show_status = #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        show_status = #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="read_count != null">
-        read_count = #{read_count,jdbcType=INTEGER},
+      <if test="readCount != null">
+        read_count = #{readCount,jdbcType=INTEGER},
       </if>
       <if test="content != null">
         content = #{content,jdbcType=LONGVARCHAR},
@@ -282,23 +282,23 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.CmsHelp">
     update cms_help
-    set category_id = #{category_id,jdbcType=BIGINT},
+    set category_id = #{categoryId,jdbcType=BIGINT},
       icon = #{icon,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
-      show_status = #{show_status,jdbcType=INTEGER},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      read_count = #{read_count,jdbcType=INTEGER},
+      show_status = #{showStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      read_count = #{readCount,jdbcType=INTEGER},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.CmsHelp">
     update cms_help
-    set category_id = #{category_id,jdbcType=BIGINT},
+    set category_id = #{categoryId,jdbcType=BIGINT},
       icon = #{icon,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
-      show_status = #{show_status,jdbcType=INTEGER},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      read_count = #{read_count,jdbcType=INTEGER}
+      show_status = #{showStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      read_count = #{readCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

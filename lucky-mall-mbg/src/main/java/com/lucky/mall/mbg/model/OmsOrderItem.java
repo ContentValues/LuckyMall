@@ -8,57 +8,57 @@ public class OmsOrderItem implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "订单id")
-    private Long order_id;
+    private Long orderId;
 
     @ApiModelProperty(value = "订单编号")
-    private String order_sn;
+    private String orderSn;
 
-    private Long product_id;
+    private Long productId;
 
-    private String product_pic;
+    private String productPic;
 
-    private String product_name;
+    private String productName;
 
-    private String product_brand;
+    private String productBrand;
 
-    private String product_sn;
+    private String productSn;
 
     @ApiModelProperty(value = "销售价格")
-    private BigDecimal product_price;
+    private BigDecimal productPrice;
 
     @ApiModelProperty(value = "购买数量")
-    private Integer product_quantity;
+    private Integer productQuantity;
 
     @ApiModelProperty(value = "商品sku编号")
-    private Long product_sku_id;
+    private Long productSkuId;
 
     @ApiModelProperty(value = "商品sku条码")
-    private String product_sku_code;
+    private String productSkuCode;
 
     @ApiModelProperty(value = "商品分类id")
-    private Long product_category_id;
+    private Long productCategoryId;
 
     @ApiModelProperty(value = "商品促销名称")
-    private String promotion_name;
+    private String promotionName;
 
     @ApiModelProperty(value = "商品促销分解金额")
-    private BigDecimal promotion_amount;
+    private BigDecimal promotionAmount;
 
     @ApiModelProperty(value = "优惠券优惠分解金额")
-    private BigDecimal coupon_amount;
+    private BigDecimal couponAmount;
 
     @ApiModelProperty(value = "积分优惠分解金额")
-    private BigDecimal integration_amount;
+    private BigDecimal integrationAmount;
 
     @ApiModelProperty(value = "该商品经过优惠后的分解金额")
-    private BigDecimal real_amount;
+    private BigDecimal realAmount;
 
-    private Integer gift_integration;
+    private Integer giftIntegration;
 
-    private Integer gift_growth;
+    private Integer giftGrowth;
 
     @ApiModelProperty(value = "商品销售属性:[{'key':'颜色','value':'颜色'},{'key':'容量','value':'4G'}]")
-    private String product_attr;
+    private String productAttr;
 
     private static final long serialVersionUID = 1L;
 
@@ -70,164 +70,164 @@ public class OmsOrderItem implements Serializable {
         this.id = id;
     }
 
-    public Long getOrder_id() {
-        return order_id;
+    public Long getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(Long order_id) {
-        this.order_id = order_id;
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 
-    public String getOrder_sn() {
-        return order_sn;
+    public String getOrderSn() {
+        return orderSn;
     }
 
-    public void setOrder_sn(String order_sn) {
-        this.order_sn = order_sn;
+    public void setOrderSn(String orderSn) {
+        this.orderSn = orderSn;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public String getProduct_pic() {
-        return product_pic;
+    public String getProductPic() {
+        return productPic;
     }
 
-    public void setProduct_pic(String product_pic) {
-        this.product_pic = product_pic;
+    public void setProductPic(String productPic) {
+        this.productPic = productPic;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getProduct_brand() {
-        return product_brand;
+    public String getProductBrand() {
+        return productBrand;
     }
 
-    public void setProduct_brand(String product_brand) {
-        this.product_brand = product_brand;
+    public void setProductBrand(String productBrand) {
+        this.productBrand = productBrand;
     }
 
-    public String getProduct_sn() {
-        return product_sn;
+    public String getProductSn() {
+        return productSn;
     }
 
-    public void setProduct_sn(String product_sn) {
-        this.product_sn = product_sn;
+    public void setProductSn(String productSn) {
+        this.productSn = productSn;
     }
 
-    public BigDecimal getProduct_price() {
-        return product_price;
+    public BigDecimal getProductPrice() {
+        return productPrice;
     }
 
-    public void setProduct_price(BigDecimal product_price) {
-        this.product_price = product_price;
+    public void setProductPrice(BigDecimal productPrice) {
+        this.productPrice = productPrice;
     }
 
-    public Integer getProduct_quantity() {
-        return product_quantity;
+    public Integer getProductQuantity() {
+        return productQuantity;
     }
 
-    public void setProduct_quantity(Integer product_quantity) {
-        this.product_quantity = product_quantity;
+    public void setProductQuantity(Integer productQuantity) {
+        this.productQuantity = productQuantity;
     }
 
-    public Long getProduct_sku_id() {
-        return product_sku_id;
+    public Long getProductSkuId() {
+        return productSkuId;
     }
 
-    public void setProduct_sku_id(Long product_sku_id) {
-        this.product_sku_id = product_sku_id;
+    public void setProductSkuId(Long productSkuId) {
+        this.productSkuId = productSkuId;
     }
 
-    public String getProduct_sku_code() {
-        return product_sku_code;
+    public String getProductSkuCode() {
+        return productSkuCode;
     }
 
-    public void setProduct_sku_code(String product_sku_code) {
-        this.product_sku_code = product_sku_code;
+    public void setProductSkuCode(String productSkuCode) {
+        this.productSkuCode = productSkuCode;
     }
 
-    public Long getProduct_category_id() {
-        return product_category_id;
+    public Long getProductCategoryId() {
+        return productCategoryId;
     }
 
-    public void setProduct_category_id(Long product_category_id) {
-        this.product_category_id = product_category_id;
+    public void setProductCategoryId(Long productCategoryId) {
+        this.productCategoryId = productCategoryId;
     }
 
-    public String getPromotion_name() {
-        return promotion_name;
+    public String getPromotionName() {
+        return promotionName;
     }
 
-    public void setPromotion_name(String promotion_name) {
-        this.promotion_name = promotion_name;
+    public void setPromotionName(String promotionName) {
+        this.promotionName = promotionName;
     }
 
-    public BigDecimal getPromotion_amount() {
-        return promotion_amount;
+    public BigDecimal getPromotionAmount() {
+        return promotionAmount;
     }
 
-    public void setPromotion_amount(BigDecimal promotion_amount) {
-        this.promotion_amount = promotion_amount;
+    public void setPromotionAmount(BigDecimal promotionAmount) {
+        this.promotionAmount = promotionAmount;
     }
 
-    public BigDecimal getCoupon_amount() {
-        return coupon_amount;
+    public BigDecimal getCouponAmount() {
+        return couponAmount;
     }
 
-    public void setCoupon_amount(BigDecimal coupon_amount) {
-        this.coupon_amount = coupon_amount;
+    public void setCouponAmount(BigDecimal couponAmount) {
+        this.couponAmount = couponAmount;
     }
 
-    public BigDecimal getIntegration_amount() {
-        return integration_amount;
+    public BigDecimal getIntegrationAmount() {
+        return integrationAmount;
     }
 
-    public void setIntegration_amount(BigDecimal integration_amount) {
-        this.integration_amount = integration_amount;
+    public void setIntegrationAmount(BigDecimal integrationAmount) {
+        this.integrationAmount = integrationAmount;
     }
 
-    public BigDecimal getReal_amount() {
-        return real_amount;
+    public BigDecimal getRealAmount() {
+        return realAmount;
     }
 
-    public void setReal_amount(BigDecimal real_amount) {
-        this.real_amount = real_amount;
+    public void setRealAmount(BigDecimal realAmount) {
+        this.realAmount = realAmount;
     }
 
-    public Integer getGift_integration() {
-        return gift_integration;
+    public Integer getGiftIntegration() {
+        return giftIntegration;
     }
 
-    public void setGift_integration(Integer gift_integration) {
-        this.gift_integration = gift_integration;
+    public void setGiftIntegration(Integer giftIntegration) {
+        this.giftIntegration = giftIntegration;
     }
 
-    public Integer getGift_growth() {
-        return gift_growth;
+    public Integer getGiftGrowth() {
+        return giftGrowth;
     }
 
-    public void setGift_growth(Integer gift_growth) {
-        this.gift_growth = gift_growth;
+    public void setGiftGrowth(Integer giftGrowth) {
+        this.giftGrowth = giftGrowth;
     }
 
-    public String getProduct_attr() {
-        return product_attr;
+    public String getProductAttr() {
+        return productAttr;
     }
 
-    public void setProduct_attr(String product_attr) {
-        this.product_attr = product_attr;
+    public void setProductAttr(String productAttr) {
+        this.productAttr = productAttr;
     }
 
     @Override
@@ -237,26 +237,26 @@ public class OmsOrderItem implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", order_id=").append(order_id);
-        sb.append(", order_sn=").append(order_sn);
-        sb.append(", product_id=").append(product_id);
-        sb.append(", product_pic=").append(product_pic);
-        sb.append(", product_name=").append(product_name);
-        sb.append(", product_brand=").append(product_brand);
-        sb.append(", product_sn=").append(product_sn);
-        sb.append(", product_price=").append(product_price);
-        sb.append(", product_quantity=").append(product_quantity);
-        sb.append(", product_sku_id=").append(product_sku_id);
-        sb.append(", product_sku_code=").append(product_sku_code);
-        sb.append(", product_category_id=").append(product_category_id);
-        sb.append(", promotion_name=").append(promotion_name);
-        sb.append(", promotion_amount=").append(promotion_amount);
-        sb.append(", coupon_amount=").append(coupon_amount);
-        sb.append(", integration_amount=").append(integration_amount);
-        sb.append(", real_amount=").append(real_amount);
-        sb.append(", gift_integration=").append(gift_integration);
-        sb.append(", gift_growth=").append(gift_growth);
-        sb.append(", product_attr=").append(product_attr);
+        sb.append(", orderId=").append(orderId);
+        sb.append(", orderSn=").append(orderSn);
+        sb.append(", productId=").append(productId);
+        sb.append(", productPic=").append(productPic);
+        sb.append(", productName=").append(productName);
+        sb.append(", productBrand=").append(productBrand);
+        sb.append(", productSn=").append(productSn);
+        sb.append(", productPrice=").append(productPrice);
+        sb.append(", productQuantity=").append(productQuantity);
+        sb.append(", productSkuId=").append(productSkuId);
+        sb.append(", productSkuCode=").append(productSkuCode);
+        sb.append(", productCategoryId=").append(productCategoryId);
+        sb.append(", promotionName=").append(promotionName);
+        sb.append(", promotionAmount=").append(promotionAmount);
+        sb.append(", couponAmount=").append(couponAmount);
+        sb.append(", integrationAmount=").append(integrationAmount);
+        sb.append(", realAmount=").append(realAmount);
+        sb.append(", giftIntegration=").append(giftIntegration);
+        sb.append(", giftGrowth=").append(giftGrowth);
+        sb.append(", productAttr=").append(productAttr);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

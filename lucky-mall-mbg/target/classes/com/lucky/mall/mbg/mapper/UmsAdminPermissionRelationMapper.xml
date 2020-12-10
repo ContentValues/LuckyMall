@@ -3,8 +3,8 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsAdminPermissionRelationMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsAdminPermissionRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="admin_id" jdbcType="BIGINT" property="admin_id" />
-    <result column="permission_id" jdbcType="BIGINT" property="permission_id" />
+    <result column="admin_id" jdbcType="BIGINT" property="adminId" />
+    <result column="permission_id" jdbcType="BIGINT" property="permissionId" />
     <result column="type" jdbcType="INTEGER" property="type" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -99,21 +99,24 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsAdminPermissionRelation">
-    insert into ums_admin_permission_relation (id, admin_id, permission_id, 
-      type)
-    values (#{id,jdbcType=BIGINT}, #{admin_id,jdbcType=BIGINT}, #{permission_id,jdbcType=BIGINT}, 
-      #{type,jdbcType=INTEGER})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ums_admin_permission_relation (admin_id, permission_id, type
+      )
+    values (#{adminId,jdbcType=BIGINT}, #{permissionId,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsAdminPermissionRelation">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into ums_admin_permission_relation
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="admin_id != null">
+      <if test="adminId != null">
         admin_id,
       </if>
-      <if test="permission_id != null">
+      <if test="permissionId != null">
         permission_id,
       </if>
       <if test="type != null">
@@ -121,14 +124,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="adminId != null">
+        #{adminId,jdbcType=BIGINT},
       </if>
-      <if test="admin_id != null">
-        #{admin_id,jdbcType=BIGINT},
-      </if>
-      <if test="permission_id != null">
-        #{permission_id,jdbcType=BIGINT},
+      <if test="permissionId != null">
+        #{permissionId,jdbcType=BIGINT},
       </if>
       <if test="type != null">
         #{type,jdbcType=INTEGER},
@@ -147,11 +147,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.admin_id != null">
-        admin_id = #{record.admin_id,jdbcType=BIGINT},
+      <if test="record.adminId != null">
+        admin_id = #{record.adminId,jdbcType=BIGINT},
       </if>
-      <if test="record.permission_id != null">
-        permission_id = #{record.permission_id,jdbcType=BIGINT},
+      <if test="record.permissionId != null">
+        permission_id = #{record.permissionId,jdbcType=BIGINT},
       </if>
       <if test="record.type != null">
         type = #{record.type,jdbcType=INTEGER},
@@ -164,8 +164,8 @@
   <update id="updateByExample" parameterType="map">
     update ums_admin_permission_relation
     set id = #{record.id,jdbcType=BIGINT},
-      admin_id = #{record.admin_id,jdbcType=BIGINT},
-      permission_id = #{record.permission_id,jdbcType=BIGINT},
+      admin_id = #{record.adminId,jdbcType=BIGINT},
+      permission_id = #{record.permissionId,jdbcType=BIGINT},
       type = #{record.type,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -174,11 +174,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsAdminPermissionRelation">
     update ums_admin_permission_relation
     <set>
-      <if test="admin_id != null">
-        admin_id = #{admin_id,jdbcType=BIGINT},
+      <if test="adminId != null">
+        admin_id = #{adminId,jdbcType=BIGINT},
       </if>
-      <if test="permission_id != null">
-        permission_id = #{permission_id,jdbcType=BIGINT},
+      <if test="permissionId != null">
+        permission_id = #{permissionId,jdbcType=BIGINT},
       </if>
       <if test="type != null">
         type = #{type,jdbcType=INTEGER},
@@ -188,8 +188,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsAdminPermissionRelation">
     update ums_admin_permission_relation
-    set admin_id = #{admin_id,jdbcType=BIGINT},
-      permission_id = #{permission_id,jdbcType=BIGINT},
+    set admin_id = #{adminId,jdbcType=BIGINT},
+      permission_id = #{permissionId,jdbcType=BIGINT},
       type = #{type,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

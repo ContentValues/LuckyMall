@@ -6,18 +6,18 @@ import java.io.Serializable;
 public class UmsMemberReceiveAddress implements Serializable {
     private Long id;
 
-    private Long member_id;
+    private Long memberId;
 
     @ApiModelProperty(value = "收货人名称")
     private String name;
 
-    private String phone_number;
+    private String phoneNumber;
 
     @ApiModelProperty(value = "是否为默认")
-    private Integer default_status;
+    private Integer defaultStatus;
 
     @ApiModelProperty(value = "邮政编码")
-    private String post_code;
+    private String postCode;
 
     @ApiModelProperty(value = "省份/直辖市")
     private String province;
@@ -29,7 +29,7 @@ public class UmsMemberReceiveAddress implements Serializable {
     private String region;
 
     @ApiModelProperty(value = "详细地址(街道)")
-    private String detail_address;
+    private String detailAddress;
 
     private static final long serialVersionUID = 1L;
 
@@ -41,12 +41,12 @@ public class UmsMemberReceiveAddress implements Serializable {
         this.id = id;
     }
 
-    public Long getMember_id() {
-        return member_id;
+    public Long getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Long member_id) {
-        this.member_id = member_id;
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
     }
 
     public String getName() {
@@ -57,28 +57,28 @@ public class UmsMemberReceiveAddress implements Serializable {
         this.name = name;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Integer getDefault_status() {
-        return default_status;
+    public Integer getDefaultStatus() {
+        return defaultStatus;
     }
 
-    public void setDefault_status(Integer default_status) {
-        this.default_status = default_status;
+    public void setDefaultStatus(Integer defaultStatus) {
+        this.defaultStatus = defaultStatus;
     }
 
-    public String getPost_code() {
-        return post_code;
+    public String getPostCode() {
+        return postCode;
     }
 
-    public void setPost_code(String post_code) {
-        this.post_code = post_code;
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
     }
 
     public String getProvince() {
@@ -105,12 +105,12 @@ public class UmsMemberReceiveAddress implements Serializable {
         this.region = region;
     }
 
-    public String getDetail_address() {
-        return detail_address;
+    public String getDetailAddress() {
+        return detailAddress;
     }
 
-    public void setDetail_address(String detail_address) {
-        this.detail_address = detail_address;
+    public void setDetailAddress(String detailAddress) {
+        this.detailAddress = detailAddress;
     }
 
     @Override
@@ -120,15 +120,15 @@ public class UmsMemberReceiveAddress implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", member_id=").append(member_id);
+        sb.append(", memberId=").append(memberId);
         sb.append(", name=").append(name);
-        sb.append(", phone_number=").append(phone_number);
-        sb.append(", default_status=").append(default_status);
-        sb.append(", post_code=").append(post_code);
+        sb.append(", phoneNumber=").append(phoneNumber);
+        sb.append(", defaultStatus=").append(defaultStatus);
+        sb.append(", postCode=").append(postCode);
         sb.append(", province=").append(province);
         sb.append(", city=").append(city);
         sb.append(", region=").append(region);
-        sb.append(", detail_address=").append(detail_address);
+        sb.append(", detailAddress=").append(detailAddress);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

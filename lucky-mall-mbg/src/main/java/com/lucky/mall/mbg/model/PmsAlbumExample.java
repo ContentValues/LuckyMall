@@ -234,133 +234,133 @@ public class PmsAlbumExample {
             return (Criteria) this;
         }
 
-        public Criteria andCover_picIsNull() {
+        public Criteria andCoverPicIsNull() {
             addCriterion("cover_pic is null");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picIsNotNull() {
+        public Criteria andCoverPicIsNotNull() {
             addCriterion("cover_pic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picEqualTo(String value) {
-            addCriterion("cover_pic =", value, "cover_pic");
+        public Criteria andCoverPicEqualTo(String value) {
+            addCriterion("cover_pic =", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picNotEqualTo(String value) {
-            addCriterion("cover_pic <>", value, "cover_pic");
+        public Criteria andCoverPicNotEqualTo(String value) {
+            addCriterion("cover_pic <>", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picGreaterThan(String value) {
-            addCriterion("cover_pic >", value, "cover_pic");
+        public Criteria andCoverPicGreaterThan(String value) {
+            addCriterion("cover_pic >", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picGreaterThanOrEqualTo(String value) {
-            addCriterion("cover_pic >=", value, "cover_pic");
+        public Criteria andCoverPicGreaterThanOrEqualTo(String value) {
+            addCriterion("cover_pic >=", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picLessThan(String value) {
-            addCriterion("cover_pic <", value, "cover_pic");
+        public Criteria andCoverPicLessThan(String value) {
+            addCriterion("cover_pic <", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picLessThanOrEqualTo(String value) {
-            addCriterion("cover_pic <=", value, "cover_pic");
+        public Criteria andCoverPicLessThanOrEqualTo(String value) {
+            addCriterion("cover_pic <=", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picLike(String value) {
-            addCriterion("cover_pic like", value, "cover_pic");
+        public Criteria andCoverPicLike(String value) {
+            addCriterion("cover_pic like", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picNotLike(String value) {
-            addCriterion("cover_pic not like", value, "cover_pic");
+        public Criteria andCoverPicNotLike(String value) {
+            addCriterion("cover_pic not like", value, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picIn(List<String> values) {
-            addCriterion("cover_pic in", values, "cover_pic");
+        public Criteria andCoverPicIn(List<String> values) {
+            addCriterion("cover_pic in", values, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picNotIn(List<String> values) {
-            addCriterion("cover_pic not in", values, "cover_pic");
+        public Criteria andCoverPicNotIn(List<String> values) {
+            addCriterion("cover_pic not in", values, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picBetween(String value1, String value2) {
-            addCriterion("cover_pic between", value1, value2, "cover_pic");
+        public Criteria andCoverPicBetween(String value1, String value2) {
+            addCriterion("cover_pic between", value1, value2, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andCover_picNotBetween(String value1, String value2) {
-            addCriterion("cover_pic not between", value1, value2, "cover_pic");
+        public Criteria andCoverPicNotBetween(String value1, String value2) {
+            addCriterion("cover_pic not between", value1, value2, "coverPic");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countIsNull() {
+        public Criteria andPicCountIsNull() {
             addCriterion("pic_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countIsNotNull() {
+        public Criteria andPicCountIsNotNull() {
             addCriterion("pic_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countEqualTo(Integer value) {
-            addCriterion("pic_count =", value, "pic_count");
+        public Criteria andPicCountEqualTo(Integer value) {
+            addCriterion("pic_count =", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countNotEqualTo(Integer value) {
-            addCriterion("pic_count <>", value, "pic_count");
+        public Criteria andPicCountNotEqualTo(Integer value) {
+            addCriterion("pic_count <>", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countGreaterThan(Integer value) {
-            addCriterion("pic_count >", value, "pic_count");
+        public Criteria andPicCountGreaterThan(Integer value) {
+            addCriterion("pic_count >", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countGreaterThanOrEqualTo(Integer value) {
-            addCriterion("pic_count >=", value, "pic_count");
+        public Criteria andPicCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("pic_count >=", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countLessThan(Integer value) {
-            addCriterion("pic_count <", value, "pic_count");
+        public Criteria andPicCountLessThan(Integer value) {
+            addCriterion("pic_count <", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countLessThanOrEqualTo(Integer value) {
-            addCriterion("pic_count <=", value, "pic_count");
+        public Criteria andPicCountLessThanOrEqualTo(Integer value) {
+            addCriterion("pic_count <=", value, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countIn(List<Integer> values) {
-            addCriterion("pic_count in", values, "pic_count");
+        public Criteria andPicCountIn(List<Integer> values) {
+            addCriterion("pic_count in", values, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countNotIn(List<Integer> values) {
-            addCriterion("pic_count not in", values, "pic_count");
+        public Criteria andPicCountNotIn(List<Integer> values) {
+            addCriterion("pic_count not in", values, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countBetween(Integer value1, Integer value2) {
-            addCriterion("pic_count between", value1, value2, "pic_count");
+        public Criteria andPicCountBetween(Integer value1, Integer value2) {
+            addCriterion("pic_count between", value1, value2, "picCount");
             return (Criteria) this;
         }
 
-        public Criteria andPic_countNotBetween(Integer value1, Integer value2) {
-            addCriterion("pic_count not between", value1, value2, "pic_count");
+        public Criteria andPicCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("pic_count not between", value1, value2, "picCount");
             return (Criteria) this;
         }
 

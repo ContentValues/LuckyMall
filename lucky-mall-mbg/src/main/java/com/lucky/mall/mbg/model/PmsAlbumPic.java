@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class PmsAlbumPic implements Serializable {
     private Long id;
 
-    private Long album_id;
+    private Long albumId;
 
     private String pic;
 
@@ -20,12 +20,12 @@ public class PmsAlbumPic implements Serializable {
         this.id = id;
     }
 
-    public Long getAlbum_id() {
-        return album_id;
+    public Long getAlbumId() {
+        return albumId;
     }
 
-    public void setAlbum_id(Long album_id) {
-        this.album_id = album_id;
+    public void setAlbumId(Long albumId) {
+        this.albumId = albumId;
     }
 
     public String getPic() {
@@ -43,7 +43,7 @@ public class PmsAlbumPic implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", album_id=").append(album_id);
+        sb.append(", albumId=").append(albumId);
         sb.append(", pic=").append(pic);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

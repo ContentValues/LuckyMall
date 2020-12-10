@@ -164,263 +164,263 @@ public class SmsCouponProductCategoryRelationExample {
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idIsNull() {
+        public Criteria andCouponIdIsNull() {
             addCriterion("coupon_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idIsNotNull() {
+        public Criteria andCouponIdIsNotNull() {
             addCriterion("coupon_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idEqualTo(Long value) {
-            addCriterion("coupon_id =", value, "coupon_id");
+        public Criteria andCouponIdEqualTo(Long value) {
+            addCriterion("coupon_id =", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idNotEqualTo(Long value) {
-            addCriterion("coupon_id <>", value, "coupon_id");
+        public Criteria andCouponIdNotEqualTo(Long value) {
+            addCriterion("coupon_id <>", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idGreaterThan(Long value) {
-            addCriterion("coupon_id >", value, "coupon_id");
+        public Criteria andCouponIdGreaterThan(Long value) {
+            addCriterion("coupon_id >", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("coupon_id >=", value, "coupon_id");
+        public Criteria andCouponIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("coupon_id >=", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idLessThan(Long value) {
-            addCriterion("coupon_id <", value, "coupon_id");
+        public Criteria andCouponIdLessThan(Long value) {
+            addCriterion("coupon_id <", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idLessThanOrEqualTo(Long value) {
-            addCriterion("coupon_id <=", value, "coupon_id");
+        public Criteria andCouponIdLessThanOrEqualTo(Long value) {
+            addCriterion("coupon_id <=", value, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idIn(List<Long> values) {
-            addCriterion("coupon_id in", values, "coupon_id");
+        public Criteria andCouponIdIn(List<Long> values) {
+            addCriterion("coupon_id in", values, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idNotIn(List<Long> values) {
-            addCriterion("coupon_id not in", values, "coupon_id");
+        public Criteria andCouponIdNotIn(List<Long> values) {
+            addCriterion("coupon_id not in", values, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idBetween(Long value1, Long value2) {
-            addCriterion("coupon_id between", value1, value2, "coupon_id");
+        public Criteria andCouponIdBetween(Long value1, Long value2) {
+            addCriterion("coupon_id between", value1, value2, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andCoupon_idNotBetween(Long value1, Long value2) {
-            addCriterion("coupon_id not between", value1, value2, "coupon_id");
+        public Criteria andCouponIdNotBetween(Long value1, Long value2) {
+            addCriterion("coupon_id not between", value1, value2, "couponId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idIsNull() {
+        public Criteria andProductCategoryIdIsNull() {
             addCriterion("product_category_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idIsNotNull() {
+        public Criteria andProductCategoryIdIsNotNull() {
             addCriterion("product_category_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idEqualTo(Long value) {
-            addCriterion("product_category_id =", value, "product_category_id");
+        public Criteria andProductCategoryIdEqualTo(Long value) {
+            addCriterion("product_category_id =", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idNotEqualTo(Long value) {
-            addCriterion("product_category_id <>", value, "product_category_id");
+        public Criteria andProductCategoryIdNotEqualTo(Long value) {
+            addCriterion("product_category_id <>", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idGreaterThan(Long value) {
-            addCriterion("product_category_id >", value, "product_category_id");
+        public Criteria andProductCategoryIdGreaterThan(Long value) {
+            addCriterion("product_category_id >", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("product_category_id >=", value, "product_category_id");
+        public Criteria andProductCategoryIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("product_category_id >=", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idLessThan(Long value) {
-            addCriterion("product_category_id <", value, "product_category_id");
+        public Criteria andProductCategoryIdLessThan(Long value) {
+            addCriterion("product_category_id <", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idLessThanOrEqualTo(Long value) {
-            addCriterion("product_category_id <=", value, "product_category_id");
+        public Criteria andProductCategoryIdLessThanOrEqualTo(Long value) {
+            addCriterion("product_category_id <=", value, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idIn(List<Long> values) {
-            addCriterion("product_category_id in", values, "product_category_id");
+        public Criteria andProductCategoryIdIn(List<Long> values) {
+            addCriterion("product_category_id in", values, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idNotIn(List<Long> values) {
-            addCriterion("product_category_id not in", values, "product_category_id");
+        public Criteria andProductCategoryIdNotIn(List<Long> values) {
+            addCriterion("product_category_id not in", values, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idBetween(Long value1, Long value2) {
-            addCriterion("product_category_id between", value1, value2, "product_category_id");
+        public Criteria andProductCategoryIdBetween(Long value1, Long value2) {
+            addCriterion("product_category_id between", value1, value2, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_idNotBetween(Long value1, Long value2) {
-            addCriterion("product_category_id not between", value1, value2, "product_category_id");
+        public Criteria andProductCategoryIdNotBetween(Long value1, Long value2) {
+            addCriterion("product_category_id not between", value1, value2, "productCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameIsNull() {
+        public Criteria andProductCategoryNameIsNull() {
             addCriterion("product_category_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameIsNotNull() {
+        public Criteria andProductCategoryNameIsNotNull() {
             addCriterion("product_category_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameEqualTo(String value) {
-            addCriterion("product_category_name =", value, "product_category_name");
+        public Criteria andProductCategoryNameEqualTo(String value) {
+            addCriterion("product_category_name =", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameNotEqualTo(String value) {
-            addCriterion("product_category_name <>", value, "product_category_name");
+        public Criteria andProductCategoryNameNotEqualTo(String value) {
+            addCriterion("product_category_name <>", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameGreaterThan(String value) {
-            addCriterion("product_category_name >", value, "product_category_name");
+        public Criteria andProductCategoryNameGreaterThan(String value) {
+            addCriterion("product_category_name >", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameGreaterThanOrEqualTo(String value) {
-            addCriterion("product_category_name >=", value, "product_category_name");
+        public Criteria andProductCategoryNameGreaterThanOrEqualTo(String value) {
+            addCriterion("product_category_name >=", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameLessThan(String value) {
-            addCriterion("product_category_name <", value, "product_category_name");
+        public Criteria andProductCategoryNameLessThan(String value) {
+            addCriterion("product_category_name <", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameLessThanOrEqualTo(String value) {
-            addCriterion("product_category_name <=", value, "product_category_name");
+        public Criteria andProductCategoryNameLessThanOrEqualTo(String value) {
+            addCriterion("product_category_name <=", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameLike(String value) {
-            addCriterion("product_category_name like", value, "product_category_name");
+        public Criteria andProductCategoryNameLike(String value) {
+            addCriterion("product_category_name like", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameNotLike(String value) {
-            addCriterion("product_category_name not like", value, "product_category_name");
+        public Criteria andProductCategoryNameNotLike(String value) {
+            addCriterion("product_category_name not like", value, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameIn(List<String> values) {
-            addCriterion("product_category_name in", values, "product_category_name");
+        public Criteria andProductCategoryNameIn(List<String> values) {
+            addCriterion("product_category_name in", values, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameNotIn(List<String> values) {
-            addCriterion("product_category_name not in", values, "product_category_name");
+        public Criteria andProductCategoryNameNotIn(List<String> values) {
+            addCriterion("product_category_name not in", values, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameBetween(String value1, String value2) {
-            addCriterion("product_category_name between", value1, value2, "product_category_name");
+        public Criteria andProductCategoryNameBetween(String value1, String value2) {
+            addCriterion("product_category_name between", value1, value2, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andProduct_category_nameNotBetween(String value1, String value2) {
-            addCriterion("product_category_name not between", value1, value2, "product_category_name");
+        public Criteria andProductCategoryNameNotBetween(String value1, String value2) {
+            addCriterion("product_category_name not between", value1, value2, "productCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameIsNull() {
+        public Criteria andParentCategoryNameIsNull() {
             addCriterion("parent_category_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameIsNotNull() {
+        public Criteria andParentCategoryNameIsNotNull() {
             addCriterion("parent_category_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameEqualTo(String value) {
-            addCriterion("parent_category_name =", value, "parent_category_name");
+        public Criteria andParentCategoryNameEqualTo(String value) {
+            addCriterion("parent_category_name =", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameNotEqualTo(String value) {
-            addCriterion("parent_category_name <>", value, "parent_category_name");
+        public Criteria andParentCategoryNameNotEqualTo(String value) {
+            addCriterion("parent_category_name <>", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameGreaterThan(String value) {
-            addCriterion("parent_category_name >", value, "parent_category_name");
+        public Criteria andParentCategoryNameGreaterThan(String value) {
+            addCriterion("parent_category_name >", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameGreaterThanOrEqualTo(String value) {
-            addCriterion("parent_category_name >=", value, "parent_category_name");
+        public Criteria andParentCategoryNameGreaterThanOrEqualTo(String value) {
+            addCriterion("parent_category_name >=", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameLessThan(String value) {
-            addCriterion("parent_category_name <", value, "parent_category_name");
+        public Criteria andParentCategoryNameLessThan(String value) {
+            addCriterion("parent_category_name <", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameLessThanOrEqualTo(String value) {
-            addCriterion("parent_category_name <=", value, "parent_category_name");
+        public Criteria andParentCategoryNameLessThanOrEqualTo(String value) {
+            addCriterion("parent_category_name <=", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameLike(String value) {
-            addCriterion("parent_category_name like", value, "parent_category_name");
+        public Criteria andParentCategoryNameLike(String value) {
+            addCriterion("parent_category_name like", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameNotLike(String value) {
-            addCriterion("parent_category_name not like", value, "parent_category_name");
+        public Criteria andParentCategoryNameNotLike(String value) {
+            addCriterion("parent_category_name not like", value, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameIn(List<String> values) {
-            addCriterion("parent_category_name in", values, "parent_category_name");
+        public Criteria andParentCategoryNameIn(List<String> values) {
+            addCriterion("parent_category_name in", values, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameNotIn(List<String> values) {
-            addCriterion("parent_category_name not in", values, "parent_category_name");
+        public Criteria andParentCategoryNameNotIn(List<String> values) {
+            addCriterion("parent_category_name not in", values, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameBetween(String value1, String value2) {
-            addCriterion("parent_category_name between", value1, value2, "parent_category_name");
+        public Criteria andParentCategoryNameBetween(String value1, String value2) {
+            addCriterion("parent_category_name between", value1, value2, "parentCategoryName");
             return (Criteria) this;
         }
 
-        public Criteria andParent_category_nameNotBetween(String value1, String value2) {
-            addCriterion("parent_category_name not between", value1, value2, "parent_category_name");
+        public Criteria andParentCategoryNameNotBetween(String value1, String value2) {
+            addCriterion("parent_category_name not between", value1, value2, "parentCategoryName");
             return (Criteria) this;
         }
     }

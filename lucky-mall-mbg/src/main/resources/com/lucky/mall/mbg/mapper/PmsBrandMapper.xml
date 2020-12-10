@@ -4,17 +4,17 @@
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsBrand">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="first_letter" jdbcType="VARCHAR" property="first_letter" />
+    <result column="first_letter" jdbcType="VARCHAR" property="firstLetter" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
-    <result column="factory_status" jdbcType="INTEGER" property="factory_status" />
-    <result column="show_status" jdbcType="INTEGER" property="show_status" />
-    <result column="product_count" jdbcType="INTEGER" property="product_count" />
-    <result column="product_comment_count" jdbcType="INTEGER" property="product_comment_count" />
+    <result column="factory_status" jdbcType="INTEGER" property="factoryStatus" />
+    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="product_count" jdbcType="INTEGER" property="productCount" />
+    <result column="product_comment_count" jdbcType="INTEGER" property="productCommentCount" />
     <result column="logo" jdbcType="VARCHAR" property="logo" />
-    <result column="big_pic" jdbcType="VARCHAR" property="big_pic" />
+    <result column="big_pic" jdbcType="VARCHAR" property="bigPic" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.lucky.mall.mbg.model.PmsBrand">
-    <result column="brand_story" jdbcType="LONGVARCHAR" property="brand_story" />
+    <result column="brand_story" jdbcType="LONGVARCHAR" property="brandStory" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -130,85 +130,85 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsBrand">
-    insert into pms_brand (id, name, first_letter, 
-      sort, factory_status, show_status, 
-      product_count, product_comment_count, logo, 
-      big_pic, brand_story)
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{first_letter,jdbcType=VARCHAR}, 
-      #{sort,jdbcType=INTEGER}, #{factory_status,jdbcType=INTEGER}, #{show_status,jdbcType=INTEGER}, 
-      #{product_count,jdbcType=INTEGER}, #{product_comment_count,jdbcType=INTEGER}, #{logo,jdbcType=VARCHAR}, 
-      #{big_pic,jdbcType=VARCHAR}, #{brand_story,jdbcType=LONGVARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_brand (name, first_letter, sort, 
+      factory_status, show_status, product_count, 
+      product_comment_count, logo, big_pic, 
+      brand_story)
+    values (#{name,jdbcType=VARCHAR}, #{firstLetter,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
+      #{factoryStatus,jdbcType=INTEGER}, #{showStatus,jdbcType=INTEGER}, #{productCount,jdbcType=INTEGER}, 
+      #{productCommentCount,jdbcType=INTEGER}, #{logo,jdbcType=VARCHAR}, #{bigPic,jdbcType=VARCHAR}, 
+      #{brandStory,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsBrand">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_brand
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
       <if test="name != null">
         name,
       </if>
-      <if test="first_letter != null">
+      <if test="firstLetter != null">
         first_letter,
       </if>
       <if test="sort != null">
         sort,
       </if>
-      <if test="factory_status != null">
+      <if test="factoryStatus != null">
         factory_status,
       </if>
-      <if test="show_status != null">
+      <if test="showStatus != null">
         show_status,
       </if>
-      <if test="product_count != null">
+      <if test="productCount != null">
         product_count,
       </if>
-      <if test="product_comment_count != null">
+      <if test="productCommentCount != null">
         product_comment_count,
       </if>
       <if test="logo != null">
         logo,
       </if>
-      <if test="big_pic != null">
+      <if test="bigPic != null">
         big_pic,
       </if>
-      <if test="brand_story != null">
+      <if test="brandStory != null">
         brand_story,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="first_letter != null">
-        #{first_letter,jdbcType=VARCHAR},
+      <if test="firstLetter != null">
+        #{firstLetter,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
       </if>
-      <if test="factory_status != null">
-        #{factory_status,jdbcType=INTEGER},
+      <if test="factoryStatus != null">
+        #{factoryStatus,jdbcType=INTEGER},
       </if>
-      <if test="show_status != null">
-        #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="product_count != null">
-        #{product_count,jdbcType=INTEGER},
+      <if test="productCount != null">
+        #{productCount,jdbcType=INTEGER},
       </if>
-      <if test="product_comment_count != null">
-        #{product_comment_count,jdbcType=INTEGER},
+      <if test="productCommentCount != null">
+        #{productCommentCount,jdbcType=INTEGER},
       </if>
       <if test="logo != null">
         #{logo,jdbcType=VARCHAR},
       </if>
-      <if test="big_pic != null">
-        #{big_pic,jdbcType=VARCHAR},
+      <if test="bigPic != null">
+        #{bigPic,jdbcType=VARCHAR},
       </if>
-      <if test="brand_story != null">
-        #{brand_story,jdbcType=LONGVARCHAR},
+      <if test="brandStory != null">
+        #{brandStory,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -227,32 +227,32 @@
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.first_letter != null">
-        first_letter = #{record.first_letter,jdbcType=VARCHAR},
+      <if test="record.firstLetter != null">
+        first_letter = #{record.firstLetter,jdbcType=VARCHAR},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
       </if>
-      <if test="record.factory_status != null">
-        factory_status = #{record.factory_status,jdbcType=INTEGER},
+      <if test="record.factoryStatus != null">
+        factory_status = #{record.factoryStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.show_status != null">
-        show_status = #{record.show_status,jdbcType=INTEGER},
+      <if test="record.showStatus != null">
+        show_status = #{record.showStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.product_count != null">
-        product_count = #{record.product_count,jdbcType=INTEGER},
+      <if test="record.productCount != null">
+        product_count = #{record.productCount,jdbcType=INTEGER},
       </if>
-      <if test="record.product_comment_count != null">
-        product_comment_count = #{record.product_comment_count,jdbcType=INTEGER},
+      <if test="record.productCommentCount != null">
+        product_comment_count = #{record.productCommentCount,jdbcType=INTEGER},
       </if>
       <if test="record.logo != null">
         logo = #{record.logo,jdbcType=VARCHAR},
       </if>
-      <if test="record.big_pic != null">
-        big_pic = #{record.big_pic,jdbcType=VARCHAR},
+      <if test="record.bigPic != null">
+        big_pic = #{record.bigPic,jdbcType=VARCHAR},
       </if>
-      <if test="record.brand_story != null">
-        brand_story = #{record.brand_story,jdbcType=LONGVARCHAR},
+      <if test="record.brandStory != null">
+        brand_story = #{record.brandStory,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -263,15 +263,15 @@
     update pms_brand
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      first_letter = #{record.first_letter,jdbcType=VARCHAR},
+      first_letter = #{record.firstLetter,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER},
-      factory_status = #{record.factory_status,jdbcType=INTEGER},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      product_count = #{record.product_count,jdbcType=INTEGER},
-      product_comment_count = #{record.product_comment_count,jdbcType=INTEGER},
+      factory_status = #{record.factoryStatus,jdbcType=INTEGER},
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      product_count = #{record.productCount,jdbcType=INTEGER},
+      product_comment_count = #{record.productCommentCount,jdbcType=INTEGER},
       logo = #{record.logo,jdbcType=VARCHAR},
-      big_pic = #{record.big_pic,jdbcType=VARCHAR},
-      brand_story = #{record.brand_story,jdbcType=LONGVARCHAR}
+      big_pic = #{record.bigPic,jdbcType=VARCHAR},
+      brand_story = #{record.brandStory,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -280,14 +280,14 @@
     update pms_brand
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      first_letter = #{record.first_letter,jdbcType=VARCHAR},
+      first_letter = #{record.firstLetter,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER},
-      factory_status = #{record.factory_status,jdbcType=INTEGER},
-      show_status = #{record.show_status,jdbcType=INTEGER},
-      product_count = #{record.product_count,jdbcType=INTEGER},
-      product_comment_count = #{record.product_comment_count,jdbcType=INTEGER},
+      factory_status = #{record.factoryStatus,jdbcType=INTEGER},
+      show_status = #{record.showStatus,jdbcType=INTEGER},
+      product_count = #{record.productCount,jdbcType=INTEGER},
+      product_comment_count = #{record.productCommentCount,jdbcType=INTEGER},
       logo = #{record.logo,jdbcType=VARCHAR},
-      big_pic = #{record.big_pic,jdbcType=VARCHAR}
+      big_pic = #{record.bigPic,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -298,32 +298,32 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="first_letter != null">
-        first_letter = #{first_letter,jdbcType=VARCHAR},
+      <if test="firstLetter != null">
+        first_letter = #{firstLetter,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
       </if>
-      <if test="factory_status != null">
-        factory_status = #{factory_status,jdbcType=INTEGER},
+      <if test="factoryStatus != null">
+        factory_status = #{factoryStatus,jdbcType=INTEGER},
       </if>
-      <if test="show_status != null">
-        show_status = #{show_status,jdbcType=INTEGER},
+      <if test="showStatus != null">
+        show_status = #{showStatus,jdbcType=INTEGER},
       </if>
-      <if test="product_count != null">
-        product_count = #{product_count,jdbcType=INTEGER},
+      <if test="productCount != null">
+        product_count = #{productCount,jdbcType=INTEGER},
       </if>
-      <if test="product_comment_count != null">
-        product_comment_count = #{product_comment_count,jdbcType=INTEGER},
+      <if test="productCommentCount != null">
+        product_comment_count = #{productCommentCount,jdbcType=INTEGER},
       </if>
       <if test="logo != null">
         logo = #{logo,jdbcType=VARCHAR},
       </if>
-      <if test="big_pic != null">
-        big_pic = #{big_pic,jdbcType=VARCHAR},
+      <if test="bigPic != null">
+        big_pic = #{bigPic,jdbcType=VARCHAR},
       </if>
-      <if test="brand_story != null">
-        brand_story = #{brand_story,jdbcType=LONGVARCHAR},
+      <if test="brandStory != null">
+        brand_story = #{brandStory,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -331,28 +331,28 @@
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lucky.mall.mbg.model.PmsBrand">
     update pms_brand
     set name = #{name,jdbcType=VARCHAR},
-      first_letter = #{first_letter,jdbcType=VARCHAR},
+      first_letter = #{firstLetter,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER},
-      factory_status = #{factory_status,jdbcType=INTEGER},
-      show_status = #{show_status,jdbcType=INTEGER},
-      product_count = #{product_count,jdbcType=INTEGER},
-      product_comment_count = #{product_comment_count,jdbcType=INTEGER},
+      factory_status = #{factoryStatus,jdbcType=INTEGER},
+      show_status = #{showStatus,jdbcType=INTEGER},
+      product_count = #{productCount,jdbcType=INTEGER},
+      product_comment_count = #{productCommentCount,jdbcType=INTEGER},
       logo = #{logo,jdbcType=VARCHAR},
-      big_pic = #{big_pic,jdbcType=VARCHAR},
-      brand_story = #{brand_story,jdbcType=LONGVARCHAR}
+      big_pic = #{bigPic,jdbcType=VARCHAR},
+      brand_story = #{brandStory,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsBrand">
     update pms_brand
     set name = #{name,jdbcType=VARCHAR},
-      first_letter = #{first_letter,jdbcType=VARCHAR},
+      first_letter = #{firstLetter,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER},
-      factory_status = #{factory_status,jdbcType=INTEGER},
-      show_status = #{show_status,jdbcType=INTEGER},
-      product_count = #{product_count,jdbcType=INTEGER},
-      product_comment_count = #{product_comment_count,jdbcType=INTEGER},
+      factory_status = #{factoryStatus,jdbcType=INTEGER},
+      show_status = #{showStatus,jdbcType=INTEGER},
+      product_count = #{productCount,jdbcType=INTEGER},
+      product_comment_count = #{productCommentCount,jdbcType=INTEGER},
       logo = #{logo,jdbcType=VARCHAR},
-      big_pic = #{big_pic,jdbcType=VARCHAR}
+      big_pic = #{bigPic,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

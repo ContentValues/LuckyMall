@@ -7,7 +7,7 @@ import java.util.Date;
 public class CmsSubject implements Serializable {
     private Long id;
 
-    private Long category_id;
+    private Long categoryId;
 
     private String title;
 
@@ -15,31 +15,31 @@ public class CmsSubject implements Serializable {
     private String pic;
 
     @ApiModelProperty(value = "关联产品数量")
-    private Integer product_count;
+    private Integer productCount;
 
-    private Integer recommend_status;
+    private Integer recommendStatus;
 
-    private Date create_time;
+    private Date createTime;
 
-    private Integer collect_count;
+    private Integer collectCount;
 
-    private Integer read_count;
+    private Integer readCount;
 
-    private Integer comment_count;
+    private Integer commentCount;
 
     @ApiModelProperty(value = "画册图片用逗号分割")
-    private String album_pics;
+    private String albumPics;
 
     private String description;
 
     @ApiModelProperty(value = "显示状态：0->不显示；1->显示")
-    private Integer show_status;
+    private Integer showStatus;
 
     @ApiModelProperty(value = "转发数")
-    private Integer forward_count;
+    private Integer forwardCount;
 
     @ApiModelProperty(value = "专题分类名称")
-    private String category_name;
+    private String categoryName;
 
     private String content;
 
@@ -53,12 +53,12 @@ public class CmsSubject implements Serializable {
         this.id = id;
     }
 
-    public Long getCategory_id() {
-        return category_id;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(Long category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getTitle() {
@@ -77,60 +77,60 @@ public class CmsSubject implements Serializable {
         this.pic = pic;
     }
 
-    public Integer getProduct_count() {
-        return product_count;
+    public Integer getProductCount() {
+        return productCount;
     }
 
-    public void setProduct_count(Integer product_count) {
-        this.product_count = product_count;
+    public void setProductCount(Integer productCount) {
+        this.productCount = productCount;
     }
 
-    public Integer getRecommend_status() {
-        return recommend_status;
+    public Integer getRecommendStatus() {
+        return recommendStatus;
     }
 
-    public void setRecommend_status(Integer recommend_status) {
-        this.recommend_status = recommend_status;
+    public void setRecommendStatus(Integer recommendStatus) {
+        this.recommendStatus = recommendStatus;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Integer getCollect_count() {
-        return collect_count;
+    public Integer getCollectCount() {
+        return collectCount;
     }
 
-    public void setCollect_count(Integer collect_count) {
-        this.collect_count = collect_count;
+    public void setCollectCount(Integer collectCount) {
+        this.collectCount = collectCount;
     }
 
-    public Integer getRead_count() {
-        return read_count;
+    public Integer getReadCount() {
+        return readCount;
     }
 
-    public void setRead_count(Integer read_count) {
-        this.read_count = read_count;
+    public void setReadCount(Integer readCount) {
+        this.readCount = readCount;
     }
 
-    public Integer getComment_count() {
-        return comment_count;
+    public Integer getCommentCount() {
+        return commentCount;
     }
 
-    public void setComment_count(Integer comment_count) {
-        this.comment_count = comment_count;
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
     }
 
-    public String getAlbum_pics() {
-        return album_pics;
+    public String getAlbumPics() {
+        return albumPics;
     }
 
-    public void setAlbum_pics(String album_pics) {
-        this.album_pics = album_pics;
+    public void setAlbumPics(String albumPics) {
+        this.albumPics = albumPics;
     }
 
     public String getDescription() {
@@ -141,28 +141,28 @@ public class CmsSubject implements Serializable {
         this.description = description;
     }
 
-    public Integer getShow_status() {
-        return show_status;
+    public Integer getShowStatus() {
+        return showStatus;
     }
 
-    public void setShow_status(Integer show_status) {
-        this.show_status = show_status;
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
     }
 
-    public Integer getForward_count() {
-        return forward_count;
+    public Integer getForwardCount() {
+        return forwardCount;
     }
 
-    public void setForward_count(Integer forward_count) {
-        this.forward_count = forward_count;
+    public void setForwardCount(Integer forwardCount) {
+        this.forwardCount = forwardCount;
     }
 
-    public String getCategory_name() {
-        return category_name;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getContent() {
@@ -180,20 +180,20 @@ public class CmsSubject implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", category_id=").append(category_id);
+        sb.append(", categoryId=").append(categoryId);
         sb.append(", title=").append(title);
         sb.append(", pic=").append(pic);
-        sb.append(", product_count=").append(product_count);
-        sb.append(", recommend_status=").append(recommend_status);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", collect_count=").append(collect_count);
-        sb.append(", read_count=").append(read_count);
-        sb.append(", comment_count=").append(comment_count);
-        sb.append(", album_pics=").append(album_pics);
+        sb.append(", productCount=").append(productCount);
+        sb.append(", recommendStatus=").append(recommendStatus);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", collectCount=").append(collectCount);
+        sb.append(", readCount=").append(readCount);
+        sb.append(", commentCount=").append(commentCount);
+        sb.append(", albumPics=").append(albumPics);
         sb.append(", description=").append(description);
-        sb.append(", show_status=").append(show_status);
-        sb.append(", forward_count=").append(forward_count);
-        sb.append(", category_name=").append(category_name);
+        sb.append(", showStatus=").append(showStatus);
+        sb.append(", forwardCount=").append(forwardCount);
+        sb.append(", categoryName=").append(categoryName);
         sb.append(", content=").append(content);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

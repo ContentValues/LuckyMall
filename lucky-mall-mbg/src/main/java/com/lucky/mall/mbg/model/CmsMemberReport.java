@@ -8,20 +8,20 @@ public class CmsMemberReport implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "举报类型：0->商品评价；1->话题内容；2->用户评论")
-    private Integer report_type;
+    private Integer reportType;
 
     @ApiModelProperty(value = "举报人")
-    private String report_member_name;
+    private String reportMemberName;
 
-    private Date create_time;
+    private Date createTime;
 
-    private String report_object;
+    private String reportObject;
 
     @ApiModelProperty(value = "举报状态：0->未处理；1->已处理")
-    private Integer report_status;
+    private Integer reportStatus;
 
     @ApiModelProperty(value = "处理结果：0->无效；1->有效；2->恶意")
-    private Integer handle_status;
+    private Integer handleStatus;
 
     private String note;
 
@@ -35,52 +35,52 @@ public class CmsMemberReport implements Serializable {
         this.id = id;
     }
 
-    public Integer getReport_type() {
-        return report_type;
+    public Integer getReportType() {
+        return reportType;
     }
 
-    public void setReport_type(Integer report_type) {
-        this.report_type = report_type;
+    public void setReportType(Integer reportType) {
+        this.reportType = reportType;
     }
 
-    public String getReport_member_name() {
-        return report_member_name;
+    public String getReportMemberName() {
+        return reportMemberName;
     }
 
-    public void setReport_member_name(String report_member_name) {
-        this.report_member_name = report_member_name;
+    public void setReportMemberName(String reportMemberName) {
+        this.reportMemberName = reportMemberName;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getReport_object() {
-        return report_object;
+    public String getReportObject() {
+        return reportObject;
     }
 
-    public void setReport_object(String report_object) {
-        this.report_object = report_object;
+    public void setReportObject(String reportObject) {
+        this.reportObject = reportObject;
     }
 
-    public Integer getReport_status() {
-        return report_status;
+    public Integer getReportStatus() {
+        return reportStatus;
     }
 
-    public void setReport_status(Integer report_status) {
-        this.report_status = report_status;
+    public void setReportStatus(Integer reportStatus) {
+        this.reportStatus = reportStatus;
     }
 
-    public Integer getHandle_status() {
-        return handle_status;
+    public Integer getHandleStatus() {
+        return handleStatus;
     }
 
-    public void setHandle_status(Integer handle_status) {
-        this.handle_status = handle_status;
+    public void setHandleStatus(Integer handleStatus) {
+        this.handleStatus = handleStatus;
     }
 
     public String getNote() {
@@ -98,12 +98,12 @@ public class CmsMemberReport implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", report_type=").append(report_type);
-        sb.append(", report_member_name=").append(report_member_name);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", report_object=").append(report_object);
-        sb.append(", report_status=").append(report_status);
-        sb.append(", handle_status=").append(handle_status);
+        sb.append(", reportType=").append(reportType);
+        sb.append(", reportMemberName=").append(reportMemberName);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", reportObject=").append(reportObject);
+        sb.append(", reportStatus=").append(reportStatus);
+        sb.append(", handleStatus=").append(handleStatus);
         sb.append(", note=").append(note);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

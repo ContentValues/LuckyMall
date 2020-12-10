@@ -3,16 +3,16 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.PmsProductAttributeMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.PmsProductAttribute">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="product_attribute_category_id" jdbcType="BIGINT" property="product_attribute_category_id" />
+    <result column="product_attribute_category_id" jdbcType="BIGINT" property="productAttributeCategoryId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="select_type" jdbcType="INTEGER" property="select_type" />
-    <result column="input_type" jdbcType="INTEGER" property="input_type" />
-    <result column="input_list" jdbcType="VARCHAR" property="input_list" />
+    <result column="select_type" jdbcType="INTEGER" property="selectType" />
+    <result column="input_type" jdbcType="INTEGER" property="inputType" />
+    <result column="input_list" jdbcType="VARCHAR" property="inputList" />
     <result column="sort" jdbcType="INTEGER" property="sort" />
-    <result column="filter_type" jdbcType="INTEGER" property="filter_type" />
-    <result column="search_type" jdbcType="INTEGER" property="search_type" />
-    <result column="related_status" jdbcType="INTEGER" property="related_status" />
-    <result column="hand_add_status" jdbcType="INTEGER" property="hand_add_status" />
+    <result column="filter_type" jdbcType="INTEGER" property="filterType" />
+    <result column="search_type" jdbcType="INTEGER" property="searchType" />
+    <result column="related_status" jdbcType="INTEGER" property="relatedStatus" />
+    <result column="hand_add_status" jdbcType="INTEGER" property="handAddStatus" />
     <result column="type" jdbcType="INTEGER" property="type" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -108,51 +108,54 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.PmsProductAttribute">
-    insert into pms_product_attribute (id, product_attribute_category_id, 
-      name, select_type, input_type, 
-      input_list, sort, filter_type, 
-      search_type, related_status, hand_add_status, 
-      type)
-    values (#{id,jdbcType=BIGINT}, #{product_attribute_category_id,jdbcType=BIGINT}, 
-      #{name,jdbcType=VARCHAR}, #{select_type,jdbcType=INTEGER}, #{input_type,jdbcType=INTEGER}, 
-      #{input_list,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{filter_type,jdbcType=INTEGER}, 
-      #{search_type,jdbcType=INTEGER}, #{related_status,jdbcType=INTEGER}, #{hand_add_status,jdbcType=INTEGER}, 
-      #{type,jdbcType=INTEGER})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_product_attribute (product_attribute_category_id, name, 
+      select_type, input_type, input_list, 
+      sort, filter_type, search_type, 
+      related_status, hand_add_status, type
+      )
+    values (#{productAttributeCategoryId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{selectType,jdbcType=INTEGER}, #{inputType,jdbcType=INTEGER}, #{inputList,jdbcType=VARCHAR}, 
+      #{sort,jdbcType=INTEGER}, #{filterType,jdbcType=INTEGER}, #{searchType,jdbcType=INTEGER}, 
+      #{relatedStatus,jdbcType=INTEGER}, #{handAddStatus,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.PmsProductAttribute">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into pms_product_attribute
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="product_attribute_category_id != null">
+      <if test="productAttributeCategoryId != null">
         product_attribute_category_id,
       </if>
       <if test="name != null">
         name,
       </if>
-      <if test="select_type != null">
+      <if test="selectType != null">
         select_type,
       </if>
-      <if test="input_type != null">
+      <if test="inputType != null">
         input_type,
       </if>
-      <if test="input_list != null">
+      <if test="inputList != null">
         input_list,
       </if>
       <if test="sort != null">
         sort,
       </if>
-      <if test="filter_type != null">
+      <if test="filterType != null">
         filter_type,
       </if>
-      <if test="search_type != null">
+      <if test="searchType != null">
         search_type,
       </if>
-      <if test="related_status != null">
+      <if test="relatedStatus != null">
         related_status,
       </if>
-      <if test="hand_add_status != null">
+      <if test="handAddStatus != null">
         hand_add_status,
       </if>
       <if test="type != null">
@@ -160,38 +163,35 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="product_attribute_category_id != null">
-        #{product_attribute_category_id,jdbcType=BIGINT},
+      <if test="productAttributeCategoryId != null">
+        #{productAttributeCategoryId,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="select_type != null">
-        #{select_type,jdbcType=INTEGER},
+      <if test="selectType != null">
+        #{selectType,jdbcType=INTEGER},
       </if>
-      <if test="input_type != null">
-        #{input_type,jdbcType=INTEGER},
+      <if test="inputType != null">
+        #{inputType,jdbcType=INTEGER},
       </if>
-      <if test="input_list != null">
-        #{input_list,jdbcType=VARCHAR},
+      <if test="inputList != null">
+        #{inputList,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         #{sort,jdbcType=INTEGER},
       </if>
-      <if test="filter_type != null">
-        #{filter_type,jdbcType=INTEGER},
+      <if test="filterType != null">
+        #{filterType,jdbcType=INTEGER},
       </if>
-      <if test="search_type != null">
-        #{search_type,jdbcType=INTEGER},
+      <if test="searchType != null">
+        #{searchType,jdbcType=INTEGER},
       </if>
-      <if test="related_status != null">
-        #{related_status,jdbcType=INTEGER},
+      <if test="relatedStatus != null">
+        #{relatedStatus,jdbcType=INTEGER},
       </if>
-      <if test="hand_add_status != null">
-        #{hand_add_status,jdbcType=INTEGER},
+      <if test="handAddStatus != null">
+        #{handAddStatus,jdbcType=INTEGER},
       </if>
       <if test="type != null">
         #{type,jdbcType=INTEGER},
@@ -210,35 +210,35 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.product_attribute_category_id != null">
-        product_attribute_category_id = #{record.product_attribute_category_id,jdbcType=BIGINT},
+      <if test="record.productAttributeCategoryId != null">
+        product_attribute_category_id = #{record.productAttributeCategoryId,jdbcType=BIGINT},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.select_type != null">
-        select_type = #{record.select_type,jdbcType=INTEGER},
+      <if test="record.selectType != null">
+        select_type = #{record.selectType,jdbcType=INTEGER},
       </if>
-      <if test="record.input_type != null">
-        input_type = #{record.input_type,jdbcType=INTEGER},
+      <if test="record.inputType != null">
+        input_type = #{record.inputType,jdbcType=INTEGER},
       </if>
-      <if test="record.input_list != null">
-        input_list = #{record.input_list,jdbcType=VARCHAR},
+      <if test="record.inputList != null">
+        input_list = #{record.inputList,jdbcType=VARCHAR},
       </if>
       <if test="record.sort != null">
         sort = #{record.sort,jdbcType=INTEGER},
       </if>
-      <if test="record.filter_type != null">
-        filter_type = #{record.filter_type,jdbcType=INTEGER},
+      <if test="record.filterType != null">
+        filter_type = #{record.filterType,jdbcType=INTEGER},
       </if>
-      <if test="record.search_type != null">
-        search_type = #{record.search_type,jdbcType=INTEGER},
+      <if test="record.searchType != null">
+        search_type = #{record.searchType,jdbcType=INTEGER},
       </if>
-      <if test="record.related_status != null">
-        related_status = #{record.related_status,jdbcType=INTEGER},
+      <if test="record.relatedStatus != null">
+        related_status = #{record.relatedStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.hand_add_status != null">
-        hand_add_status = #{record.hand_add_status,jdbcType=INTEGER},
+      <if test="record.handAddStatus != null">
+        hand_add_status = #{record.handAddStatus,jdbcType=INTEGER},
       </if>
       <if test="record.type != null">
         type = #{record.type,jdbcType=INTEGER},
@@ -251,16 +251,16 @@
   <update id="updateByExample" parameterType="map">
     update pms_product_attribute
     set id = #{record.id,jdbcType=BIGINT},
-      product_attribute_category_id = #{record.product_attribute_category_id,jdbcType=BIGINT},
+      product_attribute_category_id = #{record.productAttributeCategoryId,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
-      select_type = #{record.select_type,jdbcType=INTEGER},
-      input_type = #{record.input_type,jdbcType=INTEGER},
-      input_list = #{record.input_list,jdbcType=VARCHAR},
+      select_type = #{record.selectType,jdbcType=INTEGER},
+      input_type = #{record.inputType,jdbcType=INTEGER},
+      input_list = #{record.inputList,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=INTEGER},
-      filter_type = #{record.filter_type,jdbcType=INTEGER},
-      search_type = #{record.search_type,jdbcType=INTEGER},
-      related_status = #{record.related_status,jdbcType=INTEGER},
-      hand_add_status = #{record.hand_add_status,jdbcType=INTEGER},
+      filter_type = #{record.filterType,jdbcType=INTEGER},
+      search_type = #{record.searchType,jdbcType=INTEGER},
+      related_status = #{record.relatedStatus,jdbcType=INTEGER},
+      hand_add_status = #{record.handAddStatus,jdbcType=INTEGER},
       type = #{record.type,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -269,35 +269,35 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.PmsProductAttribute">
     update pms_product_attribute
     <set>
-      <if test="product_attribute_category_id != null">
-        product_attribute_category_id = #{product_attribute_category_id,jdbcType=BIGINT},
+      <if test="productAttributeCategoryId != null">
+        product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="select_type != null">
-        select_type = #{select_type,jdbcType=INTEGER},
+      <if test="selectType != null">
+        select_type = #{selectType,jdbcType=INTEGER},
       </if>
-      <if test="input_type != null">
-        input_type = #{input_type,jdbcType=INTEGER},
+      <if test="inputType != null">
+        input_type = #{inputType,jdbcType=INTEGER},
       </if>
-      <if test="input_list != null">
-        input_list = #{input_list,jdbcType=VARCHAR},
+      <if test="inputList != null">
+        input_list = #{inputList,jdbcType=VARCHAR},
       </if>
       <if test="sort != null">
         sort = #{sort,jdbcType=INTEGER},
       </if>
-      <if test="filter_type != null">
-        filter_type = #{filter_type,jdbcType=INTEGER},
+      <if test="filterType != null">
+        filter_type = #{filterType,jdbcType=INTEGER},
       </if>
-      <if test="search_type != null">
-        search_type = #{search_type,jdbcType=INTEGER},
+      <if test="searchType != null">
+        search_type = #{searchType,jdbcType=INTEGER},
       </if>
-      <if test="related_status != null">
-        related_status = #{related_status,jdbcType=INTEGER},
+      <if test="relatedStatus != null">
+        related_status = #{relatedStatus,jdbcType=INTEGER},
       </if>
-      <if test="hand_add_status != null">
-        hand_add_status = #{hand_add_status,jdbcType=INTEGER},
+      <if test="handAddStatus != null">
+        hand_add_status = #{handAddStatus,jdbcType=INTEGER},
       </if>
       <if test="type != null">
         type = #{type,jdbcType=INTEGER},
@@ -307,16 +307,16 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.PmsProductAttribute">
     update pms_product_attribute
-    set product_attribute_category_id = #{product_attribute_category_id,jdbcType=BIGINT},
+    set product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
-      select_type = #{select_type,jdbcType=INTEGER},
-      input_type = #{input_type,jdbcType=INTEGER},
-      input_list = #{input_list,jdbcType=VARCHAR},
+      select_type = #{selectType,jdbcType=INTEGER},
+      input_type = #{inputType,jdbcType=INTEGER},
+      input_list = #{inputList,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=INTEGER},
-      filter_type = #{filter_type,jdbcType=INTEGER},
-      search_type = #{search_type,jdbcType=INTEGER},
-      related_status = #{related_status,jdbcType=INTEGER},
-      hand_add_status = #{hand_add_status,jdbcType=INTEGER},
+      filter_type = #{filterType,jdbcType=INTEGER},
+      search_type = #{searchType,jdbcType=INTEGER},
+      related_status = #{relatedStatus,jdbcType=INTEGER},
+      hand_add_status = #{handAddStatus,jdbcType=INTEGER},
       type = #{type,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>

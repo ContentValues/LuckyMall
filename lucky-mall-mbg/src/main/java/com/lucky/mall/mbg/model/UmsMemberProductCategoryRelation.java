@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class UmsMemberProductCategoryRelation implements Serializable {
     private Long id;
 
-    private Long member_id;
+    private Long memberId;
 
-    private Long product_category_id;
+    private Long productCategoryId;
 
     private static final long serialVersionUID = 1L;
 
@@ -20,20 +20,20 @@ public class UmsMemberProductCategoryRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getMember_id() {
-        return member_id;
+    public Long getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(Long member_id) {
-        this.member_id = member_id;
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
     }
 
-    public Long getProduct_category_id() {
-        return product_category_id;
+    public Long getProductCategoryId() {
+        return productCategoryId;
     }
 
-    public void setProduct_category_id(Long product_category_id) {
-        this.product_category_id = product_category_id;
+    public void setProductCategoryId(Long productCategoryId) {
+        this.productCategoryId = productCategoryId;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class UmsMemberProductCategoryRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", member_id=").append(member_id);
-        sb.append(", product_category_id=").append(product_category_id);
+        sb.append(", memberId=").append(memberId);
+        sb.append(", productCategoryId=").append(productCategoryId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

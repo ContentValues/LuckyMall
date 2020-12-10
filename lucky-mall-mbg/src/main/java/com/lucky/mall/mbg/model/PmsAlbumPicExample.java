@@ -164,63 +164,63 @@ public class PmsAlbumPicExample {
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idIsNull() {
+        public Criteria andAlbumIdIsNull() {
             addCriterion("album_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idIsNotNull() {
+        public Criteria andAlbumIdIsNotNull() {
             addCriterion("album_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idEqualTo(Long value) {
-            addCriterion("album_id =", value, "album_id");
+        public Criteria andAlbumIdEqualTo(Long value) {
+            addCriterion("album_id =", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idNotEqualTo(Long value) {
-            addCriterion("album_id <>", value, "album_id");
+        public Criteria andAlbumIdNotEqualTo(Long value) {
+            addCriterion("album_id <>", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idGreaterThan(Long value) {
-            addCriterion("album_id >", value, "album_id");
+        public Criteria andAlbumIdGreaterThan(Long value) {
+            addCriterion("album_id >", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idGreaterThanOrEqualTo(Long value) {
-            addCriterion("album_id >=", value, "album_id");
+        public Criteria andAlbumIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("album_id >=", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idLessThan(Long value) {
-            addCriterion("album_id <", value, "album_id");
+        public Criteria andAlbumIdLessThan(Long value) {
+            addCriterion("album_id <", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idLessThanOrEqualTo(Long value) {
-            addCriterion("album_id <=", value, "album_id");
+        public Criteria andAlbumIdLessThanOrEqualTo(Long value) {
+            addCriterion("album_id <=", value, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idIn(List<Long> values) {
-            addCriterion("album_id in", values, "album_id");
+        public Criteria andAlbumIdIn(List<Long> values) {
+            addCriterion("album_id in", values, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idNotIn(List<Long> values) {
-            addCriterion("album_id not in", values, "album_id");
+        public Criteria andAlbumIdNotIn(List<Long> values) {
+            addCriterion("album_id not in", values, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idBetween(Long value1, Long value2) {
-            addCriterion("album_id between", value1, value2, "album_id");
+        public Criteria andAlbumIdBetween(Long value1, Long value2) {
+            addCriterion("album_id between", value1, value2, "albumId");
             return (Criteria) this;
         }
 
-        public Criteria andAlbum_idNotBetween(Long value1, Long value2) {
-            addCriterion("album_id not between", value1, value2, "album_id");
+        public Criteria andAlbumIdNotBetween(Long value1, Long value2) {
+            addCriterion("album_id not between", value1, value2, "albumId");
             return (Criteria) this;
         }
 

@@ -3,10 +3,10 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.SmsCouponProductCategoryRelationMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.SmsCouponProductCategoryRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="coupon_id" jdbcType="BIGINT" property="coupon_id" />
-    <result column="product_category_id" jdbcType="BIGINT" property="product_category_id" />
-    <result column="product_category_name" jdbcType="VARCHAR" property="product_category_name" />
-    <result column="parent_category_name" jdbcType="VARCHAR" property="parent_category_name" />
+    <result column="coupon_id" jdbcType="BIGINT" property="couponId" />
+    <result column="product_category_id" jdbcType="BIGINT" property="productCategoryId" />
+    <result column="product_category_name" jdbcType="VARCHAR" property="productCategoryName" />
+    <result column="parent_category_name" jdbcType="VARCHAR" property="parentCategoryName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -100,47 +100,45 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.SmsCouponProductCategoryRelation">
-    insert into sms_coupon_product_category_relation (id, coupon_id, product_category_id, 
-      product_category_name, parent_category_name
-      )
-    values (#{id,jdbcType=BIGINT}, #{coupon_id,jdbcType=BIGINT}, #{product_category_id,jdbcType=BIGINT}, 
-      #{product_category_name,jdbcType=VARCHAR}, #{parent_category_name,jdbcType=VARCHAR}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_coupon_product_category_relation (coupon_id, product_category_id, product_category_name, 
+      parent_category_name)
+    values (#{couponId,jdbcType=BIGINT}, #{productCategoryId,jdbcType=BIGINT}, #{productCategoryName,jdbcType=VARCHAR}, 
+      #{parentCategoryName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.SmsCouponProductCategoryRelation">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into sms_coupon_product_category_relation
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="coupon_id != null">
+      <if test="couponId != null">
         coupon_id,
       </if>
-      <if test="product_category_id != null">
+      <if test="productCategoryId != null">
         product_category_id,
       </if>
-      <if test="product_category_name != null">
+      <if test="productCategoryName != null">
         product_category_name,
       </if>
-      <if test="parent_category_name != null">
+      <if test="parentCategoryName != null">
         parent_category_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="couponId != null">
+        #{couponId,jdbcType=BIGINT},
       </if>
-      <if test="coupon_id != null">
-        #{coupon_id,jdbcType=BIGINT},
+      <if test="productCategoryId != null">
+        #{productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="product_category_id != null">
-        #{product_category_id,jdbcType=BIGINT},
+      <if test="productCategoryName != null">
+        #{productCategoryName,jdbcType=VARCHAR},
       </if>
-      <if test="product_category_name != null">
-        #{product_category_name,jdbcType=VARCHAR},
-      </if>
-      <if test="parent_category_name != null">
-        #{parent_category_name,jdbcType=VARCHAR},
+      <if test="parentCategoryName != null">
+        #{parentCategoryName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -156,17 +154,17 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.coupon_id != null">
-        coupon_id = #{record.coupon_id,jdbcType=BIGINT},
+      <if test="record.couponId != null">
+        coupon_id = #{record.couponId,jdbcType=BIGINT},
       </if>
-      <if test="record.product_category_id != null">
-        product_category_id = #{record.product_category_id,jdbcType=BIGINT},
+      <if test="record.productCategoryId != null">
+        product_category_id = #{record.productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="record.product_category_name != null">
-        product_category_name = #{record.product_category_name,jdbcType=VARCHAR},
+      <if test="record.productCategoryName != null">
+        product_category_name = #{record.productCategoryName,jdbcType=VARCHAR},
       </if>
-      <if test="record.parent_category_name != null">
-        parent_category_name = #{record.parent_category_name,jdbcType=VARCHAR},
+      <if test="record.parentCategoryName != null">
+        parent_category_name = #{record.parentCategoryName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -176,10 +174,10 @@
   <update id="updateByExample" parameterType="map">
     update sms_coupon_product_category_relation
     set id = #{record.id,jdbcType=BIGINT},
-      coupon_id = #{record.coupon_id,jdbcType=BIGINT},
-      product_category_id = #{record.product_category_id,jdbcType=BIGINT},
-      product_category_name = #{record.product_category_name,jdbcType=VARCHAR},
-      parent_category_name = #{record.parent_category_name,jdbcType=VARCHAR}
+      coupon_id = #{record.couponId,jdbcType=BIGINT},
+      product_category_id = #{record.productCategoryId,jdbcType=BIGINT},
+      product_category_name = #{record.productCategoryName,jdbcType=VARCHAR},
+      parent_category_name = #{record.parentCategoryName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -187,27 +185,27 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.SmsCouponProductCategoryRelation">
     update sms_coupon_product_category_relation
     <set>
-      <if test="coupon_id != null">
-        coupon_id = #{coupon_id,jdbcType=BIGINT},
+      <if test="couponId != null">
+        coupon_id = #{couponId,jdbcType=BIGINT},
       </if>
-      <if test="product_category_id != null">
-        product_category_id = #{product_category_id,jdbcType=BIGINT},
+      <if test="productCategoryId != null">
+        product_category_id = #{productCategoryId,jdbcType=BIGINT},
       </if>
-      <if test="product_category_name != null">
-        product_category_name = #{product_category_name,jdbcType=VARCHAR},
+      <if test="productCategoryName != null">
+        product_category_name = #{productCategoryName,jdbcType=VARCHAR},
       </if>
-      <if test="parent_category_name != null">
-        parent_category_name = #{parent_category_name,jdbcType=VARCHAR},
+      <if test="parentCategoryName != null">
+        parent_category_name = #{parentCategoryName,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.SmsCouponProductCategoryRelation">
     update sms_coupon_product_category_relation
-    set coupon_id = #{coupon_id,jdbcType=BIGINT},
-      product_category_id = #{product_category_id,jdbcType=BIGINT},
-      product_category_name = #{product_category_name,jdbcType=VARCHAR},
-      parent_category_name = #{parent_category_name,jdbcType=VARCHAR}
+    set coupon_id = #{couponId,jdbcType=BIGINT},
+      product_category_id = #{productCategoryId,jdbcType=BIGINT},
+      product_category_name = #{productCategoryName,jdbcType=VARCHAR},
+      parent_category_name = #{parentCategoryName,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

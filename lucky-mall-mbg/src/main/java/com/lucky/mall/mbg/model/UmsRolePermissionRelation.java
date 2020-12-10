@@ -6,9 +6,9 @@ import java.io.Serializable;
 public class UmsRolePermissionRelation implements Serializable {
     private Long id;
 
-    private Long role_id;
+    private Long roleId;
 
-    private Long permission_id;
+    private Long permissionId;
 
     private static final long serialVersionUID = 1L;
 
@@ -20,20 +20,20 @@ public class UmsRolePermissionRelation implements Serializable {
         this.id = id;
     }
 
-    public Long getRole_id() {
-        return role_id;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setRole_id(Long role_id) {
-        this.role_id = role_id;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
-    public Long getPermission_id() {
-        return permission_id;
+    public Long getPermissionId() {
+        return permissionId;
     }
 
-    public void setPermission_id(Long permission_id) {
-        this.permission_id = permission_id;
+    public void setPermissionId(Long permissionId) {
+        this.permissionId = permissionId;
     }
 
     @Override
@@ -43,8 +43,8 @@ public class UmsRolePermissionRelation implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", role_id=").append(role_id);
-        sb.append(", permission_id=").append(permission_id);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", permissionId=").append(permissionId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

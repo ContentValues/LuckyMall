@@ -3,11 +3,11 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsResourceMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsResource">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="url" jdbcType="VARCHAR" property="url" />
     <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="category_id" jdbcType="BIGINT" property="category_id" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -101,20 +101,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsResource">
-    insert into ums_resource (id, create_time, name, 
-      url, description, category_id
-      )
-    values (#{id,jdbcType=BIGINT}, #{create_time,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, 
-      #{url,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{category_id,jdbcType=BIGINT}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ums_resource (create_time, name, url, 
+      description, category_id)
+    values (#{createTime,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{categoryId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsResource">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into ums_resource
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
       <if test="name != null">
@@ -126,16 +127,13 @@
       <if test="description != null">
         description,
       </if>
-      <if test="category_id != null">
+      <if test="categoryId != null">
         category_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
@@ -146,8 +144,8 @@
       <if test="description != null">
         #{description,jdbcType=VARCHAR},
       </if>
-      <if test="category_id != null">
-        #{category_id,jdbcType=BIGINT},
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -163,8 +161,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
@@ -175,8 +173,8 @@
       <if test="record.description != null">
         description = #{record.description,jdbcType=VARCHAR},
       </if>
-      <if test="record.category_id != null">
-        category_id = #{record.category_id,jdbcType=BIGINT},
+      <if test="record.categoryId != null">
+        category_id = #{record.categoryId,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -186,11 +184,11 @@
   <update id="updateByExample" parameterType="map">
     update ums_resource
     set id = #{record.id,jdbcType=BIGINT},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       name = #{record.name,jdbcType=VARCHAR},
       url = #{record.url,jdbcType=VARCHAR},
       description = #{record.description,jdbcType=VARCHAR},
-      category_id = #{record.category_id,jdbcType=BIGINT}
+      category_id = #{record.categoryId,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -198,8 +196,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsResource">
     update ums_resource
     <set>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -210,19 +208,19 @@
       <if test="description != null">
         description = #{description,jdbcType=VARCHAR},
       </if>
-      <if test="category_id != null">
-        category_id = #{category_id,jdbcType=BIGINT},
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsResource">
     update ums_resource
-    set create_time = #{create_time,jdbcType=TIMESTAMP},
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
       name = #{name,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR},
       description = #{description,jdbcType=VARCHAR},
-      category_id = #{category_id,jdbcType=BIGINT}
+      category_id = #{categoryId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

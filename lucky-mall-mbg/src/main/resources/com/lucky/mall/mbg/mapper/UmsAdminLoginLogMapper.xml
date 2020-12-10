@@ -3,11 +3,11 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsAdminLoginLogMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsAdminLoginLog">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="admin_id" jdbcType="BIGINT" property="admin_id" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="admin_id" jdbcType="BIGINT" property="adminId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="ip" jdbcType="VARCHAR" property="ip" />
     <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="user_agent" jdbcType="VARCHAR" property="user_agent" />
+    <result column="user_agent" jdbcType="VARCHAR" property="userAgent" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -101,23 +101,24 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsAdminLoginLog">
-    insert into ums_admin_login_log (id, admin_id, create_time, 
-      ip, address, user_agent
-      )
-    values (#{id,jdbcType=BIGINT}, #{admin_id,jdbcType=BIGINT}, #{create_time,jdbcType=TIMESTAMP}, 
-      #{ip,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{user_agent,jdbcType=VARCHAR}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ums_admin_login_log (admin_id, create_time, ip, 
+      address, user_agent)
+    values (#{adminId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{userAgent,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsAdminLoginLog">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into ums_admin_login_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="admin_id != null">
+      <if test="adminId != null">
         admin_id,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
       <if test="ip != null">
@@ -126,19 +127,16 @@
       <if test="address != null">
         address,
       </if>
-      <if test="user_agent != null">
+      <if test="userAgent != null">
         user_agent,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="adminId != null">
+        #{adminId,jdbcType=BIGINT},
       </if>
-      <if test="admin_id != null">
-        #{admin_id,jdbcType=BIGINT},
-      </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="ip != null">
         #{ip,jdbcType=VARCHAR},
@@ -146,8 +144,8 @@
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
       </if>
-      <if test="user_agent != null">
-        #{user_agent,jdbcType=VARCHAR},
+      <if test="userAgent != null">
+        #{userAgent,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -163,11 +161,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.admin_id != null">
-        admin_id = #{record.admin_id,jdbcType=BIGINT},
+      <if test="record.adminId != null">
+        admin_id = #{record.adminId,jdbcType=BIGINT},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.ip != null">
         ip = #{record.ip,jdbcType=VARCHAR},
@@ -175,8 +173,8 @@
       <if test="record.address != null">
         address = #{record.address,jdbcType=VARCHAR},
       </if>
-      <if test="record.user_agent != null">
-        user_agent = #{record.user_agent,jdbcType=VARCHAR},
+      <if test="record.userAgent != null">
+        user_agent = #{record.userAgent,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -186,11 +184,11 @@
   <update id="updateByExample" parameterType="map">
     update ums_admin_login_log
     set id = #{record.id,jdbcType=BIGINT},
-      admin_id = #{record.admin_id,jdbcType=BIGINT},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      admin_id = #{record.adminId,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       ip = #{record.ip,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
-      user_agent = #{record.user_agent,jdbcType=VARCHAR}
+      user_agent = #{record.userAgent,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -198,11 +196,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsAdminLoginLog">
     update ums_admin_login_log
     <set>
-      <if test="admin_id != null">
-        admin_id = #{admin_id,jdbcType=BIGINT},
+      <if test="adminId != null">
+        admin_id = #{adminId,jdbcType=BIGINT},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="ip != null">
         ip = #{ip,jdbcType=VARCHAR},
@@ -210,19 +208,19 @@
       <if test="address != null">
         address = #{address,jdbcType=VARCHAR},
       </if>
-      <if test="user_agent != null">
-        user_agent = #{user_agent,jdbcType=VARCHAR},
+      <if test="userAgent != null">
+        user_agent = #{userAgent,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsAdminLoginLog">
     update ums_admin_login_log
-    set admin_id = #{admin_id,jdbcType=BIGINT},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
+    set admin_id = #{adminId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
       ip = #{ip,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
-      user_agent = #{user_agent,jdbcType=VARCHAR}
+      user_agent = #{userAgent,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

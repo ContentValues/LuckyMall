@@ -3,11 +3,11 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.UmsMemberLoginLogMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.UmsMemberLoginLog">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="member_id" jdbcType="BIGINT" property="member_id" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="member_id" jdbcType="BIGINT" property="memberId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="ip" jdbcType="VARCHAR" property="ip" />
     <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="login_type" jdbcType="INTEGER" property="login_type" />
+    <result column="login_type" jdbcType="INTEGER" property="loginType" />
     <result column="province" jdbcType="VARCHAR" property="province" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -102,23 +102,26 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.UmsMemberLoginLog">
-    insert into ums_member_login_log (id, member_id, create_time, 
-      ip, city, login_type, 
-      province)
-    values (#{id,jdbcType=BIGINT}, #{member_id,jdbcType=BIGINT}, #{create_time,jdbcType=TIMESTAMP}, 
-      #{ip,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{login_type,jdbcType=INTEGER}, 
-      #{province,jdbcType=VARCHAR})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ums_member_login_log (member_id, create_time, ip, 
+      city, login_type, province
+      )
+    values (#{memberId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{loginType,jdbcType=INTEGER}, #{province,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.UmsMemberLoginLog">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into ums_member_login_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="member_id != null">
+      <if test="memberId != null">
         member_id,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
       <if test="ip != null">
@@ -127,7 +130,7 @@
       <if test="city != null">
         city,
       </if>
-      <if test="login_type != null">
+      <if test="loginType != null">
         login_type,
       </if>
       <if test="province != null">
@@ -135,14 +138,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="memberId != null">
+        #{memberId,jdbcType=BIGINT},
       </if>
-      <if test="member_id != null">
-        #{member_id,jdbcType=BIGINT},
-      </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="ip != null">
         #{ip,jdbcType=VARCHAR},
@@ -150,8 +150,8 @@
       <if test="city != null">
         #{city,jdbcType=VARCHAR},
       </if>
-      <if test="login_type != null">
-        #{login_type,jdbcType=INTEGER},
+      <if test="loginType != null">
+        #{loginType,jdbcType=INTEGER},
       </if>
       <if test="province != null">
         #{province,jdbcType=VARCHAR},
@@ -170,11 +170,11 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.member_id != null">
-        member_id = #{record.member_id,jdbcType=BIGINT},
+      <if test="record.memberId != null">
+        member_id = #{record.memberId,jdbcType=BIGINT},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.ip != null">
         ip = #{record.ip,jdbcType=VARCHAR},
@@ -182,8 +182,8 @@
       <if test="record.city != null">
         city = #{record.city,jdbcType=VARCHAR},
       </if>
-      <if test="record.login_type != null">
-        login_type = #{record.login_type,jdbcType=INTEGER},
+      <if test="record.loginType != null">
+        login_type = #{record.loginType,jdbcType=INTEGER},
       </if>
       <if test="record.province != null">
         province = #{record.province,jdbcType=VARCHAR},
@@ -196,11 +196,11 @@
   <update id="updateByExample" parameterType="map">
     update ums_member_login_log
     set id = #{record.id,jdbcType=BIGINT},
-      member_id = #{record.member_id,jdbcType=BIGINT},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      member_id = #{record.memberId,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       ip = #{record.ip,jdbcType=VARCHAR},
       city = #{record.city,jdbcType=VARCHAR},
-      login_type = #{record.login_type,jdbcType=INTEGER},
+      login_type = #{record.loginType,jdbcType=INTEGER},
       province = #{record.province,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -209,11 +209,11 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.UmsMemberLoginLog">
     update ums_member_login_log
     <set>
-      <if test="member_id != null">
-        member_id = #{member_id,jdbcType=BIGINT},
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=BIGINT},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="ip != null">
         ip = #{ip,jdbcType=VARCHAR},
@@ -221,8 +221,8 @@
       <if test="city != null">
         city = #{city,jdbcType=VARCHAR},
       </if>
-      <if test="login_type != null">
-        login_type = #{login_type,jdbcType=INTEGER},
+      <if test="loginType != null">
+        login_type = #{loginType,jdbcType=INTEGER},
       </if>
       <if test="province != null">
         province = #{province,jdbcType=VARCHAR},
@@ -232,11 +232,11 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.UmsMemberLoginLog">
     update ums_member_login_log
-    set member_id = #{member_id,jdbcType=BIGINT},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
+    set member_id = #{memberId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
       ip = #{ip,jdbcType=VARCHAR},
       city = #{city,jdbcType=VARCHAR},
-      login_type = #{login_type,jdbcType=INTEGER},
+      login_type = #{loginType,jdbcType=INTEGER},
       province = #{province,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

@@ -3,10 +3,10 @@
 <mapper namespace="com.lucky.mall.mbg.mapper.OmsOrderOperateHistoryMapper">
   <resultMap id="BaseResultMap" type="com.lucky.mall.mbg.model.OmsOrderOperateHistory">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="order_id" jdbcType="BIGINT" property="order_id" />
-    <result column="operate_man" jdbcType="VARCHAR" property="operate_man" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
-    <result column="order_status" jdbcType="INTEGER" property="order_status" />
+    <result column="order_id" jdbcType="BIGINT" property="orderId" />
+    <result column="operate_man" jdbcType="VARCHAR" property="operateMan" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="order_status" jdbcType="INTEGER" property="orderStatus" />
     <result column="note" jdbcType="VARCHAR" property="note" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -101,29 +101,30 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lucky.mall.mbg.model.OmsOrderOperateHistory">
-    insert into oms_order_operate_history (id, order_id, operate_man, 
-      create_time, order_status, note
-      )
-    values (#{id,jdbcType=BIGINT}, #{order_id,jdbcType=BIGINT}, #{operate_man,jdbcType=VARCHAR}, 
-      #{create_time,jdbcType=TIMESTAMP}, #{order_status,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}
-      )
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into oms_order_operate_history (order_id, operate_man, create_time, 
+      order_status, note)
+    values (#{orderId,jdbcType=BIGINT}, #{operateMan,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{orderStatus,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lucky.mall.mbg.model.OmsOrderOperateHistory">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into oms_order_operate_history
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="order_id != null">
+      <if test="orderId != null">
         order_id,
       </if>
-      <if test="operate_man != null">
+      <if test="operateMan != null">
         operate_man,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="order_status != null">
+      <if test="orderStatus != null">
         order_status,
       </if>
       <if test="note != null">
@@ -131,20 +132,17 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="orderId != null">
+        #{orderId,jdbcType=BIGINT},
       </if>
-      <if test="order_id != null">
-        #{order_id,jdbcType=BIGINT},
+      <if test="operateMan != null">
+        #{operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="operate_man != null">
-        #{operate_man,jdbcType=VARCHAR},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="order_status != null">
-        #{order_status,jdbcType=INTEGER},
+      <if test="orderStatus != null">
+        #{orderStatus,jdbcType=INTEGER},
       </if>
       <if test="note != null">
         #{note,jdbcType=VARCHAR},
@@ -163,17 +161,17 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.order_id != null">
-        order_id = #{record.order_id,jdbcType=BIGINT},
+      <if test="record.orderId != null">
+        order_id = #{record.orderId,jdbcType=BIGINT},
       </if>
-      <if test="record.operate_man != null">
-        operate_man = #{record.operate_man,jdbcType=VARCHAR},
+      <if test="record.operateMan != null">
+        operate_man = #{record.operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="record.create_time != null">
-        create_time = #{record.create_time,jdbcType=TIMESTAMP},
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.order_status != null">
-        order_status = #{record.order_status,jdbcType=INTEGER},
+      <if test="record.orderStatus != null">
+        order_status = #{record.orderStatus,jdbcType=INTEGER},
       </if>
       <if test="record.note != null">
         note = #{record.note,jdbcType=VARCHAR},
@@ -186,10 +184,10 @@
   <update id="updateByExample" parameterType="map">
     update oms_order_operate_history
     set id = #{record.id,jdbcType=BIGINT},
-      order_id = #{record.order_id,jdbcType=BIGINT},
-      operate_man = #{record.operate_man,jdbcType=VARCHAR},
-      create_time = #{record.create_time,jdbcType=TIMESTAMP},
-      order_status = #{record.order_status,jdbcType=INTEGER},
+      order_id = #{record.orderId,jdbcType=BIGINT},
+      operate_man = #{record.operateMan,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      order_status = #{record.orderStatus,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -198,17 +196,17 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lucky.mall.mbg.model.OmsOrderOperateHistory">
     update oms_order_operate_history
     <set>
-      <if test="order_id != null">
-        order_id = #{order_id,jdbcType=BIGINT},
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=BIGINT},
       </if>
-      <if test="operate_man != null">
-        operate_man = #{operate_man,jdbcType=VARCHAR},
+      <if test="operateMan != null">
+        operate_man = #{operateMan,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="order_status != null">
-        order_status = #{order_status,jdbcType=INTEGER},
+      <if test="orderStatus != null">
+        order_status = #{orderStatus,jdbcType=INTEGER},
       </if>
       <if test="note != null">
         note = #{note,jdbcType=VARCHAR},
@@ -218,10 +216,10 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lucky.mall.mbg.model.OmsOrderOperateHistory">
     update oms_order_operate_history
-    set order_id = #{order_id,jdbcType=BIGINT},
-      operate_man = #{operate_man,jdbcType=VARCHAR},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      order_status = #{order_status,jdbcType=INTEGER},
+    set order_id = #{orderId,jdbcType=BIGINT},
+      operate_man = #{operateMan,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      order_status = #{orderStatus,jdbcType=INTEGER},
       note = #{note,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

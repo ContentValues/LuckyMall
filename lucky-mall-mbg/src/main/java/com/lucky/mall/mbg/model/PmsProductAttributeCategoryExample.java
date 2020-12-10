@@ -234,123 +234,123 @@ public class PmsProductAttributeCategoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countIsNull() {
+        public Criteria andAttributeCountIsNull() {
             addCriterion("attribute_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countIsNotNull() {
+        public Criteria andAttributeCountIsNotNull() {
             addCriterion("attribute_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countEqualTo(Integer value) {
-            addCriterion("attribute_count =", value, "attribute_count");
+        public Criteria andAttributeCountEqualTo(Integer value) {
+            addCriterion("attribute_count =", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countNotEqualTo(Integer value) {
-            addCriterion("attribute_count <>", value, "attribute_count");
+        public Criteria andAttributeCountNotEqualTo(Integer value) {
+            addCriterion("attribute_count <>", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countGreaterThan(Integer value) {
-            addCriterion("attribute_count >", value, "attribute_count");
+        public Criteria andAttributeCountGreaterThan(Integer value) {
+            addCriterion("attribute_count >", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countGreaterThanOrEqualTo(Integer value) {
-            addCriterion("attribute_count >=", value, "attribute_count");
+        public Criteria andAttributeCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("attribute_count >=", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countLessThan(Integer value) {
-            addCriterion("attribute_count <", value, "attribute_count");
+        public Criteria andAttributeCountLessThan(Integer value) {
+            addCriterion("attribute_count <", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countLessThanOrEqualTo(Integer value) {
-            addCriterion("attribute_count <=", value, "attribute_count");
+        public Criteria andAttributeCountLessThanOrEqualTo(Integer value) {
+            addCriterion("attribute_count <=", value, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countIn(List<Integer> values) {
-            addCriterion("attribute_count in", values, "attribute_count");
+        public Criteria andAttributeCountIn(List<Integer> values) {
+            addCriterion("attribute_count in", values, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countNotIn(List<Integer> values) {
-            addCriterion("attribute_count not in", values, "attribute_count");
+        public Criteria andAttributeCountNotIn(List<Integer> values) {
+            addCriterion("attribute_count not in", values, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countBetween(Integer value1, Integer value2) {
-            addCriterion("attribute_count between", value1, value2, "attribute_count");
+        public Criteria andAttributeCountBetween(Integer value1, Integer value2) {
+            addCriterion("attribute_count between", value1, value2, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andAttribute_countNotBetween(Integer value1, Integer value2) {
-            addCriterion("attribute_count not between", value1, value2, "attribute_count");
+        public Criteria andAttributeCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("attribute_count not between", value1, value2, "attributeCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countIsNull() {
+        public Criteria andParamCountIsNull() {
             addCriterion("param_count is null");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countIsNotNull() {
+        public Criteria andParamCountIsNotNull() {
             addCriterion("param_count is not null");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countEqualTo(Integer value) {
-            addCriterion("param_count =", value, "param_count");
+        public Criteria andParamCountEqualTo(Integer value) {
+            addCriterion("param_count =", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countNotEqualTo(Integer value) {
-            addCriterion("param_count <>", value, "param_count");
+        public Criteria andParamCountNotEqualTo(Integer value) {
+            addCriterion("param_count <>", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countGreaterThan(Integer value) {
-            addCriterion("param_count >", value, "param_count");
+        public Criteria andParamCountGreaterThan(Integer value) {
+            addCriterion("param_count >", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countGreaterThanOrEqualTo(Integer value) {
-            addCriterion("param_count >=", value, "param_count");
+        public Criteria andParamCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("param_count >=", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countLessThan(Integer value) {
-            addCriterion("param_count <", value, "param_count");
+        public Criteria andParamCountLessThan(Integer value) {
+            addCriterion("param_count <", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countLessThanOrEqualTo(Integer value) {
-            addCriterion("param_count <=", value, "param_count");
+        public Criteria andParamCountLessThanOrEqualTo(Integer value) {
+            addCriterion("param_count <=", value, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countIn(List<Integer> values) {
-            addCriterion("param_count in", values, "param_count");
+        public Criteria andParamCountIn(List<Integer> values) {
+            addCriterion("param_count in", values, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countNotIn(List<Integer> values) {
-            addCriterion("param_count not in", values, "param_count");
+        public Criteria andParamCountNotIn(List<Integer> values) {
+            addCriterion("param_count not in", values, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countBetween(Integer value1, Integer value2) {
-            addCriterion("param_count between", value1, value2, "param_count");
+        public Criteria andParamCountBetween(Integer value1, Integer value2) {
+            addCriterion("param_count between", value1, value2, "paramCount");
             return (Criteria) this;
         }
 
-        public Criteria andParam_countNotBetween(Integer value1, Integer value2) {
-            addCriterion("param_count not between", value1, value2, "param_count");
+        public Criteria andParamCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("param_count not between", value1, value2, "paramCount");
             return (Criteria) this;
         }
     }
